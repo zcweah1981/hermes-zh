@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+coverage
+.env*
+content-cache/raw/*
+!content-cache/raw/.gitkeep
+tsconfig.tsbuildinfo
+npm-debug.log*

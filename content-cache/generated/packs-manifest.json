@@ -1,0 +1,22 @@
+[
+  {
+    "id": "meeting-lab",
+    "title": "会议纪要助手",
+    "category": "会议与信息整理",
+    "summary": "packs 页最小样板，用于验证列表页与详情页。",
+    "modes": [
+      "solo",
+      "team"
+    ],
+    "doc": "docs/solutions/meeting-minutes.md",
+    "install": "packs/meeting-lab/INSTALL.md",
+    "download": "packs/meeting-lab/01-super-individual.zip",
+    "status": "published",
+    "featured": true,
+    "order": 1,
+    "tags": [
+      "meeting",
+      "minutes"
+    ]
+  }
+]

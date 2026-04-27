@@ -1,0 +1,14 @@
+[
+  {
+    "sourcePath": "docs/01-start/overview.md",
+    "slug": "/start",
+    "pageType": "module-overview",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-start/basic-usage.md",
+    "slug": "/start/basic-usage",
+    "pageType": "doc-page",
+    "module": "start"
+  }
+]

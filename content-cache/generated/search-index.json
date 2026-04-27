@@ -1,0 +1,12 @@
+[
+  {
+    "title": "从这开始",
+    "slug": "/start",
+    "description": "Hermes 中文站学习主线入口。"
+  },
+  {
+    "title": "认识基本使用方式",
+    "slug": "/start/basic-usage",
+    "description": "文档详情页最小样板，用于验证 docs 路由与 sidebar。"
+  }
+]
