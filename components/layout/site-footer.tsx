@@ -6,6 +6,8 @@ const footerLinks = [
   { href: '/packs', label: 'Packs' },
 ]
 
+const githubHref = 'https://github.com/zcweah1981/awesome-hermes-agent-zh'
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-bg-canvas/92">
@@ -14,9 +16,9 @@ export function SiteFooter() {
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">继续浏览</p>
-              <p className="mt-3 text-lg font-semibold text-text-primary">Hermes Agent 中文站把文档、方案与 Packs 放在同一条使用路径里。</p>
+              <p className="mt-3 text-lg font-semibold text-text-primary">Hermes Agent 中文站把首页分流、文档阅读、Packs 与 GitHub 真相源入口放在同一条路径里。</p>
               <p className="mt-2 text-sm leading-7 text-text-secondary">
-                你可以先从学习主线进入，也可以按现成方案、国内环境和参考手册直接查找需要的内容。
+                你可以先从学习主线进入，也可以按现成方案、国内环境、参考手册或 GitHub 仓库继续追溯正式来源。
               </p>
             </div>
 
@@ -26,6 +28,9 @@ export function SiteFooter() {
                   {link.label}
                 </Link>
               ))}
+              <a href={githubHref} target="_blank" rel="noreferrer" className="site-nav-link px-4 py-2">
+                GitHub 真相源
+              </a>
             </div>
           </div>
         </div>

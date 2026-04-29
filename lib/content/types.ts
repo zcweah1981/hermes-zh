@@ -42,4 +42,12 @@ export interface RouteMapItem {
   slug: string
   pageType: string
   module: string
+  title?: string
+  section?: string
+  description?: string
+  order?: number
+  status?: PageStatus
+  updated?: string
+  sourceType?: SourceType
+  navGroup?: string
 }

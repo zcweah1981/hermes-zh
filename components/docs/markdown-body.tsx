@@ -134,6 +134,7 @@ export function MarkdownBody({ page, pages }: { page: SitePage; pages: SitePage[
 
             return (
               <figure className="my-8 overflow-hidden rounded-2xl border border-white/10 bg-black/20">
+                {/* eslint-disable-next-line @next/next/no-img-element -- markdown images resolve to external/raw content URLs at runtime */}
                 <img src={resolved} alt={alt} className="h-auto w-full" loading="lazy" />
                 {alt ? <figcaption className="border-t border-white/10 px-4 py-3 text-xs leading-6 text-text-tertiary">{alt}</figcaption> : null}
               </figure>

@@ -13,6 +13,8 @@ const navItems = [
   { href: '/search', label: '搜索' },
 ]
 
+const githubHref = 'https://github.com/zcweah1981/awesome-hermes-agent-zh'
+
 export function SiteHeader() {
   const pathname = usePathname()
 
@@ -26,17 +28,18 @@ export function SiteHeader() {
             </div>
             <div>
               <p className="text-sm font-semibold text-text-primary">Hermes Agent 中文站</p>
-              <p className="text-xs text-text-tertiary">安装、方案、国内落地与参考手册</p>
+              <p className="text-xs text-text-tertiary">安装、方案、国内落地、参考手册与 GitHub 真相源入口</p>
             </div>
           </Link>
 
-          <Link href="/search" className="site-cta-secondary px-4 py-2 lg:hidden">
-            搜索
-          </Link>
-
-          <Link href="/docs/docs-overview" className="site-cta-secondary px-4 py-2 lg:hidden">
-            文档入口
-          </Link>
+          <div className="flex items-center gap-2 lg:hidden">
+            <a href={githubHref} target="_blank" rel="noreferrer" className="site-cta-secondary px-4 py-2">
+              GitHub
+            </a>
+            <Link href="/search" className="site-cta-secondary px-4 py-2">
+              搜索
+            </Link>
+          </div>
         </div>
 
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
@@ -57,10 +60,14 @@ export function SiteHeader() {
                 </Link>
               )
             })}
+
+            <a href={githubHref} target="_blank" rel="noreferrer" className="site-nav-link">
+              GitHub
+            </a>
           </nav>
 
           <Link href="/docs/start" className="site-cta-primary hidden px-5 py-2.5 lg:inline-flex">
-            开始执行
+            快速上手
           </Link>
 
           <form action="/search" className="hidden lg:block">

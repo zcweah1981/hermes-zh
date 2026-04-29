@@ -38,20 +38,119 @@ function normalizeModes(value: unknown): Array<'solo' | 'team'> {
   return value.filter((item): item is 'solo' | 'team' => item === 'solo' || item === 'team')
 }
 
-async function loadRouteMap(contentRoot: string): Promise<RouteMapItem[]> {
-  const routeMapPath = path.join(contentRoot, 'governance', 'site-route-map.yaml')
-  const raw = await fs.readFile(routeMapPath, 'utf8')
+function readString(value: unknown) {
+  return typeof value === 'string' && value.trim().length > 0 ? value.trim() : undefined
+}
+
+function readDateString(value: unknown) {
+  if (value instanceof Date && !Number.isNaN(value.valueOf())) {
+    return value.toISOString().slice(0, 10)
+  }
+
+  return readString(value)
+}
+
+function isPageStatus(value: unknown): value is SitePage['status'] {
+  return value === 'draft' || value === 'published' || value === 'archived'
+}
+
+function isSourceType(value: unknown): value is SitePage['sourceType'] {
+  return value === 'original' || value === 'imported' || value === 'adapted' || value === 'generated'
+}
+
+function firstMarkdownHeading(markdown: string) {
+  const match = markdown.match(/^#\s+(.+)$/m)
+  return match?.[1]?.replace(/\s+#+\s*$/, '').trim()
+}
+
+function stripMarkdown(value: string) {
+  return value
+    .replace(/^>\s*/, '')
+    .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+    .replace(/[`*_~#]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function firstMarkdownSummary(markdown: string) {
+  const lines = markdown.split('\n').map((line) => line.trim())
+  const candidate = lines.find((line) => {
+    if (!line) return false
+    if (line.startsWith('#')) return false
+    if (line === '---') return false
+    if (line.startsWith('|')) return false
+    return true
+  })
+
+  return candidate ? stripMarkdown(candidate) : undefined
+}
+
+function titleFromPath(relativePath: string) {
+  return path
+    .basename(relativePath, path.extname(relativePath))
+    .replace(/^\d+[-_、\s]*/, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function buildBodyFallback(title: string, description?: string) {
+  return [`# ${title}`, description].filter(Boolean).join('\n\n')
+}
+
+function routeMapItemFromRecord(record: Record<string, unknown>): RouteMapItem | undefined {
+  const sourcePath = readString(record.source)
+  const slug = readString(record.slug)
+  const routeModule = readString(record.module)
+  const pageType = readString(record.page_type)
+
+  if (!sourcePath || !slug || !routeModule || !pageType) {
+    return undefined
+  }
+
+  const status = isPageStatus(record.status) ? record.status : undefined
+  const sourceType = isSourceType(record.source_type) ? record.source_type : undefined
+
+  return {
+    sourcePath,
+    slug,
+    module: routeModule,
+    pageType,
+    title: readString(record.title),
+    section: readString(record.section),
+    description: readString(record.description),
+    order: record.order === undefined ? undefined : parseNumber(record.order),
+    status,
+    updated: readDateString(record.updated),
+    sourceType,
+    navGroup: readString(record.nav_group),
+  }
+}
+
+function parseRouteMapWithYaml(raw: string): RouteMapItem[] {
+  const parsed = matter(`---\n${raw}\n---`)
+  const data = parsed.data as { routes?: unknown }
+
+  if (!Array.isArray(data.routes)) {
+    return []
+  }
+
+  return data.routes
+    .map((item) => (item && typeof item === 'object' ? routeMapItemFromRecord(item as Record<string, unknown>) : undefined))
+    .filter((item): item is RouteMapItem => Boolean(item))
+}
+
+function parseRouteMapLineByLine(raw: string): RouteMapItem[] {
   const routes: RouteMapItem[] = []
-  let current: Partial<RouteMapItem> | null = null
+  let current: Record<string, unknown> | null = null
 
   for (const line of raw.split('\n')) {
     const trimmed = line.trim()
 
     if (trimmed.startsWith('- source:')) {
-      if (current?.sourcePath && current.slug && current.pageType && current.module) {
-        routes.push(current as RouteMapItem)
-      }
-      current = { sourcePath: trimmed.split(':', 2)[1].trim() }
+      const item = current ? routeMapItemFromRecord(current) : undefined
+      if (item) routes.push(item)
+      current = { source: trimmed.split(':', 2)[1].trim() }
       continue
     }
 
@@ -60,18 +159,21 @@ async function loadRouteMap(contentRoot: string): Promise<RouteMapItem[]> {
     }
 
     const [key, ...rest] = trimmed.split(':')
-    const value = rest.join(':').trim()
-
-    if (key === 'slug') current.slug = value
-    if (key === 'module') current.module = value
-    if (key === 'page_type') current.pageType = value
+    current[key] = rest.join(':').trim()
   }
 
-  if (current?.sourcePath && current.slug && current.pageType && current.module) {
-    routes.push(current as RouteMapItem)
-  }
+  const item = current ? routeMapItemFromRecord(current) : undefined
+  if (item) routes.push(item)
 
   return routes
+}
+
+async function loadRouteMap(contentRoot: string): Promise<RouteMapItem[]> {
+  const routeMapPath = path.join(contentRoot, 'governance', 'site-route-map.yaml')
+  const raw = await fs.readFile(routeMapPath, 'utf8')
+  const yamlRoutes = parseRouteMapWithYaml(raw)
+
+  return yamlRoutes.length > 0 ? yamlRoutes : parseRouteMapLineByLine(raw)
 }
 
 function buildPrevNextPages(pages: SitePage[]) {
@@ -102,7 +204,9 @@ export async function loadContentPages(contentRoot = DEFAULT_CONTENT_REPO): Prom
     fg('docs/**/*.md', { cwd: contentRoot, absolute: false }),
     loadRouteMap(contentRoot),
   ])
-  const routeIndex = new Map(routeMap.map((item, index) => [item.sourcePath, { item, index }]))
+  const routeIndex = new Map<string, { item: RouteMapItem; index: number }>(
+    routeMap.map((item, index) => [item.sourcePath, { item, index }]),
+  )
   const pages: SitePage[] = []
 
   for (const file of matches) {
@@ -110,26 +214,35 @@ export async function loadContentPages(contentRoot = DEFAULT_CONTENT_REPO): Prom
     const parsed = matter(raw)
     const data = parsed.data as Record<string, unknown>
     const routeInfo = routeIndex.get(file)
+    const route = routeInfo?.item
+    const markdownBody = parsed.content.trim()
+    const title = readString(data.title) ?? route?.title ?? firstMarkdownHeading(markdownBody) ?? titleFromPath(file)
+    const description = readString(data.description) ?? route?.description ?? firstMarkdownSummary(markdownBody) ?? ''
+    const slug = readString(data.slug) ?? route?.slug
 
-    if (typeof data.slug !== 'string' || typeof data.title !== 'string') {
+    if (!slug) {
       continue
     }
 
+    const status = isPageStatus(data.status) ? data.status : route?.status ?? 'draft'
+    const sourceType = isSourceType(data.source_type) ? data.source_type : route?.sourceType ?? 'generated'
+    const body = markdownBody ? parsed.content : buildBodyFallback(title, description)
+
     pages.push({
       sourcePath: file,
-      slug: data.slug,
-      title: data.title,
-      module: String(data.module ?? routeInfo?.item.module ?? 'reference'),
-      section: String(data.section ?? 'general'),
-      description: String(data.description ?? ''),
-      order: parseNumber(data.order, routeInfo ? routeInfo.index + 1 : 999),
-      status: (data.status as SitePage['status']) ?? 'draft',
-      updated: String(data.updated ?? ''),
-      sourceType: (data.source_type as SitePage['sourceType']) ?? 'generated',
-      navGroup: String(data.nav_group ?? path.basename(path.dirname(file)) ?? '未分组'),
-      pageType: ((data.page_type as SitePage['pageType']) ?? routeInfo?.item.pageType ?? 'doc-page') as SitePage['pageType'],
-      headings: parseHeadings(parsed.content),
-      body: parsed.content,
+      slug,
+      title,
+      module: readString(data.module) ?? route?.module ?? 'reference',
+      section: readString(data.section) ?? route?.section ?? 'general',
+      description,
+      order: data.order === undefined ? route?.order ?? (routeInfo ? routeInfo.index + 1 : 999) : parseNumber(data.order),
+      status,
+      updated: readDateString(data.updated) ?? route?.updated ?? '',
+      sourceType,
+      navGroup: readString(data.nav_group) ?? route?.navGroup ?? path.basename(path.dirname(file)) ?? '未分组',
+      pageType: (readString(data.page_type) ?? route?.pageType ?? 'doc-page') as SitePage['pageType'],
+      headings: parseHeadings(body),
+      body,
       githubUrl: githubUrlFromPath(file),
     })
   }

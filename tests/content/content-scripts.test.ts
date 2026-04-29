@@ -38,7 +38,9 @@ test('build-manifests writes pages, routes, packs, and search manifests', async 
 
   const [pages, routes, packs, search, buildMeta] = await Promise.all([
     readGeneratedJson<Array<{ slug: string; status: string }>>('pages-manifest.json'),
-    readGeneratedJson<Array<{ slug: string; sourcePath: string }>>('routes-manifest.json'),
+    readGeneratedJson<Array<{ slug: string; sourcePath: string; title: string; description: string; status: string }>>(
+      'routes-manifest.json',
+    ),
     readGeneratedJson<Array<{ id: string; status: string }>>('packs-manifest.json'),
     readGeneratedJson<Array<{ type: string; slug: string }>>('search-index.json'),
     readGeneratedJson<{
@@ -52,7 +54,11 @@ test('build-manifests writes pages, routes, packs, and search manifests', async 
   assert.equal(routes.length, pages.length)
   assert.equal(packs.length, 8)
   assert.equal(search.length, pages.length + packs.length)
-  assert.ok(routes.some((route) => route.slug === '/start' && route.sourcePath === 'docs/01-从这开始/总览.md'))
+  const startRoute = routes.find((route) => route.slug === '/start')
+  assert.equal(startRoute?.sourcePath, 'docs/01-从这开始/总览.md')
+  assert.equal(startRoute?.title, '从这开始')
+  assert.equal(startRoute?.description, 'Hermes 中文站学习主线入口。')
+  assert.equal(startRoute?.status, 'published')
   assert.ok(packs.some((pack) => pack.id === 'webdev-lab' && pack.status === 'published'))
   assert.ok(search.some((entry) => entry.type === 'pack' && entry.slug === '/packs/webdev-lab'))
   assert.equal(buildMeta.sourceBranch, 'site-content-anchor')

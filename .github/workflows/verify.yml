@@ -38,6 +38,9 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Lint
+        run: npm run lint
+
       - name: Test
         run: npm test
 
@@ -45,6 +48,9 @@ jobs:
         run: npm run build
         env:
           CONTENT_REPO_PATH: ${{ github.workspace }}/_content_repo
+
+      - name: Smoke
+        run: npm run smoke
 
       - name: Verify content manifests
         run: npm run verify:content

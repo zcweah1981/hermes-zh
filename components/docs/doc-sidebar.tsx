@@ -16,13 +16,13 @@ export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentS
   const groupedPages = groupPages(pages)
 
   return (
-    <aside className="site-panel-docs p-5 lg:sticky lg:top-24 lg:h-fit">
-      <div className="border-b border-border pb-4">
+    <aside className="site-panel-docs site-doc-sidebar-shell p-4 lg:p-5">
+      <div className="site-doc-sidebar-heading border-b border-border pb-4">
         <p className="site-doc-rail-title">Docs navigation</p>
-        <p className="mt-2 text-sm leading-6 text-text-tertiary">共享首页品牌语气，但保持文档导航的三级信息密度。</p>
+        <p className="mt-2 text-sm leading-6 text-text-tertiary">按模块浏览文档，当前页面会在左侧树中保持高亮。</p>
       </div>
 
-      <div className="mt-5 flex flex-col gap-5">
+      <div className="site-doc-sidebar-scroll mt-5 flex flex-col gap-5 pr-1">
         {Object.entries(groupedPages).map(([group, items]) => (
           <div key={group} className="space-y-2">
             <p className="px-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-tertiary">{group}</p>

@@ -1,9 +1,10 @@
 # hermes-zh — Preview Deploy Skeleton
 # PR 触发：构建站点 → 上传 artifact → 评论 PR 构建状态
 #
+# 当前边界：这里只证明“PR 可构建”，还不等于“已有真实 preview 部署 URL”。
 # 后续演进路径：
 #   1. 接入 Vercel Preview / Cloudflare Pages 做真实预览 URL
-#   2. next.config.ts 加 output: 'export' 后改为上传 out/ 目录
+#   2. 让 PR 评论回传 preview URL + site sha + content sha
 #   3. 接入 Playwright / Lighthouse CI 做视觉回归
 name: preview
 
@@ -40,6 +41,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
       - name: Test
         run: npm test
 
@@ -47,6 +54,9 @@ jobs:
         run: npm run build
         env:
           CONTENT_REPO_PATH: ${{ github.workspace }}/_content_repo
+
+      - name: Smoke
+        run: npm run smoke
 
       - name: Verify content manifests
         run: npm run verify:content
@@ -77,8 +87,8 @@ jobs:
             | Commit | \`${context.sha.slice(0, 7)}\` |
             | Run | [View logs](${runUrl}) |
             | Artifact | \`preview-build-${pr.number}\` |
-            | Content | synced from \`awesome-hermes-agent-zh@main\` |
+            | Content | synced from \`awesome-hermes-agent-zh@site-content-anchor\` |
 
-            > 🏗️ **Next step**: Wire artifact to a preview deploy target (Vercel / CF Pages).
+            > 🏗️ Current scope: build artifact only. Next step is wiring a real preview deploy target (Vercel / CF Pages).
             `
             });
