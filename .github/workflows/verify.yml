@@ -48,3 +48,6 @@ jobs:
 
       - name: Verify content manifests
         run: npm run verify:content
+
+      - name: Verify content freshness
+        run: npm run verify:content:freshness

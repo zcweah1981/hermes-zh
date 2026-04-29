@@ -12,6 +12,7 @@
     "build:manifests": "tsx scripts/build-manifests.ts",
     "build:content": "npm run sync:content && npm run build:manifests",
     "verify:content": "tsx scripts/verify-content.ts",
+    "verify:content:freshness": "tsx scripts/verify-content-freshness.ts",
     "test": "tsx --test tests/**/*.test.ts"
   },
   "dependencies": {

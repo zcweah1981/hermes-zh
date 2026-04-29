@@ -4,6 +4,7 @@ import path from 'node:path'
 import { buildRouteMap } from '../lib/content/resolvers/build-route-map'
 import { loadContentPages, loadPackEntries } from '../lib/content/sync/source-loader'
 import type { SitePack, SitePage } from '../lib/content/types'
+import { writeContentBuildMeta } from './lib/content-build-meta'
 
 const generatedDir = path.join(process.cwd(), 'content-cache', 'generated')
 const preferredContentRoot = process.env.CONTENT_REPO_PATH ?? '/opt/projects/awesome-hermes-agent-zh'
@@ -12,6 +13,7 @@ const requiredGeneratedFiles = [
   'routes-manifest.json',
   'packs-manifest.json',
   'search-index.json',
+  'build-meta.json',
 ]
 
 async function pathExists(targetPath: string) {
@@ -73,6 +75,12 @@ async function buildGeneratedContent(contentRoot: string) {
   await writeJson('routes-manifest.json', routes)
   await writeJson('packs-manifest.json', publishedPacks)
   await writeJson('search-index.json', search)
+  await writeContentBuildMeta(contentRoot, {
+    pages: publishedPages.length,
+    routes: routes.length,
+    packs: publishedPacks.length,
+    search: search.length,
+  })
 
   console.log(
     `[content-build] refreshed manifests from ${contentRoot} pages=${publishedPages.length} routes=${routes.length} packs=${publishedPacks.length} search=${search.length}`,

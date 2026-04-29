@@ -5,6 +5,7 @@ import { buildRouteMap } from '../lib/content/resolvers/build-route-map'
 import { loadContentPages, loadPackEntries } from '../lib/content/sync/source-loader'
 import { resolveContentRoot } from '../lib/content/sync/resolve-content-root'
 import type { SitePack, SitePage } from '../lib/content/types'
+import { writeContentBuildMeta } from './lib/content-build-meta'
 
 const generatedDir = path.join(process.cwd(), 'content-cache', 'generated')
 
@@ -47,6 +48,12 @@ async function main() {
   await writeJson('routes-manifest.json', routes)
   await writeJson('packs-manifest.json', publishedPacks)
   await writeJson('search-index.json', search)
+  await writeContentBuildMeta(repoPath, {
+    pages: publishedPages.length,
+    routes: routes.length,
+    packs: publishedPacks.length,
+    search: search.length,
+  })
 
   console.log(`built pages=${publishedPages.length} routes=${routes.length} packs=${publishedPacks.length} search=${search.length}`)
 }

@@ -36,11 +36,16 @@ test('build-manifests writes pages, routes, packs, and search manifests', async 
   const { stdout } = await runScript('scripts/build-manifests.ts')
   assert.match(stdout, /built pages=87 routes=87 packs=8 search=95/)
 
-  const [pages, routes, packs, search] = await Promise.all([
+  const [pages, routes, packs, search, buildMeta] = await Promise.all([
     readGeneratedJson<Array<{ slug: string; status: string }>>('pages-manifest.json'),
     readGeneratedJson<Array<{ slug: string; sourcePath: string }>>('routes-manifest.json'),
     readGeneratedJson<Array<{ id: string; status: string }>>('packs-manifest.json'),
     readGeneratedJson<Array<{ type: string; slug: string }>>('search-index.json'),
+    readGeneratedJson<{
+      sourceBranch: string | null
+      sourceSha: string | null
+      counts: { pages: number; routes: number; packs: number; search: number }
+    }>('build-meta.json'),
   ])
 
   assert.equal(pages.length, 87)
@@ -50,4 +55,7 @@ test('build-manifests writes pages, routes, packs, and search manifests', async 
   assert.ok(routes.some((route) => route.slug === '/start' && route.sourcePath === 'docs/01-从这开始/总览.md'))
   assert.ok(packs.some((pack) => pack.id === 'webdev-lab' && pack.status === 'published'))
   assert.ok(search.some((entry) => entry.type === 'pack' && entry.slug === '/packs/webdev-lab'))
+  assert.equal(buildMeta.sourceBranch, 'site-content-anchor')
+  assert.match(buildMeta.sourceSha ?? '', /^[0-9a-f]{40}$/)
+  assert.deepEqual(buildMeta.counts, { pages: 87, routes: 87, packs: 8, search: 95 })
 })
