@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 const footerLinks = [
-  { href: '/start', label: '从这开始' },
-  { href: '/docs/start', label: '文档入口' },
+  { href: '/docs/start', label: '从这开始' },
+  { href: '/docs/docs-overview', label: '文档总览' },
   { href: '/packs', label: 'Packs' },
 ]
 
@@ -13,10 +13,10 @@ export function SiteFooter() {
         <div className="site-panel rounded-xl px-6 py-6 shadow-none">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">Content source</p>
-              <p className="mt-3 text-lg font-semibold text-text-primary">Hermes Agent 中文站保持首页与文档页同一套壳层语言。</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">继续浏览</p>
+              <p className="mt-3 text-lg font-semibold text-text-primary">Hermes Agent 中文站把文档、方案与 Packs 放在同一条使用路径里。</p>
               <p className="mt-2 text-sm leading-7 text-text-secondary">
-                内容真源仍然来自 awesome-hermes-agent-zh@site-content-anchor；站点只收敛表现层、导航与执行入口。
+                你可以先从学习主线进入，也可以按现成方案、国内环境和参考手册直接查找需要的内容。
               </p>
             </div>
 

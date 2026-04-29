@@ -7,18 +7,18 @@ import { buildCanonicalUrl } from '@/lib/seo/canonical'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [pages, packs] = await Promise.all([loadPagesManifest(), loadPacksManifest()])
-  const staticRoutes = ['/', '/search', '/docs', '/start', '/solutions', '/china', '/openclaw', '/issues', '/reference', '/packs']
+  const staticRoutes = ['/', '/docs/docs-overview', '/packs']
 
   const entries = [
     ...staticRoutes.map((route) => ({
       url: buildCanonicalUrl(route),
       lastModified: undefined,
     })),
-    ...pages.map((page) => ({
+    ...pages.filter((page) => page.status === 'published').map((page) => ({
       url: buildCanonicalUrl(toDocPath(page.slug)),
       lastModified: page.updated || undefined,
     })),
-    ...packs.map((pack) => ({
+    ...packs.filter((pack) => pack.status === 'published').map((pack) => ({
       url: buildCanonicalUrl(`/packs/${pack.id}`),
       lastModified: undefined,
     })),

@@ -49,6 +49,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: buildCanonicalUrl('/search'),
   },
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
@@ -68,9 +72,9 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   return (
     <div className="mx-auto max-w-5xl px-6 py-12">
       <div className="site-doc-header">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">Search</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">站内搜索</p>
         <h1 className="mt-4 text-3xl font-black text-white lg:text-4xl">搜索文档与 Packs</h1>
-        <p className="mt-4 max-w-3xl text-base leading-8 text-text-secondary">基于内容仓生成的 search-index.json，支持按标题、描述、模块和正文标题快速定位入口。</p>
+        <p className="mt-4 max-w-3xl text-base leading-8 text-text-secondary">按标题、简介、模块和章节标题快速查找你要看的文档或 Pack。</p>
 
         <form action="/search" className="mt-8 flex flex-col gap-3 sm:flex-row">
           <input
@@ -87,7 +91,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
       </div>
 
       <div className="mt-8 flex items-center justify-between gap-4 text-sm text-text-tertiary">
-        <p>{term ? `共找到 ${results.length} 条结果` : '先给你常用入口；输入关键词后会按相关度过滤。'}</p>
+        <p>{term ? `共找到 ${results.length} 条结果` : '先给你常用入口；输入关键词后会按相关度筛选。'}</p>
         <Link href="/docs/docs-overview" className="site-cta-secondary px-4 py-2">
           浏览文档总览
         </Link>
@@ -116,7 +120,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           ))
         ) : (
           <div className="site-section-card p-6 text-sm leading-7 text-text-secondary">
-            没找到匹配项。建议换一个更短的关键词，或先从“文档总览 / 从这开始 / Reference / Packs”这些主入口继续浏览。
+            没找到匹配项。建议换一个更短的关键词，或先从“文档总览 / 从这开始 / 参考手册 / Packs”继续浏览。
           </div>
         )}
       </div>

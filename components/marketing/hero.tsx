@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-const pathHighlights = ['品牌入口', '模块分流', 'Docs 执行链']
+const pathHighlights = ['上手路径', '现成方案', '排障参考']
 
 export function Hero() {
   return (
@@ -31,22 +31,22 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-text-secondary md:text-[18px] md:leading-[30px]">
-              首页负责品牌入口与路径分流，文档页负责把动作继续执行。现在先统一品牌绿主色、结构化卡片、顶栏与导航语法，让 landing 和 docs 明显属于同一套系统。
+              先用首页判断自己该从哪一条路径进入，再去文档页继续完成安装、选型、方案落地和问题排查。
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/start" className="site-cta-primary">
+              <Link href="/docs/start" className="site-cta-primary">
                 从这开始
               </Link>
-              <Link href="/docs/start" className="site-cta-secondary">
-                查看文档骨架
+              <Link href="/docs/docs-overview" className="site-cta-secondary">
+                浏览全部文档
               </Link>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3 text-sm text-text-tertiary">
-              <span className="site-meta-pill">统一 token</span>
-              <span className="site-meta-pill">共享顶栏</span>
-              <span className="site-meta-pill">同源卡片与侧栏</span>
+              <span className="site-meta-pill">安装到进阶主线</span>
+              <span className="site-meta-pill">国内环境入口</span>
+              <span className="site-meta-pill">Packs 与文档互通</span>
             </div>
           </div>
         </div>

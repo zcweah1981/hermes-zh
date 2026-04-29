@@ -5,10 +5,10 @@ import { usePathname } from 'next/navigation'
 
 const navItems = [
   { href: '/docs/docs-overview', label: '文档' },
-  { href: '/start', label: '从这开始' },
-  { href: '/solutions', label: '现成方案' },
-  { href: '/china', label: '国内落地' },
-  { href: '/reference', label: 'Reference' },
+  { href: '/docs/start', label: '从这开始' },
+  { href: '/docs/solutions', label: '现成方案' },
+  { href: '/docs/china', label: '国内落地' },
+  { href: '/docs/reference', label: '参考手册' },
   { href: '/packs', label: 'Packs' },
   { href: '/search', label: '搜索' },
 ]
@@ -26,7 +26,7 @@ export function SiteHeader() {
             </div>
             <div>
               <p className="text-sm font-semibold text-text-primary">Hermes Agent 中文站</p>
-              <p className="text-xs text-text-tertiary">统一设计系统 · Brand green / Docs rails</p>
+              <p className="text-xs text-text-tertiary">安装、方案、国内落地与参考手册</p>
             </div>
           </Link>
 

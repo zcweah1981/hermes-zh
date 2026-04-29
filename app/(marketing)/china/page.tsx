@@ -1,10 +1,5 @@
-import { MarketingPlaceholder } from '@/components/marketing/marketing-placeholder'
+import { permanentRedirect } from 'next/navigation'
 
 export default function ChinaPage() {
-  return (
-    <MarketingPlaceholder
-      title="国内落地"
-      description="国内落地页占位：后续聚合国产模型、网络环境、平台接入与部署路线。"
-    />
-  )
+  permanentRedirect('/docs/china')
 }
