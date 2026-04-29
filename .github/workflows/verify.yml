@@ -24,7 +24,7 @@ jobs:
         with:
           repository: zcweah1981/awesome-hermes-agent-zh
           path: _content_repo
-          ref: main
+          ref: site-content-anchor
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -37,6 +37,9 @@ jobs:
 
       - name: Typecheck
         run: npm run typecheck
+
+      - name: Test
+        run: npm test
 
       - name: Build (content sync + manifests + next build)
         run: npm run build

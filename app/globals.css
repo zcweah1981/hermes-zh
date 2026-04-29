@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Noto+Sans+SC:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,16 +6,188 @@
 
 :root {
   color-scheme: dark;
+  --site-bg: #0b0c10;
+  --site-surface: #151821;
+  --site-surface-elevated: #1a1f2b;
+  --site-panel: rgba(255, 255, 255, 0.04);
+  --site-code: #10141c;
+  --site-text-primary: #f5f7fa;
+  --site-text-secondary: #c6cbd3;
+  --site-text-tertiary: #98a1ae;
+  --site-border: rgba(255, 255, 255, 0.1);
+  --site-border-strong: rgba(255, 255, 255, 0.18);
+  --site-border-accent: rgba(45, 184, 110, 0.32);
+  --site-border-info: rgba(61, 214, 245, 0.22);
+  --site-brand: #2db86e;
+  --site-brand-hover: #36c978;
+  --site-accent-info: #3dd6f5;
+  --site-radius-sm: 10px;
+  --site-radius-md: 16px;
+  --site-radius-lg: 20px;
+  --site-header-height: 56px;
 }
 
-body {
-  @apply bg-background text-stone-100 antialiased;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-bg-canvas font-sans text-text-primary antialiased;
+    background-image:
+      radial-gradient(circle at top, rgba(45, 184, 110, 0.08), transparent 30%),
+      radial-gradient(circle at 100% 0, rgba(61, 214, 245, 0.05), transparent 24%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 28%);
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  ::selection {
+    background: rgba(45, 184, 110, 0.28);
+    color: #f5f7fa;
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(45, 184, 110, 0.28);
+  }
 }
 
-a {
-  @apply text-inherit no-underline;
-}
+@layer components {
+  .site-frame {
+    @apply border-b border-border backdrop-blur-xl;
+    background-color: rgba(11, 12, 16, 0.84);
+  }
 
-* {
-  @apply border-border;
+  .site-panel {
+    @apply rounded-lg border border-border shadow-soft;
+    background-color: rgba(21, 24, 33, 0.9);
+  }
+
+  .site-panel-elevated {
+    @apply rounded-lg border border-border-strong shadow-medium;
+    background:
+      linear-gradient(180deg, rgba(45, 184, 110, 0.05), transparent 28%),
+      rgba(26, 31, 43, 0.96);
+  }
+
+  .site-panel-docs {
+    @apply rounded-lg border border-border shadow-none;
+    background:
+      linear-gradient(180deg, rgba(45, 184, 110, 0.04), transparent 22%),
+      rgba(21, 24, 33, 0.94);
+  }
+
+  .site-section-card {
+    @apply rounded-lg border shadow-soft transition duration-200;
+    background:
+      linear-gradient(180deg, rgba(45, 184, 110, 0.045), transparent 26%),
+      rgba(21, 24, 33, 0.9);
+  }
+
+  .site-section-card-interactive {
+    @apply hover:-translate-y-0.5 hover:border-border-strong hover:shadow-medium;
+  }
+
+  .site-section-card-selected {
+    border-color: var(--site-border-accent);
+    background:
+      linear-gradient(180deg, rgba(45, 184, 110, 0.10), rgba(61, 214, 245, 0.04)),
+      rgba(21, 24, 33, 0.96);
+    box-shadow: 0 12px 48px rgba(45, 184, 110, 0.12);
+  }
+
+  .site-compact-card {
+    @apply rounded-md border border-border bg-white/[0.02];
+  }
+
+  .site-eyebrow {
+    @apply inline-flex items-center rounded-full border border-border-accent bg-brand-primary/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-primary;
+  }
+
+  .site-meta-pill {
+    @apply inline-flex items-center rounded-full border border-border bg-white/[0.02] px-3 py-1.5 text-xs font-medium text-text-secondary;
+  }
+
+  .site-nav-link {
+    @apply rounded-full border border-transparent px-4 py-2 text-sm font-medium text-text-tertiary transition duration-200 hover:border-border hover:bg-white/[0.03] hover:text-text-primary;
+  }
+
+  .site-nav-link-active {
+    @apply border-border-accent bg-brand-primary/10 text-text-primary shadow-glow;
+  }
+
+  .site-cta-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-brand-primary px-6 py-3 text-sm font-semibold text-text-inverse shadow-glow transition duration-200 hover:bg-brand-hover;
+  }
+
+  .site-cta-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-border px-6 py-3 text-sm font-semibold text-text-secondary transition duration-200 hover:border-border-strong hover:bg-white/[0.03] hover:text-text-primary;
+  }
+
+  .site-grid-overlay {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 80%);
+  }
+
+  .site-doc-sidebar-link {
+    @apply block rounded-md border border-transparent px-4 py-3 text-sm transition duration-200;
+  }
+
+  .site-doc-sidebar-link-active {
+    @apply border-border-accent text-text-primary shadow-glow;
+    background:
+      linear-gradient(90deg, rgba(45, 184, 110, 0.14), rgba(61, 214, 245, 0.04));
+  }
+
+  .site-doc-sidebar-link-idle {
+    @apply text-text-secondary hover:border-border hover:bg-white/[0.03] hover:text-text-primary;
+  }
+
+  .site-doc-header {
+    @apply rounded-lg border border-border bg-white/[0.02] p-6 md:p-8;
+    background:
+      linear-gradient(180deg, rgba(45, 184, 110, 0.07), transparent 34%),
+      linear-gradient(90deg, rgba(61, 214, 245, 0.04), transparent 40%),
+      rgba(21, 24, 33, 0.72);
+  }
+
+  .site-doc-rail-title {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary;
+  }
+
+  .site-doc-prose > :first-child {
+    @apply mt-0;
+  }
+
+  .site-doc-prose strong {
+    @apply font-semibold text-text-primary;
+  }
+
+  .site-doc-prose em {
+    @apply text-text-primary;
+  }
+
+  .site-doc-prose blockquote > :first-child,
+  .site-doc-prose li > :first-child,
+  .site-doc-prose td > :first-child,
+  .site-doc-prose th > :first-child {
+    @apply mt-0;
+  }
+
+  .site-doc-prose blockquote > :last-child,
+  .site-doc-prose li > :last-child,
+  .site-doc-prose td > :last-child,
+  .site-doc-prose th > :last-child {
+    @apply mb-0;
+  }
 }

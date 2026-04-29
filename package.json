@@ -4,20 +4,24 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run build:content && next build",
+    "build": "tsx scripts/prepare-build-content.ts && next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "sync:content": "tsx scripts/sync-content.ts",
     "build:manifests": "tsx scripts/build-manifests.ts",
     "build:content": "npm run sync:content && npm run build:manifests",
-    "verify:content": "tsx scripts/verify-content.ts"
+    "verify:content": "tsx scripts/verify-content.ts",
+    "test": "tsx --test tests/**/*.test.ts"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "^15.3.2",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

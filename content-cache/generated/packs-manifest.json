@@ -1,22 +1,167 @@
 [
   {
-    "id": "meeting-lab",
-    "title": "会议纪要助手",
-    "category": "会议与信息整理",
-    "summary": "packs 页最小样板，用于验证列表页与详情页。",
+    "id": "miniapp-lab",
+    "title": "微信小程序助手",
+    "category": "应用开发与快速原型",
+    "summary": "帮你把一个微信小程序想法快速压成可开工骨架。",
     "modes": [
       "solo",
       "team"
     ],
-    "doc": "docs/solutions/meeting-minutes.md",
-    "install": "packs/meeting-lab/INSTALL.md",
-    "download": "packs/meeting-lab/01-super-individual.zip",
+    "doc": "docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md",
+    "install": "packs/miniapp-lab/INSTALL.md",
+    "download": "packs/miniapp-lab/01-super-individual.zip",
     "status": "published",
     "featured": true,
     "order": 1,
     "tags": [
+      "miniapp",
+      "wechat",
+      "prototype"
+    ]
+  },
+  {
+    "id": "webdev-lab",
+    "title": "敏捷 Web 开发助手",
+    "category": "应用开发与快速原型",
+    "summary": "帮你把 Web 应用想法拆成页面、接口和第一版开发骨架。",
+    "modes": [
+      "solo",
+      "team"
+    ],
+    "doc": "docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md",
+    "install": "packs/webdev-lab/INSTALL.md",
+    "download": "packs/webdev-lab/01-super-individual.zip",
+    "status": "published",
+    "featured": true,
+    "order": 2,
+    "tags": [
+      "web",
+      "frontend",
+      "backend"
+    ]
+  },
+  {
+    "id": "meeting-lab",
+    "title": "会议纪要助手",
+    "category": "办公效率与知识整理",
+    "summary": "把会议输入快速整理成结构化纪要与跟进项。",
+    "modes": [
+      "solo"
+    ],
+    "doc": "docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md",
+    "install": "packs/meeting-lab/INSTALL.md",
+    "download": "packs/meeting-lab/01-super-individual.zip",
+    "status": "published",
+    "featured": false,
+    "order": 3,
+    "tags": [
       "meeting",
-      "minutes"
+      "notes",
+      "office"
+    ]
+  },
+  {
+    "id": "daily-report-lab",
+    "title": "项目日报助手",
+    "category": "办公效率与知识整理",
+    "summary": "把项目进度整理成日报、汇总与跟进输出。",
+    "modes": [
+      "solo"
+    ],
+    "doc": "docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md",
+    "install": "packs/daily-report-lab/INSTALL.md",
+    "download": "packs/daily-report-lab/01-super-individual.zip",
+    "status": "published",
+    "featured": false,
+    "order": 4,
+    "tags": [
+      "daily-report",
+      "project",
+      "office"
+    ]
+  },
+  {
+    "id": "summary-lab",
+    "title": "资料总结助手",
+    "category": "办公效率与知识整理",
+    "summary": "把散资料压缩成结构化总结和发送版输出。",
+    "modes": [
+      "solo"
+    ],
+    "doc": "docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md",
+    "install": "packs/summary-lab/INSTALL.md",
+    "download": "packs/summary-lab/01-super-individual.zip",
+    "status": "published",
+    "featured": false,
+    "order": 5,
+    "tags": [
+      "summary",
+      "knowledge",
+      "office"
+    ]
+  },
+  {
+    "id": "xhs-lab",
+    "title": "小红书内容助手",
+    "category": "内容创作与发布",
+    "summary": "帮你完成小红书选题、标题、正文和发布检查。",
+    "modes": [
+      "solo",
+      "team"
+    ],
+    "doc": "docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md",
+    "install": "packs/xhs-lab/INSTALL.md",
+    "download": "packs/xhs-lab/01-super-individual.zip",
+    "status": "published",
+    "featured": true,
+    "order": 6,
+    "tags": [
+      "xhs",
+      "content",
+      "creator"
+    ]
+  },
+  {
+    "id": "wechat-writer-lab",
+    "title": "公众号写作助手",
+    "category": "内容创作与发布",
+    "summary": "帮你完成公众号文章选题、初稿、编辑与审校。",
+    "modes": [
+      "solo",
+      "team"
+    ],
+    "doc": "docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md",
+    "install": "packs/wechat-writer-lab/INSTALL.md",
+    "download": "packs/wechat-writer-lab/01-super-individual.zip",
+    "status": "published",
+    "featured": true,
+    "order": 7,
+    "tags": [
+      "wechat",
+      "article",
+      "content"
+    ]
+  },
+  {
+    "id": "ppt-lab",
+    "title": "PPT 助手",
+    "category": "内容创作与发布",
+    "summary": "帮你生成 PPT 结构、逐页要点与讲稿评审流程。",
+    "modes": [
+      "solo",
+      "team"
+    ],
+    "doc": "docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md",
+    "install": "packs/ppt-lab/INSTALL.md",
+    "download": "packs/ppt-lab/01-super-individual.zip",
+    "status": "published",
+    "featured": true,
+    "order": 8,
+    "tags": [
+      "ppt",
+      "slides",
+      "presentation"
     ]
   }
 ]

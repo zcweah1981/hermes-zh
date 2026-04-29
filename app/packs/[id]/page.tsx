@@ -1,12 +1,35 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { loadPacksManifest } from '@/lib/content/loaders/packs'
+import { buildCanonicalUrl } from '@/lib/seo/canonical'
+
+async function getPack(id: string) {
+  const packs = await loadPacksManifest()
+  return packs.find((item) => item.id === id)
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params
+  const pack = await getPack(id)
+
+  if (!pack) {
+    return {}
+  }
+
+  return {
+    title: `${pack.title} Pack`,
+    description: pack.summary ?? '',
+    alternates: {
+      canonical: buildCanonicalUrl(`/packs/${pack.id}`),
+    },
+  }
+}
 
 export default async function PackDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  const packs = await loadPacksManifest()
-  const pack = packs.find((item) => item.id === id)
+  const pack = await getPack(id)
 
   if (!pack) {
     notFound()

@@ -1,14 +1,524 @@
 [
   {
-    "sourcePath": "docs/01-start/overview.md",
+    "sourcePath": "docs/00-文档总览.md",
+    "slug": "/docs-overview",
+    "pageType": "module-overview",
+    "module": "overview"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/总览.md",
     "slug": "/start",
     "pageType": "module-overview",
     "module": "start"
   },
   {
-    "sourcePath": "docs/01-start/basic-usage.md",
-    "slug": "/start/basic-usage",
+    "sourcePath": "docs/01-从这开始/01-先跑起来/01-总览.md",
+    "slug": "/start/get-running",
+    "pageType": "module-overview",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/01-先跑起来/02-先准备运行环境.md",
+    "slug": "/start/get-running/prepare-environment",
     "pageType": "doc-page",
     "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/01-先跑起来/03-进入终端并连接服务器.md",
+    "slug": "/start/get-running/connect-terminal",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md",
+    "slug": "/start/get-running/install-hermes",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md",
+    "slug": "/start/get-running/first-hello",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/01-总览.md",
+    "slug": "/solutions",
+    "pageType": "module-overview",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "slug": "/solutions/content",
+    "pageType": "module-overview",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md",
+    "slug": "/solutions/xiaohongshu",
+    "pageType": "doc-page",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md",
+    "slug": "/solutions/wechat-writer",
+    "pageType": "doc-page",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md",
+    "slug": "/solutions/ppt",
+    "pageType": "doc-page",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/02-办公效率与知识整理/01-总览.md",
+    "slug": "/solutions/office",
+    "pageType": "module-overview",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md",
+    "slug": "/solutions/meeting",
+    "pageType": "doc-page",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md",
+    "slug": "/solutions/daily-report",
+    "pageType": "doc-page",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md",
+    "slug": "/solutions/summary",
+    "pageType": "doc-page",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "slug": "/solutions/dev",
+    "pageType": "module-overview",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md",
+    "slug": "/solutions/miniapp",
+    "pageType": "doc-page",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md",
+    "slug": "/solutions/webdev",
+    "pageType": "doc-page",
+    "module": "solutions"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/01-总览.md",
+    "slug": "/china",
+    "pageType": "module-overview",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/04-从OpenClaw过来/01-总览.md",
+    "slug": "/openclaw",
+    "pageType": "module-overview",
+    "module": "openclaw"
+  },
+  {
+    "sourcePath": "docs/05-遇到问题/01-总览.md",
+    "slug": "/issues",
+    "pageType": "module-overview",
+    "module": "issues"
+  },
+  {
+    "sourcePath": "docs/06-reference/01-总览.md",
+    "slug": "/reference",
+    "pageType": "module-overview",
+    "module": "reference"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/02-开始上手/01-总览.md",
+    "slug": "/start/getting-started",
+    "pageType": "module-overview",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md",
+    "slug": "/start/getting-started/basic-usage",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md",
+    "slug": "/start/getting-started/slash-commands-and-sessions",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md",
+    "slug": "/start/getting-started/curated-skills",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md",
+    "slug": "/start/getting-started/connect-message-platform",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "slug": "/start/personalize",
+    "pageType": "module-overview",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md",
+    "slug": "/start/personalize/soul",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md",
+    "slug": "/start/personalize/memory-basics",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/03-玩出花样/04-自定义 AI 大模型.md",
+    "slug": "/start/personalize/custom-model",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/03-玩出花样/05-让工具更顺手.md",
+    "slug": "/start/personalize/toolsets-and-workflow",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/03-玩出花样/06-让终端更顺眼.md",
+    "slug": "/start/personalize/skins-and-themes",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "slug": "/start/build",
+    "pageType": "module-overview",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/02-多个助手一起工作.md",
+    "slug": "/start/build/profiles",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/01-总览.md",
+    "slug": "/start/build/memory-providers",
+    "pageType": "module-overview",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/02-Holographic记忆.md",
+    "slug": "/start/build/memory-providers/holographic",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/03-Honcho记忆.md",
+    "slug": "/start/build/memory-providers/honcho",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/04-外部记忆对比.md",
+    "slug": "/start/build/memory-providers/compare",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/04-上下文系统/01-总览.md",
+    "slug": "/start/build/context-system",
+    "pageType": "module-overview",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/04-上下文系统/02-上下文文件.md",
+    "slug": "/start/build/context-system/context-files",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/04-上下文系统/03-上下文引用.md",
+    "slug": "/start/build/context-system/context-references",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md",
+    "slug": "/start/build/mcp-and-plugins",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md",
+    "slug": "/start/build/api-server",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/07-让 Hermes 自己自动跑.md",
+    "slug": "/start/build/automation",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/08-放进编辑器里用.md",
+    "slug": "/start/build/acp-ide",
+    "pageType": "doc-page",
+    "module": "start"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/01-国内部署/01-总览.md",
+    "slug": "/china/deploy",
+    "pageType": "module-overview",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md",
+    "slug": "/china/deploy/alicloud-lite-server",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md",
+    "slug": "/china/deploy/tencent-lite-server",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "slug": "/china/models",
+    "pageType": "module-overview",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "slug": "/china/models/alibaba-bailian-token-plan",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "slug": "/china/models/tencent-token-plan",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "slug": "/china/models/glm-coding-plan",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "slug": "/china/models/minimax-token-plan",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "slug": "/china/models/kimi-plan",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "slug": "/china/models/deepseek-metered-api",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "slug": "/china/models/openai-compatible-endpoint",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "slug": "/china/entry",
+    "pageType": "module-overview",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "slug": "/china/entry/dashboard",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "slug": "/china/entry/api-service-open-webui",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "slug": "/china/entry/cli",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "slug": "/china/entry/feishu",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md",
+    "slug": "/china/entry/wecom-ai-bot",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/03-国内入口/07-钉钉.md",
+    "slug": "/china/entry/dingtalk",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/03-国内入口/08-个人微信.md",
+    "slug": "/china/entry/personal-wechat",
+    "pageType": "doc-page",
+    "module": "china"
+  },
+  {
+    "sourcePath": "docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md",
+    "slug": "/openclaw/relationship",
+    "pageType": "doc-page",
+    "module": "openclaw"
+  },
+  {
+    "sourcePath": "docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md",
+    "slug": "/openclaw/decision",
+    "pageType": "doc-page",
+    "module": "openclaw"
+  },
+  {
+    "sourcePath": "docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md",
+    "slug": "/openclaw/coexistence",
+    "pageType": "doc-page",
+    "module": "openclaw"
+  },
+  {
+    "sourcePath": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "slug": "/openclaw/migration-path",
+    "pageType": "doc-page",
+    "module": "openclaw"
+  },
+  {
+    "sourcePath": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "slug": "/openclaw/checklist",
+    "pageType": "doc-page",
+    "module": "openclaw"
+  },
+  {
+    "sourcePath": "docs/05-遇到问题/02-安装更新与环境问题.md",
+    "slug": "/issues/install-environment",
+    "pageType": "doc-page",
+    "module": "issues"
+  },
+  {
+    "sourcePath": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "slug": "/issues/provider-endpoint",
+    "pageType": "doc-page",
+    "module": "issues"
+  },
+  {
+    "sourcePath": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "slug": "/issues/cli-tui-session",
+    "pageType": "doc-page",
+    "module": "issues"
+  },
+  {
+    "sourcePath": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "slug": "/issues/gateway-messaging",
+    "pageType": "doc-page",
+    "module": "issues"
+  },
+  {
+    "sourcePath": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "slug": "/issues/tools-skills-mcp",
+    "pageType": "doc-page",
+    "module": "issues"
+  },
+  {
+    "sourcePath": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "slug": "/issues/config-profiles-environment",
+    "pageType": "doc-page",
+    "module": "issues"
+  },
+  {
+    "sourcePath": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "slug": "/issues/docker-nix-remote",
+    "pageType": "doc-page",
+    "module": "issues"
+  },
+  {
+    "sourcePath": "docs/06-reference/02-CLI 命令参考.md",
+    "slug": "/reference/cli-commands",
+    "pageType": "doc-page",
+    "module": "reference"
+  },
+  {
+    "sourcePath": "docs/06-reference/03-Slash Commands 参考.md",
+    "slug": "/reference/slash-commands",
+    "pageType": "doc-page",
+    "module": "reference"
+  },
+  {
+    "sourcePath": "docs/06-reference/04-Profile 命令参考.md",
+    "slug": "/reference/profile-commands",
+    "pageType": "doc-page",
+    "module": "reference"
+  },
+  {
+    "sourcePath": "docs/06-reference/05-环境变量参考.md",
+    "slug": "/reference/environment-variables",
+    "pageType": "doc-page",
+    "module": "reference"
+  },
+  {
+    "sourcePath": "docs/06-reference/06-Built-in Tools 参考.md",
+    "slug": "/reference/built-in-tools",
+    "pageType": "doc-page",
+    "module": "reference"
+  },
+  {
+    "sourcePath": "docs/06-reference/07-Toolsets 参考.md",
+    "slug": "/reference/toolsets",
+    "pageType": "doc-page",
+    "module": "reference"
+  },
+  {
+    "sourcePath": "docs/06-reference/08-MCP 配置参考.md",
+    "slug": "/reference/mcp-config",
+    "pageType": "doc-page",
+    "module": "reference"
+  },
+  {
+    "sourcePath": "docs/06-reference/09-内置 Skills 目录.md",
+    "slug": "/reference/bundled-skills",
+    "pageType": "doc-page",
+    "module": "reference"
+  },
+  {
+    "sourcePath": "docs/06-reference/10-可选 Skills 目录.md",
+    "slug": "/reference/optional-skills",
+    "pageType": "doc-page",
+    "module": "reference"
   }
 ]

@@ -5,5 +5,7 @@ coverage
 .env*
 content-cache/raw/*
 !content-cache/raw/.gitkeep
+.content-cache/
 tsconfig.tsbuildinfo
 npm-debug.log*
+.vercel

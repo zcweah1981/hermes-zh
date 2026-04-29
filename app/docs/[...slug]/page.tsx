@@ -1,45 +1,80 @@
-import Link from 'next/link'
+import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
+import { DocOutline, DocPrevNext } from '@/components/docs/doc-outline'
 import { DocSidebar } from '@/components/docs/doc-sidebar'
+import { MarkdownBody } from '@/components/docs/markdown-body'
 import { loadPagesManifest } from '@/lib/content/loaders/pages'
+import { toDocPath } from '@/lib/routing/docs-path'
+import { buildCanonicalUrl } from '@/lib/seo/canonical'
+
+async function getCurrentPage(slugParts?: string[]) {
+  const slug = `/${(slugParts ?? []).join('/')}`.replace(/\/$/, '') || '/'
+  const pages = await loadPagesManifest()
+  const page = pages.find((item) => toDocPath(item.slug) === `/docs${slug}` || toDocPath(item.slug) === slug)
+
+  return { pages, page }
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug?: string[] }> }): Promise<Metadata> {
+  const resolved = await params
+  const { page } = await getCurrentPage(resolved.slug)
+
+  if (!page) {
+    return {}
+  }
+
+  return {
+    title: page.title,
+    description: page.description,
+    alternates: {
+      canonical: buildCanonicalUrl(toDocPath(page.slug)),
+    },
+    openGraph: {
+      title: page.title,
+      description: page.description,
+      url: buildCanonicalUrl(toDocPath(page.slug)),
+      type: 'article',
+    },
+  }
+}
 
 export default async function DocsPage({ params }: { params: Promise<{ slug?: string[] }> }) {
   const resolved = await params
-  const slug = `/${(resolved.slug ?? []).join('/')}`.replace(/\/$/, '') || '/'
-  const pages = await loadPagesManifest()
-  const page = pages.find((item) => item.slug === slug || item.slug === `/docs${slug}`)
+  const { pages, page } = await getCurrentPage(resolved.slug)
 
   if (!page) {
     notFound()
   }
 
   return (
-    <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 lg:grid-cols-[260px_minmax(0,1fr)]">
+    <div className="mx-auto grid max-w-site-docs gap-8 px-6 py-10 xl:grid-cols-[260px_minmax(0,1fr)_260px]">
       <DocSidebar pages={pages} currentSlug={page.slug} />
-      <article className="rounded-3xl border border-white/10 bg-surface p-8">
-        <p className="text-xs uppercase tracking-[0.22em] text-accent">{page.module}</p>
-        <h1 className="mt-4 text-3xl font-black text-white">{page.title}</h1>
-        <p className="mt-3 max-w-3xl text-sm leading-7 text-muted">{page.description}</p>
 
-        <div className="mt-8 rounded-2xl border border-white/10 bg-black/20 p-5 text-sm leading-7 text-stone-300">
-          <p>这是文档详情页占位。</p>
-          <p>当前正文先来自 generated pages-manifest 样板，后续替换为 Markdown + frontmatter + headings 渲染。</p>
-          <p className="mt-3 text-muted">Source: {page.sourcePath}</p>
+      <article className="site-panel-docs overflow-hidden p-6 lg:p-8">
+        <div className="site-doc-header border-b border-white/8 pb-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">{page.module}</p>
+          <h1 className="mt-4 text-3xl font-black text-white lg:text-4xl">{page.title}</h1>
+          <p className="mt-4 max-w-3xl text-base leading-8 text-text-secondary">{page.description}</p>
+
+          <div className="mt-6 flex flex-wrap gap-3 text-xs text-text-tertiary">
+            <span className="site-meta-pill">状态：{page.status}</span>
+            <span className="site-meta-pill">更新：{page.updated || '未标注'}</span>
+            <span className="site-meta-pill">模块：{page.module}</span>
+            <a href={page.githubUrl} target="_blank" rel="noreferrer" className="site-meta-pill hover:border-border-strong hover:text-text-primary">
+              GitHub：{page.sourcePath}
+            </a>
+          </div>
         </div>
 
-        <div className="mt-8 flex flex-wrap gap-4 text-sm">
-          <Link href="/packs" className="rounded-xl border border-white/10 px-4 py-2 text-muted transition hover:bg-white/5 hover:text-white">
-            查看 Packs
-          </Link>
-          <a
-            href={page.githubUrl}
-            className="rounded-xl border border-white/10 px-4 py-2 text-muted transition hover:bg-white/5 hover:text-white"
-          >
-            查看 GitHub 原文
-          </a>
+        <div className="mt-10">
+          <MarkdownBody page={page} pages={pages} />
         </div>
+
+        <DocPrevNext page={page} pages={pages} />
       </article>
+
+      <DocOutline page={page} />
     </div>
   )
 }

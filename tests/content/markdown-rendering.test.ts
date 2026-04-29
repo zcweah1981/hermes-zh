@@ -1,0 +1,63 @@
+import test from 'node:test'
+import assert from 'node:assert/strict'
+
+import { parseHeadings } from '../../lib/content/parsers/headings'
+import { resolveMarkdownHref, resolveMarkdownImage } from '../../lib/content/markdown/link-resolver'
+import type { SitePage } from '../../lib/content/types'
+
+const page: SitePage = {
+  sourcePath: 'docs/05-遇到问题/02-安装更新与环境问题.md',
+  slug: '/issues/install-environment',
+  title: '02-安装 / 更新 / 环境问题',
+  module: 'issues',
+  section: 'install-environment',
+  description: '',
+  order: 73,
+  status: 'published',
+  updated: '2026-04-28',
+  sourceType: 'original',
+  navGroup: '05-遇到问题',
+  pageType: 'doc-page',
+  headings: [],
+  body: '',
+  githubUrl: 'https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/site-content-anchor/docs/05-遇到问题/02-安装更新与环境问题.md',
+}
+
+const linkedPage: SitePage = {
+  ...page,
+  sourcePath: 'docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md',
+  slug: '/issues/model-provider-endpoint',
+  title: '03-模型 Provider 与自定义 endpoint 问题',
+}
+
+test('parseHeadings keeps Chinese heading ids aligned with markdown renderer', () => {
+  const headings = parseHeadings('# 标题\n\n## ⚡ 先按症状选路\n\n### 01｜执行就报 `hermes: command not found`')
+
+  assert.deepEqual(headings, [
+    { depth: 1, text: '标题', id: '标题' },
+    { depth: 2, text: '⚡ 先按症状选路', id: '先按症状选路' },
+    { depth: 3, text: '01｜执行就报 `hermes: command not found`', id: '01执行就报-hermes-command-not-found' },
+  ])
+})
+
+test('resolveMarkdownHref maps relative markdown links to docs routes', () => {
+  const href = resolveMarkdownHref('<./03-模型%20Provider%20与自定义%20endpoint%20问题.md>', page, [page, linkedPage])
+  assert.equal(href, '/docs/issues/model-provider-endpoint')
+})
+
+test('resolveMarkdownHref preserves local anchors on internal doc links', () => {
+  const href = resolveMarkdownHref('./03-模型 Provider 与自定义 endpoint 问题.md#faq-base-url', page, [page, linkedPage])
+  assert.equal(href, '/docs/issues/model-provider-endpoint#faq-base-url')
+})
+
+test('resolveMarkdownImage maps relative assets to raw github urls', () => {
+  const src = resolveMarkdownImage('../../assets/solution-miniapp-3-layer-map-v7.png', {
+    ...page,
+    sourcePath: 'docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md',
+  })
+
+  assert.equal(
+    src,
+    'https://raw.githubusercontent.com/zcweah1981/awesome-hermes-agent-zh/site-content-anchor/docs/assets/solution-miniapp-3-layer-map-v7.png',
+  )
+})

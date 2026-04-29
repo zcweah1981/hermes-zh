@@ -30,7 +30,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 pb-20">
+      <div className="mx-auto flex max-w-site-marketing flex-col gap-8 px-6 pb-20">
         <SectionCard
           eyebrow="MVP scope"
           title="统一设计系统下的 Landing + Docs 双模式"
@@ -41,10 +41,12 @@ export default function HomePage() {
               <Link
                 key={module.href}
                 href={module.href}
-                className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 transition hover:-translate-y-1 hover:bg-white/[0.04]"
+                className="site-section-card site-section-card-interactive p-5"
               >
-                <h3 className="text-lg font-semibold text-white">{module.title}</h3>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-primary">Entry</p>
+                <h3 className="mt-3 text-lg font-semibold text-white">{module.title}</h3>
                 <p className="mt-2 text-sm leading-7 text-muted">{module.description}</p>
+                <p className="mt-5 text-sm font-medium text-text-secondary">进入路径 →</p>
               </Link>
             ))}
           </div>

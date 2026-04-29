@@ -1,4 +1,5 @@
+import { joinSiteUrl } from '@/lib/site-config'
+
 export function buildCanonicalUrl(slug: string) {
-  const normalized = slug.startsWith('/') ? slug : `/${slug}`
-  return `https://hermes-zh.local${normalized}`
+  return joinSiteUrl(slug)
 }

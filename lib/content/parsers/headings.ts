@@ -1,3 +1,5 @@
+import { slugifyHeadingText } from '@/lib/content/markdown/slugify'
+
 export function parseHeadings(markdown: string) {
   return markdown
     .split('\n')
@@ -8,11 +10,7 @@ export function parseHeadings(markdown: string) {
       return {
         depth: hashes?.length ?? 1,
         text: cleaned,
-        id: cleaned
-          .toLowerCase()
-          .replace(/[^\p{Letter}\p{Number}\s-]/gu, '')
-          .trim()
-          .replace(/\s+/g, '-'),
+        id: slugifyHeadingText(cleaned),
       }
     })
 }
