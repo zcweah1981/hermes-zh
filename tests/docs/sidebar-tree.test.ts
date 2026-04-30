@@ -92,19 +92,35 @@ test('DocSidebar renders a recursive tree with active markers and an independent
   assert.match(globalsSource, /@screen xl\s*{[^}]*\.site-doc-sidebar-scroll\s*{[^}]*flex:\s*1 1 auto[^}]*overflow-y:\s*auto[^}]*overscroll-behavior:\s*contain/s)
 })
 
-test('DocSidebar supports VFIX6 collapsible top-level groups with current root expanded by default', () => {
+test('DocSidebar supports collapsible top-level groups with current root expanded by default', () => {
   assert.match(sidebarSource, /useMemo/)
   assert.match(sidebarSource, /useState/)
   assert.match(sidebarSource, /findRootNodeForSlug/)
+  assert.match(sidebarSource, /findExpandedAncestorIds/)
   assert.match(sidebarSource, /site-doc-sidebar-group-trigger/)
   assert.match(sidebarSource, /aria-expanded=\{expanded\}/)
   assert.match(sidebarSource, /aria-controls=\{groupId\}/)
-  assert.match(sidebarSource, /data-doc-sidebar-current-root=\{isCurrentRoot \? 'true' : undefined\}/)
+  assert.match(sidebarSource, /data-doc-sidebar-current-ancestor=\{containsCurrent \? 'true' : undefined\}/)
   assert.match(sidebarSource, /data-doc-sidebar-expanded=\{expanded \? 'true' : 'false'\}/)
-  assert.match(sidebarSource, /setExpandedRootIds/)
+  assert.match(sidebarSource, /setExpandedNodeIds/)
 
   assert.match(globalsSource, /\.site-doc-sidebar-group-trigger\s*{/)
   assert.match(globalsSource, /\.site-doc-sidebar-chevron\s*{/)
+  assert.match(globalsSource, /\[data-doc-sidebar-expanded="true"\]\s+\.site-doc-sidebar-chevron/)
+})
+
+test('DocSidebar supports VFIX7 first and second level accordions with current ancestor chain expanded', () => {
+  assert.match(sidebarSource, /findExpandedAncestorIds/)
+  assert.match(sidebarSource, /toggleExpandedNode/)
+  assert.match(sidebarSource, /<div data-doc-sidebar-level=\{level\}>/)
+  assert.match(sidebarSource, /data-doc-sidebar-accordion=\{level === 1 \? 'root' : 'section'\}/)
+  assert.match(sidebarSource, /data-doc-sidebar-current-ancestor=\{containsCurrent \? 'true' : undefined\}/)
+  assert.match(sidebarSource, /aria-expanded=\{expanded\}/)
+  assert.match(sidebarSource, /aria-controls=\{groupId\}/)
+  assert.match(sidebarSource, /setExpandedNodeIds/)
+
+  assert.match(globalsSource, /\.site-doc-sidebar-group-trigger-depth-2\s*{/)
+  assert.match(globalsSource, /\.site-doc-sidebar-group-trigger\[data-doc-sidebar-current-ancestor="true"\]/)
   assert.match(globalsSource, /\[data-doc-sidebar-expanded="true"\]\s+\.site-doc-sidebar-chevron/)
 })
 

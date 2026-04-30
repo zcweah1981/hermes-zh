@@ -136,25 +136,25 @@
 
   .site-hero-circuit {
     position: absolute;
-    width: 270px;
-    height: 270px;
+    width: clamp(160px, 18vw, 270px);
+    height: clamp(160px, 18vw, 270px);
     opacity: 0.42;
     background-image:
       linear-gradient(90deg, rgba(98,208,255,0.36) 1px, transparent 1px),
       linear-gradient(rgba(98,208,255,0.26) 1px, transparent 1px),
       radial-gradient(circle, rgba(98,208,255,0.75) 0 2px, transparent 2.5px);
-    background-size: 48px 48px, 48px 48px, 48px 48px;
+    background-size: clamp(34px, 3.4vw, 48px) clamp(34px, 3.4vw, 48px), clamp(34px, 3.4vw, 48px) clamp(34px, 3.4vw, 48px), clamp(34px, 3.4vw, 48px) clamp(34px, 3.4vw, 48px);
     mask-image: radial-gradient(circle at center, black, transparent 72%);
   }
 
   .site-hero-circuit-left {
-    left: -58px;
-    top: 104px;
+    left: clamp(-74px, -5vw, -42px);
+    top: clamp(76px, 9vw, 104px);
   }
 
   .site-hero-circuit-right {
-    right: -44px;
-    top: 54px;
+    right: clamp(-76px, -5vw, -42px);
+    top: clamp(42px, 5vw, 54px);
     transform: rotate(180deg);
   }
 
@@ -170,14 +170,14 @@
 
   .site-hero-orbit-line-a {
     bottom: clamp(54px, 7vw, 80px);
-    width: clamp(320px, 68vw, 780px);
-    height: clamp(88px, 16vw, 180px);
+    width: clamp(280px, 68vw, 780px);
+    height: clamp(76px, 16vw, 180px);
   }
 
   .site-hero-orbit-line-b {
     bottom: clamp(28px, 4vw, 40px);
-    width: clamp(420px, 86vw, 980px);
-    height: clamp(120px, 21vw, 240px);
+    width: clamp(340px, 86vw, 980px);
+    height: clamp(96px, 21vw, 240px);
     transform: translateX(-50%) rotate(7deg);
   }
 
@@ -190,25 +190,25 @@
   }
 
   .site-hero-planet-small {
-    bottom: 92px;
-    left: 12%;
-    width: 44px;
-    height: 44px;
+    bottom: clamp(72px, 7vw, 92px);
+    left: clamp(6%, 10vw, 12%);
+    width: clamp(32px, 3.5vw, 44px);
+    height: clamp(32px, 3.5vw, 44px);
   }
 
   .site-hero-planet-ring {
-    right: 12%;
-    bottom: 120px;
-    width: 76px;
-    height: 76px;
+    right: clamp(6%, 10vw, 12%);
+    bottom: clamp(88px, 8vw, 120px);
+    width: clamp(52px, 5.4vw, 76px);
+    height: clamp(52px, 5.4vw, 76px);
   }
 
   .site-hero-planet-ring::after {
     content: '';
     position: absolute;
     inset: 50% auto auto 50%;
-    width: 128px;
-    height: 30px;
+    width: clamp(88px, 9vw, 128px);
+    height: clamp(22px, 2.4vw, 30px);
     border: 1px solid rgba(98, 208, 255, 0.26);
     border-radius: 50%;
     transform: translate(-50%, -50%) rotate(-18deg);
@@ -217,9 +217,9 @@
   .site-hero-horizon {
     position: absolute;
     left: 50%;
-    bottom: -210px;
-    width: min(1080px, 120vw);
-    height: 330px;
+    bottom: clamp(-210px, -15vw, -142px);
+    width: clamp(420px, 112vw, 1080px);
+    height: clamp(210px, 26vw, 330px);
     transform: translateX(-50%);
     border-radius: 50% 50% 0 0;
     background:
@@ -234,40 +234,22 @@
       transform: translateY(-1rem);
     }
 
-    .site-hero-circuit {
-      width: 180px;
-      height: 180px;
-      background-size: 36px 36px, 36px 36px, 36px 36px;
-    }
-
     .site-hero-circuit-left {
-      left: -74px;
-      top: 86px;
+      left: clamp(-74px, -12vw, -42px);
+      top: clamp(72px, 11vw, 86px);
     }
 
     .site-hero-circuit-right {
-      right: -76px;
-      top: 46px;
+      right: clamp(-76px, -12vw, -42px);
+      top: clamp(42px, 7vw, 46px);
     }
 
     .site-hero-planet-small {
-      bottom: 76px;
       left: 6%;
-      width: 32px;
-      height: 32px;
     }
 
     .site-hero-planet-ring {
       right: 6%;
-      bottom: 94px;
-      width: 52px;
-      height: 52px;
-    }
-
-    .site-hero-horizon {
-      bottom: -142px;
-      width: 115vw;
-      height: 220px;
     }
   }
 
@@ -307,11 +289,6 @@
     pointer-events: none;
   }
 
-  .site-section-seam-light-to-blue {
-    height: clamp(64px, 7vw, 104px);
-    margin-top: -1px;
-    background: linear-gradient(180deg, #f8fafc 0%, #e6f0ff 28%, #0b1f3f 70%, #030812 100%);
-  }
 
   [data-home-section="primary-paths"] > .max-w-site-marketing {
     position: relative;
@@ -694,19 +671,21 @@
 
   .site-capability-connectors path {
     fill: none;
-    stroke: rgba(120, 224, 255, .95);
-    stroke-width: 3.4;
-    stroke-dasharray: 9 6;
-    marker-end: url(#site-capability-arrowhead);
-    filter: drop-shadow(0 0 12px rgba(39, 186, 255, .95));
+    stroke: rgba(120, 224, 255, .78);
+    stroke-width: clamp(2px, .22vw, 2.8px);
+    stroke-dasharray: 7 7;
+    marker-start: none;
+    marker-mid: none;
+    marker-end: none;
+    filter: drop-shadow(0 0 8px rgba(39, 186, 255, .58));
   }
 
-  .site-capability-connectors path[data-flow="core-to-left"] {
-    stroke: rgba(98, 208, 255, .88);
+  .site-capability-connectors path[data-flow="core-link-left"] {
+    stroke: rgba(98, 208, 255, .78);
   }
 
-  .site-capability-connectors path[data-flow="core-to-right"] {
-    stroke: rgba(168, 235, 255, .94);
+  .site-capability-connectors path[data-flow="core-link-right"] {
+    stroke: rgba(168, 235, 255, .84);
   }
 
   .site-capability-right {
@@ -1073,6 +1052,22 @@
   .site-doc-sidebar-group-trigger[data-doc-sidebar-current-root="true"] {
     border-color: rgba(98, 208, 255, .46);
     box-shadow: 0 0 22px rgba(91, 167, 255, .12);
+  }
+
+
+  .site-doc-sidebar-group-trigger-depth-2 {
+    min-height: 36px;
+    margin-left: .15rem;
+    padding: .48rem .62rem;
+    font-size: .78rem;
+    font-weight: 800;
+    background: rgba(91, 167, 255, .035);
+  }
+
+  .site-doc-sidebar-group-trigger[data-doc-sidebar-current-ancestor="true"] {
+    border-color: rgba(98, 208, 255, .34);
+    background: linear-gradient(90deg, rgba(91, 167, 255, .11), rgba(98, 208, 255, .04));
+    color: var(--site-text-primary);
   }
 
   .site-doc-sidebar-chevron {

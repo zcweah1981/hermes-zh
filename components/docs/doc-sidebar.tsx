@@ -1,13 +1,13 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, type RefObject } from 'react'
 
 import { buildDocSidebarTree, type DocSidebarTreeNode } from '@/lib/docs/sidebar-tree'
 import type { SitePage } from '@/lib/content/types'
 import { toDocPath } from '@/lib/routing/docs-path'
 
-function DocSidebarPageLink({ page, currentSlug, activeRef }: { page: SitePage; currentSlug: string; activeRef: React.RefObject<HTMLAnchorElement | null> }) {
+function DocSidebarPageLink({ page, currentSlug, activeRef }: { page: SitePage; currentSlug: string; activeRef: RefObject<HTMLAnchorElement | null> }) {
   const active = page.slug === currentSlug
 
   return (
@@ -36,19 +36,64 @@ function findRootNodeForSlug(nodes: DocSidebarTreeNode[], currentSlug: string) {
   return nodes.find((node) => nodeContainsSlug(node, currentSlug)) ?? nodes.find((node) => node.label === '00-文档总览') ?? nodes[0]
 }
 
-function DocSidebarNode({ node, currentSlug, activeRef }: { node: DocSidebarTreeNode; currentSlug: string; activeRef: React.RefObject<HTMLAnchorElement | null> }) {
+function findExpandedAncestorIds(nodes: DocSidebarTreeNode[], currentSlug: string): Set<string> {
+  const expanded = new Set<string>()
+
+  function visit(node: DocSidebarTreeNode): boolean {
+    const containsCurrent = nodeContainsSlug(node, currentSlug)
+
+    if (containsCurrent) {
+      expanded.add(node.id)
+    }
+
+    for (const child of node.children) {
+      if (visit(child)) {
+        expanded.add(node.id)
+      }
+    }
+
+    return containsCurrent
+  }
+
+  for (const node of nodes) {
+    visit(node)
+  }
+
+  if (expanded.size === 0) {
+    const fallback = nodes.find((node) => node.label === '00-文档总览') ?? nodes[0]
+    if (fallback) {
+      expanded.add(fallback.id)
+    }
+  }
+
+  return expanded
+}
+
+function safeGroupId(nodeId: string) {
+  return `doc-sidebar-group-${nodeId.replace(/[^\w\u4e00-\u9fff-]+/g, '-')}`
+}
+
+function DocSidebarNode({
+  node,
+  currentSlug,
+  activeRef,
+  expandedNodeIds,
+  onToggle,
+}: {
+  node: DocSidebarTreeNode
+  currentSlug: string
+  activeRef: RefObject<HTMLAnchorElement | null>
+  expandedNodeIds: Set<string>
+  onToggle: (nodeId: string) => void
+}) {
   const level = node.depth + 1
+  const containsCurrent = nodeContainsSlug(node, currentSlug)
+  const canAccordion = level <= 2 && (node.pages.length > 0 || node.children.length > 0)
+  const expanded = expandedNodeIds.has(node.id)
+  const groupId = safeGroupId(node.id)
   const childIndent = Math.min(node.depth + 1, 3) * 0.65
-
-  return (
-    <section data-doc-sidebar-level={level} className="site-doc-sidebar-node" aria-label={node.label}>
-      <div
-        className={`site-doc-sidebar-group-label site-doc-sidebar-group-label-depth-${Math.min(level, 3)}`}
-        style={node.depth > 0 ? { paddingLeft: `${childIndent}rem` } : undefined}
-      >
-        {node.label}
-      </div>
-
+  const content = (
+    <>
       {node.pages.length > 0 ? (
         <div className="mt-2 space-y-1.5" style={node.depth > 0 ? { paddingLeft: `${childIndent}rem` } : undefined}>
           {node.pages.map((page) => (
@@ -60,66 +105,49 @@ function DocSidebarNode({ node, currentSlug, activeRef }: { node: DocSidebarTree
       {node.children.length > 0 ? (
         <div className="mt-3 space-y-3 border-l border-white/10 pl-3">
           {node.children.map((child) => (
-            <DocSidebarNode key={child.id} node={child} currentSlug={currentSlug} activeRef={activeRef} />
+            <DocSidebarNode
+              key={child.id}
+              node={child}
+              currentSlug={currentSlug}
+              activeRef={activeRef}
+              expandedNodeIds={expandedNodeIds}
+              onToggle={onToggle}
+            />
           ))}
         </div>
       ) : null}
-    </section>
+    </>
   )
-}
-
-function DocSidebarRootNode({
-  node,
-  currentSlug,
-  activeRef,
-  expanded,
-  isCurrentRoot,
-  onToggle,
-}: {
-  node: DocSidebarTreeNode
-  currentSlug: string
-  activeRef: React.RefObject<HTMLAnchorElement | null>
-  expanded: boolean
-  isCurrentRoot: boolean
-  onToggle: (nodeId: string) => void
-}) {
-  const groupId = `doc-sidebar-group-${node.id.replace(/[^\w\u4e00-\u9fff-]+/g, '-')}`
 
   return (
-    <section data-doc-sidebar-level={1} className="site-doc-sidebar-node" aria-label={node.label}>
-      <button
-        type="button"
-        className="site-doc-sidebar-group-trigger"
-        aria-expanded={expanded}
-        aria-controls={groupId}
-        data-doc-sidebar-current-root={isCurrentRoot ? 'true' : undefined}
-        data-doc-sidebar-expanded={expanded ? 'true' : 'false'}
-        onClick={() => onToggle(node.id)}
-      >
-        <span className="site-doc-sidebar-chevron" aria-hidden="true" />
-        <span className="min-w-0 flex-1 truncate text-left">{node.label}</span>
-        <span className="site-doc-sidebar-count">{node.pageCount}</span>
-      </button>
-
-      {expanded ? (
-        <div id={groupId} className="mt-3 space-y-3">
-          {node.pages.length > 0 ? (
-            <div className="space-y-1.5">
-              {node.pages.map((page) => (
-                <DocSidebarPageLink key={page.slug} page={page} currentSlug={currentSlug} activeRef={activeRef} />
-              ))}
-            </div>
-          ) : null}
-
-          {node.children.length > 0 ? (
-            <div className="space-y-3 border-l border-white/10 pl-3">
-              {node.children.map((child) => (
-                <DocSidebarNode key={child.id} node={child} currentSlug={currentSlug} activeRef={activeRef} />
-              ))}
-            </div>
-          ) : null}
+    <section className="site-doc-sidebar-node" aria-label={node.label}>
+      {canAccordion ? (
+        <div data-doc-sidebar-level={level}>
+          <button
+            type="button"
+            className={`site-doc-sidebar-group-trigger site-doc-sidebar-group-trigger-depth-${Math.min(level, 3)}`}
+            aria-expanded={expanded}
+            aria-controls={groupId}
+            data-doc-sidebar-accordion={level === 1 ? 'root' : 'section'}
+            data-doc-sidebar-current-ancestor={containsCurrent ? 'true' : undefined}
+            data-doc-sidebar-expanded={expanded ? 'true' : 'false'}
+            onClick={() => onToggle(node.id)}
+          >
+            <span className="site-doc-sidebar-chevron" aria-hidden="true" />
+            <span className="min-w-0 flex-1 truncate text-left">{node.label}</span>
+            <span className="site-doc-sidebar-count">{node.pageCount}</span>
+          </button>
         </div>
-      ) : null}
+      ) : (
+        <div
+          className={`site-doc-sidebar-group-label site-doc-sidebar-group-label-depth-${Math.min(level, 3)}`}
+          style={node.depth > 0 ? { paddingLeft: `${childIndent}rem` } : undefined}
+        >
+          {node.label}
+        </div>
+      )}
+
+      {canAccordion ? (expanded ? <div id={groupId} className="mt-3 space-y-3">{content}</div> : null) : content}
     </section>
   )
 }
@@ -127,23 +155,20 @@ function DocSidebarRootNode({
 export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentSlug: string }) {
   const sidebarTree = useMemo(() => buildDocSidebarTree(pages), [pages])
   const currentRoot = useMemo(() => findRootNodeForSlug(sidebarTree, currentSlug), [sidebarTree, currentSlug])
-  const [expandedRootIds, setExpandedRootIds] = useState<Set<string>>(() => new Set(currentRoot ? [currentRoot.id] : []))
+  const defaultExpandedNodeIds = useMemo(() => findExpandedAncestorIds(sidebarTree, currentSlug), [sidebarTree, currentSlug])
+  const [expandedNodeIds, setExpandedNodeIds] = useState<Set<string>>(defaultExpandedNodeIds)
   const scrollRef = useRef<HTMLDivElement | null>(null)
   const activeRef = useRef<HTMLAnchorElement | null>(null)
 
   useEffect(() => {
-    if (!currentRoot) {
-      return
-    }
-
-    setExpandedRootIds((previous) => {
-      if (previous.has(currentRoot.id)) {
-        return previous
+    setExpandedNodeIds((previous) => {
+      const next = new Set(previous)
+      for (const nodeId of defaultExpandedNodeIds) {
+        next.add(nodeId)
       }
-
-      return new Set([...previous, currentRoot.id])
+      return next
     })
-  }, [currentRoot])
+  }, [defaultExpandedNodeIds])
 
   useEffect(() => {
     const active = activeRef.current
@@ -156,10 +181,10 @@ export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentS
     const activeTop = active.offsetTop
     const targetTop = Math.max(activeTop - scroll.clientHeight * 0.36, 0)
     scroll.scrollTo({ top: targetTop, behavior: 'auto' })
-  }, [currentSlug, expandedRootIds])
+  }, [currentSlug, expandedNodeIds])
 
-  function toggleRootNode(nodeId: string) {
-    setExpandedRootIds((previous) => {
+  function toggleExpandedNode(nodeId: string) {
+    setExpandedNodeIds((previous) => {
       const next = new Set(previous)
 
       if (next.has(nodeId)) {
@@ -176,26 +201,20 @@ export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentS
     <aside className="site-panel-docs site-doc-sidebar-shell p-4 lg:p-5">
       <div className="site-doc-sidebar-heading border-b border-border pb-4">
         <p className="site-doc-rail-title">Docs navigation</p>
-        <p className="mt-2 text-sm leading-6 text-text-tertiary">按内容仓真实目录层级浏览文档，当前页面所属一级模块默认展开。</p>
+        <p className="mt-2 text-sm leading-6 text-text-tertiary">按内容仓真实目录层级浏览文档，当前页面所属一级与二级目录默认展开。</p>
       </div>
 
       <div ref={scrollRef} className="site-doc-sidebar-scroll mt-5 flex flex-col gap-4 pr-2" aria-label="文档目录滚动区域">
-        {sidebarTree.map((node) => {
-          const isCurrentRoot = node.id === currentRoot?.id
-          const expanded = isCurrentRoot || expandedRootIds.has(node.id)
-
-          return (
-            <DocSidebarRootNode
-              key={node.id}
-              node={node}
-              currentSlug={currentSlug}
-              activeRef={activeRef}
-              expanded={expanded}
-              isCurrentRoot={isCurrentRoot}
-              onToggle={toggleRootNode}
-            />
-          )
-        })}
+        {sidebarTree.map((node) => (
+          <DocSidebarNode
+            key={node.id}
+            node={node}
+            currentSlug={currentSlug}
+            activeRef={activeRef}
+            expandedNodeIds={expandedNodeIds}
+            onToggle={toggleExpandedNode}
+          />
+        ))}
       </div>
 
       <div className="site-doc-sidebar-scroll-hint" aria-hidden="true">

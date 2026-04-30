@@ -132,17 +132,12 @@ function CapabilityInfographic() {
       <div className="site-capability-circuit site-capability-circuit-left" />
       <div className="site-capability-circuit site-capability-circuit-right" />
       <svg className="site-capability-connectors" viewBox="0 0 1120 620" aria-hidden="true">
-        <defs>
-          <marker id="site-capability-arrowhead" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="strokeWidth">
-            <polygon points="1,1 9,5 1,9" fill="rgba(125, 220, 255, .92)" />
-          </marker>
-        </defs>
-        <path data-flow="core-to-left" data-target="learning-loop" d="M528 252 C486 252 460 185 392 185" />
-        <path data-flow="core-to-left" data-target="memory" d="M520 310 C478 310 454 310 392 310" />
-        <path data-flow="core-to-left" data-target="skill-evolution" d="M528 368 C486 368 460 435 392 435" />
-        <path data-flow="core-to-right" data-target="deploy" d="M592 252 C636 252 660 198 728 198" />
-        <path data-flow="core-to-right" data-target="autonomy-realtime" d="M600 310 C644 310 664 314 728 314" />
-        <path data-flow="core-to-right" data-target="mcp" d="M592 368 C636 368 660 430 728 430" />
+        <path data-flow="core-link-left" data-target="learning-loop" d="M528 252 C486 252 460 185 392 185" />
+        <path data-flow="core-link-left" data-target="memory" d="M520 310 C478 310 454 310 392 310" />
+        <path data-flow="core-link-left" data-target="skill-evolution" d="M528 368 C486 368 460 435 392 435" />
+        <path data-flow="core-link-right" data-target="deploy" d="M592 252 C636 252 660 198 728 198" />
+        <path data-flow="core-link-right" data-target="autonomy-realtime" d="M600 310 C644 310 664 314 728 314" />
+        <path data-flow="core-link-right" data-target="mcp" d="M592 368 C636 368 660 430 728 430" />
       </svg>
 
       <div className="site-capability-inner">
@@ -270,8 +265,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
-        <div className="site-section-seam-light-to-blue" aria-hidden="true" />
 
         <section data-home-section="evolving-assistant" className="relative overflow-hidden bg-[#030812]">
           <CapabilityInfographic />
