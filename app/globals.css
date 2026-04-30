@@ -230,6 +230,20 @@
     @apply border-sky-200/40 bg-white/[0.07] text-white;
   }
 
+  .site-infographic-shell {
+    overflow: hidden;
+    border-radius: 28px;
+    border: 1px solid rgba(91, 167, 255, 0.3);
+    background: #050b16;
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.38), 0 0 40px rgba(91, 167, 255, 0.18);
+  }
+
+  .site-infographic-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   .site-panel-docs {
     @apply rounded-lg border border-border shadow-none;
     background:

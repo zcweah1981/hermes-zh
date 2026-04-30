@@ -50,22 +50,16 @@ describe('R19 homepage structure', () => {
     assert.doesNotMatch(footerSource, /github\.com\/NousResearch\/hermes-agent|Hermes Agent 官方仓库|zcweah1981\/hermes-zh|独立站代码仓/)
   })
 
-  it('keeps the evolving assistant section as a concise self-evolving assistant explainer', () => {
+  it('uses the approved infographic crop in the evolving assistant section without duplicating its title text', () => {
     const sectionStart = homePageSource.indexOf('data-home-section="evolving-assistant"')
     const sectionEnd = homePageSource.indexOf('data-home-section="ready-made-solutions"')
     assert.ok(sectionStart > -1, 'evolving assistant section must exist')
     assert.ok(sectionEnd > sectionStart, 'evolving assistant section must sit before ready-made solutions')
 
     const sectionSource = homePageSource.slice(sectionStart, sectionEnd)
-    assert.match(sectionSource, /一个会自我进化的 AI 助手/)
-    assert.match(homePageSource, /Learning Loop/)
-    assert.match(homePageSource, /Memory/)
-    assert.match(homePageSource, /Automation/)
-    assert.match(homePageSource, /MCP/)
-    assert.match(homePageSource, /Hermes Agent/)
-    assert.match(homePageSource, /OpenClaw/)
-    assert.match(homePageSource, /Claude Code/)
-    assert.doesNotMatch(sectionSource, /自动从对话中提炼经验|无缝接入 6000\+ 外部应用|核心机制：让 AI 自己给自己造/)
+    assert.match(sectionSource, /hermes-capability-map-cropped\.jpg/)
+    assert.match(sectionSource, /site-infographic-shell/)
+    assert.doesNotMatch(sectionSource, /一个会自我进化的 AI 助手|核心机制：让 AI 自己给自己造/)
   })
 
   it('links homepage doc entries only to generated docs routes', () => {

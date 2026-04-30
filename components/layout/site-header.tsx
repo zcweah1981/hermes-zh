@@ -37,7 +37,7 @@ export function SiteHeader() {
               width={44}
               height={44}
               priority
-              className="h-11 w-11 rounded-lg border border-border-accent shadow-glow"
+              className="h-11 w-11 object-contain"
             />
             <div>
               <p className="text-sm font-semibold text-text-primary">Hermes Agent 中文站</p>

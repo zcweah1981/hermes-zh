@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 import { Hero } from '@/components/marketing/hero'
 import { SectionCard } from '@/components/ui/section-card'
@@ -44,35 +45,6 @@ const primaryPaths = [
   },
 ]
 
-const agentHighlights = [
-  {
-    label: 'Learning Loop',
-    title: '从经验沉淀 Skill',
-    description: '把反复验证过的做法沉淀成可复用技能，下一次不用从零开始。',
-  },
-  {
-    label: 'Memory',
-    title: '记住关键上下文',
-    description: '结合会话、偏好和技能记忆，让长期项目协作更连续。',
-  },
-  {
-    label: 'Automation',
-    title: '适合后台任务',
-    description: '低成本 VPS 即可承载 24/7 巡检、通知和自动化工作流。',
-  },
-  {
-    label: 'MCP',
-    title: '连接工具生态',
-    description: '通过内置工具与 MCP，把 GitHub、消息平台和外部应用接入流程。',
-  },
-]
-
-const comparisonCards = [
-  { name: 'Hermes Agent', point: '自改进学习循环 · 后台自主运行 · Skill 可沉淀' },
-  { name: 'OpenClaw', point: '配置即行为 · 按需启动 · Skill 多由人工维护' },
-  { name: 'Claude Code', point: '结对编程强 · 实时交互 · 更偏开发现场' },
-]
-
 const solutionCards = [
   { href: '/docs/solutions/content', title: '内容创作与发布', description: '小红书、公众号、PPT 等内容工作流。' },
   { href: '/docs/solutions/office', title: '办公效率与知识整理', description: '会议纪要、日报、资料总结等高频任务。' },
@@ -115,36 +87,16 @@ export default function HomePage() {
         <section data-home-section="evolving-assistant" className="relative overflow-hidden px-6 py-16 md:py-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(91,167,255,0.18),transparent_34%),radial-gradient(circle_at_70%_36%,rgba(130,80,255,0.13),transparent_30%)]" />
           <div className="relative mx-auto max-w-site-marketing">
-            <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-primary">一个会自我进化的 AI 助手</p>
-                <h2 className="mt-4 font-serif text-3xl font-black leading-tight text-text-primary md:text-[44px]">把记忆、Skill、工具和后台任务接成一条闭环</h2>
-                <p className="mt-4 text-base leading-8 text-text-secondary">Hermes 的价值不是多聊几句，而是让常用工作流逐步变成可复用、可巡检、可接入外部系统的长期助手。</p>
-                <div className="mt-7 flex flex-wrap gap-3">
-                  <Link href="/docs/start/personalize/memory-basics" className="site-cta-primary px-5 py-3">了解记忆能力</Link>
-                  <Link href="/docs/reference/mcp-config" className="site-cta-secondary px-5 py-3">查看 MCP 配置</Link>
-                </div>
-              </div>
-
-              <div className="rounded-[28px] border border-border-strong bg-[#071426]/88 p-5 shadow-xl shadow-blue-950/30">
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {agentHighlights.map((item) => (
-                    <div key={item.label} className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-primary">{item.label}</p>
-                      <h3 className="mt-3 text-lg font-bold text-text-primary">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-7 text-text-secondary">{item.description}</p>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-5 grid gap-3 lg:grid-cols-3">
-                  {comparisonCards.map((item) => (
-                    <div key={item.name} className="rounded-2xl border border-sky-200/10 bg-sky-200/[0.03] p-4">
-                      <p className="text-sm font-bold text-text-primary">{item.name}</p>
-                      <p className="mt-2 text-xs leading-6 text-text-tertiary">{item.point}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            <div className="site-infographic-shell">
+              <Image
+                src="/assets/hermes-capability-map-cropped.jpg"
+                alt="Hermes Agent 核心机制、实战优势与主流工具差异信息图"
+                width={1280}
+                height={600}
+                sizes="(min-width: 1280px) 1180px, calc(100vw - 48px)"
+                className="site-infographic-image"
+                priority={false}
+              />
             </div>
           </div>
         </section>

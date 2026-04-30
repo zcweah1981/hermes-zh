@@ -28,7 +28,7 @@ export function SiteFooter() {
               alt="Hermes Agent 中文站 Logo"
               width={40}
               height={40}
-              className="h-10 w-10 rounded-lg border border-border-accent shadow-glow"
+              className="h-10 w-10 object-contain"
             />
             <div>
               <p className="text-sm font-semibold text-text-primary">Hermes Agent 中文站</p>
