@@ -39,6 +39,16 @@ function createHeading(level: 1 | 2 | 3 | 4 | 5 | 6, className: string) {
   }
 }
 
+function containsBlockImageFigure(children: ReactNode): boolean {
+  return React.Children.toArray(children).some((child) => {
+    if (!React.isValidElement<{ node?: { tagName?: string }; src?: unknown }>(child)) {
+      return false
+    }
+
+    return child.type === 'figure' || child.props.node?.tagName === 'img' || typeof child.props.src === 'string'
+  })
+}
+
 export function MarkdownBody({ page, pages }: { page: SitePage; pages: SitePage[] }) {
   return (
     <div className="site-doc-prose">
@@ -52,7 +62,13 @@ export function MarkdownBody({ page, pages }: { page: SitePage; pages: SitePage[
           h4: createHeading(4, 'mt-7 scroll-mt-28 text-lg font-semibold text-white'),
           h5: createHeading(5, 'mt-6 scroll-mt-28 text-base font-semibold text-white'),
           h6: createHeading(6, 'mt-6 scroll-mt-28 text-sm font-semibold uppercase tracking-[0.18em] text-text-secondary'),
-          p: ({ children }) => <p className="my-4 text-base leading-8 text-text-secondary">{children}</p>,
+          p: ({ children }) => {
+            if (containsBlockImageFigure(children)) {
+              return <>{children}</>
+            }
+
+            return <p className="my-4 text-base leading-8 text-text-secondary">{children}</p>
+          },
           a: ({ href = '', children }) => {
             const resolved = resolveMarkdownHref(href, page, pages)
             const external = resolved ? isExternalMarkdownHref(resolved) : false

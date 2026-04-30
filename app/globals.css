@@ -88,6 +88,18 @@
       rgba(10, 21, 39, 0.94);
   }
 
+  .site-doc-article {
+    border-color: rgba(155, 196, 255, 0.24);
+    background:
+      linear-gradient(180deg, rgba(91, 167, 255, 0.1), transparent 22%),
+      linear-gradient(90deg, rgba(98, 208, 255, 0.045), transparent 34%),
+      rgba(10, 21, 39, 0.98);
+  }
+
+  .site-doc-outline-shell {
+    opacity: 0.84;
+  }
+
   .site-section-card {
     @apply rounded-lg border shadow-soft transition duration-200;
     background:
@@ -128,6 +140,10 @@
 
   .site-nav-link-active {
     @apply border-border-accent bg-brand-primary/10 text-text-primary shadow-glow;
+  }
+
+  .site-icon-link {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-text-secondary transition duration-200 hover:border-border-strong hover:bg-white/[0.04] hover:text-text-primary;
   }
 
   .site-cta-primary {
@@ -183,7 +199,29 @@
   }
 
   .site-doc-sidebar-shell {
+    position: relative;
     height: fit-content;
+  }
+
+  .site-doc-sidebar-shell::before,
+  .site-doc-sidebar-shell::after {
+    content: '';
+    position: absolute;
+    right: 0.75rem;
+    left: 0.75rem;
+    z-index: 2;
+    height: 2.5rem;
+    pointer-events: none;
+  }
+
+  .site-doc-sidebar-shell::before {
+    top: 5.5rem;
+    background: linear-gradient(180deg, rgba(10, 21, 39, 0.98), rgba(10, 21, 39, 0));
+  }
+
+  .site-doc-sidebar-shell::after {
+    bottom: 2.8rem;
+    background: linear-gradient(0deg, rgba(10, 21, 39, 0.98), rgba(10, 21, 39, 0));
   }
 
   @screen xl {
@@ -203,6 +241,31 @@
 
   .site-doc-sidebar-scroll {
     min-height: 0;
+    scrollbar-gutter: stable;
+  }
+
+  .site-doc-sidebar-scroll-hint {
+    margin-top: 0.75rem;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    border-top: 1px solid rgba(125, 165, 220, 0.16);
+    padding-top: 0.75rem;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(98, 208, 255, 0.86);
+  }
+
+  .site-doc-sidebar-scroll-hint::after {
+    content: '↓';
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1;
+    text-shadow: 0 0 14px rgba(98, 208, 255, 0.55);
   }
 
   @screen xl {
@@ -289,6 +352,25 @@
 
   .site-doc-prose > :first-child {
     @apply mt-0;
+  }
+
+  .site-doc-prose {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .site-doc-prose a,
+  .site-doc-prose code,
+  .site-doc-prose td,
+  .site-doc-prose th,
+  .site-doc-sidebar-link,
+  .site-doc-header {
+    overflow-wrap: anywhere;
+  }
+
+  .site-doc-prose pre,
+  .site-doc-prose table {
+    max-width: 100%;
   }
 
   .site-doc-prose strong {

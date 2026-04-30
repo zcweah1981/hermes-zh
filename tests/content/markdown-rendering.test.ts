@@ -1,6 +1,10 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 
+import React from 'react'
+import { renderToStaticMarkup } from 'react-dom/server'
+
+import { MarkdownBody } from '../../components/docs/markdown-body'
 import { parseHeadings } from '../../lib/content/parsers/headings'
 import { resolveMarkdownHref, resolveMarkdownImage } from '../../lib/content/markdown/link-resolver'
 import type { SitePage } from '../../lib/content/types'
@@ -60,4 +64,21 @@ test('resolveMarkdownImage maps relative assets to raw github urls', () => {
     src,
     'https://raw.githubusercontent.com/zcweah1981/awesome-hermes-agent-zh/site-content-anchor/docs/assets/solution-miniapp-3-layer-map-v7.png',
   )
+})
+
+test('MarkdownBody renders standalone image figures outside paragraph tags', () => {
+  const html = renderToStaticMarkup(
+    React.createElement(MarkdownBody, {
+      page: {
+        ...page,
+        body: '正文前。\n\n![钉钉接入主线图](./assets/dingtalk-entry-structure-v3.png)\n\n正文后。',
+        sourcePath: 'docs/03-消息入口/07-钉钉.md',
+      },
+      pages: [page],
+    }),
+  )
+
+  assert.match(html, /<figure[^>]*>/)
+  assert.match(html, /<figcaption[^>]*>钉钉接入主线图<\/figcaption>/)
+  assert.doesNotMatch(html, /<p[^>]*>\s*<figure/)
 })

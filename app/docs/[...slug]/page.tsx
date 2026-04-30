@@ -51,7 +51,7 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
     <div className="site-doc-page-grid mx-auto grid max-w-site-docs gap-6 px-6 py-8 xl:grid-cols-[280px_minmax(0,1fr)_250px]">
       <DocSidebar pages={pages} currentSlug={page.slug} />
 
-      <article className="site-panel-docs overflow-hidden p-6 lg:p-8">
+      <article className="site-panel-docs site-doc-article overflow-hidden p-6 lg:p-8">
         <div className="site-doc-header border-b border-border pb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">{page.module}</p>
           <h1 className="mt-4 text-3xl font-black text-white lg:text-4xl">{page.title}</h1>

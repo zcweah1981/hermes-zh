@@ -7,7 +7,7 @@ export function DocOutline({ page }: { page: SitePage }) {
   const headings = page.headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3)
 
   return (
-    <aside className="site-panel-docs p-5 xl:sticky xl:top-24 xl:h-fit">
+    <aside className="site-panel-docs site-doc-outline-shell p-5 xl:sticky xl:top-24 xl:h-fit">
       <div className="border-b border-border pb-4">
         <p className="site-doc-rail-title">On this page</p>
         <p className="mt-2 text-sm leading-6 text-text-tertiary">正文目录、原文入口与相邻页面都在这里。</p>
