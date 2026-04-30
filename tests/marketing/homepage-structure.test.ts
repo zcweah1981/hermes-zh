@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, it } from 'node:test'
 
@@ -49,7 +49,7 @@ describe('R19 homepage structure', () => {
     assert.match(heroSource, /className=\"site-hero-title/)
     assert.match(globalsSource, /\.site-hero-content\s*{[^}]*transform:\s*translateY\(-1\.5rem\)/s)
     assert.match(globalsSource, /@media \(min-width:\s*768px\)\s*{[^}]*\.site-hero-content\s*{[^}]*transform:\s*translateY\(-2rem\)/s)
-    assert.match(globalsSource, /\.site-hero-title\s*{[^}]*overflow:\s*visible[^}]*padding-bottom:\s*0\.75rem[^}]*line-height:\s*1\.16/s)
+    assert.match(globalsSource, /\.site-hero-title\s*{[^}]*overflow:\s*visible[^}]*padding-bottom:\s*1\.25rem[^}]*line-height:\s*1\.28/s)
   })
 
   it('surfaces the GitHub truth-source entry in header hero and footer without exposing the private site repo', () => {
@@ -59,18 +59,21 @@ describe('R19 homepage structure', () => {
     assert.doesNotMatch(footerSource, /github\.com\/NousResearch\/hermes-agent|Hermes Agent 官方仓库|zcweah1981\/hermes-zh|独立站代码仓/)
   })
 
-  it('renders the evolving assistant section as a CSS infographic with readable title text, not a blurred bitmap', () => {
+  it('renders the evolving assistant section as the supplied 1:1 reference image without an extra module border', () => {
     const sectionStart = homePageSource.indexOf('data-home-section="evolving-assistant"')
     const sectionEnd = homePageSource.indexOf('data-home-section="ready-made-solutions"')
     assert.ok(sectionStart > -1, 'evolving assistant section must exist')
     assert.ok(sectionEnd > sectionStart, 'evolving assistant section must sit before ready-made solutions')
 
     const sectionSource = homePageSource.slice(sectionStart, sectionEnd)
+    const referenceAsset = join(repoRoot, 'public/assets/marketing/hermes-agent-capability-1to1.jpg')
+    assert.ok(existsSync(referenceAsset), '1:1 reference infographic asset must be committed')
     assert.match(homePageSource, /function CapabilityInfographic/)
-    assert.match(homePageSource, /site-capability-map/)
-    assert.match(homePageSource, /Hermes Agent：一个会自我进化的 AI 助手/)
-    assert.match(homePageSource, /核心机制：让 AI 自己给自己造“缰绳”/)
-    assert.doesNotMatch(sectionSource, /hermes-capability-map-cropped\.jpg|site-infographic-shell|<Image/)
+    assert.match(homePageSource, /site-capability-reference/)
+    assert.match(homePageSource, /hermes-agent-capability-1to1\.jpg/)
+    assert.match(globalsSource, /\.site-capability-reference\s*{[^}]*margin:\s*0[^}]*width:\s*100%[^}]*overflow:\s*hidden[^}]*background:\s*#030812/s)
+    assert.match(globalsSource, /\.site-capability-reference img\s*{[^}]*display:\s*block[^}]*width:\s*100%[^}]*height:\s*auto/s)
+    assert.doesNotMatch(sectionSource, /max-w-site-marketing|px-6|py-16|site-capability-map|site-infographic-shell|<Image/)
   })
 
   it('links homepage doc entries only to generated docs routes', () => {
