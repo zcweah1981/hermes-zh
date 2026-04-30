@@ -185,18 +185,24 @@ function CapabilityInfographic() {
 
         <aside className="site-capability-right" data-infographic-part="advantages">
           <h3>实战优势：低成本、全连接、高自主</h3>
-          {advantageCards.map((card, index) => {
-            const connectorNode = index === 0 ? 'right-top' : index === 1 ? 'right-middle' : undefined
-            return (
-              <article key={card.title} className="site-capability-panel site-capability-advantage-panel" data-connector-node={connectorNode}>
+          <article className="site-capability-panel site-capability-advantage-panel" data-connector-node="right-top">
+            <span className={`site-capability-round-icon site-capability-round-icon-${advantageCards[0].icon}`}><MiniIcon name={advantageCards[0].icon} /></span>
+            <div>
+              <h4>{advantageCards[0].title}</h4>
+              <p>{advantageCards[0].description}</p>
+            </div>
+          </article>
+          <div className="site-capability-right-middle-anchor" data-connector-node="right-middle">
+            {advantageCards.slice(1).map((card) => (
+              <article key={card.title} className="site-capability-panel site-capability-advantage-panel">
                 <span className={`site-capability-round-icon site-capability-round-icon-${card.icon}`}><MiniIcon name={card.icon} /></span>
                 <div>
                   <h4>{card.title}</h4>
                   <p>{card.description}</p>
                 </div>
               </article>
-            )
-          })}
+            ))}
+          </div>
           <article className="site-capability-panel site-capability-mcp-panel" data-infographic-part="mcp-network" data-connector-node="right-bottom">
             <div>
               <h4>MCP 协议连接万物</h4>

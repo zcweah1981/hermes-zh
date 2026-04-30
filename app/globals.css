@@ -693,6 +693,13 @@
     border-radius: 14px;
   }
 
+  .site-capability-right-middle-anchor {
+    display: grid;
+    gap: clamp(.7rem, 1vw, .95rem);
+    position: relative;
+    overflow: visible;
+  }
+
   .site-capability-round-icon {
     display: grid;
     width: clamp(2.8rem, 4vw, 4rem);

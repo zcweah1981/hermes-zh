@@ -1,17 +1,8 @@
 import Link from 'next/link'
 
 import type { SitePage } from '@/lib/content/types'
+import { getDocNavSummary } from '@/lib/docs/nav-summary'
 import { toDocPath } from '@/lib/routing/docs-path'
-
-function cleanCardDescription(description: string) {
-  return description
-    .replace(/\[([^\]]+)]\([^)]*\)/g, '$1')
-    .replace(/<[^>]+>/g, '')
-    .replace(/https?:\/\/\S+/g, '')
-    .replace(/%[0-9A-Fa-f]{2}/g, '')
-    .replace(/\s+/g, ' ')
-    .trim()
-}
 
 export function DocOutline({ page }: { page: SitePage }) {
   const headings = page.headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3)
@@ -71,7 +62,7 @@ export function DocPrevNext({ page, pages }: { page: SitePage; pages: SitePage[]
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-text-tertiary">上一篇</p>
             <h3 className="mt-3 text-lg font-semibold text-white">{prevPage.title}</h3>
-            <p className="mt-2 line-clamp-3 text-sm leading-6 text-text-tertiary">{cleanCardDescription(prevPage.description)}</p>
+            <p className="mt-2 line-clamp-3 text-sm leading-6 text-text-tertiary">{getDocNavSummary(prevPage)}</p>
           </div>
         </Link>
       ) : (
@@ -83,7 +74,7 @@ export function DocPrevNext({ page, pages }: { page: SitePage; pages: SitePage[]
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">下一篇</p>
             <h3 className="mt-3 text-lg font-semibold text-white">{nextPage.title}</h3>
-            <p className="mt-2 line-clamp-3 text-sm leading-6 text-text-tertiary">{cleanCardDescription(nextPage.description)}</p>
+            <p className="mt-2 line-clamp-3 text-sm leading-6 text-text-tertiary">{getDocNavSummary(nextPage)}</p>
           </div>
         </Link>
       ) : null}
