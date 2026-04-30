@@ -31,32 +31,6 @@ export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentS
     const activeTop = active.offsetTop
     const targetTop = Math.max(activeTop - scroll.clientHeight * 0.36, 0)
     scroll.scrollTo({ top: targetTop, behavior: 'auto' })
-
-    const baseWindowY = window.scrollY
-    const baseScrollTop = targetTop
-    let frame = 0
-
-    const syncSidebarWithPage = () => {
-      if (frame) {
-        window.cancelAnimationFrame(frame)
-      }
-
-      frame = window.requestAnimationFrame(() => {
-        const maxScrollTop = Math.max(scroll.scrollHeight - scroll.clientHeight, 0)
-        const nextTop = Math.min(Math.max(baseScrollTop + window.scrollY - baseWindowY, 0), maxScrollTop)
-        scroll.scrollTop = nextTop
-        frame = 0
-      })
-    }
-
-    window.addEventListener('scroll', syncSidebarWithPage, { passive: true })
-
-    return () => {
-      window.removeEventListener('scroll', syncSidebarWithPage)
-      if (frame) {
-        window.cancelAnimationFrame(frame)
-      }
-    }
   }, [currentSlug])
 
   return (
