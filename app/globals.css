@@ -677,7 +677,13 @@
     marker-start: none;
     marker-mid: none;
     marker-end: none;
+    vector-effect: non-scaling-stroke;
     filter: drop-shadow(0 0 8px rgba(39, 186, 255, .58));
+  }
+
+  .site-capability-connectors [data-connector-dot] {
+    fill: rgba(205, 246, 255, .92);
+    filter: drop-shadow(0 0 7px rgba(39, 186, 255, .72));
   }
 
   .site-capability-connectors path[data-flow="core-link-left"] {

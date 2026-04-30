@@ -132,12 +132,18 @@ function CapabilityInfographic() {
       <div className="site-capability-circuit site-capability-circuit-left" />
       <div className="site-capability-circuit site-capability-circuit-right" />
       <svg className="site-capability-connectors" viewBox="0 0 1120 620" aria-hidden="true">
-        <path data-flow="core-link-left" data-target="learning-loop" d="M528 252 C486 252 460 185 392 185" />
-        <path data-flow="core-link-left" data-target="memory" d="M520 310 C478 310 454 310 392 310" />
-        <path data-flow="core-link-left" data-target="skill-evolution" d="M528 368 C486 368 460 435 392 435" />
-        <path data-flow="core-link-right" data-target="deploy" d="M592 252 C636 252 660 198 728 198" />
-        <path data-flow="core-link-right" data-target="autonomy-realtime" d="M600 310 C644 310 664 314 728 314" />
-        <path data-flow="core-link-right" data-target="mcp" d="M592 368 C636 368 660 430 728 430" />
+        <path data-flow="core-link-left" data-anchor="top-left" data-target="learning-loop" d="M520 248 C482 236 454 184 392 184" />
+        <path data-flow="core-link-right" data-anchor="top-right" data-target="deploy" d="M600 248 C638 236 666 198 728 198" />
+        <path data-flow="core-link-left" data-anchor="middle-left" data-target="memory" d="M512 310 C474 310 452 310 392 310" />
+        <path data-flow="core-link-right" data-anchor="middle-right" data-target="autonomy-realtime" d="M608 310 C646 310 668 314 728 314" />
+        <path data-flow="core-link-left" data-anchor="bottom-left" data-target="skill-evolution" d="M520 372 C482 384 454 436 392 436" />
+        <path data-flow="core-link-right" data-anchor="bottom-right" data-target="mcp" d="M600 372 C638 384 666 430 728 430" />
+        <circle data-connector-dot="learning-loop" cx="392" cy="184" r="3.5" />
+        <circle data-connector-dot="deploy" cx="728" cy="198" r="3.5" />
+        <circle data-connector-dot="memory" cx="392" cy="310" r="3.5" />
+        <circle data-connector-dot="autonomy-realtime" cx="728" cy="314" r="3.5" />
+        <circle data-connector-dot="skill-evolution" cx="392" cy="436" r="3.5" />
+        <circle data-connector-dot="mcp" cx="728" cy="430" r="3.5" />
       </svg>
 
       <div className="site-capability-inner">

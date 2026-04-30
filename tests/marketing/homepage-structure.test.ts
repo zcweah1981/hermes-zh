@@ -121,6 +121,25 @@ describe('R19 homepage structure', () => {
     assert.match(globalsSource, /@media \(max-width:\s*900px\)\s*{[\s\S]*\.site-capability-connectors\s*{\s*display:\s*none/s)
   })
 
+  it('anchors VFIX8 connector lines to explicit top middle bottom target pairs without arrows', () => {
+    const expectedAnchors = ['top-left', 'top-right', 'middle-left', 'middle-right', 'bottom-left', 'bottom-right']
+    const expectedTargets = ['learning-loop', 'deploy', 'memory', 'autonomy-realtime', 'skill-evolution', 'mcp']
+
+    const pathMatches = [...homePageSource.matchAll(/<path\s+data-flow="core-link-(?:left|right)"[\s\S]*?\/>/g)].map((match) => match[0])
+    assert.equal(pathMatches.length, 6)
+    assert.deepEqual(pathMatches.map((path) => path.match(/data-anchor="([^"]+)"/)?.[1]), expectedAnchors)
+    assert.deepEqual(pathMatches.map((path) => path.match(/data-target="([^"]+)"/)?.[1]), expectedTargets)
+
+    for (const target of expectedTargets) {
+      assert.match(homePageSource, new RegExp(`data-connector-dot="${target}"`))
+    }
+
+    assert.doesNotMatch(homePageSource, /<marker|arrowhead/)
+    assert.doesNotMatch(globalsSource, /marker-end:\s*url\(/)
+    assert.match(globalsSource, /\.site-capability-connectors path\s*{[^}]*vector-effect:\s*non-scaling-stroke/s)
+    assert.match(globalsSource, /\.site-capability-connectors \[data-connector-dot\]\s*{/)
+  })
+
   it('keeps the hero background responsive across narrow viewports', () => {
     assert.match(globalsSource, /\.site-hero-fullscreen\s*{[^}]*overflow:\s*hidden/s)
     assert.match(globalsSource, /\.site-hero-orbit-line-a\s*{[^}]*width:\s*clamp\(280px,\s*68vw,\s*780px\)[^}]*height:\s*clamp\(76px,\s*16vw,\s*180px\)/s)

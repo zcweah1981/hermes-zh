@@ -3,11 +3,23 @@
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState, type RefObject } from 'react'
 
-import { buildDocSidebarTree, type DocSidebarTreeNode } from '@/lib/docs/sidebar-tree'
+import { buildDocSidebarTree, getOrderedSidebarItems, type DocSidebarTreeNode } from '@/lib/docs/sidebar-tree'
 import type { SitePage } from '@/lib/content/types'
 import { toDocPath } from '@/lib/routing/docs-path'
 
-function DocSidebarPageLink({ page, currentSlug, activeRef }: { page: SitePage; currentSlug: string; activeRef: RefObject<HTMLAnchorElement | null> }) {
+type ExpandedByParent = Record<string, string>
+
+function DocSidebarPageLink({
+  page,
+  currentSlug,
+  activeRef,
+  displayLabel,
+}: {
+  page: SitePage
+  currentSlug: string
+  activeRef: RefObject<HTMLAnchorElement | null>
+  displayLabel?: string
+}) {
   const active = page.slug === currentSlug
 
   return (
@@ -20,7 +32,7 @@ function DocSidebarPageLink({ page, currentSlug, activeRef }: { page: SitePage; 
       <div className="flex items-start gap-3">
         <span className={`mt-2 h-2 w-2 shrink-0 rounded-full ${active ? 'bg-brand-primary' : 'bg-accentual-info/70'}`} />
         <div className="min-w-0">
-          <div className="font-medium leading-6">{page.title}</div>
+          <div className="font-medium leading-6">{displayLabel ?? page.title}</div>
           <div className="mt-1 text-xs text-text-tertiary">{page.module}</div>
         </div>
       </div>
@@ -36,37 +48,54 @@ function findRootNodeForSlug(nodes: DocSidebarTreeNode[], currentSlug: string) {
   return nodes.find((node) => nodeContainsSlug(node, currentSlug)) ?? nodes.find((node) => node.label === '00-文档总览') ?? nodes[0]
 }
 
+function findCurrentAncestorChain(nodes: DocSidebarTreeNode[], currentSlug: string): DocSidebarTreeNode[] {
+  function visit(node: DocSidebarTreeNode, path: DocSidebarTreeNode[]): DocSidebarTreeNode[] | null {
+    const nextPath = [...path, node]
+
+    if (nodeContainsSlug(node, currentSlug)) {
+      const childPath = node.children.map((child) => visit(child, nextPath)).find(Boolean)
+      return childPath ?? nextPath
+    }
+
+    return null
+  }
+
+  const chain = nodes.map((node) => visit(node, [])).find(Boolean)
+
+  if (chain) {
+    return chain
+  }
+
+  const fallback = nodes.find((node) => node.label === '00-文档总览') ?? nodes[0]
+  return fallback ? [fallback] : []
+}
+
 function findExpandedAncestorIds(nodes: DocSidebarTreeNode[], currentSlug: string): Set<string> {
-  const expanded = new Set<string>()
+  return new Set(findCurrentAncestorChain(nodes, currentSlug).map((node) => node.id))
+}
 
-  function visit(node: DocSidebarTreeNode): boolean {
-    const containsCurrent = nodeContainsSlug(node, currentSlug)
+function buildDefaultExpandedByParent(nodes: DocSidebarTreeNode[], currentSlug: string): ExpandedByParent {
+  const chain = findCurrentAncestorChain(nodes, currentSlug)
+  const expanded: ExpandedByParent = {}
 
-    if (containsCurrent) {
-      expanded.add(node.id)
-    }
-
-    for (const child of node.children) {
-      if (visit(child)) {
-        expanded.add(node.id)
-      }
-    }
-
-    return containsCurrent
-  }
-
-  for (const node of nodes) {
-    visit(node)
-  }
-
-  if (expanded.size === 0) {
-    const fallback = nodes.find((node) => node.label === '00-文档总览') ?? nodes[0]
-    if (fallback) {
-      expanded.add(fallback.id)
-    }
-  }
+  chain.forEach((node, index) => {
+    const parentKey = index === 0 ? '__root__' : chain[index - 1].id
+    expanded[parentKey] = node.id
+  })
 
   return expanded
+}
+
+function collectDescendantIds(node: DocSidebarTreeNode): Set<string> {
+  const ids = new Set<string>()
+
+  function visit(current: DocSidebarTreeNode) {
+    ids.add(current.id)
+    current.children.forEach(visit)
+  }
+
+  node.children.forEach(visit)
+  return ids
 }
 
 function safeGroupId(nodeId: string) {
@@ -75,49 +104,47 @@ function safeGroupId(nodeId: string) {
 
 function DocSidebarNode({
   node,
+  parentId,
   currentSlug,
   activeRef,
-  expandedNodeIds,
+  expandedByParent,
   onToggle,
 }: {
   node: DocSidebarTreeNode
+  parentId: string
   currentSlug: string
   activeRef: RefObject<HTMLAnchorElement | null>
-  expandedNodeIds: Set<string>
-  onToggle: (nodeId: string) => void
+  expandedByParent: ExpandedByParent
+  onToggle: (node: DocSidebarTreeNode, parentId: string) => void
 }) {
   const level = node.depth + 1
   const containsCurrent = nodeContainsSlug(node, currentSlug)
-  const canAccordion = level <= 2 && (node.pages.length > 0 || node.children.length > 0)
-  const expanded = expandedNodeIds.has(node.id)
+  const orderedItems = getOrderedSidebarItems(node)
+  const canAccordion = orderedItems.length > 0
+  const parentKey = parentId || '__root__'
+  const expanded = expandedByParent[parentKey] === node.id
   const groupId = safeGroupId(node.id)
   const childIndent = Math.min(node.depth + 1, 3) * 0.65
-  const content = (
-    <>
-      {node.pages.length > 0 ? (
-        <div className="mt-2 space-y-1.5" style={node.depth > 0 ? { paddingLeft: `${childIndent}rem` } : undefined}>
-          {node.pages.map((page) => (
-            <DocSidebarPageLink key={page.slug} page={page} currentSlug={currentSlug} activeRef={activeRef} />
-          ))}
-        </div>
-      ) : null}
-
-      {node.children.length > 0 ? (
-        <div className="mt-3 space-y-3 border-l border-white/10 pl-3">
-          {node.children.map((child) => (
+  const content = orderedItems.length > 0 ? (
+    <div className="mt-3 space-y-3 border-l border-white/10 pl-3" style={node.depth > 0 ? { paddingLeft: `${childIndent}rem` } : undefined}>
+      {orderedItems.map((item) => (
+        <div key={item.key} data-doc-sidebar-item-label={item.label} data-doc-sidebar-item-type={item.type} data-doc-sidebar-parent-label={node.label}>
+          {item.type === 'page' ? (
+            <DocSidebarPageLink page={item.page} currentSlug={currentSlug} activeRef={activeRef} displayLabel={item.label} />
+          ) : (
             <DocSidebarNode
-              key={child.id}
-              node={child}
+              node={item.node}
+              parentId={node.id}
               currentSlug={currentSlug}
               activeRef={activeRef}
-              expandedNodeIds={expandedNodeIds}
+              expandedByParent={expandedByParent}
               onToggle={onToggle}
             />
-          ))}
+          )}
         </div>
-      ) : null}
-    </>
-  )
+      ))}
+    </div>
+  ) : null
 
   return (
     <section className="site-doc-sidebar-node" aria-label={node.label}>
@@ -129,9 +156,11 @@ function DocSidebarNode({
             aria-expanded={expanded}
             aria-controls={groupId}
             data-doc-sidebar-accordion={level === 1 ? 'root' : 'section'}
+            data-doc-sidebar-parent-id={parentId || '__root__'}
+            data-doc-sidebar-node-id={node.id}
             data-doc-sidebar-current-ancestor={containsCurrent ? 'true' : undefined}
             data-doc-sidebar-expanded={expanded ? 'true' : 'false'}
-            onClick={() => onToggle(node.id)}
+            onClick={() => onToggle(node, parentId || '__root__')}
           >
             <span className="site-doc-sidebar-chevron" aria-hidden="true" />
             <span className="min-w-0 flex-1 truncate text-left">{node.label}</span>
@@ -147,7 +176,7 @@ function DocSidebarNode({
         </div>
       )}
 
-      {canAccordion ? (expanded ? <div id={groupId} className="mt-3 space-y-3">{content}</div> : null) : content}
+      {canAccordion ? (expanded ? <div id={groupId}>{content}</div> : null) : content}
     </section>
   )
 }
@@ -156,19 +185,14 @@ export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentS
   const sidebarTree = useMemo(() => buildDocSidebarTree(pages), [pages])
   const currentRoot = useMemo(() => findRootNodeForSlug(sidebarTree, currentSlug), [sidebarTree, currentSlug])
   const defaultExpandedNodeIds = useMemo(() => findExpandedAncestorIds(sidebarTree, currentSlug), [sidebarTree, currentSlug])
-  const [expandedNodeIds, setExpandedNodeIds] = useState<Set<string>>(defaultExpandedNodeIds)
+  const defaultExpandedByParent = useMemo(() => buildDefaultExpandedByParent(sidebarTree, currentSlug), [sidebarTree, currentSlug])
+  const [expandedByParent, setExpandedByParent] = useState<ExpandedByParent>(defaultExpandedByParent)
   const scrollRef = useRef<HTMLDivElement | null>(null)
   const activeRef = useRef<HTMLAnchorElement | null>(null)
 
   useEffect(() => {
-    setExpandedNodeIds((previous) => {
-      const next = new Set(previous)
-      for (const nodeId of defaultExpandedNodeIds) {
-        next.add(nodeId)
-      }
-      return next
-    })
-  }, [defaultExpandedNodeIds])
+    setExpandedByParent(defaultExpandedByParent)
+  }, [defaultExpandedByParent])
 
   useEffect(() => {
     const active = activeRef.current
@@ -181,16 +205,23 @@ export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentS
     const activeTop = active.offsetTop
     const targetTop = Math.max(activeTop - scroll.clientHeight * 0.36, 0)
     scroll.scrollTo({ top: targetTop, behavior: 'auto' })
-  }, [currentSlug, expandedNodeIds])
+  }, [currentSlug, expandedByParent, defaultExpandedNodeIds])
 
-  function toggleExpandedNode(nodeId: string) {
-    setExpandedNodeIds((previous) => {
-      const next = new Set(previous)
+  function toggleExpandedNode(node: DocSidebarTreeNode, parentKey: string) {
+    setExpandedByParent((previous) => {
+      const next = { ...previous }
+      const descendantIds = collectDescendantIds(node)
 
-      if (next.has(nodeId)) {
-        next.delete(nodeId)
+      for (const key of Object.keys(next)) {
+        if (descendantIds.has(key)) {
+          delete next[key]
+        }
+      }
+
+      if (next[parentKey] === node.id) {
+        delete next[parentKey]
       } else {
-        next.add(nodeId)
+        next[parentKey] = node.id
       }
 
       return next
@@ -201,7 +232,8 @@ export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentS
     <aside className="site-panel-docs site-doc-sidebar-shell p-4 lg:p-5">
       <div className="site-doc-sidebar-heading border-b border-border pb-4">
         <p className="site-doc-rail-title">Docs navigation</p>
-        <p className="mt-2 text-sm leading-6 text-text-tertiary">按内容仓真实目录层级浏览文档，当前页面所属一级与二级目录默认展开。</p>
+        <p className="mt-2 text-sm leading-6 text-text-tertiary">按内容仓真实目录层级浏览文档；当前路径自动展开，同一层级只保留一个打开项。</p>
+        <p className="sr-only">当前一级目录：{currentRoot?.label}</p>
       </div>
 
       <div ref={scrollRef} className="site-doc-sidebar-scroll mt-5 flex flex-col gap-4 pr-2" aria-label="文档目录滚动区域">
@@ -209,9 +241,10 @@ export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentS
           <DocSidebarNode
             key={node.id}
             node={node}
+            parentId=""
             currentSlug={currentSlug}
             activeRef={activeRef}
-            expandedNodeIds={expandedNodeIds}
+            expandedByParent={expandedByParent}
             onToggle={toggleExpandedNode}
           />
         ))}

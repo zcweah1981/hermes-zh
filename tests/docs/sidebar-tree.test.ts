@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import test from 'node:test'
 
-import { buildDocSidebarTree } from '../../lib/docs/sidebar-tree'
+import { buildDocSidebarTree, getOrderedSidebarItems } from '../../lib/docs/sidebar-tree'
 import type { SitePage } from '../../lib/content/types'
 
 const repoRoot = process.cwd()
@@ -102,7 +102,7 @@ test('DocSidebar supports collapsible top-level groups with current root expande
   assert.match(sidebarSource, /aria-controls=\{groupId\}/)
   assert.match(sidebarSource, /data-doc-sidebar-current-ancestor=\{containsCurrent \? 'true' : undefined\}/)
   assert.match(sidebarSource, /data-doc-sidebar-expanded=\{expanded \? 'true' : 'false'\}/)
-  assert.match(sidebarSource, /setExpandedNodeIds/)
+  assert.match(sidebarSource, /setExpandedByParent/)
 
   assert.match(globalsSource, /\.site-doc-sidebar-group-trigger\s*{/)
   assert.match(globalsSource, /\.site-doc-sidebar-chevron\s*{/)
@@ -117,7 +117,7 @@ test('DocSidebar supports VFIX7 first and second level accordions with current a
   assert.match(sidebarSource, /data-doc-sidebar-current-ancestor=\{containsCurrent \? 'true' : undefined\}/)
   assert.match(sidebarSource, /aria-expanded=\{expanded\}/)
   assert.match(sidebarSource, /aria-controls=\{groupId\}/)
-  assert.match(sidebarSource, /setExpandedNodeIds/)
+  assert.match(sidebarSource, /setExpandedByParent/)
 
   assert.match(globalsSource, /\.site-doc-sidebar-group-trigger-depth-2\s*{/)
   assert.match(globalsSource, /\.site-doc-sidebar-group-trigger\[data-doc-sidebar-current-ancestor="true"\]/)
@@ -146,4 +146,45 @@ test('buildDocSidebarTree orders nested build docs by real content path prefixes
       '08-放进编辑器里用.md',
     ],
   )
+})
+
+test('getOrderedSidebarItems mixes pages and child folders by source path with overview first', () => {
+  const tree = buildDocSidebarTree(pagesManifest)
+  const start = tree.find((node) => node.label === '01-从这开始')
+  const build = start?.children.find((node) => node.label === '04-自己造东西')
+  assert.ok(build)
+
+  assert.deepEqual(
+    getOrderedSidebarItems(build).map((item) => item.label),
+    [
+      '01-总览',
+      '02-多个助手一起工作',
+      '03-接入外部记忆系统',
+      '04-上下文系统',
+      '05-把 Hermes 接进外部系统',
+      '06-把 Hermes 暴露成后端服务',
+      '07-让 Hermes 自己自动跑',
+      '08-放进编辑器里用',
+    ],
+  )
+
+  const externalMemory = build.children.find((node) => node.label === '03-接入外部记忆系统')
+  const contextSystem = build.children.find((node) => node.label === '04-上下文系统')
+  assert.ok(externalMemory)
+  assert.ok(contextSystem)
+  assert.equal(getOrderedSidebarItems(externalMemory)[0]?.label, '01-总览')
+  assert.equal(getOrderedSidebarItems(contextSystem)[0]?.label, '01-总览')
+})
+
+test('DocSidebar VFIX8 uses same-parent single-open accordion state and ordered mixed rendering', () => {
+  assert.match(sidebarSource, /type ExpandedByParent\s*=\s*Record<string, string>/)
+  assert.match(sidebarSource, /data-doc-sidebar-parent-id=\{parentId \|\| '__root__'\}/)
+  assert.match(sidebarSource, /data-doc-sidebar-node-id=\{node\.id\}/)
+  assert.match(sidebarSource, /buildDefaultExpandedByParent/)
+  assert.match(sidebarSource, /findCurrentAncestorChain/)
+  assert.match(sidebarSource, /toggleExpandedNode/)
+  assert.match(sidebarSource, /next\[parentKey\] = node\.id/)
+  assert.doesNotMatch(sidebarSource, /node\.pages\.map[\s\S]*node\.children\.map/)
+  assert.match(sidebarSource, /getOrderedSidebarItems\(node\)/)
+  assert.match(sidebarSource, /data-doc-sidebar-item-label=\{item\.label\}/)
 })

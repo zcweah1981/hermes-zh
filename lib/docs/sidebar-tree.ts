@@ -9,6 +9,10 @@ export interface DocSidebarTreeNode {
   pageCount: number
 }
 
+export type DocSidebarOrderedItem =
+  | { type: 'page'; key: string; label: string; orderKey: string; page: SitePage; isOverview: boolean }
+  | { type: 'node'; key: string; label: string; orderKey: string; node: DocSidebarTreeNode; isOverview: false }
+
 function normalizeSourcePath(sourcePath: string) {
   return sourcePath.replace(/^\.?\/?/, '').replace(/^docs\//, '')
 }
@@ -17,9 +21,21 @@ function stripMarkdownExtension(segment: string) {
   return segment.replace(/\.md$/i, '')
 }
 
-function isOverviewPage(page: SitePage) {
-  const fileName = normalizeSourcePath(page.sourcePath).split('/').pop() ?? ''
+function getFileName(sourcePath: string) {
+  const segments = normalizeSourcePath(sourcePath).split('/').filter(Boolean)
+  return segments[segments.length - 1] ?? ''
+}
+
+function isOverviewFileName(fileName: string) {
   return /^(?:00-文档总览|(?:01-)?总览)\.md$/i.test(fileName)
+}
+
+function isOverviewPage(page: SitePage) {
+  return isOverviewFileName(getFileName(page.sourcePath))
+}
+
+function getPageOrderKey(page: SitePage) {
+  return stripMarkdownExtension(getFileName(page.sourcePath))
 }
 
 function compareByOrderThenPath(a: SitePage, b: SitePage) {
@@ -76,6 +92,46 @@ function updatePageCounts(nodes: DocSidebarTreeNode[]) {
   return nodes
 }
 
+function compareOrderedItems(a: DocSidebarOrderedItem, b: DocSidebarOrderedItem) {
+  const overviewDelta = Number(b.isOverview) - Number(a.isOverview)
+
+  if (overviewDelta) {
+    return overviewDelta
+  }
+
+  const orderDelta = a.orderKey.localeCompare(b.orderKey, 'zh-Hans-CN', { numeric: true })
+
+  if (orderDelta) {
+    return orderDelta
+  }
+
+  const aPath = a.type === 'page' ? a.page.sourcePath : a.node.id
+  const bPath = b.type === 'page' ? b.page.sourcePath : b.node.id
+  return aPath.localeCompare(bPath, 'zh-Hans-CN', { numeric: true })
+}
+
+export function getOrderedSidebarItems(node: DocSidebarTreeNode): DocSidebarOrderedItem[] {
+  const pageItems: DocSidebarOrderedItem[] = node.pages.map((page) => ({
+    type: 'page',
+    key: page.slug,
+    label: getPageOrderKey(page),
+    orderKey: getPageOrderKey(page),
+    page,
+    isOverview: isOverviewPage(page),
+  }))
+
+  const childItems: DocSidebarOrderedItem[] = node.children.map((child) => ({
+    type: 'node',
+    key: child.id,
+    label: child.label,
+    orderKey: child.label,
+    node: child,
+    isOverview: false,
+  }))
+
+  return [...pageItems, ...childItems].sort(compareOrderedItems)
+}
+
 export function buildDocSidebarTree(pages: SitePage[]): DocSidebarTreeNode[] {
   const roots: DocSidebarTreeNode[] = []
 
@@ -87,7 +143,7 @@ export function buildDocSidebarTree(pages: SitePage[]): DocSidebarTreeNode[] {
       continue
     }
 
-    const fileName = segments.at(-1) ?? ''
+    const fileName = segments[segments.length - 1] ?? ''
     const directorySegments = segments.slice(0, -1)
     const rootLabel = directorySegments[0] ?? stripMarkdownExtension(fileName)
     let current = roots.find((node) => node.label === rootLabel)
