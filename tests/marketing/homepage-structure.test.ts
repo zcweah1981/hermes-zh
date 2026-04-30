@@ -8,6 +8,7 @@ const homePageSource = readFileSync(join(repoRoot, 'app/(marketing)/page.tsx'), 
 const heroSource = readFileSync(join(repoRoot, 'components/marketing/hero.tsx'), 'utf8')
 const headerSource = readFileSync(join(repoRoot, 'components/layout/site-header.tsx'), 'utf8')
 const footerSource = readFileSync(join(repoRoot, 'components/layout/site-footer.tsx'), 'utf8')
+const connectorSource = readFileSync(join(repoRoot, 'components/marketing/capability-connectors.tsx'), 'utf8')
 const globalsSource = readFileSync(join(repoRoot, 'app/globals.css'), 'utf8')
 const routesManifest = JSON.parse(readFileSync(join(repoRoot, 'content-cache/generated/routes-manifest.json'), 'utf8')) as Array<{
   slug: string
@@ -104,38 +105,43 @@ describe('R19 homepage structure', () => {
 
     assert.doesNotMatch(homePageSource, /<defs>[\s\S]*site-capability-arrowhead/)
     assert.doesNotMatch(homePageSource, /<marker[\s\S]*arrowhead/)
-    assert.doesNotMatch(globalsSource, /marker-end:\s*url\(#site-capability-arrowhead\)/)
+    assert.doesNotMatch(connectorSource, /<marker|arrowhead/)
+    assert.doesNotMatch(globalsSource, /marker-end:\s*url\(/)
     assert.match(globalsSource, /\.site-capability-connectors path\s*{[^}]*marker-start:\s*none[^}]*marker-mid:\s*none[^}]*marker-end:\s*none/s)
-
-    assert.equal([...homePageSource.matchAll(/data-flow="core-link-left"/g)].length, 3)
-    assert.equal([...homePageSource.matchAll(/data-flow="core-link-right"/g)].length, 3)
-    assert.doesNotMatch(homePageSource, /data-flow="core-to-left"/)
-    assert.doesNotMatch(homePageSource, /data-flow="core-to-right"/)
-
-    for (const target of ['learning-loop', 'memory', 'skill-evolution', 'deploy', 'autonomy-realtime', 'mcp']) {
-      assert.match(homePageSource, new RegExp(`data-target="${target}"`))
-    }
-
-    assert.match(globalsSource, /\.site-capability-connectors path\[data-flow="core-link-left"\]/)
-    assert.match(globalsSource, /\.site-capability-connectors path\[data-flow="core-link-right"\]/)
     assert.match(globalsSource, /@media \(max-width:\s*900px\)\s*{[\s\S]*\.site-capability-connectors\s*{\s*display:\s*none/s)
   })
 
-  it('anchors VFIX8 connector lines to explicit top middle bottom target pairs without arrows', () => {
-    const expectedAnchors = ['top-left', 'top-right', 'middle-left', 'middle-right', 'bottom-left', 'bottom-right']
-    const expectedTargets = ['learning-loop', 'deploy', 'memory', 'autonomy-realtime', 'skill-evolution', 'mcp']
+  it('uses DOM anchors for VFIX9 connector lines and removes internal public copy', () => {
+    const expectedNodes = ['core', 'left-top', 'left-middle', 'left-bottom', 'right-top', 'right-middle', 'right-bottom']
+    const expectedLines = ['top-left', 'top-right', 'middle-left', 'middle-right', 'bottom-left', 'bottom-right']
+    const expectedTargets = ['left-top', 'right-top', 'left-middle', 'right-middle', 'left-bottom', 'right-bottom']
 
-    const pathMatches = [...homePageSource.matchAll(/<path\s+data-flow="core-link-(?:left|right)"[\s\S]*?\/>/g)].map((match) => match[0])
-    assert.equal(pathMatches.length, 6)
-    assert.deepEqual(pathMatches.map((path) => path.match(/data-anchor="([^"]+)"/)?.[1]), expectedAnchors)
-    assert.deepEqual(pathMatches.map((path) => path.match(/data-target="([^"]+)"/)?.[1]), expectedTargets)
+    assert.match(connectorSource, /'use client'/)
+    assert.match(connectorSource, /ResizeObserver/)
+    assert.match(connectorSource, /getBoundingClientRect/)
+    assert.match(homePageSource, /CapabilityConnectorLayer/)
+    assert.match(homePageSource, /data-connector-scope="capability-infographic"/)
 
-    for (const target of expectedTargets) {
-      assert.match(homePageSource, new RegExp(`data-connector-dot="${target}"`))
+    assert.match(homePageSource, /data-connector-node/)
+    for (const node of expectedNodes) {
+      assert.match(homePageSource, new RegExp(`['\"]${node}['\"]`))
     }
 
-    assert.doesNotMatch(homePageSource, /<marker|arrowhead/)
-    assert.doesNotMatch(globalsSource, /marker-end:\s*url\(/)
+    for (const line of expectedLines) {
+      assert.match(connectorSource, new RegExp(`['\"]${line}['\"]`))
+    }
+    assert.match(connectorSource, /data-connector-line={line\.id}/)
+    for (const target of expectedTargets) {
+      assert.match(connectorSource, new RegExp(`target:\\s*['\"]${target}['\"]`))
+    }
+    assert.match(connectorSource, /data-target={line\.target}/)
+    assert.match(connectorSource, /data-connector-dot={line\.target}/)
+
+    assert.doesNotMatch(homePageSource, /viewBox="0 0 1120 620"/)
+    assert.doesNotMatch(homePageSource, /机制汇聚|机器汇聚|能力输出|同步口径|构建驱动的半自动同步/)
+    assert.match(homePageSource, /内容特点/)
+    assert.match(homePageSource, /按真实使用路径组织内容/)
+    assert.match(globalsSource, /\.site-capability-connectors\s*{[^}]*inset:\s*0[^}]*width:\s*100%[^}]*height:\s*100%/s)
     assert.match(globalsSource, /\.site-capability-connectors path\s*{[^}]*vector-effect:\s*non-scaling-stroke/s)
     assert.match(globalsSource, /\.site-capability-connectors \[data-connector-dot\]\s*{/)
   })

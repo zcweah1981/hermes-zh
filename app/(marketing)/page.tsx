@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import { Hero } from '@/components/marketing/hero'
+import { CapabilityConnectorLayer } from '@/components/marketing/capability-connectors'
 import { SectionCard } from '@/components/ui/section-card'
 
 const githubHref = 'https://github.com/zcweah1981/awesome-hermes-agent-zh'
@@ -127,24 +128,11 @@ function MiniIcon({ name }: { name: string }) {
 
 function CapabilityInfographic() {
   return (
-    <div className="site-capability-web" data-infographic-medium="dom-css-svg" data-infographic-source="prototype-html-css-vfix3" aria-label="Hermes Agent 核心机制、实战优势与主流工具差异信息图">
+    <div className="site-capability-web" data-infographic-medium="dom-css-svg" data-infographic-source="prototype-html-css-vfix3" data-connector-scope="capability-infographic" aria-label="Hermes Agent 核心机制、实战优势与主流工具差异信息图">
       <div className="site-capability-stars" />
       <div className="site-capability-circuit site-capability-circuit-left" />
       <div className="site-capability-circuit site-capability-circuit-right" />
-      <svg className="site-capability-connectors" viewBox="0 0 1120 620" aria-hidden="true">
-        <path data-flow="core-link-left" data-anchor="top-left" data-target="learning-loop" d="M520 248 C482 236 454 184 392 184" />
-        <path data-flow="core-link-right" data-anchor="top-right" data-target="deploy" d="M600 248 C638 236 666 198 728 198" />
-        <path data-flow="core-link-left" data-anchor="middle-left" data-target="memory" d="M512 310 C474 310 452 310 392 310" />
-        <path data-flow="core-link-right" data-anchor="middle-right" data-target="autonomy-realtime" d="M608 310 C646 310 668 314 728 314" />
-        <path data-flow="core-link-left" data-anchor="bottom-left" data-target="skill-evolution" d="M520 372 C482 384 454 436 392 436" />
-        <path data-flow="core-link-right" data-anchor="bottom-right" data-target="mcp" d="M600 372 C638 384 666 430 728 430" />
-        <circle data-connector-dot="learning-loop" cx="392" cy="184" r="3.5" />
-        <circle data-connector-dot="deploy" cx="728" cy="198" r="3.5" />
-        <circle data-connector-dot="memory" cx="392" cy="310" r="3.5" />
-        <circle data-connector-dot="autonomy-realtime" cx="728" cy="314" r="3.5" />
-        <circle data-connector-dot="skill-evolution" cx="392" cy="436" r="3.5" />
-        <circle data-connector-dot="mcp" cx="728" cy="430" r="3.5" />
-      </svg>
+      <CapabilityConnectorLayer />
 
       <div className="site-capability-inner">
         <header className="site-capability-title-block">
@@ -154,35 +142,37 @@ function CapabilityInfographic() {
 
         <div className="site-capability-layout">
         <div className="site-capability-left" data-infographic-part="mechanisms">
-          {mechanismCards.map((card) => (
-            <article key={card.title} className="site-capability-panel site-capability-mechanism-panel">
-              <div className="site-capability-panel-title">
-                <span className="site-capability-badge">{card.number}</span>
-                <div>
-                  <h3>{card.title}</h3>
-                  <p>({card.subtitle})</p>
+          {mechanismCards.map((card, index) => {
+            const connectorNode = index === 0 ? 'left-top' : index === 1 ? 'left-middle' : 'left-bottom'
+            return (
+              <article key={card.title} className="site-capability-panel site-capability-mechanism-panel" data-connector-node={connectorNode}>
+                <div className="site-capability-panel-title">
+                  <span className="site-capability-badge">{card.number}</span>
+                  <div>
+                    <h3>{card.title}</h3>
+                    <p>({card.subtitle})</p>
+                  </div>
                 </div>
-              </div>
-              <p className="site-capability-copy">{card.description}</p>
-              <div className="site-capability-flow" aria-label={card.steps.join(' 到 ')}>
-                {card.steps.map((step, index) => (
-                  <span key={step} className="site-capability-flow-step">
-                    <span className="site-capability-flow-icon"><MiniIcon name={index === 0 ? card.icon : index === 1 ? 'megaphone' : 'growth'} /></span>
-                    <small>{step}</small>
-                    {index < card.steps.length - 1 ? <i aria-hidden="true">→</i> : null}
-                  </span>
-                ))}
-              </div>
-            </article>
-          ))}
+                <p className="site-capability-copy">{card.description}</p>
+                <div className="site-capability-flow" aria-label={card.steps.join(' 到 ')}>
+                  {card.steps.map((step, index) => (
+                    <span key={step} className="site-capability-flow-step">
+                      <span className="site-capability-flow-icon"><MiniIcon name={index === 0 ? card.icon : index === 1 ? 'megaphone' : 'growth'} /></span>
+                      <small>{step}</small>
+                      {index < card.steps.length - 1 ? <i aria-hidden="true">→</i> : null}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            )
+          })}
         </div>
 
         <div className="site-capability-core" data-infographic-part="core-engine" aria-label="Hermes Agent 核心引擎">
-          <span className="site-capability-core-label site-capability-core-label-top">机制汇聚</span>
           <div className="site-capability-core-orbit site-capability-core-orbit-outer" />
           <div className="site-capability-core-orbit site-capability-core-orbit-middle" />
           <div className="site-capability-core-orbit site-capability-core-orbit-inner" />
-          <div className="site-capability-core-node">
+          <div className="site-capability-core-node" data-connector-node="core">
             <svg viewBox="0 0 96 96" aria-hidden="true">
               <path d="M48 14 70 28v40L48 82 26 68V28Z" fill="none" stroke="currentColor" strokeWidth="3" />
               <path d="M48 14v28M26 28l22 14 22-14M48 42v40M26 68l22-26 22 26" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -191,21 +181,23 @@ function CapabilityInfographic() {
             <strong>Hermes Agent</strong>
             <span>核心引擎</span>
           </div>
-          <span className="site-capability-core-label site-capability-core-label-bottom">能力输出</span>
         </div>
 
         <aside className="site-capability-right" data-infographic-part="advantages">
           <h3>实战优势：低成本、全连接、高自主</h3>
-          {advantageCards.map((card) => (
-            <article key={card.title} className="site-capability-panel site-capability-advantage-panel">
-              <span className={`site-capability-round-icon site-capability-round-icon-${card.icon}`}><MiniIcon name={card.icon} /></span>
-              <div>
-                <h4>{card.title}</h4>
-                <p>{card.description}</p>
-              </div>
-            </article>
-          ))}
-          <article className="site-capability-panel site-capability-mcp-panel" data-infographic-part="mcp-network">
+          {advantageCards.map((card, index) => {
+            const connectorNode = index === 0 ? 'right-top' : index === 1 ? 'right-middle' : undefined
+            return (
+              <article key={card.title} className="site-capability-panel site-capability-advantage-panel" data-connector-node={connectorNode}>
+                <span className={`site-capability-round-icon site-capability-round-icon-${card.icon}`}><MiniIcon name={card.icon} /></span>
+                <div>
+                  <h4>{card.title}</h4>
+                  <p>{card.description}</p>
+                </div>
+              </article>
+            )
+          })}
+          <article className="site-capability-panel site-capability-mcp-panel" data-infographic-part="mcp-network" data-connector-node="right-bottom">
             <div>
               <h4>MCP 协议连接万物</h4>
               <p>内置 40+ 工具，并通过 MCP 协议无缝接入 GitHub 等 6000+ 外部应用。</p>
@@ -323,7 +315,7 @@ export default function HomePage() {
             <SectionCard eyebrow="迁移参考" title="从 OpenClaw 过来的用户有独立路径" description="关系、共存、迁移与检查清单单独收口，避免混在新手路径里。" density="docs">
               <Link href="/docs/openclaw" className="site-cta-secondary mt-2 px-4 py-2">查看迁移路径</Link>
             </SectionCard>
-            <SectionCard eyebrow="同步口径" title="当前是构建驱动的半自动同步" description="内容仓是唯一来源；当站点重新构建/部署时，会读取锚点分支并生成页面、导航、搜索与 Packs。" density="docs">
+            <SectionCard eyebrow="内容特点" title="按真实使用路径组织内容" description="从快速跑通、场景方案、国内落地到参考手册，内容按用户决策顺序串起来，而不是堆成命令清单。" density="docs">
               <a href={githubHref} target="_blank" rel="noreferrer" className="site-cta-secondary mt-2 px-4 py-2">查看中文站官方仓库</a>
             </SectionCard>
           </div>

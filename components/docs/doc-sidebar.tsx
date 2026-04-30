@@ -232,7 +232,7 @@ export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentS
     <aside className="site-panel-docs site-doc-sidebar-shell p-4 lg:p-5">
       <div className="site-doc-sidebar-heading border-b border-border pb-4">
         <p className="site-doc-rail-title">Docs navigation</p>
-        <p className="mt-2 text-sm leading-6 text-text-tertiary">按内容仓真实目录层级浏览文档；当前路径自动展开，同一层级只保留一个打开项。</p>
+        <p className="mt-2 text-sm leading-6 text-text-tertiary">按章节浏览文档，当前路径会在目录中高亮。</p>
         <p className="sr-only">当前一级目录：{currentRoot?.label}</p>
       </div>
 
