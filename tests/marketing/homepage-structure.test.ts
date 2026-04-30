@@ -8,6 +8,7 @@ const homePageSource = readFileSync(join(repoRoot, 'app/(marketing)/page.tsx'), 
 const heroSource = readFileSync(join(repoRoot, 'components/marketing/hero.tsx'), 'utf8')
 const headerSource = readFileSync(join(repoRoot, 'components/layout/site-header.tsx'), 'utf8')
 const footerSource = readFileSync(join(repoRoot, 'components/layout/site-footer.tsx'), 'utf8')
+const globalsSource = readFileSync(join(repoRoot, 'app/globals.css'), 'utf8')
 const routesManifest = JSON.parse(readFileSync(join(repoRoot, 'content-cache/generated/routes-manifest.json'), 'utf8')) as Array<{
   slug: string
 }>
@@ -43,6 +44,14 @@ describe('R19 homepage structure', () => {
     assert.doesNotMatch(heroSource, /真相源可追溯|六条主线分流|深蓝科技感首页|首页先帮你判断|占位页/)
   })
 
+  it('keeps the hero title visually above center and protects the Agent g descender from clipping', () => {
+    assert.match(heroSource, /className=\"site-hero-content/)
+    assert.match(heroSource, /className=\"site-hero-title/)
+    assert.match(globalsSource, /\.site-hero-content\s*{[^}]*transform:\s*translateY\(-1\.5rem\)/s)
+    assert.match(globalsSource, /@media \(min-width:\s*768px\)\s*{[^}]*\.site-hero-content\s*{[^}]*transform:\s*translateY\(-2rem\)/s)
+    assert.match(globalsSource, /\.site-hero-title\s*{[^}]*overflow:\s*visible[^}]*padding-bottom:\s*0\.75rem[^}]*line-height:\s*1\.16/s)
+  })
+
   it('surfaces the GitHub truth-source entry in header hero and footer without exposing the private site repo', () => {
     assert.match(headerSource, new RegExp(githubUrl))
     assert.match(heroSource, new RegExp(githubUrl))
@@ -50,16 +59,18 @@ describe('R19 homepage structure', () => {
     assert.doesNotMatch(footerSource, /github\.com\/NousResearch\/hermes-agent|Hermes Agent 官方仓库|zcweah1981\/hermes-zh|独立站代码仓/)
   })
 
-  it('uses the approved infographic crop in the evolving assistant section without duplicating its title text', () => {
+  it('renders the evolving assistant section as a CSS infographic with readable title text, not a blurred bitmap', () => {
     const sectionStart = homePageSource.indexOf('data-home-section="evolving-assistant"')
     const sectionEnd = homePageSource.indexOf('data-home-section="ready-made-solutions"')
     assert.ok(sectionStart > -1, 'evolving assistant section must exist')
     assert.ok(sectionEnd > sectionStart, 'evolving assistant section must sit before ready-made solutions')
 
     const sectionSource = homePageSource.slice(sectionStart, sectionEnd)
-    assert.match(sectionSource, /hermes-capability-map-cropped\.jpg/)
-    assert.match(sectionSource, /site-infographic-shell/)
-    assert.doesNotMatch(sectionSource, /一个会自我进化的 AI 助手|核心机制：让 AI 自己给自己造/)
+    assert.match(homePageSource, /function CapabilityInfographic/)
+    assert.match(homePageSource, /site-capability-map/)
+    assert.match(homePageSource, /Hermes Agent：一个会自我进化的 AI 助手/)
+    assert.match(homePageSource, /核心机制：让 AI 自己给自己造“缰绳”/)
+    assert.doesNotMatch(sectionSource, /hermes-capability-map-cropped\.jpg|site-infographic-shell|<Image/)
   })
 
   it('links homepage doc entries only to generated docs routes', () => {

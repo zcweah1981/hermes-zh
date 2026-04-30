@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 import { Hero } from '@/components/marketing/hero'
 import { SectionCard } from '@/components/ui/section-card'
@@ -45,6 +44,43 @@ const primaryPaths = [
   },
 ]
 
+const mechanismCards = [
+  {
+    icon: '💬',
+    title: '闭环学习系统',
+    subtitle: 'Learning Loop',
+    description: '从对话与执行结果里提炼经验，再沉淀成可复用的 Skill。',
+    chips: ['对话数据', '提炼转化', 'Skill 文件'],
+  },
+  {
+    icon: '🧠',
+    title: '三层记忆架构',
+    subtitle: 'Three-Layer Memory',
+    description: '会话、长期偏好与技能记忆协同，按场景精准唤回背景。',
+    chips: ['会话记忆', '技能记忆', '精准背景'],
+  },
+  {
+    icon: '📈',
+    title: 'Skill 自我进化能力',
+    subtitle: 'Skill Self-Evolution',
+    description: '根据用户反馈和验收结果，持续修正工作流与操作步骤。',
+    chips: ['用户反馈', '自动优化', '持续进化'],
+  },
+]
+
+const advantageCards = [
+  { icon: '💸', title: '极低部署门槛', description: '一台轻量 VPS 也能搭起 24/7 在线的私人助手。' },
+  { icon: '🛰️', title: '自主后台', description: '适合无人值守巡检、定时任务和持续协作。' },
+  { icon: '⌨️', title: '实时交互', description: '保留人机对话入口，必要时随时接管与校准。' },
+  { icon: '🔌', title: 'MCP 协议连接万物', description: '内置工具与外部应用连接，逐步扩展到真实工作系统。' },
+]
+
+const comparisonCards = [
+  { name: 'Hermes Agent', icon: '✦', points: ['自改进学习循环', '24/7 后台自主', 'Skill 自动创建并优化'] },
+  { name: 'OpenClaw', icon: '🐾', points: ['配置即行为', '按需启动', '人工编写与维护'] },
+  { name: 'Claude Code', icon: '</>', points: ['交互式结对编程', '实时在线交互', '人工手写指令'] },
+]
+
 const solutionCards = [
   { href: '/docs/solutions/content', title: '内容创作与发布', description: '小红书、公众号、PPT 等内容工作流。' },
   { href: '/docs/solutions/office', title: '办公效率与知识整理', description: '会议纪要、日报、资料总结等高频任务。' },
@@ -56,6 +92,81 @@ const chinaCards = [
   { href: '/docs/china/models', title: '国内模型', description: '百炼、腾讯云、智谱、Kimi、DeepSeek 与兼容接口。' },
   { href: '/docs/china/entry', title: '国内入口', description: '网页控制台、API、CLI、飞书、企业微信、钉钉与个人微信。' },
 ]
+
+function CapabilityInfographic() {
+  return (
+    <div className="site-capability-map" aria-label="Hermes Agent 核心机制、实战优势与主流工具差异信息图">
+      <div className="site-capability-bg-grid" />
+      <div className="site-capability-header">
+        <p className="site-capability-kicker">Hermes Agent</p>
+        <h2>Hermes Agent：一个会自我进化的 AI 助手</h2>
+        <p>核心机制：让 AI 自己给自己造“缰绳”</p>
+      </div>
+
+      <div className="site-capability-body">
+        <div className="site-capability-column">
+          {mechanismCards.map((card, index) => (
+            <article key={card.title} className="site-capability-card site-capability-card-left">
+              <div className="site-capability-card-head">
+                <span className="site-capability-number">0{index + 1}</span>
+                <span className="site-capability-icon" aria-hidden="true">{card.icon}</span>
+                <div>
+                  <h3>{card.title}</h3>
+                  <p>{card.subtitle}</p>
+                </div>
+              </div>
+              <p className="site-capability-desc">{card.description}</p>
+              <div className="site-capability-chips">
+                {card.chips.map((chip) => <span key={chip}>{chip}</span>)}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="site-capability-core" aria-label="Hermes Agent 核心引擎">
+          <div className="site-capability-core-ring" />
+          <div className="site-capability-core-inner">
+            <span>✦</span>
+            <strong>Hermes Agent</strong>
+            <em>核心引擎</em>
+          </div>
+        </div>
+
+        <div className="site-capability-column site-capability-column-right">
+          <div className="site-capability-side-title">实战优势：低成本、全连接、高自主</div>
+          {advantageCards.map((card) => (
+            <article key={card.title} className="site-capability-card site-capability-card-right">
+              <span className="site-capability-icon" aria-hidden="true">{card.icon}</span>
+              <div>
+                <h3>{card.title}</h3>
+                <p>{card.description}</p>
+              </div>
+            </article>
+          ))}
+          <div className="site-capability-metrics">
+            <span>内置 40+ 工具</span>
+            <span>可接入 6000+ 外部应用</span>
+          </div>
+        </div>
+      </div>
+
+      <div className="site-capability-compare">
+        <h3>直观对比 Hermes 与主流工具的设计差异</h3>
+        <div className="site-capability-compare-grid">
+          {comparisonCards.map((card) => (
+            <article key={card.name} className="site-capability-compare-card">
+              <span aria-hidden="true">{card.icon}</span>
+              <strong>{card.name}</strong>
+              <ul>
+                {card.points.map((point) => <li key={point}>{point}</li>)}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function HomePage() {
   return (
@@ -87,17 +198,7 @@ export default function HomePage() {
         <section data-home-section="evolving-assistant" className="relative overflow-hidden px-6 py-16 md:py-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(91,167,255,0.18),transparent_34%),radial-gradient(circle_at_70%_36%,rgba(130,80,255,0.13),transparent_30%)]" />
           <div className="relative mx-auto max-w-site-marketing">
-            <div className="site-infographic-shell">
-              <Image
-                src="/assets/hermes-capability-map-cropped.jpg"
-                alt="Hermes Agent 核心机制、实战优势与主流工具差异信息图"
-                width={1280}
-                height={600}
-                sizes="(min-width: 1280px) 1180px, calc(100vw - 48px)"
-                className="site-infographic-image"
-                priority={false}
-              />
-            </div>
+            <CapabilityInfographic />
           </div>
         </section>
 

@@ -15,8 +15,8 @@ export function Hero() {
       <div className="site-hero-planet site-hero-planet-ring" />
       <div className="site-hero-horizon" />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-var(--site-header-height))] max-w-4xl flex-col items-center justify-center py-20 text-center md:py-24">
-        <h1 className="max-w-4xl bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text font-serif text-5xl font-black leading-[1.05] text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] md:text-[82px] md:tracking-[-0.055em]">
+      <div className="site-hero-content relative z-10 mx-auto flex min-h-[calc(100vh-var(--site-header-height))] max-w-4xl flex-col items-center justify-center py-20 text-center md:py-24">
+        <h1 className="site-hero-title max-w-4xl bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text font-serif text-5xl font-black text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] md:text-[82px] md:tracking-[-0.055em]">
           Hermes Agent 中文站
         </h1>
 
