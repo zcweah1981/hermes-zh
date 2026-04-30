@@ -5,6 +5,7 @@ import Markdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 
+import { CopyableCodeBlock } from '@/components/docs/copyable-code-block'
 import { isExternalMarkdownHref, resolveMarkdownHref, resolveMarkdownImage } from '@/lib/content/markdown/link-resolver'
 import { slugifyHeadingText } from '@/lib/content/markdown/slugify'
 import type { SitePage } from '@/lib/content/types'
@@ -122,11 +123,11 @@ export function MarkdownBody({ page, pages }: { page: SitePage; pages: SitePage[
 
             return <code className={className} {...props}>{children}</code>
           },
-          pre: ({ children }) => (
-            <pre className="my-6 overflow-x-auto rounded-2xl border border-white/10 bg-bg-code p-4 text-sm leading-7 text-stone-200">
-              {children}
-            </pre>
-          ),
+          pre: ({ children }) => {
+            const code = flattenText(children).replace(/\n$/, '')
+
+            return <CopyableCodeBlock code={code}>{children}</CopyableCodeBlock>
+          },
           table: ({ children }) => (
             <div className="my-6 overflow-x-auto rounded-2xl border border-white/10">
               <table className="min-w-full border-collapse text-left text-sm leading-7 text-text-secondary">{children}</table>

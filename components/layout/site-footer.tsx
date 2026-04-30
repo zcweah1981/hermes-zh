@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 const officialLinks = [
-  { href: 'https://github.com/NousResearch/hermes-agent', label: 'Hermes Agent 官方仓库' },
   { href: 'https://hermes-agent.nousresearch.com/docs', label: 'Hermes Agent 官方文档' },
   { href: 'https://nousresearch.com', label: 'Nous Research' },
 ]
@@ -14,8 +13,7 @@ const localLinks = [
 ]
 
 const sourceLinks = [
-  { href: 'https://github.com/zcweah1981/awesome-hermes-agent-zh', label: '中文内容仓' },
-  { href: 'https://github.com/zcweah1981/hermes-zh', label: '独立站代码仓' },
+  { href: 'https://github.com/zcweah1981/awesome-hermes-agent-zh', label: '中文站官方仓库' },
 ]
 
 export function SiteFooter() {
@@ -33,7 +31,7 @@ export function SiteFooter() {
             </div>
           </Link>
           <p className="mt-5 max-w-sm text-sm leading-7 text-text-secondary">
-            内容以 GitHub 中文内容仓为真相源，独立站负责更适合阅读、搜索和路径分流的网页体验。
+            本站内容以中文站官方仓库为来源，独立站负责更适合阅读、搜索和路径分流的网页体验。
           </p>
         </div>
 

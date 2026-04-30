@@ -33,22 +33,24 @@ describe('R19 homepage structure', () => {
     assert.doesNotMatch(homePageSource, /快速跳转|继续浏览/)
   })
 
-  it('keeps the hero as a centered single-narrative entry with three primary actions', () => {
+  it('keeps the hero focused on the site promise without internal design notes', () => {
     assert.match(heroSource, /data-home-section=["']hero["']/)
-    assert.match(heroSource, /text-center/)
-    assert.match(heroSource, /从这开始/)
+    assert.match(heroSource, /Hermes Agent 中文站/)
+    assert.match(heroSource, /一套面向中文用户的 AI Agent 全流程实践指南/)
+    assert.match(heroSource, /快速上手/)
     assert.match(heroSource, /浏览文档/)
     assert.match(heroSource, /GitHub/)
-    assert.doesNotMatch(heroSource, /lg:flex-row/)
+    assert.doesNotMatch(heroSource, /真相源可追溯|六条主线分流|深蓝科技感首页|首页先帮你判断|占位页/)
   })
 
-  it('surfaces the GitHub truth-source entry in header hero and footer', () => {
+  it('surfaces the GitHub truth-source entry in header hero and footer without exposing the private site repo', () => {
     assert.match(headerSource, new RegExp(githubUrl))
     assert.match(heroSource, new RegExp(githubUrl))
     assert.match(footerSource, new RegExp(githubUrl))
+    assert.doesNotMatch(footerSource, /github\.com\/NousResearch\/hermes-agent|Hermes Agent 官方仓库|zcweah1981\/hermes-zh|独立站代码仓/)
   })
 
-  it('keeps the evolving assistant section as a lightweight brand explainer', () => {
+  it('keeps the evolving assistant section as a concise self-evolving assistant explainer', () => {
     const sectionStart = homePageSource.indexOf('data-home-section="evolving-assistant"')
     const sectionEnd = homePageSource.indexOf('data-home-section="ready-made-solutions"')
     assert.ok(sectionStart > -1, 'evolving assistant section must exist')
@@ -56,15 +58,14 @@ describe('R19 homepage structure', () => {
 
     const sectionSource = homePageSource.slice(sectionStart, sectionEnd)
     assert.match(sectionSource, /一个会自我进化的 AI 助手/)
-    assert.match(homePageSource, /输入任务/)
-    assert.match(homePageSource, /执行与反馈/)
-    assert.match(homePageSource, /记住关键事实/)
-    assert.match(homePageSource, /下次更顺手/)
-    assert.match(homePageSource, /会记住，而不只是会回复/)
-    assert.match(homePageSource, /会连接，而不只是单点对话/)
-    assert.match(homePageSource, /会沉淀，而不只是生成一次/)
-    assert.match(homePageSource, /能落地，而不只是演示效果/)
-    assert.doesNotMatch(sectionSource, /MCP|Tools|Skills|webhook|token/)
+    assert.match(homePageSource, /Learning Loop/)
+    assert.match(homePageSource, /Memory/)
+    assert.match(homePageSource, /Automation/)
+    assert.match(homePageSource, /MCP/)
+    assert.match(homePageSource, /Hermes Agent/)
+    assert.match(homePageSource, /OpenClaw/)
+    assert.match(homePageSource, /Claude Code/)
+    assert.doesNotMatch(sectionSource, /自动从对话中提炼经验|无缝接入 6000\+ 外部应用|核心机制：让 AI 自己给自己造/)
   })
 
   it('links homepage doc entries only to generated docs routes', () => {

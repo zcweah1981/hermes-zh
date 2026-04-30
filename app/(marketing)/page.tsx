@@ -44,26 +44,34 @@ const primaryPaths = [
   },
 ]
 
-const evolvingPoints = [
+const agentHighlights = [
   {
-    title: '会记住，而不只是会回复',
-    description: '它会保留真正有用的上下文、偏好和项目事实，下次不用从零解释。',
+    label: 'Learning Loop',
+    title: '从经验沉淀 Skill',
+    description: '把反复验证过的做法沉淀成可复用技能，下一次不用从零开始。',
   },
   {
-    title: '会连接，而不只是单点对话',
-    description: '模型、工具和常用工作流可以逐步接进来，让助手从回答问题走向完成任务。',
+    label: 'Memory',
+    title: '记住关键上下文',
+    description: '结合会话、偏好和技能记忆，让长期项目协作更连续。',
   },
   {
-    title: '会沉淀，而不只是生成一次',
-    description: '重复出现的经验可以变成可复用方法，团队和个人都能少走回头路。',
+    label: 'Automation',
+    title: '适合后台任务',
+    description: '低成本 VPS 即可承载 24/7 巡检、通知和自动化工作流。',
   },
   {
-    title: '能落地，而不只是演示效果',
-    description: '先低成本跑起来，再按你的使用场景扩展，不需要一开始就重投入。',
+    label: 'MCP',
+    title: '连接工具生态',
+    description: '通过内置工具与 MCP，把 GitHub、消息平台和外部应用接入流程。',
   },
 ]
 
-const evolutionFlow = ['输入任务', '执行与反馈', '记住关键事实', '下次更顺手']
+const comparisonCards = [
+  { name: 'Hermes Agent', point: '自改进学习循环 · 后台自主运行 · Skill 可沉淀' },
+  { name: 'OpenClaw', point: '配置即行为 · 按需启动 · Skill 多由人工维护' },
+  { name: 'Claude Code', point: '结对编程强 · 实时交互 · 更偏开发现场' },
+]
 
 const solutionCards = [
   { href: '/docs/solutions/content', title: '内容创作与发布', description: '小红书、公众号、PPT 等内容工作流。' },
@@ -88,7 +96,7 @@ export default function HomePage() {
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600">六大主线入口</p>
               <h2 className="mt-4 font-serif text-3xl font-black leading-tight md:text-[44px]">先判断你是哪类用户，再进入对应路径</h2>
-              <p className="mt-4 text-base leading-8 text-slate-600">首页仍然首先是一张入口页。这里把快速上手、场景方案、国内落地、参考手册、问题排查和迁移参考一次性摆清楚。</p>
+              <p className="mt-4 text-base leading-8 text-slate-600">首页承担路径分流：快速上手、场景方案、国内落地、参考手册、问题排查和迁移参考都能从这里进入。</p>
             </div>
 
             <div className="mt-9 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -104,34 +112,35 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section data-home-section="evolving-assistant" className="bg-[#eef6ff] px-6 py-16 text-slate-950 md:py-20">
-          <div className="mx-auto grid max-w-site-marketing gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600">品牌解释</p>
-              <h2 className="mt-4 font-serif text-3xl font-black leading-tight md:text-[44px]">一个会自我进化的 AI 助手</h2>
-              <p className="mt-4 text-base leading-8 text-slate-600">Hermes 的强项不只是“能聊”。它会记住关键上下文，连接你常用的工具，把反复验证过的方法沉淀下来，让下一次协作更省力。</p>
-              <p className="mt-4 text-sm leading-7 text-slate-500">这一段只帮你快速理解 Hermes 的差异：先知道它为什么值得继续看，再进入后面的现成方案和落地路径。</p>
-              <Link href="/docs/start/personalize/soul" className="mt-7 inline-flex rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition hover:bg-blue-500">
-                了解如何让 Hermes 更像你
-              </Link>
-            </div>
+        <section data-home-section="evolving-assistant" className="relative overflow-hidden px-6 py-16 md:py-20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(91,167,255,0.18),transparent_34%),radial-gradient(circle_at_70%_36%,rgba(130,80,255,0.13),transparent_30%)]" />
+          <div className="relative mx-auto max-w-site-marketing">
+            <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-primary">一个会自我进化的 AI 助手</p>
+                <h2 className="mt-4 font-serif text-3xl font-black leading-tight text-text-primary md:text-[44px]">把记忆、Skill、工具和后台任务接成一条闭环</h2>
+                <p className="mt-4 text-base leading-8 text-text-secondary">Hermes 的价值不是多聊几句，而是让常用工作流逐步变成可复用、可巡检、可接入外部系统的长期助手。</p>
+                <div className="mt-7 flex flex-wrap gap-3">
+                  <Link href="/docs/start/personalize/memory-basics" className="site-cta-primary px-5 py-3">了解记忆能力</Link>
+                  <Link href="/docs/reference/mcp-config" className="site-cta-secondary px-5 py-3">查看 MCP 配置</Link>
+                </div>
+              </div>
 
-            <div className="rounded-[28px] border border-blue-200 bg-white/80 p-5 shadow-xl shadow-blue-900/10">
-              <div className="rounded-[22px] border border-blue-100 bg-gradient-to-br from-white to-blue-50 p-5">
-                <div className="grid gap-3 sm:grid-cols-4">
-                  {evolutionFlow.map((item, index) => (
-                    <div key={item} className="relative rounded-2xl border border-blue-100 bg-white px-3 py-3 text-center text-xs font-semibold text-blue-700">
-                      <span>{item}</span>
-                      {index < evolutionFlow.length - 1 ? <span className="absolute -right-2 top-1/2 hidden -translate-y-1/2 text-blue-300 sm:block">→</span> : null}
+              <div className="rounded-[28px] border border-border-strong bg-[#071426]/88 p-5 shadow-xl shadow-blue-950/30">
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {agentHighlights.map((item) => (
+                    <div key={item.label} className="rounded-2xl border border-white/10 bg-white/[0.035] p-5">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-primary">{item.label}</p>
+                      <h3 className="mt-3 text-lg font-bold text-text-primary">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-text-secondary">{item.description}</p>
                     </div>
                   ))}
                 </div>
-
-                <div className="mt-5 grid gap-4 sm:grid-cols-2">
-                  {evolvingPoints.map((item) => (
-                    <div key={item.title} className="rounded-2xl border border-blue-100 bg-white p-4">
-                      <h3 className="text-base font-bold text-slate-950">{item.title}</h3>
-                      <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
+                <div className="mt-5 grid gap-3 lg:grid-cols-3">
+                  {comparisonCards.map((item) => (
+                    <div key={item.name} className="rounded-2xl border border-sky-200/10 bg-sky-200/[0.03] p-4">
+                      <p className="text-sm font-bold text-text-primary">{item.name}</p>
+                      <p className="mt-2 text-xs leading-6 text-text-tertiary">{item.point}</p>
                     </div>
                   ))}
                 </div>
@@ -187,12 +196,11 @@ export default function HomePage() {
             <SectionCard eyebrow="迁移参考" title="从 OpenClaw 过来的用户有独立路径" description="关系、共存、迁移与检查清单单独收口，避免混在新手路径里。" density="docs">
               <Link href="/docs/openclaw" className="site-cta-secondary mt-2 px-4 py-2">查看迁移路径</Link>
             </SectionCard>
-            <SectionCard eyebrow="同步口径" title="当前是构建驱动的半自动同步" description="本站消费内容仓生成页面、导航、搜索与 Packs；webhook 级自动同步下一轮单独评估。" density="docs">
-              <a href={githubHref} target="_blank" rel="noreferrer" className="site-cta-secondary mt-2 px-4 py-2">追溯 GitHub 真相源</a>
+            <SectionCard eyebrow="同步口径" title="当前是构建驱动的半自动同步" description="内容仓是唯一来源；当站点重新构建/部署时，会读取锚点分支并生成页面、导航、搜索与 Packs。" density="docs">
+              <a href={githubHref} target="_blank" rel="noreferrer" className="site-cta-secondary mt-2 px-4 py-2">查看中文站官方仓库</a>
             </SectionCard>
           </div>
         </section>
-
       </main>
     </>
   )
