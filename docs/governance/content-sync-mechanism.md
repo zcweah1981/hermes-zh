@@ -40,7 +40,7 @@
 - `build:manifests`：通过 `resolveContentRoot()` 获取内容仓，生成页面、路由、packs、搜索索引等完整 manifest
 - `build:content`：顺序执行 `sync:content` + `build:manifests`，适合本地或 CI 显式刷新 generated manifest
 - `build`：执行 `prepare-build-content.ts` 后再 `next build`，是生产部署主入口
-- `resolveContentRoot()` 在缺少本地内容仓时可以按 `CONTENT_REPO_URL` / `CONTENT_REPO_BRANCH` 克隆 fallback 内容仓；`prepare-build-content.ts` 当前不克隆，只在可用内容仓与已生成 manifest 之间二选一
+- `prepare-build-content.ts` 会复用 `resolveContentRoot()`：优先读取本地内容仓；本地内容仓不可用时按 `CONTENT_REPO_URL` / `CONTENT_REPO_BRANCH` 克隆 fallback 内容仓；只有解析 fresh content root 失败且已有 generated manifest 时，才使用 checked-in manifest 兜底
 
 从运行口径看，真正决定站点拿到哪一版内容的核心动作仍是“构建/部署”。
 
@@ -161,7 +161,7 @@ npm run build
 关键检查点：
 - `content-cache/generated/build-meta.json` 中的 `sourceSha` 应对应内容仓当前 HEAD
 - `counts.pages` / `counts.routes` / `counts.packs` / `counts.search` 不应异常归零
-- 如果执行的是生产构建，构建日志应出现 `[content-build] refreshed manifests ...`；若出现 `using checked-in generated manifests`，说明本次只是 fallback 构建，需要单独评估内容新鲜度
+- 如果执行的是生产构建，构建日志应出现 `[content-build] refreshed manifests ...`；若出现 `using checked-in generated manifests`，说明 fresh content root 解析失败，本次只是 fallback 构建，需要单独评估内容新鲜度
 
 ## 10. 当前结论
 当前机制已经不是“手工复制内容”，但也还不是“内容仓一变线上立刻自动更新”。

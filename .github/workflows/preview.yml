@@ -30,7 +30,7 @@ jobs:
         with:
           repository: zcweah1981/awesome-hermes-agent-zh
           path: _content_repo
-          ref: site-content-anchor
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -87,7 +87,7 @@ jobs:
             | Commit | \`${context.sha.slice(0, 7)}\` |
             | Run | [View logs](${runUrl}) |
             | Artifact | \`preview-build-${pr.number}\` |
-            | Content | synced from \`awesome-hermes-agent-zh@site-content-anchor\` |
+            | Content | synced from \`awesome-hermes-agent-zh@main\` |
 
             > 🏗️ Current scope: build artifact only. Next step is wiring a real preview deploy target (Vercel / CF Pages).
             `

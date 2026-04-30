@@ -2,6 +2,7 @@ import { promises as fs } from 'node:fs'
 import path from 'node:path'
 
 import { buildRouteMap } from '../lib/content/resolvers/build-route-map'
+import { resolveContentRoot } from '../lib/content/sync/resolve-content-root'
 import { loadContentPages, loadPackEntries } from '../lib/content/sync/source-loader'
 import type { SitePack, SitePage } from '../lib/content/types'
 import { writeContentBuildMeta } from './lib/content-build-meta'
@@ -88,8 +89,22 @@ async function buildGeneratedContent(contentRoot: string) {
 }
 
 async function main() {
-  if (await hasUsableContentRoot(preferredContentRoot)) {
-    await buildGeneratedContent(preferredContentRoot)
+  try {
+    const contentRoot = await resolveContentRoot(preferredContentRoot)
+
+    if (await hasUsableContentRoot(contentRoot)) {
+      await buildGeneratedContent(contentRoot)
+      return
+    }
+  } catch (error) {
+    if (!(await hasGeneratedContent())) {
+      throw error
+    }
+
+    console.warn(
+      `[content-build] failed to resolve fresh content root from ${preferredContentRoot}; using checked-in generated manifests from ${generatedDir}`,
+    )
+    console.warn(error)
     return
   }
 

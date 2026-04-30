@@ -86,4 +86,6 @@ npm run verify:content
 但在做这一步之前，当前对外口径仍应保持：
 - “Hermes 中文站目前采用构建驱动的半自动同步；内容更新后需要由构建/部署动作把最新内容带到站点。”
 
-更多细节见：`docs/governance/content-sync-mechanism.md`
+更多细节见：
+- `docs/governance/content-sync-mechanism.md`
+- `docs/governance/auto-sync-upgrade-evaluation.md`

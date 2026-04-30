@@ -24,7 +24,7 @@ jobs:
         with:
           repository: zcweah1981/awesome-hermes-agent-zh
           path: _content_repo
-          ref: site-content-anchor
+          ref: main
 
       - name: Setup Node
         uses: actions/setup-node@v4
