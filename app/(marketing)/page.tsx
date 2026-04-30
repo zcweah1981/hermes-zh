@@ -90,9 +90,9 @@ const advantageCards = [
 ]
 
 const comparisonCards = [
-  { name: 'Hermes Agent', tag: '会自我进化的 AI 助手', points: ['能沉淀长期记忆', '能把经验变成 Skill', '适合 24/7 后台任务'] },
-  { name: 'OpenClaw', tag: '配置即行为', points: ['偏本地配置', '按需启动', '人工维护工作流'] },
-  { name: 'Claude Code', tag: '交互式编程伙伴', points: ['强在人机实时协作', '更依赖人持续在线', '后台自主较弱'] },
+  { name: 'Hermes Agent', tag: '自改进学习循环', tone: 'hermes', icon: '✦', points: ['核心理念：自改进学习循环', '运行模式：24/7 后台自主', 'Skill 维护：自动创建并优化'] },
+  { name: 'OpenClaw', tag: '配置即行为', tone: 'openclaw', icon: '●', points: ['核心理念：配置即行为 (SOUL.md)', '运行模式：按需启动', 'Skill 维护：人工编写与维护'] },
+  { name: 'Claude Code', tag: '交互式结对编程', tone: 'claude', icon: '</>', points: ['核心理念：交互式结对编程', '运行模式：实时在线交互', 'Skill 维护：人工手写指令'] },
 ]
 
 function MiniIcon({ name }: { name: string }) {
@@ -127,22 +127,23 @@ function MiniIcon({ name }: { name: string }) {
 
 function CapabilityInfographic() {
   return (
-    <div className="site-capability-web" data-infographic-medium="dom-css-svg" aria-label="Hermes Agent 核心机制、实战优势与主流工具差异信息图">
+    <div className="site-capability-web" data-infographic-medium="dom-css-svg" data-infographic-source="prototype-html-css-vfix3" aria-label="Hermes Agent 核心机制、实战优势与主流工具差异信息图">
       <div className="site-capability-stars" />
       <div className="site-capability-circuit site-capability-circuit-left" />
       <div className="site-capability-circuit site-capability-circuit-right" />
-      <svg className="site-capability-connectors" viewBox="0 0 1200 620" aria-hidden="true">
-        <path d="M420 215 C505 215 520 300 600 300 C680 300 695 215 780 215" />
-        <path d="M420 330 C505 330 520 300 600 300 C680 300 695 330 780 330" />
-        <path d="M420 445 C505 445 520 300 600 300 C680 300 695 445 780 445" />
+      <svg className="site-capability-connectors" viewBox="0 0 1120 620" aria-hidden="true">
+        <path d="M396 205 C475 205 488 300 560 300 C632 300 646 205 724 205" />
+        <path d="M396 310 C475 310 488 300 560 300 C632 300 646 310 724 310" />
+        <path d="M396 415 C475 415 488 300 560 300 C632 300 646 415 724 415" />
       </svg>
 
-      <header className="site-capability-title-block">
-        <h2>Hermes Agent: 一个会自我进化的 AI 助手</h2>
-        <p>核心机制：让 AI 自己给自己造“缰绳”</p>
-      </header>
+      <div className="site-capability-inner">
+        <header className="site-capability-title-block">
+          <h2>Hermes Agent: 一个会自我进化的 AI 助手</h2>
+          <p>核心机制：让 AI 自己给自己造“缰绳”</p>
+        </header>
 
-      <div className="site-capability-layout">
+        <div className="site-capability-layout">
         <div className="site-capability-left" data-infographic-part="mechanisms">
           {mechanismCards.map((card) => (
             <article key={card.title} className="site-capability-panel site-capability-mechanism-panel">
@@ -205,23 +206,30 @@ function CapabilityInfographic() {
               <span>DB</span>
               <span>Files</span>
             </div>
-            <div className="site-capability-mcp-tags">
-              <span>内置 40+ 工具</span>
-              <span>无缝接入 6000+</span>
+            <div className="site-capability-mcp-tags" aria-label="MCP 工具与外部应用连接规模">
+              <b><span>内置</span><strong>40+ 工具</strong></b>
+              <b><span>无缝接入</span><strong>6000+</strong><span>外部应用</span></b>
             </div>
           </article>
         </aside>
       </div>
 
       <section className="site-capability-comparison" data-infographic-part="comparison">
-        {comparisonCards.map((card) => (
-          <article key={card.name} className="site-capability-comparison-card">
-            <strong>{card.name}</strong>
-            <span>{card.tag}</span>
-            <ul>{card.points.map((point) => <li key={point}>{point}</li>)}</ul>
-          </article>
-        ))}
+        <h3 className="site-capability-compare-heading">直观对比 Hermes 与主流工具的设计差异</h3>
+        <div className="site-capability-compare-grid">
+          {comparisonCards.map((card) => (
+            <article key={card.name} className={`site-capability-comparison-card site-capability-comparison-card-${card.tone}`}>
+              <div className="site-capability-brand-icon" aria-hidden="true">{card.icon}</div>
+              <div>
+                <strong>{card.name}</strong>
+                <span>{card.tag}</span>
+                <ul>{card.points.map((point) => <li key={point}>{point}</li>)}</ul>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
+      </div>
     </div>
   )
 }
@@ -257,7 +265,7 @@ export default function HomePage() {
           <CapabilityInfographic />
         </section>
 
-        <section data-home-section="ready-made-solutions" className="px-6 py-16 md:py-20">
+        <section data-home-section="ready-made-solutions" className="relative bg-[#030812] px-6 py-16 md:py-20">
           <div className="mx-auto max-w-site-marketing">
             <SectionCard
               eyebrow="现成方案"
