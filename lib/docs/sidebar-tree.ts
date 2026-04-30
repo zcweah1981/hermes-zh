@@ -6,6 +6,7 @@ export interface DocSidebarTreeNode {
   depth: number
   pages: SitePage[]
   children: DocSidebarTreeNode[]
+  pageCount: number
 }
 
 function normalizeSourcePath(sourcePath: string) {
@@ -16,8 +17,14 @@ function stripMarkdownExtension(segment: string) {
   return segment.replace(/\.md$/i, '')
 }
 
+function isOverviewPage(page: SitePage) {
+  const fileName = normalizeSourcePath(page.sourcePath).split('/').pop() ?? ''
+  return /^(?:00-文档总览|(?:01-)?总览)\.md$/i.test(fileName)
+}
+
 function compareByOrderThenPath(a: SitePage, b: SitePage) {
-  return a.order - b.order || a.sourcePath.localeCompare(b.sourcePath, 'zh-Hans-CN', { numeric: true })
+  const overviewDelta = Number(isOverviewPage(b)) - Number(isOverviewPage(a))
+  return overviewDelta || a.order - b.order || a.sourcePath.localeCompare(b.sourcePath, 'zh-Hans-CN', { numeric: true })
 }
 
 function compareNodes(a: DocSidebarTreeNode, b: DocSidebarTreeNode) {
@@ -33,6 +40,7 @@ function createNode(label: string, depth: number, parentId: string): DocSidebarT
     depth,
     pages: [],
     children: [],
+    pageCount: 0,
   }
 }
 
@@ -54,6 +62,15 @@ function sortTree(nodes: DocSidebarTreeNode[]) {
   for (const node of nodes) {
     node.pages.sort(compareByOrderThenPath)
     sortTree(node.children)
+  }
+
+  return nodes
+}
+
+function updatePageCounts(nodes: DocSidebarTreeNode[]) {
+  for (const node of nodes) {
+    updatePageCounts(node.children)
+    node.pageCount = node.pages.length + node.children.reduce((total, child) => total + child.pageCount, 0)
   }
 
   return nodes
@@ -87,5 +104,5 @@ export function buildDocSidebarTree(pages: SitePage[]): DocSidebarTreeNode[] {
     current.pages.push(page)
   }
 
-  return sortTree(roots)
+  return updatePageCounts(sortTree(roots))
 }

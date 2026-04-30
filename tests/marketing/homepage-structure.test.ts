@@ -96,7 +96,8 @@ describe('R19 homepage structure', () => {
   it('keeps the VFIX5 infographic polish: no white band, smaller title, centered core, and six clear arrows', () => {
     assert.match(homePageSource, /data-home-section="evolving-assistant" className="relative overflow-hidden bg-\[#030812\]/)
     assert.match(globalsSource, /\[data-home-section="primary-paths"\]\s*{[^}]*background:\s*#f8fafc/s)
-    assert.match(globalsSource, /\[data-home-section="primary-paths"\]::after\s*{[^}]*bottom:\s*-1px[^}]*height:\s*clamp\(120px,\s*12vw,\s*180px\)[^}]*rgba\(25,\s*62,\s*116,\s*\.92\) 42%[^}]*#030812 68%[^}]*#030812 100%/s)
+    assert.match(globalsSource, /\[data-home-section="primary-paths"\]::after\s*{[^}]*bottom:\s*-1px[^}]*height:\s*clamp\(52px,\s*6vw,\s*88px\)[^}]*#f8fafc 100%/s)
+    assert.match(globalsSource, /\.site-section-seam-light-to-blue\s*{[^}]*#030812 100%/s)
     assert.match(globalsSource, /\[data-home-section="evolving-assistant"\]\s*{[^}]*margin-top:\s*-1px[^}]*background:\s*#030812/s)
     assert.match(globalsSource, /\[data-home-section="evolving-assistant"\]::before\s*{[^}]*height:\s*clamp\(120px,\s*10vw,\s*180px\)[^}]*linear-gradient\(180deg,\s*#030812 0%,\s*rgba\(3,\s*8,\s*18,\s*\.98\) 48%,\s*rgba\(3,\s*8,\s*18,\s*0\) 100%\)/s)
 
@@ -105,15 +106,35 @@ describe('R19 homepage structure', () => {
     assert.match(globalsSource, /\.site-capability-title-block p\s*{[^}]*font-size:\s*clamp\(\.86rem,\s*1\.1vw,\s*\.98rem\)[^}]*text-shadow:\s*0 0 6px rgba\(39,\s*186,\s*255,\s*\.16\)/s)
 
     assert.match(homePageSource, /<defs>[\s\S]*id="site-capability-arrowhead"/)
-    assert.match(homePageSource, /data-flow="mechanism-to-core"/)
-    assert.match(homePageSource, /data-flow="core-to-advantage"/)
-    assert.equal([...homePageSource.matchAll(/data-flow="mechanism-to-core"/g)].length, 3)
-    assert.equal([...homePageSource.matchAll(/data-flow="core-to-advantage"/g)].length, 3)
+    assert.match(homePageSource, /data-flow="core-to-left"/)
+    assert.match(homePageSource, /data-flow="core-to-right"/)
+    assert.equal([...homePageSource.matchAll(/data-flow="core-to-left"/g)].length, 3)
+    assert.equal([...homePageSource.matchAll(/data-flow="core-to-right"/g)].length, 3)
     assert.match(globalsSource, /\.site-capability-layout\s*{[^}]*grid-template-columns:\s*40%\s+18%\s+36%[^}]*gap:\s*clamp\(24px,\s*2\.2vw,\s*32px\)/s)
     assert.match(globalsSource, /\.site-capability-core\s*{[^}]*justify-items:\s*center[^}]*align-items:\s*center/s)
     assert.match(globalsSource, /\.site-capability-core-node\s*{[^}]*width:\s*clamp\(150px,\s*12vw,\s*172px\)[^}]*height:\s*clamp\(150px,\s*12vw,\s*172px\)/s)
     assert.match(globalsSource, /\.site-capability-core-orbit-outer\s*{[^}]*width:\s*clamp\(190px,\s*16vw,\s*236px\)[^}]*height:\s*clamp\(190px,\s*16vw,\s*236px\)/s)
     assert.match(globalsSource, /\.site-capability-connectors path\s*{[^}]*stroke-width:\s*3\.4[^}]*stroke-dasharray:\s*9\s+6[^}]*marker-end:\s*url\(#site-capability-arrowhead\)/s)
+  })
+
+  it('keeps VFIX6 section seam below the six white cards and points all core arrows outward', () => {
+    assert.match(homePageSource, /data-home-section="primary-paths" className="[^"]*pb-24[^"]*md:pb-28/)
+    assert.match(homePageSource, /site-section-seam-light-to-blue/)
+    assert.match(globalsSource, /\.site-section-seam-light-to-blue\s*{[^}]*height:\s*clamp\(64px,\s*7vw,\s*104px\)[^}]*linear-gradient\(180deg,\s*#f8fafc 0%,\s*#e6f0ff 28%,\s*#0b1f3f 70%,\s*#030812 100%\)/s)
+    assert.doesNotMatch(globalsSource, /\[data-home-section="primary-paths"\]::after\s*{[^}]*#030812 68%/s)
+
+    assert.equal([...homePageSource.matchAll(/data-flow="core-to-left"/g)].length, 3)
+    assert.equal([...homePageSource.matchAll(/data-flow="core-to-right"/g)].length, 3)
+    assert.doesNotMatch(homePageSource, /data-flow="mechanism-to-core"/)
+    assert.doesNotMatch(homePageSource, /data-flow="core-to-advantage"/)
+
+    for (const target of ['learning-loop', 'memory', 'skill-evolution', 'deploy', 'autonomy-realtime', 'mcp']) {
+      assert.match(homePageSource, new RegExp(`data-target="${target}"`))
+    }
+
+    assert.match(globalsSource, /\.site-capability-connectors path\[data-flow="core-to-left"\]/)
+    assert.match(globalsSource, /\.site-capability-connectors path\[data-flow="core-to-right"\]/)
+    assert.match(globalsSource, /@media \(max-width:\s*900px\)\s*{[\s\S]*\.site-capability-connectors\s*{\s*display:\s*none/s)
   })
 
   it('keeps the hero background responsive across narrow viewports', () => {

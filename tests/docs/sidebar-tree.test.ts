@@ -91,3 +91,43 @@ test('DocSidebar renders a recursive tree with active markers and an independent
   assert.match(globalsSource, /@screen xl\s*{[^}]*\.site-doc-sidebar-shell\s*{[^}]*position:\s*sticky[^}]*max-height:\s*calc\(100vh - var\(--site-header-height\) - 2rem\)[^}]*overflow:\s*hidden/s)
   assert.match(globalsSource, /@screen xl\s*{[^}]*\.site-doc-sidebar-scroll\s*{[^}]*flex:\s*1 1 auto[^}]*overflow-y:\s*auto[^}]*overscroll-behavior:\s*contain/s)
 })
+
+test('DocSidebar supports VFIX6 collapsible top-level groups with current root expanded by default', () => {
+  assert.match(sidebarSource, /useMemo/)
+  assert.match(sidebarSource, /useState/)
+  assert.match(sidebarSource, /findRootNodeForSlug/)
+  assert.match(sidebarSource, /site-doc-sidebar-group-trigger/)
+  assert.match(sidebarSource, /aria-expanded=\{expanded\}/)
+  assert.match(sidebarSource, /aria-controls=\{groupId\}/)
+  assert.match(sidebarSource, /data-doc-sidebar-current-root=\{isCurrentRoot \? 'true' : undefined\}/)
+  assert.match(sidebarSource, /data-doc-sidebar-expanded=\{expanded \? 'true' : 'false'\}/)
+  assert.match(sidebarSource, /setExpandedRootIds/)
+
+  assert.match(globalsSource, /\.site-doc-sidebar-group-trigger\s*{/)
+  assert.match(globalsSource, /\.site-doc-sidebar-chevron\s*{/)
+  assert.match(globalsSource, /\[data-doc-sidebar-expanded="true"\]\s+\.site-doc-sidebar-chevron/)
+})
+
+test('buildDocSidebarTree orders nested build docs by real content path prefixes', () => {
+  const tree = buildDocSidebarTree(pagesManifest)
+  const start = tree.find((node) => node.label === '01-从这开始')
+  const build = start?.children.find((node) => node.label === '04-自己造东西')
+  assert.ok(build)
+
+  assert.deepEqual(
+    build.children.map((node) => node.label),
+    ['03-接入外部记忆系统', '04-上下文系统'],
+  )
+
+  assert.deepEqual(
+    build.pages.map((item) => item.sourcePath.split('/').at(-1)),
+    [
+      '01-总览.md',
+      '02-多个助手一起工作.md',
+      '05-把 Hermes 接进外部系统.md',
+      '06-把 Hermes 暴露成后端服务.md',
+      '07-让 Hermes 自己自动跑.md',
+      '08-放进编辑器里用.md',
+    ],
+  )
+})

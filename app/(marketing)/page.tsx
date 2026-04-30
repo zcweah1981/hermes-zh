@@ -134,15 +134,15 @@ function CapabilityInfographic() {
       <svg className="site-capability-connectors" viewBox="0 0 1120 620" aria-hidden="true">
         <defs>
           <marker id="site-capability-arrowhead" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="strokeWidth">
-            <path d="M1 1 9 5 1 9Z" fill="rgba(125, 220, 255, .92)" />
+            <polygon points="1,1 9,5 1,9" fill="rgba(125, 220, 255, .92)" />
           </marker>
         </defs>
-        <path data-flow="mechanism-to-core" d="M382 178 C458 178 486 300 548 300" />
-        <path data-flow="mechanism-to-core" d="M382 310 C460 310 488 300 548 300" />
-        <path data-flow="mechanism-to-core" d="M382 442 C458 442 486 300 548 300" />
-        <path data-flow="core-to-advantage" d="M572 300 C642 300 660 198 728 198" />
-        <path data-flow="core-to-advantage" d="M572 300 C644 300 662 314 728 314" />
-        <path data-flow="core-to-advantage" d="M572 300 C642 300 660 430 728 430" />
+        <path data-flow="core-to-left" data-target="learning-loop" d="M528 252 C486 252 460 185 392 185" />
+        <path data-flow="core-to-left" data-target="memory" d="M520 310 C478 310 454 310 392 310" />
+        <path data-flow="core-to-left" data-target="skill-evolution" d="M528 368 C486 368 460 435 392 435" />
+        <path data-flow="core-to-right" data-target="deploy" d="M592 252 C636 252 660 198 728 198" />
+        <path data-flow="core-to-right" data-target="autonomy-realtime" d="M600 310 C644 310 664 314 728 314" />
+        <path data-flow="core-to-right" data-target="mcp" d="M592 368 C636 368 660 430 728 430" />
       </svg>
 
       <div className="site-capability-inner">
@@ -250,7 +250,7 @@ export default function HomePage() {
       <Hero />
 
       <main className="flex flex-col">
-        <section data-home-section="primary-paths" className="bg-slate-50 px-6 py-16 text-slate-950 md:py-20">
+        <section data-home-section="primary-paths" className="bg-slate-50 px-6 pb-24 pt-16 text-slate-950 md:pb-28 md:pt-20">
           <div className="mx-auto max-w-site-marketing">
             <div className="max-w-3xl">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-600">六大主线入口</p>
@@ -270,6 +270,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <div className="site-section-seam-light-to-blue" aria-hidden="true" />
 
         <section data-home-section="evolving-assistant" className="relative overflow-hidden bg-[#030812]">
           <CapabilityInfographic />
