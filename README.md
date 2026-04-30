@@ -1,6 +1,19 @@
+<p align="center">
+  <img src="public/hermes-logo.png" alt="Hermes Agent 中文站 Logo" width="112" height="112" />
+</p>
+
 # hermes-zh
 
 Hermes Agent 中文站独立站第一轮可运行骨架。
+
+## Logo 资产口径
+
+- 统一主 logo 来源：`/root/.hermes/image_cache/img_3c9f9a72b4fc.jpg`
+- 仓内展示资产：`public/hermes-logo.png`
+- favicon / app icon：`app/icon.png`
+- Apple touch icon：`app/apple-icon.png`
+- 详细规范：`docs/governance/logo-asset-spec.md`
+- 禁止重绘或改变圆角方形、深蓝星空背景、电蓝轨道、中央星芒等核心视觉。
 
 ## 已包含
 - Next.js 15 + TypeScript + Tailwind 基础结构
