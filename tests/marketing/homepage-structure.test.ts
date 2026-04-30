@@ -120,9 +120,12 @@ describe('R19 homepage structure', () => {
     assert.match(connectorSource, /ResizeObserver/)
     assert.match(connectorSource, /getBoundingClientRect/)
     assert.match(connectorSource, /function mirrorPointX/)
+    assert.match(connectorSource, /function mirrorLeftLineToRight/)
     assert.match(connectorSource, /const leftStarts/)
     assert.match(connectorSource, /const rightStarts/)
     assert.match(connectorSource, /mirrorPointX\(leftStarts\.top, axisX\)/)
+    assert.match(connectorSource, /end:\s*mirrorPointX\(leftLine\.end, axisX\)/)
+    assert.match(connectorSource, /dot:\s*mirrorPointX\(leftLine\.dot, axisX\)/)
     assert.match(homePageSource, /CapabilityConnectorLayer/)
     assert.match(homePageSource, /data-connector-scope="capability-infographic"/)
 

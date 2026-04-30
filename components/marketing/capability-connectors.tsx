@@ -3,16 +3,28 @@
 import { useEffect, useState } from 'react'
 
 type Point = { x: number; y: number }
+type ConnectorLineId = 'top-left' | 'top-right' | 'middle-left' | 'middle-right' | 'bottom-left' | 'bottom-right'
+type ConnectorTarget = 'left-top' | 'right-top' | 'left-middle' | 'right-middle' | 'left-bottom' | 'right-bottom'
 type ConnectorLine = {
-  id: 'top-left' | 'top-right' | 'middle-left' | 'middle-right' | 'bottom-left' | 'bottom-right'
-  target: 'left-top' | 'right-top' | 'left-middle' | 'right-middle' | 'left-bottom' | 'right-bottom'
+  id: ConnectorLineId
+  target: ConnectorTarget
   d: string
   dot: Point
 }
 
+type ConnectorGeometry = {
+  id: ConnectorLineId
+  target: ConnectorTarget
+  start: Point
+  c1: Point
+  c2: Point
+  end: Point
+  dot: Point
+}
+
 type ConnectorSpec = {
-  id: ConnectorLine['id']
-  target: ConnectorLine['target']
+  id: ConnectorLineId
+  target: ConnectorTarget
   start: 'top' | 'middle' | 'bottom'
 }
 
@@ -24,6 +36,28 @@ const connectorSpecs: ConnectorSpec[] = [
   { id: 'bottom-left', target: 'left-bottom', start: 'bottom' },
   { id: 'bottom-right', target: 'right-bottom', start: 'bottom' },
 ]
+
+const connectorPairs = [
+  {
+    start: 'top',
+    left: { id: 'top-left', target: 'left-top' },
+    right: { id: 'top-right', target: 'right-top' },
+  },
+  {
+    start: 'middle',
+    left: { id: 'middle-left', target: 'left-middle' },
+    right: { id: 'middle-right', target: 'right-middle' },
+  },
+  {
+    start: 'bottom',
+    left: { id: 'bottom-left', target: 'left-bottom' },
+    right: { id: 'bottom-right', target: 'right-bottom' },
+  },
+] satisfies Array<{
+  start: ConnectorSpec['start']
+  left: { id: ConnectorLineId; target: ConnectorTarget }
+  right: { id: ConnectorLineId; target: ConnectorTarget }
+}>
 
 function mirrorPointX(point: Point, axisX: number): Point {
   return { x: axisX + (axisX - point.x), y: point.y }
@@ -52,7 +86,7 @@ function getCoreAnchors(rect: DOMRect, scopeRect: DOMRect) {
   return { leftStarts, rightStarts, axisX }
 }
 
-function getTargetPoint(target: ConnectorLine['target'], rect: DOMRect, scopeRect: DOMRect): Point {
+function getTargetPoint(target: ConnectorTarget, rect: DOMRect, scopeRect: DOMRect): Point {
   const isLeftTarget = target.startsWith('left-')
   const x = isLeftTarget ? rect.right - scopeRect.left : rect.left - scopeRect.left
   let y = rect.top - scopeRect.top + rect.height / 2
@@ -63,14 +97,39 @@ function getTargetPoint(target: ConnectorLine['target'], rect: DOMRect, scopeRec
   return { x, y }
 }
 
-function createConnectorPath(start: Point, end: Point) {
+function createConnectorGeometry(id: ConnectorLineId, target: ConnectorTarget, start: Point, end: Point): ConnectorGeometry {
   const distance = Math.abs(end.x - start.x)
   const dx = Math.max(48, distance * 0.46)
   const direction = end.x > start.x ? 1 : -1
-  const c1x = start.x + dx * direction
-  const c2x = end.x - dx * direction
+  const c1 = { x: start.x + dx * direction, y: start.y }
+  const c2 = { x: end.x - dx * direction, y: end.y }
 
-  return `M ${start.x.toFixed(1)} ${start.y.toFixed(1)} C ${c1x.toFixed(1)} ${start.y.toFixed(1)} ${c2x.toFixed(1)} ${end.y.toFixed(1)} ${end.x.toFixed(1)} ${end.y.toFixed(1)}`
+  return { id, target, start, c1, c2, end, dot: end }
+}
+
+function serializeConnectorPath(line: ConnectorGeometry) {
+  return `M ${line.start.x.toFixed(1)} ${line.start.y.toFixed(1)} C ${line.c1.x.toFixed(1)} ${line.c1.y.toFixed(1)} ${line.c2.x.toFixed(1)} ${line.c2.y.toFixed(1)} ${line.end.x.toFixed(1)} ${line.end.y.toFixed(1)}`
+}
+
+function toConnectorLine(line: ConnectorGeometry): ConnectorLine {
+  return { id: line.id, target: line.target, d: serializeConnectorPath(line), dot: line.dot }
+}
+
+function mirrorLeftLineToRight(
+  leftLine: ConnectorGeometry,
+  axisX: number,
+  id: ConnectorLineId,
+  target: ConnectorTarget,
+): ConnectorGeometry {
+  return {
+    id,
+    target,
+    start: mirrorPointX(leftLine.start, axisX),
+    c1: mirrorPointX(leftLine.c1, axisX),
+    c2: mirrorPointX(leftLine.c2, axisX),
+    end: mirrorPointX(leftLine.end, axisX),
+    dot: mirrorPointX(leftLine.dot, axisX),
+  }
 }
 
 function getStartPoint(spec: ConnectorSpec, anchors: ReturnType<typeof getCoreAnchors>) {
@@ -83,15 +142,23 @@ function buildConnectorLines(scope: HTMLElement): { lines: ConnectorLine[]; widt
   if (!core || scopeRect.width <= 0 || scopeRect.height <= 0) return null
 
   const coreAnchors = getCoreAnchors(core.getBoundingClientRect(), scopeRect)
+  for (const spec of connectorSpecs) {
+    if (!scope.querySelector<HTMLElement>(`[data-connector-node="${spec.target}"]`)) return null
+  }
+
   const lines: ConnectorLine[] = []
 
-  for (const spec of connectorSpecs) {
-    const target = scope.querySelector<HTMLElement>(`[data-connector-node="${spec.target}"]`)
-    if (!target) return null
+  for (const pair of connectorPairs) {
+    const leftTarget = scope.querySelector<HTMLElement>(`[data-connector-node="${pair.left.target}"]`)
+    if (!leftTarget) return null
 
-    const start = getStartPoint(spec, coreAnchors)
-    const dot = getTargetPoint(spec.target, target.getBoundingClientRect(), scopeRect)
-    lines.push({ id: spec.id, target: spec.target, d: createConnectorPath(start, dot), dot })
+    const leftSpec: ConnectorSpec = { ...pair.left, start: pair.start }
+    const leftStart = getStartPoint(leftSpec, coreAnchors)
+    const leftEnd = getTargetPoint(pair.left.target, leftTarget.getBoundingClientRect(), scopeRect)
+    const leftLine = createConnectorGeometry(pair.left.id, pair.left.target, leftStart, leftEnd)
+    const rightLine = mirrorLeftLineToRight(leftLine, coreAnchors.axisX, pair.right.id, pair.right.target)
+
+    lines.push(toConnectorLine(leftLine), toConnectorLine(rightLine))
   }
 
   return { lines, width: scopeRect.width, height: scopeRect.height }
