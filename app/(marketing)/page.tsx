@@ -132,9 +132,13 @@ function CapabilityInfographic() {
       <div className="site-capability-circuit site-capability-circuit-left" />
       <div className="site-capability-circuit site-capability-circuit-right" />
       <svg className="site-capability-connectors" viewBox="0 0 1120 620" aria-hidden="true">
-        <path d="M396 205 C475 205 488 300 560 300 C632 300 646 205 724 205" />
-        <path d="M396 310 C475 310 488 300 560 300 C632 300 646 310 724 310" />
-        <path d="M396 415 C475 415 488 300 560 300 C632 300 646 415 724 415" />
+        <path data-flow="mechanism-to-core" d="M396 185 C470 185 492 300 560 300" />
+        <path data-flow="mechanism-to-core" d="M396 310 C472 310 492 300 560 300" />
+        <path data-flow="mechanism-to-core" d="M396 435 C470 435 492 300 560 300" />
+        <path data-flow="core-to-advantage" d="M560 300 C628 300 652 175 724 175" />
+        <path data-flow="core-to-advantage" d="M560 300 C630 300 652 270 724 270" />
+        <path data-flow="core-to-advantage" d="M560 300 C630 300 652 365 724 365" />
+        <path data-flow="core-to-advantage" d="M560 300 C628 300 650 455 724 455" />
       </svg>
 
       <div className="site-capability-inner">
@@ -169,6 +173,7 @@ function CapabilityInfographic() {
         </div>
 
         <div className="site-capability-core" data-infographic-part="core-engine" aria-label="Hermes Agent 核心引擎">
+          <span className="site-capability-core-label site-capability-core-label-top">机制汇聚</span>
           <div className="site-capability-core-orbit site-capability-core-orbit-outer" />
           <div className="site-capability-core-orbit site-capability-core-orbit-middle" />
           <div className="site-capability-core-orbit site-capability-core-orbit-inner" />
@@ -181,6 +186,7 @@ function CapabilityInfographic() {
             <strong>Hermes Agent</strong>
             <span>核心引擎</span>
           </div>
+          <span className="site-capability-core-label site-capability-core-label-bottom">能力输出</span>
         </div>
 
         <aside className="site-capability-right" data-infographic-part="advantages">
