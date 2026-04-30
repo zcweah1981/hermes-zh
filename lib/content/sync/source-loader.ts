@@ -68,7 +68,7 @@ function stripMarkdown(value: string) {
     .replace(/^>\s*/, '')
     .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
-    .replace(/[`*_~#]/g, '')
+    .replace(/[`*#]/g, '')
     .replace(/\s+/g, ' ')
     .trim()
 }
@@ -217,7 +217,7 @@ export async function loadContentPages(contentRoot = DEFAULT_CONTENT_REPO): Prom
     const route = routeInfo?.item
     const markdownBody = parsed.content.trim()
     const title = readString(data.title) ?? route?.title ?? firstMarkdownHeading(markdownBody) ?? titleFromPath(file)
-    const description = readString(data.description) ?? route?.description ?? firstMarkdownSummary(markdownBody) ?? ''
+    const description = stripMarkdown(readString(data.description) ?? route?.description ?? firstMarkdownSummary(markdownBody) ?? '')
     const slug = readString(data.slug) ?? route?.slug
 
     if (!slug) {

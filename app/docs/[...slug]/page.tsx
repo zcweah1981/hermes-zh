@@ -58,11 +58,9 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
           <p className="mt-4 max-w-3xl text-base leading-8 text-text-secondary">{page.description}</p>
 
           <div className="mt-6 flex flex-wrap gap-3 text-xs text-text-tertiary">
-            <span className="site-meta-pill">状态：{page.status}</span>
-            <span className="site-meta-pill">更新：{page.updated || '未标注'}</span>
-            <span className="site-meta-pill">模块：{page.module}</span>
+            <span className="site-meta-pill">最后更新：{page.updated || '未标注'}</span>
             <a href={page.githubUrl} target="_blank" rel="noreferrer" className="site-meta-pill hover:border-border-strong hover:text-text-primary">
-              GitHub：{page.sourcePath}
+              查看 GitHub 原文
             </a>
           </div>
         </div>

@@ -120,7 +120,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           ))
         ) : (
           <div className="site-section-card p-6 text-sm leading-7 text-text-secondary">
-            没找到匹配项。建议换一个更短的关键词，或先从“文档总览 / 从这开始 / 参考手册 / Packs”继续浏览。
+            没找到匹配项。建议换一个更短的关键词，或先回到“文档总览 / 从这开始 / 参考手册 / Packs”重新定位。
           </div>
         )}
       </div>

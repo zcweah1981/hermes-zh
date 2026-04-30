@@ -15,19 +15,22 @@ const githubUrl = 'https://github.com/zcweah1981/awesome-hermes-agent-zh'
 const docRoutes = new Set(routesManifest.map((route) => `/docs${route.slug}`))
 
 describe('R19 homepage structure', () => {
-  it('exposes the six accepted homepage sections as stable anchors', () => {
+  it('exposes the accepted homepage sections as stable anchors without a duplicate bottom CTA', () => {
     const requiredSections = [
       'hero',
       'primary-paths',
       'evolving-assistant',
       'ready-made-solutions',
       'china-landing',
-      'final-cta',
+      'support-and-trust',
     ]
 
     for (const section of requiredSections) {
       assert.match(homePageSource + heroSource, new RegExp(`data-home-section=["']${section}["']`))
     }
+
+    assert.doesNotMatch(homePageSource, /data-home-section=["']final-cta["']/)
+    assert.doesNotMatch(homePageSource, /快速跳转|继续浏览/)
   })
 
   it('keeps the hero as a centered single-narrative entry with three primary actions', () => {

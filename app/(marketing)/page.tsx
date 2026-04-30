@@ -77,12 +77,6 @@ const chinaCards = [
   { href: '/docs/china/entry', title: '国内入口', description: '网页控制台、API、CLI、飞书、企业微信、钉钉与个人微信。' },
 ]
 
-const finalLinks = [
-  { href: '/docs/docs-overview', label: '浏览完整文档' },
-  { href: '/packs', label: '查看 Packs' },
-  { href: githubHref, label: '打开 GitHub', external: true },
-]
-
 export default function HomePage() {
   return (
     <>
@@ -199,26 +193,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section data-home-section="final-cta" className="px-6 pb-20 md:pb-24">
-          <div className="mx-auto max-w-site-marketing rounded-[28px] border border-border-strong bg-gradient-to-br from-blue-500/16 via-sky-400/8 to-transparent p-8 text-center shadow-medium md:p-12">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-brand-primary">快速跳转</p>
-            <h2 className="mx-auto mt-4 max-w-3xl font-serif text-3xl font-black leading-tight text-text-primary md:text-[44px]">从文档、Packs 或 GitHub 进入下一步</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-8 text-text-secondary">保留首页作为路径分流页的职责，把最常见的三个动作放在最后一屏，减少重复寻找入口的成本。</p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              {finalLinks.map((link) =>
-                link.external ? (
-                  <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="site-cta-secondary">
-                    {link.label}
-                  </a>
-                ) : (
-                  <Link key={link.label} href={link.href} className="site-cta-primary">
-                    {link.label}
-                  </Link>
-                ),
-              )}
-            </div>
-          </div>
-        </section>
       </main>
     </>
   )
