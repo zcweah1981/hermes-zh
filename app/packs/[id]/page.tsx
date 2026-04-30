@@ -10,7 +10,7 @@ import type { SitePack, SitePage } from '@/lib/content/types'
 import { toDocPath } from '@/lib/routing/docs-path'
 import { buildCanonicalUrl } from '@/lib/seo/canonical'
 
-const CONTENT_REPO_BRANCH = process.env.CONTENT_REPO_BRANCH ?? 'site-content-anchor'
+const CONTENT_REPO_BRANCH = process.env.CONTENT_REPO_BRANCH ?? 'main'
 const CONTENT_REPO_OWNER = 'zcweah1981/awesome-hermes-agent-zh'
 
 function toBlobUrl(relativePath: string) {

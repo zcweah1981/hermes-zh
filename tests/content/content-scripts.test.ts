@@ -61,7 +61,7 @@ test('build-manifests writes pages, routes, packs, and search manifests', async 
   assert.equal(startRoute?.status, 'published')
   assert.ok(packs.some((pack) => pack.id === 'webdev-lab' && pack.status === 'published'))
   assert.ok(search.some((entry) => entry.type === 'pack' && entry.slug === '/packs/webdev-lab'))
-  assert.equal(buildMeta.sourceBranch, 'site-content-anchor')
+  assert.equal(buildMeta.sourceBranch, 'main')
   assert.match(buildMeta.sourceSha ?? '', /^[0-9a-f]{40}$/)
   assert.deepEqual(buildMeta.counts, { pages: 87, routes: 87, packs: 8, search: 95 })
 })

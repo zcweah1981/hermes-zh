@@ -2,7 +2,7 @@ import path from 'node:path'
 
 import type { SitePage } from '@/lib/content/types'
 
-const CONTENT_REPO_BRANCH = process.env.CONTENT_REPO_BRANCH ?? 'site-content-anchor'
+const CONTENT_REPO_BRANCH = process.env.CONTENT_REPO_BRANCH ?? 'main'
 const CONTENT_REPO_OWNER = 'zcweah1981/awesome-hermes-agent-zh'
 
 function toDocHref(slug: string) {

@@ -9,7 +9,7 @@
 
 ### 1.1 真相源
 - 内容真相源仓：`awesome-hermes-agent-zh`
-- 当前消费分支：`site-content-anchor`
+- 当前消费分支：`main`
 - 站点代码仓：`hermes-zh`
 - 站点运行时读取对象：`content-cache/generated/*.json`，而不是直接读取 Markdown 源文件
 
@@ -80,7 +80,7 @@
 ## 5. 当前正式对外口径
 建议统一使用以下表述：
 
-“当前 Hermes 中文站采用构建驱动的半自动同步。内容仓是唯一正式内容来源；当站点触发构建/部署时，会自动读取锚点分支内容并生成站点所需 manifest。内容仓更新后，暂时仍需要通过构建或部署动作把最新内容带到线上站点。”
+“当前 Hermes 中文站采用构建驱动的半自动同步。内容仓是唯一正式内容来源；当站点触发构建/部署时，会自动读取 `main` 内容并生成站点所需 manifest。内容仓更新后，暂时仍需要通过构建或部署动作把最新内容带到线上站点。”
 
 ### 5.1 口径边界表
 | 问题 | 统一回答 |
@@ -102,7 +102,7 @@
 目标：先打通“内容仓更新后，站点自动重建并更新线上”的最小闭环，不在首轮就做复杂增量同步。
 
 ### 方案 A：内容仓 -> Vercel Deploy Hook（推荐最小落地）
-1. 在内容仓 `site-content-anchor` 分支配置 GitHub Actions
+1. 在内容仓 `main` 分支配置 GitHub Actions
 2. 当该分支有新提交时，调用 hermes-zh 对应项目的 Vercel Deploy Hook
 3. Vercel 收到 hook 后触发新一轮站点构建
 4. 构建阶段继续使用现有逻辑读取内容仓并生成 manifest
@@ -116,7 +116,7 @@
 实施前置：
 - Vercel 项目侧必须配置好可读取内容仓的构建环境，或确保构建阶段能拿到最新 generated manifest
 - Deploy Hook URL 与 `REVALIDATE_TOKEN` 属于敏感信息，只能进入 GitHub/Vercel Secrets，不写入仓库与治理文件
-- 首轮只监听 `site-content-anchor`，避免所有内容仓分支都触发生产部署
+- 首轮只监听 `main`，避免所有内容仓分支都触发生产部署
 
 ### 方案 B：内容仓 -> GitHub repository_dispatch -> hermes-zh workflow
 1. 内容仓 push 后触发 workflow
@@ -134,7 +134,7 @@
 ## 7. 下一轮最小验收标准
 如果进入自动同步下一轮，建议以以下标准验收：
 
-1. 内容仓 `site-content-anchor` 有新提交
+1. 内容仓 `main` 有新提交
 2. hermes-zh 无需人工介入即可自动开始一次新部署
 3. 新部署使用的是内容仓最新 SHA，并写入 `build-meta.json`
 4. 线上首页 / docs / packs 能看到新内容

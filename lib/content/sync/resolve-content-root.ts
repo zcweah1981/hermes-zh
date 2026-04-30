@@ -1,9 +1,12 @@
-import { spawn } from 'node:child_process'
+import { execFile, spawn } from 'node:child_process'
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
+import { promisify } from 'node:util'
+
+const execFileAsync = promisify(execFile)
 
 const LOCAL_CONTENT_REPO = '/opt/projects/awesome-hermes-agent-zh'
-const CONTENT_REPO_BRANCH = process.env.CONTENT_REPO_BRANCH ?? 'site-content-anchor'
+const CONTENT_REPO_BRANCH = process.env.CONTENT_REPO_BRANCH ?? 'main'
 const CONTENT_REPO_URL =
   process.env.CONTENT_REPO_URL ?? 'https://github.com/zcweah1981/awesome-hermes-agent-zh.git'
 const FALLBACK_CONTENT_ROOT = path.join(process.cwd(), '.content-cache', `awesome-hermes-agent-zh-${CONTENT_REPO_BRANCH}`)
@@ -20,6 +23,24 @@ async function pathExists(targetPath: string) {
 
 async function hasRequiredContentRoot(targetPath: string) {
   return pathExists(path.join(targetPath, REQUIRED_ROUTE_MAP))
+}
+
+async function getCurrentBranch(targetPath: string) {
+  try {
+    const { stdout } = await execFileAsync('git', ['-C', targetPath, 'branch', '--show-current'])
+    return stdout.trim() || null
+  } catch {
+    return null
+  }
+}
+
+async function hasExpectedContentRoot(targetPath: string) {
+  if (!(await hasRequiredContentRoot(targetPath))) {
+    return false
+  }
+
+  const currentBranch = await getCurrentBranch(targetPath)
+  return currentBranch === CONTENT_REPO_BRANCH
 }
 
 async function runCommand(command: string, args: string[], cwd = process.cwd()) {
@@ -73,7 +94,7 @@ async function cloneFallbackRepo() {
 }
 
 export async function resolveContentRoot(preferredPath = process.env.CONTENT_REPO_PATH ?? LOCAL_CONTENT_REPO) {
-  if (await hasRequiredContentRoot(preferredPath)) {
+  if (await hasExpectedContentRoot(preferredPath)) {
     return preferredPath
   }
 

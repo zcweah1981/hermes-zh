@@ -11,7 +11,7 @@ import type { RouteMapItem, SitePack, SitePage } from '@/lib/content/types'
 const DEFAULT_CONTENT_REPO = process.env.CONTENT_REPO_PATH ?? '/opt/projects/awesome-hermes-agent-zh'
 
 function githubUrlFromPath(relativePath: string) {
-  const branch = process.env.CONTENT_REPO_BRANCH ?? 'site-content-anchor'
+  const branch = process.env.CONTENT_REPO_BRANCH ?? 'main'
   return `https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/${branch}/${relativePath}`
 }
 

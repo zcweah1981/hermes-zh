@@ -25,7 +25,7 @@ npm run verify:content
 
 ## 环境变量
 - `CONTENT_REPO_PATH`：默认 `/opt/projects/awesome-hermes-agent-zh`
-- `CONTENT_REPO_BRANCH`：默认 `site-content-anchor`
+- `CONTENT_REPO_BRANCH`：默认 `main`
 
 ## 生产运维约定
 - canonical host 固定为 `https://hermes-zh.com`
@@ -41,7 +41,7 @@ npm run verify:content
 一句话：当前是“构建驱动的半自动同步”，不是实时自动同步。
 
 ### 现在到底怎么同步
-1. 内容真相源仍是 `awesome-hermes-agent-zh` 的锚点分支 `site-content-anchor`
+1. 内容真相源仍是 `awesome-hermes-agent-zh` 的默认分支 `main`
 2. 站点在 `npm run build`、`npm run build:content`、CI verify/build、Vercel 部署构建这类显式构建动作里读取内容仓
 3. 构建脚本会把内容仓页面与 packs 转成 `content-cache/generated/*.json` manifest，再由 Next.js 消费这些构建产物；站点运行时不直接读取 Markdown 源文件
 4. `npm run build` 使用 `scripts/prepare-build-content.ts`：有可用内容仓时刷新 manifest；没有可用内容仓但已有 generated manifest 时复用兜底产物
@@ -61,7 +61,7 @@ npm run verify:content
 目标不是一步做到复杂增量同步，而是先打通“内容仓更新后，站点自动重建并刷新”的最小闭环。
 
 最小方案：
-1. 在内容仓 `awesome-hermes-agent-zh` 的 `site-content-anchor` 分支配置 GitHub Actions 或 webhook
+1. 在内容仓 `awesome-hermes-agent-zh` 的 `main` 分支配置 GitHub Actions 或 webhook
 2. 当该分支有新提交时，自动触发 hermes-zh 的部署动作（推荐用 Vercel Deploy Hook，或 GitHub repository_dispatch/workflow_dispatch）
 3. hermes-zh 在这次部署里继续沿用现有构建逻辑：checkout / clone 内容仓 -> 生成 manifest -> `next build`
 4. 部署成功后，再按需要调用 `/api/revalidate` 做兜底缓存失效；首轮可先粗粒度刷新首页、docs、packs

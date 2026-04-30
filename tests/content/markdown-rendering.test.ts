@@ -24,7 +24,7 @@ const page: SitePage = {
   pageType: 'doc-page',
   headings: [],
   body: '',
-  githubUrl: 'https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/site-content-anchor/docs/05-遇到问题/02-安装更新与环境问题.md',
+  githubUrl: 'https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/docs/05-遇到问题/02-安装更新与环境问题.md',
 }
 
 const linkedPage: SitePage = {
@@ -62,7 +62,7 @@ test('resolveMarkdownImage maps relative assets to raw github urls', () => {
 
   assert.equal(
     src,
-    'https://raw.githubusercontent.com/zcweah1981/awesome-hermes-agent-zh/site-content-anchor/docs/assets/solution-miniapp-3-layer-map-v7.png',
+    'https://raw.githubusercontent.com/zcweah1981/awesome-hermes-agent-zh/main/docs/assets/solution-miniapp-3-layer-map-v7.png',
   )
 })
 

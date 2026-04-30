@@ -117,7 +117,7 @@ test('buildRouteMap preserves page metadata for generated routes manifest', () =
     pageType: 'doc-page',
     headings: [],
     body: '# GitHub 可读页面',
-    githubUrl: 'https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/site-content-anchor/docs/readable.md',
+    githubUrl: 'https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/docs/readable.md',
   }
 
   assert.deepEqual(buildRouteMap([page]), [
