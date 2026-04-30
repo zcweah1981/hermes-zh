@@ -56,16 +56,173 @@ const chinaCards = [
   { href: '/docs/china/entry', title: '国内入口', description: '网页控制台、API、CLI、飞书、企业微信、钉钉与个人微信。' },
 ]
 
+const mechanismCards = [
+  {
+    number: '1',
+    title: '闭环学习系统',
+    subtitle: 'Learning Loop',
+    description: '自动从对话中提炼经验，将解决方案转化为可复用的 Skill 文件。',
+    steps: ['对话经验提炼', '提炼与转化', 'Skill 文件'],
+    icon: 'loop',
+  },
+  {
+    number: '2',
+    title: '三层记忆架构',
+    subtitle: 'Three-Layer Memory',
+    description: '融合会话、持久化偏好与技能记忆，实现短时空的精准背景唤回。',
+    steps: ['会话记忆', '技能记忆', '精准背景唤回'],
+    icon: 'memory',
+  },
+  {
+    number: '3',
+    title: 'Skill 自我进化能力',
+    subtitle: 'Skill Self-Evolution Ability',
+    description: '遵循 agentskills.io 标准，技能会根据用户反馈与验收结果持续优化。',
+    steps: ['用户反馈', 'Skill 修正', '持续进化'],
+    icon: 'growth',
+  },
+]
+
+const advantageCards = [
+  { icon: 'coin', title: '极低部署门槛', description: '仅需一台低价 VPS 即可实现 24/7 全天候在线的私人助手。' },
+  { icon: 'orbit', title: '自主后台', description: '区别于 Claude Code，Hermes 擅长无人值守的后台任务与定时巡检。' },
+  { icon: 'terminal', title: '实时交互', description: '保留 Telegram / CLI 等入口，人可随时插入决策与校准。' },
+]
+
+const comparisonCards = [
+  { name: 'Hermes Agent', tag: '会自我进化的 AI 助手', points: ['能沉淀长期记忆', '能把经验变成 Skill', '适合 24/7 后台任务'] },
+  { name: 'OpenClaw', tag: '配置即行为', points: ['偏本地配置', '按需启动', '人工维护工作流'] },
+  { name: 'Claude Code', tag: '交互式编程伙伴', points: ['强在人机实时协作', '更依赖人持续在线', '后台自主较弱'] },
+]
+
+function MiniIcon({ name }: { name: string }) {
+  const common = { fill: 'none', stroke: 'currentColor', strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const, strokeWidth: 1.8 }
+
+  if (name === 'coin') {
+    return <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="12" fill="rgba(245, 178, 72, .18)" stroke="currentColor" strokeWidth="2" /><path {...common} d="M20 12v16M15 16.5c1.2-1.4 8-2.2 8.7 1.2.8 3.8-8.4 2-7.5 5.8.7 3.1 7.3 2.4 9 .5" /></svg>
+  }
+
+  if (name === 'orbit') {
+    return <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="5" fill="currentColor" /><ellipse cx="20" cy="20" rx="15" ry="6" {...common} /><ellipse cx="20" cy="20" rx="6" ry="15" {...common} transform="rotate(32 20 20)" /></svg>
+  }
+
+  if (name === 'terminal') {
+    return <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="10" width="24" height="20" rx="4" {...common} /><path {...common} d="m14 18 4 3.2-4 3.2M21 25h6" /></svg>
+  }
+
+  if (name === 'memory') {
+    return <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="6" fill="currentColor" /><path {...common} d="M20 7v7M20 26v7M7 20h7M26 20h7M11.5 11.5l5 5M23.5 23.5l5 5M28.5 11.5l-5 5M16.5 23.5l-5 5" /></svg>
+  }
+
+  if (name === 'growth') {
+    return <svg viewBox="0 0 40 40" aria-hidden="true"><path {...common} d="M10 28h20M14 28V17M20 28V12M26 28V20M11 16l8-6 7 7 4-5" /></svg>
+  }
+
+  if (name === 'mcp') {
+    return <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="15" fill="rgba(98,208,255,.16)" stroke="currentColor" strokeWidth="2" /><path {...common} d="M40 15v10M40 55v10M15 40h10M55 40h10M22 22l8 8M58 22l-8 8M58 58l-8-8M22 58l8-8" /><circle cx="40" cy="15" r="4" fill="currentColor" /><circle cx="40" cy="65" r="4" fill="currentColor" /><circle cx="15" cy="40" r="4" fill="currentColor" /><circle cx="65" cy="40" r="4" fill="currentColor" /></svg>
+  }
+
+  return <svg viewBox="0 0 40 40" aria-hidden="true"><path {...common} d="M9 15h13l9-6v22l-9-6H9zM13 25v6" /><path {...common} d="M27 16c2 2.2 2 5.8 0 8" /></svg>
+}
+
 function CapabilityInfographic() {
   return (
-    <figure className="site-capability-reference" aria-label="Hermes Agent 核心机制、实战优势与主流工具差异信息图">
-      {/* Use the exact supplied raster so the module remains a 1:1 visual match, without Next image transformations. */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src="/assets/marketing/hermes-agent-capability-1to1.jpg"
-        alt="Hermes Agent：一个会自我进化的 AI 助手。左侧展示闭环学习、三层记忆、Skill 自我进化；中间是 Hermes Agent 核心引擎；右侧展示部署门槛、自主后台、实时交互和 MCP 连接；底部对比 Hermes Agent、OpenClaw 与 Claude Code。"
-      />
-    </figure>
+    <div className="site-capability-web" data-infographic-medium="dom-css-svg" aria-label="Hermes Agent 核心机制、实战优势与主流工具差异信息图">
+      <div className="site-capability-stars" />
+      <div className="site-capability-circuit site-capability-circuit-left" />
+      <div className="site-capability-circuit site-capability-circuit-right" />
+      <svg className="site-capability-connectors" viewBox="0 0 1200 620" aria-hidden="true">
+        <path d="M420 215 C505 215 520 300 600 300 C680 300 695 215 780 215" />
+        <path d="M420 330 C505 330 520 300 600 300 C680 300 695 330 780 330" />
+        <path d="M420 445 C505 445 520 300 600 300 C680 300 695 445 780 445" />
+      </svg>
+
+      <header className="site-capability-title-block">
+        <h2>Hermes Agent: 一个会自我进化的 AI 助手</h2>
+        <p>核心机制：让 AI 自己给自己造“缰绳”</p>
+      </header>
+
+      <div className="site-capability-layout">
+        <div className="site-capability-left" data-infographic-part="mechanisms">
+          {mechanismCards.map((card) => (
+            <article key={card.title} className="site-capability-panel site-capability-mechanism-panel">
+              <div className="site-capability-panel-title">
+                <span className="site-capability-badge">{card.number}</span>
+                <div>
+                  <h3>{card.title}</h3>
+                  <p>({card.subtitle})</p>
+                </div>
+              </div>
+              <p className="site-capability-copy">{card.description}</p>
+              <div className="site-capability-flow" aria-label={card.steps.join(' 到 ')}>
+                {card.steps.map((step, index) => (
+                  <span key={step} className="site-capability-flow-step">
+                    <span className="site-capability-flow-icon"><MiniIcon name={index === 0 ? card.icon : index === 1 ? 'megaphone' : 'growth'} /></span>
+                    <small>{step}</small>
+                    {index < card.steps.length - 1 ? <i aria-hidden="true">→</i> : null}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="site-capability-core" data-infographic-part="core-engine" aria-label="Hermes Agent 核心引擎">
+          <div className="site-capability-core-orbit site-capability-core-orbit-outer" />
+          <div className="site-capability-core-orbit site-capability-core-orbit-middle" />
+          <div className="site-capability-core-orbit site-capability-core-orbit-inner" />
+          <div className="site-capability-core-node">
+            <svg viewBox="0 0 96 96" aria-hidden="true">
+              <path d="M48 14 70 28v40L48 82 26 68V28Z" fill="none" stroke="currentColor" strokeWidth="3" />
+              <path d="M48 14v28M26 28l22 14 22-14M48 42v40M26 68l22-26 22 26" fill="none" stroke="currentColor" strokeWidth="2" />
+              <circle cx="48" cy="42" r="5" fill="currentColor" />
+            </svg>
+            <strong>Hermes Agent</strong>
+            <span>核心引擎</span>
+          </div>
+        </div>
+
+        <aside className="site-capability-right" data-infographic-part="advantages">
+          <h3>实战优势：低成本、全连接、高自主</h3>
+          {advantageCards.map((card) => (
+            <article key={card.title} className="site-capability-panel site-capability-advantage-panel">
+              <span className={`site-capability-round-icon site-capability-round-icon-${card.icon}`}><MiniIcon name={card.icon} /></span>
+              <div>
+                <h4>{card.title}</h4>
+                <p>{card.description}</p>
+              </div>
+            </article>
+          ))}
+          <article className="site-capability-panel site-capability-mcp-panel" data-infographic-part="mcp-network">
+            <div>
+              <h4>MCP 协议连接万物</h4>
+              <p>内置 40+ 工具，并通过 MCP 协议无缝接入 GitHub 等 6000+ 外部应用。</p>
+            </div>
+            <div className="site-capability-mcp-map">
+              <MiniIcon name="mcp" />
+              <span>GitHub</span>
+              <span>Browser</span>
+              <span>DB</span>
+              <span>Files</span>
+            </div>
+            <div className="site-capability-mcp-tags">
+              <span>内置 40+ 工具</span>
+              <span>无缝接入 6000+</span>
+            </div>
+          </article>
+        </aside>
+      </div>
+
+      <section className="site-capability-comparison" data-infographic-part="comparison">
+        {comparisonCards.map((card) => (
+          <article key={card.name} className="site-capability-comparison-card">
+            <strong>{card.name}</strong>
+            <span>{card.tag}</span>
+            <ul>{card.points.map((point) => <li key={point}>{point}</li>)}</ul>
+          </article>
+        ))}
+      </section>
+    </div>
   )
 }
 

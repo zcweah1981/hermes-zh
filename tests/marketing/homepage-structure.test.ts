@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { existsSync, readFileSync } from 'node:fs'
+import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, it } from 'node:test'
 
@@ -59,21 +59,27 @@ describe('R19 homepage structure', () => {
     assert.doesNotMatch(footerSource, /github\.com\/NousResearch\/hermes-agent|Hermes Agent 官方仓库|zcweah1981\/hermes-zh|独立站代码仓/)
   })
 
-  it('renders the evolving assistant section as the supplied 1:1 reference image without an extra module border', () => {
+  it('reconstructs the evolving assistant infographic as DOM/CSS/SVG instead of embedding the reference bitmap', () => {
     const sectionStart = homePageSource.indexOf('data-home-section="evolving-assistant"')
     const sectionEnd = homePageSource.indexOf('data-home-section="ready-made-solutions"')
     assert.ok(sectionStart > -1, 'evolving assistant section must exist')
     assert.ok(sectionEnd > sectionStart, 'evolving assistant section must sit before ready-made solutions')
 
     const sectionSource = homePageSource.slice(sectionStart, sectionEnd)
-    const referenceAsset = join(repoRoot, 'public/assets/marketing/hermes-agent-capability-1to1.jpg')
-    assert.ok(existsSync(referenceAsset), '1:1 reference infographic asset must be committed')
     assert.match(homePageSource, /function CapabilityInfographic/)
-    assert.match(homePageSource, /site-capability-reference/)
-    assert.match(homePageSource, /hermes-agent-capability-1to1\.jpg/)
-    assert.match(globalsSource, /\.site-capability-reference\s*{[^}]*margin:\s*0[^}]*width:\s*100%[^}]*overflow:\s*hidden[^}]*background:\s*#030812/s)
-    assert.match(globalsSource, /\.site-capability-reference img\s*{[^}]*display:\s*block[^}]*width:\s*100%[^}]*height:\s*auto/s)
-    assert.doesNotMatch(sectionSource, /max-w-site-marketing|px-6|py-16|site-capability-map|site-infographic-shell|<Image/)
+    assert.match(homePageSource, /data-infographic-medium="dom-css-svg"/)
+    assert.match(homePageSource, /data-infographic-part="mechanisms"/)
+    assert.match(homePageSource, /data-infographic-part="core-engine"/)
+    assert.match(homePageSource, /data-infographic-part="advantages"/)
+    assert.match(homePageSource, /data-infographic-part="mcp-network"/)
+    assert.match(homePageSource, /data-infographic-part="comparison"/)
+    assert.match(homePageSource, /闭环学习系统/)
+    assert.match(homePageSource, /三层记忆架构/)
+    assert.match(homePageSource, /Skill 自我进化能力/)
+    assert.match(homePageSource, /MCP 协议连接万物/)
+    assert.match(globalsSource, /\.site-capability-web\s*{[^}]*min-height:[^}]*overflow:\s*hidden[^}]*background:/s)
+    assert.match(globalsSource, /\.site-capability-connectors path\s*{[^}]*stroke-dasharray:/s)
+    assert.doesNotMatch(sectionSource, /<img|<Image|hermes-agent-capability-1to1\.jpg|site-capability-reference|max-w-site-marketing|px-6|py-16/)
   })
 
   it('links homepage doc entries only to generated docs routes', () => {
