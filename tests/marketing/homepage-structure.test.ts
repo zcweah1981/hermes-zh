@@ -84,7 +84,7 @@ describe('R19 homepage structure', () => {
     assert.match(homePageSource, /MCP 协议连接万物/)
     assert.match(globalsSource, /\.site-capability-web\s*{[^}]*--cap-bg:[^}]*--cap-glow:[^}]*overflow:\s*hidden[^}]*background:/s)
     assert.match(globalsSource, /\.site-capability-inner\s*{[^}]*width:\s*min\(100%,\s*1120px\)[^}]*margin-inline:\s*auto/s)
-    assert.match(globalsSource, /\.site-capability-layout\s*{[^}]*grid-template-columns:\s*42%\s+14%\s+38%[^}]*max-width:\s*100%/s)
+    assert.match(globalsSource, /\.site-capability-layout\s*{[^}]*grid-template-columns:\s*40%\s+18%\s+36%[^}]*max-width:\s*100%/s)
     assert.match(globalsSource, /\.site-capability-connectors path\s*{[^}]*stroke-dasharray:/s)
     assert.match(globalsSource, /\.site-capability-title-block p::before,[\s\S]*\.site-capability-title-block p::after/s)
     assert.match(globalsSource, /\.site-capability-compare-heading::before,[\s\S]*\.site-capability-compare-heading::after/s)
@@ -93,26 +93,35 @@ describe('R19 homepage structure', () => {
     assert.doesNotMatch(sectionSource, /<img|<Image|hermes-agent-capability-1to1\.jpg|site-capability-reference/)
   })
 
-  it('keeps the VFIX4 infographic polish: dark top transition, restrained title, and explicit core flow lines', () => {
+  it('keeps the VFIX5 infographic polish: no white band, smaller title, centered core, and six clear arrows', () => {
     assert.match(homePageSource, /data-home-section="evolving-assistant" className="relative overflow-hidden bg-\[#030812\]/)
-    assert.match(globalsSource, /\[data-home-section="evolving-assistant"\]::before\s*{[^}]*height:\s*clamp\(32px,\s*5vw,\s*72px\)[^}]*background:\s*linear-gradient\(180deg,\s*#030812 0%,\s*rgba\(3,\s*8,\s*18,\s*0\) 100%\)/s)
-    assert.match(globalsSource, /\[data-home-section="primary-paths"\]::after\s*{[^}]*background:\s*linear-gradient\(180deg,\s*rgba\(248,\s*250,\s*252,\s*0\),\s*#030812 88%\)/s)
+    assert.match(globalsSource, /\[data-home-section="primary-paths"\]\s*{[^}]*background:\s*#f8fafc/s)
+    assert.match(globalsSource, /\[data-home-section="primary-paths"\]::after\s*{[^}]*bottom:\s*-1px[^}]*height:\s*clamp\(120px,\s*12vw,\s*180px\)[^}]*rgba\(25,\s*62,\s*116,\s*\.92\) 42%[^}]*#030812 68%[^}]*#030812 100%/s)
+    assert.match(globalsSource, /\[data-home-section="evolving-assistant"\]\s*{[^}]*margin-top:\s*-1px[^}]*background:\s*#030812/s)
+    assert.match(globalsSource, /\[data-home-section="evolving-assistant"\]::before\s*{[^}]*height:\s*clamp\(120px,\s*10vw,\s*180px\)[^}]*linear-gradient\(180deg,\s*#030812 0%,\s*rgba\(3,\s*8,\s*18,\s*\.98\) 48%,\s*rgba\(3,\s*8,\s*18,\s*0\) 100%\)/s)
 
-    assert.match(globalsSource, /\.site-capability-title-block\s*{[^}]*max-width:\s*min\(100%,\s*1040px\)[^}]*margin:\s*0 auto clamp\(1\.6rem,\s*2\.8vw,\s*2\.25rem\)[^}]*padding-top:\s*clamp\(\.3rem,\s*1vw,\s*\.8rem\)/s)
-    assert.match(globalsSource, /\.site-capability-title-block h2\s*{[^}]*font-size:\s*clamp\(2\.1rem,\s*3\.8vw,\s*4rem\)[^}]*line-height:\s*1\.12[^}]*text-shadow:\s*0 0 12px rgba\(94,\s*177,\s*255,\s*\.46\),\s*0 0 28px rgba\(0,\s*136,\s*255,\s*\.24\)/s)
-    assert.match(globalsSource, /\.site-capability-title-block p\s*{[^}]*font-size:\s*clamp\(\.98rem,\s*1\.55vw,\s*1\.28rem\)[^}]*text-shadow:\s*0 0 10px rgba\(39,\s*186,\s*255,\s*\.26\)/s)
-    assert.match(globalsSource, /\.site-capability-title-block p::before,[\s\S]*\.site-capability-compare-heading::after\s*{[^}]*width:\s*clamp\(34px,\s*7vw,\s*112px\)[^}]*opacity:\s*\.72/s)
+    assert.match(globalsSource, /\.site-capability-title-block\s*{[^}]*max-width:\s*min\(100%,\s*920px\)[^}]*margin:\s*0 auto clamp\(1\.75rem,\s*2\.8vw,\s*2\.35rem\)/s)
+    assert.match(globalsSource, /\.site-capability-title-block h2\s*{[^}]*font-size:\s*clamp\(1\.85rem,\s*2\.65vw,\s*2\.45rem\)[^}]*line-height:\s*1\.16[^}]*text-shadow:\s*0 0 8px rgba\(94,\s*177,\s*255,\s*\.24\),\s*0 0 18px rgba\(0,\s*136,\s*255,\s*\.12\)/s)
+    assert.match(globalsSource, /\.site-capability-title-block p\s*{[^}]*font-size:\s*clamp\(\.86rem,\s*1\.1vw,\s*\.98rem\)[^}]*text-shadow:\s*0 0 6px rgba\(39,\s*186,\s*255,\s*\.16\)/s)
 
+    assert.match(homePageSource, /<defs>[\s\S]*id="site-capability-arrowhead"/)
     assert.match(homePageSource, /data-flow="mechanism-to-core"/)
     assert.match(homePageSource, /data-flow="core-to-advantage"/)
     assert.equal([...homePageSource.matchAll(/data-flow="mechanism-to-core"/g)].length, 3)
-    assert.equal([...homePageSource.matchAll(/data-flow="core-to-advantage"/g)].length, 4)
-    assert.match(homePageSource, /site-capability-core-label site-capability-core-label-top[\s\S]*机制汇聚/)
-    assert.match(homePageSource, /site-capability-core-label site-capability-core-label-bottom[\s\S]*能力输出/)
-    assert.match(globalsSource, /\.site-capability-layout\s*{[^}]*grid-template-columns:\s*42%\s+14%\s+38%/s)
-    assert.match(globalsSource, /\.site-capability-core-node\s*{[^}]*width:\s*clamp\(150px,\s*13\.5vw,\s*205px\)[^}]*height:\s*clamp\(150px,\s*13\.5vw,\s*205px\)[^}]*0 0 120px rgba\(39,\s*186,\s*255,\s*\.18\)/s)
-    assert.match(globalsSource, /\.site-capability-connectors path\s*{[^}]*stroke:\s*rgba\(72,\s*202,\s*255,\s*\.72\)[^}]*stroke-width:\s*2\.2[^}]*stroke-dasharray:\s*6 8/s)
-    assert.match(globalsSource, /\.site-capability-connectors path\[data-flow="core-to-advantage"\]\s*{[^}]*stroke:\s*rgba\(125,\s*220,\s*255,\s*\.78\)/s)
+    assert.equal([...homePageSource.matchAll(/data-flow="core-to-advantage"/g)].length, 3)
+    assert.match(globalsSource, /\.site-capability-layout\s*{[^}]*grid-template-columns:\s*40%\s+18%\s+36%[^}]*gap:\s*clamp\(24px,\s*2\.2vw,\s*32px\)/s)
+    assert.match(globalsSource, /\.site-capability-core\s*{[^}]*justify-items:\s*center[^}]*align-items:\s*center/s)
+    assert.match(globalsSource, /\.site-capability-core-node\s*{[^}]*width:\s*clamp\(150px,\s*12vw,\s*172px\)[^}]*height:\s*clamp\(150px,\s*12vw,\s*172px\)/s)
+    assert.match(globalsSource, /\.site-capability-core-orbit-outer\s*{[^}]*width:\s*clamp\(190px,\s*16vw,\s*236px\)[^}]*height:\s*clamp\(190px,\s*16vw,\s*236px\)/s)
+    assert.match(globalsSource, /\.site-capability-connectors path\s*{[^}]*stroke-width:\s*3\.4[^}]*stroke-dasharray:\s*9\s+6[^}]*marker-end:\s*url\(#site-capability-arrowhead\)/s)
+  })
+
+  it('keeps the hero background responsive across narrow viewports', () => {
+    assert.match(globalsSource, /\.site-hero-fullscreen\s*{[^}]*overflow:\s*hidden/s)
+    assert.match(globalsSource, /\.site-hero-orbit-line-a\s*{[^}]*width:\s*clamp\(320px,\s*68vw,\s*780px\)[^}]*height:\s*clamp\(88px,\s*16vw,\s*180px\)/s)
+    assert.match(globalsSource, /\.site-hero-orbit-line-b\s*{[^}]*width:\s*clamp\(420px,\s*86vw,\s*980px\)[^}]*height:\s*clamp\(120px,\s*21vw,\s*240px\)/s)
+    assert.match(globalsSource, /@media \(max-width:\s*640px\)\s*{[\s\S]*\.site-hero-circuit\s*{[^}]*width:\s*180px[^}]*height:\s*180px/s)
+    assert.match(globalsSource, /@media \(max-width:\s*640px\)\s*{[\s\S]*\.site-hero-horizon\s*{[^}]*width:\s*115vw[^}]*height:\s*220px/s)
   })
 
   it('links homepage doc entries only to generated docs routes', () => {

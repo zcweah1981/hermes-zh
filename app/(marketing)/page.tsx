@@ -132,13 +132,17 @@ function CapabilityInfographic() {
       <div className="site-capability-circuit site-capability-circuit-left" />
       <div className="site-capability-circuit site-capability-circuit-right" />
       <svg className="site-capability-connectors" viewBox="0 0 1120 620" aria-hidden="true">
-        <path data-flow="mechanism-to-core" d="M396 185 C470 185 492 300 560 300" />
-        <path data-flow="mechanism-to-core" d="M396 310 C472 310 492 300 560 300" />
-        <path data-flow="mechanism-to-core" d="M396 435 C470 435 492 300 560 300" />
-        <path data-flow="core-to-advantage" d="M560 300 C628 300 652 175 724 175" />
-        <path data-flow="core-to-advantage" d="M560 300 C630 300 652 270 724 270" />
-        <path data-flow="core-to-advantage" d="M560 300 C630 300 652 365 724 365" />
-        <path data-flow="core-to-advantage" d="M560 300 C628 300 650 455 724 455" />
+        <defs>
+          <marker id="site-capability-arrowhead" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="strokeWidth">
+            <path d="M1 1 9 5 1 9Z" fill="rgba(125, 220, 255, .92)" />
+          </marker>
+        </defs>
+        <path data-flow="mechanism-to-core" d="M382 178 C458 178 486 300 548 300" />
+        <path data-flow="mechanism-to-core" d="M382 310 C460 310 488 300 548 300" />
+        <path data-flow="mechanism-to-core" d="M382 442 C458 442 486 300 548 300" />
+        <path data-flow="core-to-advantage" d="M572 300 C642 300 660 198 728 198" />
+        <path data-flow="core-to-advantage" d="M572 300 C644 300 662 314 728 314" />
+        <path data-flow="core-to-advantage" d="M572 300 C642 300 660 430 728 430" />
       </svg>
 
       <div className="site-capability-inner">
