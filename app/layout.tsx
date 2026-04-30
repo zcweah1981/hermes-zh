@@ -13,6 +13,13 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
+  icons: {
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/hermes-logo.png', type: 'image/png' },
+    ],
+    apple: [{ url: '/apple-icon.png', type: 'image/png' }],
+  },
   alternates: {
     canonical: '/',
   },

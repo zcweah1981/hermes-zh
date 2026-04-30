@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const officialLinks = [
   { href: 'https://hermes-agent.nousresearch.com/docs', label: 'Hermes Agent 官方文档' },
@@ -22,9 +23,13 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-site-marketing gap-8 px-6 py-10 md:grid-cols-[1.35fr_1fr_1fr_1fr]">
         <div>
           <Link href="/" className="inline-flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-border-accent bg-brand-primary/12 text-sm font-bold text-brand-primary shadow-glow">
-              H
-            </div>
+            <Image
+              src="/hermes-logo.png"
+              alt="Hermes Agent 中文站 Logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-lg border border-border-accent shadow-glow"
+            />
             <div>
               <p className="text-sm font-semibold text-text-primary">Hermes Agent 中文站</p>
               <p className="mt-1 text-xs leading-5 text-text-tertiary">面向中文用户的 AI Agent 实践入口。</p>

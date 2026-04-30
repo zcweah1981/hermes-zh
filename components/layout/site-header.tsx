@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
@@ -30,9 +31,14 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-site-docs flex-col gap-4 px-6 py-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex min-h-[var(--site-header-height)] items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-border-accent bg-brand-primary/12 text-base font-bold text-brand-primary shadow-glow">
-              H
-            </div>
+            <Image
+              src="/hermes-logo.png"
+              alt="Hermes Agent 中文站 Logo"
+              width={44}
+              height={44}
+              priority
+              className="h-11 w-11 rounded-lg border border-border-accent shadow-glow"
+            />
             <div>
               <p className="text-sm font-semibold text-text-primary">Hermes Agent 中文站</p>
               <p className="text-xs text-text-tertiary">安装、方案、国内落地、参考手册与 GitHub 真相源入口</p>
