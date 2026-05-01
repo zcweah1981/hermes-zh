@@ -57,7 +57,7 @@ export function MarkdownBody({ page, pages }: { page: SitePage; pages: SitePage[
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeRaw]}
         components={{
-          h1: createHeading(1, 'mt-10 scroll-mt-28 text-3xl font-black tracking-tight text-white first:mt-0'),
+          h1: createHeading(2, 'mt-10 scroll-mt-28 text-3xl font-black tracking-tight text-white first:mt-0'),
           h2: createHeading(2, 'mt-12 scroll-mt-28 border-t border-white/8 pt-8 text-2xl font-black tracking-tight text-white'),
           h3: createHeading(3, 'mt-9 scroll-mt-28 text-xl font-bold text-white'),
           h4: createHeading(4, 'mt-7 scroll-mt-28 text-lg font-semibold text-white'),

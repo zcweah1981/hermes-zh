@@ -19,7 +19,7 @@ export const CORE_PAGE_SEO: Record<string, { title: string; description: string;
   },
   '/docs/start': {
     title: '从这开始｜Hermes Agent 中文站',
-    description: '从环境准备、安装配置到第一次互动，按顺序带你把 Hermes Agent 真正跑起来。',
+    description: '从环境准备、服务器连接、安装配置到第一次互动，按顺序带你把 Hermes Agent 真正跑起来，并理解后续学习路径该从哪里继续。',
     aiSummary:
       '如果你是第一次接触 Hermes Agent，从这里开始。这个模块先帮你准备运行环境、连接服务器、安装 Hermes、配置模型，并完成第一次真实互动。目标不是讲完所有功能，而是让你先跑通。',
   },
@@ -74,6 +74,20 @@ export function absoluteOgImage(pathname = DEFAULT_OG_IMAGE) {
 export function getEffectiveDescription(page: SitePage) {
   // Filters template-only descriptions such as “这一页只解决一件事：” before generating SEO metadata.
   return getDocNavSummary(page)
+}
+
+export function getDocsSeoDescription(page: SitePage, pathname?: string) {
+  const coreDescription = pathname ? CORE_PAGE_SEO[pathname]?.description : undefined
+  const summary = coreDescription ?? getEffectiveDescription(page)
+
+  if (summary.trim().length >= 50) {
+    return summary
+  }
+
+  const moduleName = page.module || '文档'
+  const sectionName = page.section && page.section !== moduleName ? `、${page.section}` : ''
+
+  return `${page.title} 是 Hermes Agent 中文站「${moduleName}${sectionName}」路径下的中文说明页，帮助你理解适用场景、关键步骤、常见坑和下一步入口，并和快速上手、现成方案、Packs、问题排查及参考手册形成完整学习链路。`
 }
 
 export function getPackSeoDescription(pack: SitePack) {

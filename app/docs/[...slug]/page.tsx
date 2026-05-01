@@ -8,7 +8,7 @@ import { loadPagesManifest } from '@/lib/content/loaders/pages'
 import { toDocPath } from '@/lib/routing/docs-path'
 import { buildCanonicalUrl } from '@/lib/seo/canonical'
 import { SiteJsonLd, buildBreadcrumbJsonLd, buildFAQPageJsonLd, buildTechArticleJsonLd } from '@/lib/seo/json-ld'
-import { buildSeoMetadata, getEffectiveDescription } from '@/lib/seo/metadata'
+import { buildSeoMetadata, CORE_PAGE_SEO, getCorePageSeo, getDocsSeoDescription } from '@/lib/seo/metadata'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 async function getCurrentPage(slugParts?: string[]) {
@@ -27,12 +27,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug?: st
     return {}
   }
 
-  const description = getEffectiveDescription(page)
+  const docPath = toDocPath(page.slug)
+  const description = getDocsSeoDescription(page, docPath)
 
   return buildSeoMetadata({
     title: page.title,
     description,
-    pathname: toDocPath(page.slug),
+    pathname: docPath,
     type: 'article',
   })
 }
@@ -45,7 +46,9 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
     notFound()
   }
 
-  const effectiveDescription = getEffectiveDescription(page)
+  const docPath = toDocPath(page.slug)
+  const corePageSeo = CORE_PAGE_SEO[docPath] ? getCorePageSeo(docPath) : null
+  const effectiveDescription = corePageSeo?.aiSummary ?? getDocsSeoDescription(page, docPath)
   const faqJsonLd = buildFAQPageJsonLd(page)
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: SITE_NAME, url: SITE_URL },
