@@ -1,11 +1,11 @@
 import { access } from 'node:fs/promises'
 import { spawn } from 'node:child_process'
+import { createServer } from 'node:net'
 import { setTimeout as delay } from 'node:timers/promises'
-import path from 'node:path'
+import * as path from 'node:path'
 
-const DEFAULT_PORT = Number(process.env.SMOKE_PORT ?? 3100)
+const REQUESTED_PORT = Number(process.env.SMOKE_PORT ?? 3100)
 const DEFAULT_HOST = process.env.SMOKE_HOST ?? '127.0.0.1'
-const DEFAULT_BASE_URL = process.env.SMOKE_BASE_URL ?? `http://${DEFAULT_HOST}:${DEFAULT_PORT}`
 const REQUEST_TIMEOUT_MS = Number(process.env.SMOKE_REQUEST_TIMEOUT_MS ?? 10_000)
 const SERVER_READY_TIMEOUT_MS = Number(process.env.SMOKE_SERVER_READY_TIMEOUT_MS ?? 30_000)
 
@@ -83,12 +83,39 @@ async function waitForServer(baseUrl: string, child: ReturnType<typeof spawn>) {
   throw new Error(`Timed out waiting for smoke server at ${baseUrl}`)
 }
 
-function startServer() {
-  return spawn('npm', ['run', 'start', '--', '--hostname', DEFAULT_HOST, '--port', String(DEFAULT_PORT)], {
+async function findAvailablePort(host: string, preferredPort: number) {
+  return await new Promise<number>((resolve, reject) => {
+    const server = createServer()
+    server.once('error', (error: NodeJS.ErrnoException) => {
+      if (error.code === 'EADDRINUSE') {
+        const fallback = createServer()
+        fallback.once('error', reject)
+        fallback.listen(0, host, () => {
+          const address = fallback.address()
+          fallback.close(() => {
+            if (typeof address === 'object' && address?.port) {
+              resolve(address.port)
+            } else {
+              reject(new Error('Unable to allocate fallback smoke port'))
+            }
+          })
+        })
+        return
+      }
+      reject(error)
+    })
+    server.listen(preferredPort, host, () => {
+      server.close(() => resolve(preferredPort))
+    })
+  })
+}
+
+function startServer(port: number) {
+  return spawn('npm', ['run', 'start', '--', '--hostname', DEFAULT_HOST, '--port', String(port)], {
     cwd: process.cwd(),
     env: {
       ...process.env,
-      PORT: String(DEFAULT_PORT),
+      PORT: String(port),
       HOSTNAME: DEFAULT_HOST,
       FORCE_COLOR: '0',
     },
@@ -124,17 +151,19 @@ async function runChecks(baseUrl: string) {
 
 async function main() {
   const usingExternalBaseUrl = Boolean(process.env.SMOKE_BASE_URL)
+  const port = usingExternalBaseUrl ? REQUESTED_PORT : await findAvailablePort(DEFAULT_HOST, REQUESTED_PORT)
+  const baseUrl = process.env.SMOKE_BASE_URL ?? `http://${DEFAULT_HOST}:${port}`
   let child: ReturnType<typeof spawn> | undefined
 
   if (!usingExternalBaseUrl) {
     await ensureBuildArtifacts()
-    child = startServer()
-    await waitForServer(DEFAULT_BASE_URL, child)
+    child = startServer(port)
+    await waitForServer(baseUrl, child)
   }
 
   try {
-    await runChecks(DEFAULT_BASE_URL)
-    console.log(`Smoke checks passed for ${DEFAULT_BASE_URL}`)
+    await runChecks(baseUrl)
+    console.log(`Smoke checks passed for ${baseUrl}`)
   } finally {
     if (child && child.exitCode === null) {
       child.kill('SIGTERM')
