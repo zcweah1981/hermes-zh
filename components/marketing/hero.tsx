@@ -26,14 +26,37 @@ export function Hero() {
         </div>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Link href="/docs/start" className="site-hero-cta-primary">
+          <Link
+            href="/docs/start"
+            className="site-hero-cta-primary"
+            data-analytics-event="hero_start_click"
+            data-analytics-label="快速上手"
+            data-analytics-destination="/docs/start"
+            data-analytics-section="hero"
+          >
             <span aria-hidden="true">🚀</span>
             快速上手
           </Link>
-          <Link href="/docs/docs-overview" className="site-hero-cta-secondary">
+          <Link
+            href="/docs/docs-overview"
+            className="site-hero-cta-secondary"
+            data-analytics-event="hero_docs_overview_click"
+            data-analytics-label="浏览文档"
+            data-analytics-destination="/docs/docs-overview"
+            data-analytics-section="hero"
+          >
             浏览文档
           </Link>
-          <a href={githubHref} target="_blank" rel="noreferrer" className="site-hero-cta-secondary">
+          <a
+            href={githubHref}
+            target="_blank"
+            rel="noreferrer"
+            className="site-hero-cta-secondary"
+            data-analytics-event="hero_github_click"
+            data-analytics-label="GitHub"
+            data-analytics-destination={githubHref}
+            data-analytics-section="hero"
+          >
             GitHub
           </a>
         </div>

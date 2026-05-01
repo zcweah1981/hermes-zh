@@ -259,7 +259,15 @@ export default function HomePage() {
 
             <div className="mt-9 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {primaryPaths.map((item) => (
-                <Link key={item.href} href={item.href} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg">
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
+                  data-analytics-event="home_primary_path_click"
+                  data-analytics-label={item.title}
+                  data-analytics-destination={item.href}
+                  data-analytics-section="primary-paths"
+                >
                   <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-blue-600">{item.eyebrow}</p>
                   <h3 className="mt-3 text-lg font-bold text-slate-950">{item.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
@@ -303,7 +311,15 @@ export default function HomePage() {
             </div>
             <div className="mt-9 grid gap-4 md:grid-cols-3">
               {chinaCards.map((item) => (
-                <Link key={item.href} href={item.href} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg">
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
+                  data-analytics-event="home_china_landing_click"
+                  data-analytics-label={item.title}
+                  data-analytics-destination={item.href}
+                  data-analytics-section="china-landing"
+                >
                   <h3 className="text-lg font-bold text-slate-950">{item.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-slate-600">{item.description}</p>
                   <p className="mt-5 text-sm font-semibold text-blue-600">继续查看 →</p>
@@ -322,7 +338,16 @@ export default function HomePage() {
               <Link href="/docs/openclaw" className="site-cta-secondary mt-2 px-4 py-2">查看迁移路径</Link>
             </SectionCard>
             <SectionCard eyebrow="内容特点" title="按真实使用路径组织内容" description="从快速跑通、场景方案、国内落地到参考手册，内容按用户决策顺序串起来，而不是堆成命令清单。" density="docs">
-              <a href={githubHref} target="_blank" rel="noreferrer" className="site-cta-secondary mt-2 px-4 py-2">查看中文站官方仓库</a>
+              <a
+                href={githubHref}
+                target="_blank"
+                rel="noreferrer"
+                className="site-cta-secondary mt-2 px-4 py-2"
+                data-analytics-event="home_content_repo_click"
+                data-analytics-label="查看中文站官方仓库"
+                data-analytics-destination={githubHref}
+                data-analytics-section="support-and-trust"
+              >查看中文站官方仓库</a>
             </SectionCard>
           </div>
         </section>

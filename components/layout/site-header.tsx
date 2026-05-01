@@ -5,12 +5,12 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
-  { href: '/docs/start', label: '从这开始' },
-  { href: '/docs/solutions', label: '现成方案' },
-  { href: '/docs/china', label: '国内落地' },
-  { href: '/docs/openclaw', label: '从 OpenClaw 过来' },
-  { href: '/docs/reference', label: '参考手册' },
-  { href: '/packs', label: 'Packs' },
+  { href: '/docs/start', label: '从这开始', analyticsEvent: 'nav_start_docs_click' },
+  { href: '/docs/solutions', label: '现成方案', analyticsEvent: 'nav_solutions_click' },
+  { href: '/docs/china', label: '国内落地', analyticsEvent: 'nav_china_click' },
+  { href: '/docs/openclaw', label: '从 OpenClaw 过来', analyticsEvent: 'nav_openclaw_click' },
+  { href: '/docs/reference', label: '参考手册', analyticsEvent: 'nav_reference_click' },
+  { href: '/packs', label: 'Packs', analyticsEvent: 'nav_packs_click' },
 ]
 
 const githubHref = 'https://github.com/zcweah1981/awesome-hermes-agent-zh'
@@ -46,7 +46,17 @@ export function SiteHeader() {
           </Link>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <a href={githubHref} target="_blank" rel="noreferrer" className="site-icon-link" aria-label="打开 GitHub 真相源">
+            <a
+              href={githubHref}
+              target="_blank"
+              rel="noreferrer"
+              className="site-icon-link"
+              aria-label="打开 GitHub 真相源"
+              data-analytics-event="nav_github_click"
+              data-analytics-label="GitHub"
+              data-analytics-destination={githubHref}
+              data-analytics-section="site-header-mobile"
+            >
               <GitHubIcon />
             </a>
           </div>
@@ -64,6 +74,10 @@ export function SiteHeader() {
                   key={item.href}
                   href={item.href}
                   className={`site-nav-link ${active ? 'site-nav-link-active' : ''}`}
+                  data-analytics-event={item.analyticsEvent}
+                  data-analytics-label={item.label}
+                  data-analytics-destination={item.href}
+                  data-analytics-section="site-header"
                 >
                   {item.label}
                 </Link>
@@ -72,11 +86,28 @@ export function SiteHeader() {
 
           </nav>
 
-          <a href={githubHref} target="_blank" rel="noreferrer" className="site-icon-link hidden lg:inline-flex" aria-label="打开 GitHub 真相源">
+          <a
+            href={githubHref}
+            target="_blank"
+            rel="noreferrer"
+            className="site-icon-link hidden lg:inline-flex"
+            aria-label="打开 GitHub 真相源"
+            data-analytics-event="nav_github_click"
+            data-analytics-label="GitHub"
+            data-analytics-destination={githubHref}
+            data-analytics-section="site-header"
+          >
             <GitHubIcon />
           </a>
 
-          <Link href="/docs/start" className="site-cta-primary hidden px-5 py-2.5 lg:inline-flex">
+          <Link
+            href="/docs/start"
+            className="site-cta-primary hidden px-5 py-2.5 lg:inline-flex"
+            data-analytics-event="nav_start_click"
+            data-analytics-label="快速上手"
+            data-analytics-destination="/docs/start"
+            data-analytics-section="site-header"
+          >
             快速上手
           </Link>
         </div>

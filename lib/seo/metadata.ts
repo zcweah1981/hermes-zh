@@ -6,9 +6,9 @@ import { buildCanonicalUrl } from '@/lib/seo/canonical'
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 export const DEFAULT_OG_IMAGE = '/og/hermes-zh-og.png'
-export const DEFAULT_TITLE = 'Hermes Agent 中文站｜中文教程、Packs 与国内落地指南'
+export const DEFAULT_TITLE = 'Hermes Agent 中文站：快速上手、现成方案、国内落地与 OpenClaw 迁移'
 export const DEFAULT_DESCRIPTION =
-  'Hermes Agent 中文站按真实使用路径整理快速上手、现成方案、国内部署、OpenClaw 迁移、问题排查、Reference 与 Packs，帮助中文用户少走弯路。'
+  'Hermes Agent 中文站是一套面向中文用户的 AI Agent 全流程实践指南，覆盖快速上手、现成方案、国内模型与入口、OpenClaw 迁移、参考手册、Packs 方案包与问题排查。'
 
 export const CORE_PAGE_SEO: Record<string, { title: string; description: string; aiSummary: string }> = {
   '/': {

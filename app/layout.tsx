@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
 
+import { AnalyticsEvents } from '@/components/analytics/analytics-events'
 import { SiteJsonLd, buildOrganizationJsonLd, buildWebSiteJsonLd } from '@/lib/seo/json-ld'
 import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, DEFAULT_TITLE, absoluteOgImage } from '@/lib/seo/metadata'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="zh-CN">
       <body>
         <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
+        <AnalyticsEvents />
         {children}
         <Script
           id="cloudflare-web-analytics"

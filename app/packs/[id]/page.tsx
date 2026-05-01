@@ -175,7 +175,16 @@ export default async function PackDetailPage({ params }: { params: Promise<{ id:
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <a href={installHref} target="_blank" rel="noreferrer" className="site-cta-primary">
+            <a
+              href={installHref}
+              target="_blank"
+              rel="noreferrer"
+              className="site-cta-primary"
+              data-analytics-event="pack_install_click"
+              data-analytics-label={`${pack.title} 安装说明`}
+              data-analytics-destination={installHref}
+              data-analytics-section="pack-detail"
+            >
               查看安装说明
             </a>
             {relatedDoc ? (
@@ -187,7 +196,16 @@ export default async function PackDetailPage({ params }: { params: Promise<{ id:
               返回 Packs
             </Link>
             {downloadHref ? (
-              <a href={downloadHref} target="_blank" rel="noreferrer" className="site-cta-secondary">
+              <a
+                href={downloadHref}
+                target="_blank"
+                rel="noreferrer"
+                className="site-cta-secondary"
+                data-analytics-event="pack_download_click"
+                data-analytics-label={`${pack.title} 下载`}
+                data-analytics-destination={downloadHref}
+                data-analytics-section="pack-detail"
+              >
                 下载 Pack 文件
               </a>
             ) : null}
