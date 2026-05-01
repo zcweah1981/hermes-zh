@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "smoke": "tsx scripts/smoke.ts",
     "submit:baidu": "tsx scripts/submit-baidu-urls.ts",
+    "submit:indexnow": "tsx scripts/submit-indexnow-urls.ts",
     "sync:content": "tsx scripts/sync-content.ts",
     "build:manifests": "tsx scripts/build-manifests.ts",
     "build:content": "npm run sync:content && npm run build:manifests",
