@@ -51,6 +51,7 @@ describe('SEO-GEO-C no-token SEO and GEO contract', () => {
   it('injects JSON-LD and page-specific metadata across layout docs packs and ai-index', () => {
     const layout = read('app/layout.tsx')
     const docsPage = read('app/docs/[...slug]/page.tsx')
+    const homePage = read('app/(marketing)/page.tsx')
     const packsPage = read('app/(marketing)/packs/page.tsx')
     const packDetail = read('app/packs/[id]/page.tsx')
     const aiIndexPage = read('app/ai-index/page.tsx')
@@ -60,6 +61,8 @@ describe('SEO-GEO-C no-token SEO and GEO contract', () => {
     assert.match(layout, /buildOrganizationJsonLd/)
     assert.match(layout, /images:/)
     assert.match(layout, /DEFAULT_OG_IMAGE/)
+    assert.match(homePage, /buildBreadcrumbJsonLd/)
+    assert.match(homePage, /首页/)
 
     assert.match(docsPage, /buildSeoMetadata/)
     assert.match(docsPage, /getDocsSeoDescription\(page, docPath\)/)

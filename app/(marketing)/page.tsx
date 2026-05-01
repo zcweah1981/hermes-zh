@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { Hero } from '@/components/marketing/hero'
 import { LazyCapabilityConnectorLayer } from '@/components/marketing/lazy-capability-connectors'
 import { SectionCard } from '@/components/ui/section-card'
+import { SiteJsonLd, buildBreadcrumbJsonLd } from '@/lib/seo/json-ld'
+import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 const githubHref = 'https://github.com/zcweah1981/awesome-hermes-agent-zh'
 
@@ -246,6 +248,12 @@ function CapabilityInfographic() {
 export default function HomePage() {
   return (
     <>
+      <SiteJsonLd
+        data={buildBreadcrumbJsonLd([
+          { name: SITE_NAME, url: SITE_URL },
+          { name: '首页', url: `${SITE_URL}/` },
+        ])}
+      />
       <Hero />
 
       <main className="flex flex-col">

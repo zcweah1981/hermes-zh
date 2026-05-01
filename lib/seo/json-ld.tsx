@@ -32,7 +32,7 @@ export function buildWebSiteJsonLd(): JsonLdObject {
     name: SITE_NAME,
     url: SITE_URL,
     inLanguage: 'zh-CN',
-    description: 'Hermes Agent 中文教程、Packs 与国内落地导航站。',
+    description: 'Hermes Agent 中文学习与落地入口，覆盖快速上手、现成方案、国内落地、OpenClaw 迁移、参考手册和问题排查。',
     potentialAction: {
       '@type': 'SearchAction',
       target: `${SITE_URL}/search?q={search_term_string}`,
@@ -100,24 +100,80 @@ export function buildWebPageJsonLd(input: { title: string; description: string; 
   }
 }
 
+function cleanFaqHeading(value: string) {
+  return value
+    .replace(/^#+\s*/, '')
+    .replace(/\s*\{#faq-[^}]+}\s*$/i, '')
+    .replace(/^\d+[｜|、.．\s-]+/, '')
+    .trim()
+}
+
+function cleanFaqAnswer(value: string) {
+  return value
+    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]+)]\([^)]*\)/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function extractFaqEntitiesFromBody(body: string) {
+  const lines = body.split('\n')
+  const entities: JsonLdObject[] = []
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index].trim()
+    const isFaqHeading = /^#{2,4}\s+/.test(line) && /\{#faq-[^}]+}/i.test(line)
+
+    if (!isFaqHeading) continue
+
+    const question = cleanFaqHeading(line)
+    if (!question) continue
+
+    const answerLines: string[] = []
+    for (let cursor = index + 1; cursor < lines.length; cursor += 1) {
+      const nextLine = lines[cursor].trim()
+      if (/^#{1,6}\s+/.test(nextLine)) break
+      if (!nextLine || nextLine === '---') {
+        if (answerLines.length > 0) break
+        continue
+      }
+      if (/^[-*+]\s+/.test(nextLine) && answerLines.length === 0) continue
+      answerLines.push(nextLine)
+      if (answerLines.join(' ').length >= 42) break
+    }
+
+    const answer = cleanFaqAnswer(answerLines.join(' '))
+    if (!answer) continue
+
+    entities.push({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer.length > 220 ? `${answer.slice(0, 220).trim()}…` : answer,
+      },
+    })
+  }
+
+  return entities
+}
+
 export function buildFAQPageJsonLd(page: SitePage): JsonLdObject | null {
   if (!/问题|FAQ|排查|常见/.test(`${page.title} ${page.module} ${page.section}`)) {
+    return null
+  }
+
+  const mainEntity = extractFaqEntitiesFromBody(page.body)
+  if (mainEntity.length === 0) {
     return null
   }
 
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `${page.title} 应该先查哪里？`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: getEffectiveDescription(page),
-        },
-      },
-    ],
+    mainEntity,
   }
 }
 
