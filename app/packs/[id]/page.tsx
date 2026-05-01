@@ -8,7 +8,8 @@ import { loadPagesManifest } from '@/lib/content/loaders/pages'
 import { loadPacksManifest } from '@/lib/content/loaders/packs'
 import type { SitePack, SitePage } from '@/lib/content/types'
 import { toDocPath } from '@/lib/routing/docs-path'
-import { buildCanonicalUrl } from '@/lib/seo/canonical'
+import { SiteJsonLd, buildBreadcrumbJsonLd, buildSoftwareSourceCodeJsonLd } from '@/lib/seo/json-ld'
+import { buildSeoMetadata, getPackSeoDescription } from '@/lib/seo/metadata'
 
 const CONTENT_REPO_BRANCH = process.env.CONTENT_REPO_BRANCH ?? 'main'
 const CONTENT_REPO_OWNER = 'zcweah1981/awesome-hermes-agent-zh'
@@ -87,13 +88,14 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     return {}
   }
 
-  return {
+  const description = getPackSeoDescription(pack)
+
+  return buildSeoMetadata({
     title: `${pack.title} Pack`,
-    description: buildHeroDescription(pack),
-    alternates: {
-      canonical: buildCanonicalUrl(`/packs/${pack.id}`),
-    },
-  }
+    description,
+    pathname: `/packs/${pack.id}`,
+    type: 'article',
+  })
 }
 
 export default async function PackDetailPage({ params }: { params: Promise<{ id: string }> }) {
@@ -115,6 +117,16 @@ export default async function PackDetailPage({ params }: { params: Promise<{ id:
 
   return (
     <div className="mx-auto flex max-w-site-marketing flex-col gap-8 px-6 py-16">
+      <SiteJsonLd
+        data={[
+          buildSoftwareSourceCodeJsonLd(pack),
+          buildBreadcrumbJsonLd([
+            { name: 'Hermes Agent 中文站', url: 'https://hermes-zh.com' },
+            { name: 'Packs', url: 'https://hermes-zh.com/packs' },
+            { name: pack.title, url: `https://hermes-zh.com/packs/${pack.id}` },
+          ]),
+        ]}
+      />
       <section className="site-panel-elevated relative overflow-hidden px-8 py-10 md:px-12 md:py-14">
         <div className="absolute inset-y-0 right-0 hidden w-1/3 bg-[radial-gradient(circle_at_center,rgba(45,184,110,0.14),transparent_68%)] lg:block" />
 

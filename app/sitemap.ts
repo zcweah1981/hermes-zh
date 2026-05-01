@@ -7,7 +7,7 @@ import { buildCanonicalUrl } from '@/lib/seo/canonical'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [pages, packs] = await Promise.all([loadPagesManifest(), loadPacksManifest()])
-  const staticRoutes = ['/', '/docs/docs-overview', '/packs']
+  const staticRoutes = ['/', '/docs/docs-overview', '/packs', '/llms.txt', '/ai-index']
 
   const entries = [
     ...staticRoutes.map((route) => ({
