@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import type { ReactNode } from 'react'
 
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 import './globals.css'
+
+const CLOUDFLARE_WEB_ANALYTICS_TOKEN = 'b653102bed904fb289cf6e3dd1f8baaa'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -48,7 +51,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          id="cloudflare-web-analytics"
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: CLOUDFLARE_WEB_ANALYTICS_TOKEN })}
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   )
 }
