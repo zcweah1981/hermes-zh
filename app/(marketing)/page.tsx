@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { Hero } from '@/components/marketing/hero'
-import { CapabilityConnectorLayer } from '@/components/marketing/capability-connectors'
+import { LazyCapabilityConnectorLayer } from '@/components/marketing/lazy-capability-connectors'
 import { SectionCard } from '@/components/ui/section-card'
 
 const githubHref = 'https://github.com/zcweah1981/awesome-hermes-agent-zh'
@@ -132,7 +132,7 @@ function CapabilityInfographic() {
       <div className="site-capability-stars" />
       <div className="site-capability-circuit site-capability-circuit-left" />
       <div className="site-capability-circuit site-capability-circuit-right" />
-      <CapabilityConnectorLayer />
+      <LazyCapabilityConnectorLayer />
 
       <div className="site-capability-inner">
         <header className="site-capability-title-block">

@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
 
-import { AnalyticsEvents } from '@/components/analytics/analytics-events'
 import { SiteJsonLd, buildOrganizationJsonLd, buildWebSiteJsonLd } from '@/lib/seo/json-ld'
 import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, DEFAULT_TITLE, absoluteOgImage } from '@/lib/seo/metadata'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
@@ -58,7 +57,38 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="zh-CN">
       <body>
         <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
-        <AnalyticsEvents />
+        <Script
+          id="hermes-analytics-events"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+(function () {
+  function getAnalyticsDetail(element) {
+    var event = element.dataset.analyticsEvent;
+    if (!event) return null;
+    return {
+      event: event,
+      label: element.dataset.analyticsLabel,
+      destination: element.dataset.analyticsDestination,
+      section: element.dataset.analyticsSection
+    };
+  }
+
+  document.addEventListener('click', function (event) {
+    var target = event.target;
+    if (!(target instanceof Element)) return;
+
+    var analyticsTarget = target.closest('[data-analytics-event]');
+    if (!(analyticsTarget instanceof HTMLElement)) return;
+
+    var detail = getAnalyticsDetail(analyticsTarget);
+    if (!detail) return;
+
+    window.dispatchEvent(new CustomEvent('hermes:analytics', { detail: detail }));
+  }, { capture: true });
+})();`,
+          }}
+        />
         {children}
         <Script
           id="cloudflare-web-analytics"

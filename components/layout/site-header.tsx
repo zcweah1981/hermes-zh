@@ -1,8 +1,5 @@
-'use client'
-
 import Link from 'next/link'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
 
 const navItems = [
   { href: '/docs/start', label: '从这开始', analyticsEvent: 'nav_start_docs_click' },
@@ -24,8 +21,6 @@ function GitHubIcon() {
 }
 
 export function SiteHeader() {
-  const pathname = usePathname()
-
   return (
     <header className="site-frame sticky top-0 z-40">
       <div className="mx-auto flex max-w-site-docs flex-col gap-4 px-6 py-3 lg:flex-row lg:items-center lg:justify-between">
@@ -64,26 +59,19 @@ export function SiteHeader() {
 
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
           <nav className="flex flex-wrap items-center gap-2">
-            {navItems.map((item) => {
-              const active =
-                pathname === item.href ||
-                pathname?.startsWith(`${item.href}/`)
-
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={`site-nav-link ${active ? 'site-nav-link-active' : ''}`}
-                  data-analytics-event={item.analyticsEvent}
-                  data-analytics-label={item.label}
-                  data-analytics-destination={item.href}
-                  data-analytics-section="site-header"
-                >
-                  {item.label}
-                </Link>
-              )
-            })}
-
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="site-nav-link"
+                data-analytics-event={item.analyticsEvent}
+                data-analytics-label={item.label}
+                data-analytics-destination={item.href}
+                data-analytics-section="site-header"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           <a

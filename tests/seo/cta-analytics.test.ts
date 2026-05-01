@@ -14,18 +14,15 @@ const layoutSource = read('app/layout.tsx')
 const analyticsComponentPath = join(repoRoot, 'components/analytics/analytics-events.tsx')
 
 describe('core CTA analytics markers', () => {
-  it('loads a lightweight click analytics entrypoint from the root layout', () => {
-    assert.ok(existsSync(analyticsComponentPath), 'analytics event client component should exist')
-    const analyticsSource = read('components/analytics/analytics-events.tsx')
+  it('loads a lightweight delegated click analytics bridge without a hydrated React component', () => {
+    assert.ok(!existsSync(analyticsComponentPath), 'analytics event React client component should be removed from the first-screen bundle')
 
-    assert.match(analyticsSource, /'use client'/)
-    assert.match(analyticsSource, /addEventListener\(['"]click['"]/, 'click listener should be delegated')
-    assert.match(analyticsSource, /closest\(['"]\[data-analytics-event\]['"]\)/, 'listener should use stable data-analytics markers')
-    assert.match(analyticsSource, /CustomEvent\(['"]hermes:analytics['"]/, 'listener should emit a local custom event for downstream hooks')
-    assert.doesNotMatch(analyticsSource, /navigator\.sendBeacon|fetch\(/, 'lightweight entrypoint should not send PII or call a new tracking endpoint')
-
-    assert.match(layoutSource, /AnalyticsEvents/)
-    assert.match(layoutSource, /<AnalyticsEvents\s*\/>/)
+    assert.match(layoutSource, /id="hermes-analytics-events"/)
+    assert.match(layoutSource, /addEventListener\(['"]click['"]/, 'click listener should be delegated')
+    assert.match(layoutSource, /closest\(['"]\[data-analytics-event\]['"]\)/, 'listener should use stable data-analytics markers')
+    assert.match(layoutSource, /CustomEvent\(['"]hermes:analytics['"]/, 'listener should emit a local custom event for downstream hooks')
+    assert.doesNotMatch(layoutSource, /navigator\.sendBeacon|fetch\(/, 'lightweight entrypoint should not send PII or call a new tracking endpoint')
+    assert.doesNotMatch(layoutSource, /AnalyticsEvents|<AnalyticsEvents\s*\/>/)
   })
 
   it('marks homepage hero, docs, packs, github, and china CTAs with stable analytics attributes', () => {
