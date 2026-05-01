@@ -1,0 +1,208 @@
+# hermes-zh — Content Auto Sync
+# Triggered by repository_dispatch from awesome-hermes-agent-zh after content changes pass validation.
+name: content-auto-sync
+
+on:
+  repository_dispatch:
+    types: [content-updated]
+  workflow_dispatch:
+    inputs:
+      content_sha:
+        description: "awesome-hermes-agent-zh commit SHA to sync"
+        required: true
+        type: string
+      content_ref:
+        description: "Content branch/ref label stored in the lock file"
+        required: false
+        default: "main"
+        type: string
+      content_repo:
+        description: "Content repository owner/name recorded in the lock file"
+        required: false
+        default: "zcweah1981/awesome-hermes-agent-zh"
+        type: string
+      source_actor:
+        description: "Manual actor or upstream actor recorded in the lock file"
+        required: false
+        default: "manual"
+        type: string
+
+permissions:
+  contents: write
+
+env:
+  CONTENT_REPO: ${{ github.event.client_payload.content_repo || inputs.content_repo || 'zcweah1981/awesome-hermes-agent-zh' }}
+  CONTENT_REF: ${{ github.event.client_payload.content_ref || inputs.content_ref || 'main' }}
+  CONTENT_SHA: ${{ github.event.client_payload.content_sha || inputs.content_sha }}
+  SOURCE_ACTOR: ${{ github.event.client_payload.actor || inputs.source_actor || github.actor }}
+  SOURCE_WORKFLOW_RUN: ${{ github.event.client_payload.run_id || github.run_id }}
+
+concurrency:
+  group: content-auto-sync-main
+  cancel-in-progress: false
+
+jobs:
+  sync-content:
+    name: Sync content lock and generated manifests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout hermes-zh (site repo)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve requested content SHA
+        id: resolve
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! [[ "${CONTENT_SHA}" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "CONTENT_SHA must be a full 40-character git SHA; got '${CONTENT_SHA}'" >&2
+            exit 1
+          fi
+
+          CURRENT_LOCK_SHA=""
+          if [ -f content-cache/content-lock.json ]; then
+            CURRENT_LOCK_SHA=$(node -e "const fs=require('fs'); const p='content-cache/content-lock.json'; const j=JSON.parse(fs.readFileSync(p,'utf8')); process.stdout.write(j.contentSha || '')")
+          fi
+
+          if [ "${CURRENT_LOCK_SHA}" = "${CONTENT_SHA}" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Content SHA ${CONTENT_SHA} is already locked; skipping rebuild." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Syncing content SHA ${CONTENT_SHA} from ${CONTENT_REPO}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Checkout awesome-hermes-agent-zh (content repo)
+        if: steps.resolve.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.CONTENT_REPO }}
+          path: _content_repo
+          ref: ${{ env.CONTENT_SHA }}
+
+      - name: Setup Node
+        if: steps.resolve.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.resolve.outputs.skip != 'true'
+        run: npm ci
+
+      - name: Typecheck
+        if: steps.resolve.outputs.skip != 'true'
+        run: npm run typecheck
+
+      - name: Lint
+        if: steps.resolve.outputs.skip != 'true'
+        run: npm run lint
+
+      - name: Test
+        if: steps.resolve.outputs.skip != 'true'
+        run: npm test
+
+      - name: Build with locked content
+        if: steps.resolve.outputs.skip != 'true'
+        run: npm run build
+        env:
+          CONTENT_REPO_PATH: ${{ github.workspace }}/_content_repo
+
+      - name: Smoke
+        if: steps.resolve.outputs.skip != 'true'
+        run: npm run smoke
+
+      - name: Verify content manifests
+        if: steps.resolve.outputs.skip != 'true'
+        run: npm run verify:content
+
+      - name: Verify content freshness
+        if: steps.resolve.outputs.skip != 'true'
+        run: npm run verify:content:freshness
+        env:
+          CONTENT_REPO_PATH: ${{ github.workspace }}/_content_repo
+
+      - name: Ensure build meta matches requested content SHA
+        if: steps.resolve.outputs.skip != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs = require('fs')
+          const meta = JSON.parse(fs.readFileSync('content-cache/generated/build-meta.json', 'utf8'))
+          const expected = process.env.CONTENT_SHA
+          if (meta.sourceSha !== expected) {
+            throw new Error(`build-meta.json.sourceSha mismatch: expected ${expected}, got ${meta.sourceSha}`)
+          }
+          console.log(`build-meta.json.sourceSha verified: ${meta.sourceSha}`)
+          NODE
+
+      - name: Write content lock
+        if: steps.resolve.outputs.skip != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p content-cache
+          node <<'NODE'
+          const fs = require('fs')
+          const lock = {
+            schemaVersion: 1,
+            contentRepo: process.env.CONTENT_REPO,
+            contentRef: process.env.CONTENT_REF || 'main',
+            contentSha: process.env.CONTENT_SHA,
+            lockedAt: new Date().toISOString(),
+            sourceWorkflowRun: String(process.env.SOURCE_WORKFLOW_RUN || ''),
+            sourceActor: process.env.SOURCE_ACTOR || 'unknown',
+          }
+          fs.writeFileSync('content-cache/content-lock.json', JSON.stringify(lock, null, 2) + '\n')
+          NODE
+
+      - name: Detect generated content changes
+        if: steps.resolve.outputs.skip != 'true'
+        id: changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain content-cache/generated content-cache/content-lock.json)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Generated manifests already match ${CONTENT_SHA}; no commit needed." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Commit synchronized content artifacts
+        if: steps.resolve.outputs.skip != 'true' && steps.changes.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content-cache/generated content-cache/content-lock.json
+          git commit -m "chore(content): sync content ${CONTENT_SHA:0:12}"
+          git push
+          echo "Committed and pushed content sync for ${CONTENT_SHA}." >> "$GITHUB_STEP_SUMMARY"
+
+  notify-failure:
+    name: Optional Telegram failure notification
+    runs-on: ubuntu-latest
+    needs: sync-content
+    if: failure()
+    steps:
+      - name: Send failure notification when token is configured
+        shell: bash
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID }}
+        run: |
+          set -euo pipefail
+          if [ -z "${TELEGRAM_BOT_TOKEN:-}" ] || [ -z "${TELEGRAM_CHAT_ID:-}" ]; then
+            echo "Telegram notification secrets/variables are not fully configured; skipping optional notification."
+            exit 0
+          fi
+          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            -d text="Hermes 中文站内容自动同步失败：content=${CONTENT_SHA} run=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}" \
+            >/dev/null
