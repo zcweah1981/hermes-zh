@@ -50,7 +50,35 @@ function containsBlockImageFigure(children: ReactNode): boolean {
   })
 }
 
+function normalizeHeadingText(value: string) {
+  return value
+    .replace(/^#+\s*/, '')
+    .replace(/\s*#+\s*$/, '')
+    .replace(/[|｜]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function stripLeadingDuplicateTitle(body: string, title: string) {
+  const match = body.match(/^(\s*)#\s+([^\n]+)\n?/)
+
+  if (!match) {
+    return body
+  }
+
+  const heading = normalizeHeadingText(match[2])
+  const pageTitle = normalizeHeadingText(title)
+
+  if (heading === pageTitle || heading.includes(pageTitle) || pageTitle.includes(heading)) {
+    return body.slice(match[0].length).replace(/^\n+/, '')
+  }
+
+  return body
+}
+
 export function MarkdownBody({ page, pages }: { page: SitePage; pages: SitePage[] }) {
+  const body = stripLeadingDuplicateTitle(page.body, page.title)
+
   return (
     <div className="site-doc-prose">
       <Markdown
@@ -159,7 +187,7 @@ export function MarkdownBody({ page, pages }: { page: SitePage; pages: SitePage[
           },
         }}
       >
-        {page.body}
+        {body}
       </Markdown>
     </div>
   )

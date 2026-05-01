@@ -83,7 +83,7 @@ test('MarkdownBody renders standalone image figures outside paragraph tags', () 
   assert.doesNotMatch(html, /<p[^>]*>\s*<figure/)
 })
 
-test('MarkdownBody demotes markdown h1 headings so docs pages keep one visible h1', () => {
+test('MarkdownBody removes the leading duplicate title and never emits body h1 tags', () => {
   const html = renderToStaticMarkup(
     React.createElement(MarkdownBody, {
       page: {
@@ -96,6 +96,6 @@ test('MarkdownBody demotes markdown h1 headings so docs pages keep one visible h
   )
 
   assert.doesNotMatch(html, /<h1\b/)
-  assert.match(html, /<h2[^>]*id="从这开始"[^>]*>从这开始<\/h2>/)
+  assert.doesNotMatch(html, /<h2[^>]*id="从这开始"[^>]*>从这开始<\/h2>/)
   assert.match(html, /<h2[^>]*id="先跑起来"[^>]*>先跑起来<\/h2>/)
 })
