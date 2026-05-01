@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { promises as fs } from 'node:fs'
+import { existsSync, promises as fs } from 'node:fs'
 import os from 'node:os'
 import path from 'node:path'
 
@@ -8,7 +8,11 @@ import { buildRouteMap } from '../../lib/content/resolvers/build-route-map'
 import { loadContentPages, loadPackEntries } from '../../lib/content/sync/source-loader'
 import type { SitePage } from '../../lib/content/types'
 
-const contentRoot = '/opt/projects/awesome-hermes-agent-zh'
+const contentRoot =
+  process.env.CONTENT_REPO_PATH ??
+  (existsSync(path.join(process.cwd(), '_content_repo'))
+    ? path.join(process.cwd(), '_content_repo')
+    : '/opt/projects/awesome-hermes-agent-zh')
 
 test('loadContentPages reads published pages from the real content repo with prev/next links', async () => {
   const pages = await loadContentPages(contentRoot)

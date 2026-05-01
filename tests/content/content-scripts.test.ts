@@ -1,19 +1,24 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { execFile } from 'node:child_process'
-import { promises as fs } from 'node:fs'
+import { existsSync, promises as fs } from 'node:fs'
 import path from 'node:path'
 import { promisify } from 'node:util'
 
 const execFileAsync = promisify(execFile)
-const projectRoot = '/opt/projects/hermes-zh'
+const projectRoot = process.cwd()
 const generatedDir = path.join(projectRoot, 'content-cache', 'generated')
 const tsxBin = path.join(projectRoot, 'node_modules', '.bin', 'tsx')
+const contentRoot =
+  process.env.CONTENT_REPO_PATH ??
+  (existsSync(path.join(projectRoot, '_content_repo'))
+    ? path.join(projectRoot, '_content_repo')
+    : '/opt/projects/awesome-hermes-agent-zh')
 
 async function runScript(scriptPath: string) {
   return execFileAsync(tsxBin, [scriptPath], {
     cwd: projectRoot,
-    env: process.env,
+    env: { ...process.env, CONTENT_REPO_PATH: contentRoot },
   })
 }
 
