@@ -13,7 +13,7 @@
 5. 站点仓 checkout 内容仓到 payload 中的 `content_sha`。
 6. 站点仓执行 typecheck、lint、test、build、smoke、content verify 与 freshness 校验。
 7. 校验通过后写入 `content-cache/content-lock.json`，并提交 `content-cache/generated/*.json`。
-8. 站点仓 main 新提交触发 Vercel 生产部署。
+8. 站点仓 workflow 使用 `VERCEL_TOKEN` / `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` 执行 Vercel CLI 生产部署，避免 GitHub Actions bot commit 不触发后续 GitHub/Vercel 自动部署的问题。
 
 ## 必需 Secret
 
@@ -22,6 +22,14 @@
 - `SITE_REPO_DISPATCH_TOKEN`
 
 权限要求：该 token 只需要能对 `zcweah1981/hermes-zh` 调用 `repository_dispatch`。建议使用 fine-grained token，限定目标仓库，并只给 Contents read/write 或 Actions 触发所需最小权限。不要把 token 写入仓库、治理文件或聊天记录。
+
+站点仓还需要配置生产部署 Secret：
+
+- `VERCEL_TOKEN`
+- `VERCEL_ORG_ID`
+- `VERCEL_PROJECT_ID`
+
+这些值只用于 `content-auto-sync` workflow 在内容锁定成功后执行 Vercel CLI 生产部署；不要写入仓库、治理文件或聊天记录。
 
 站点仓可选配置：
 

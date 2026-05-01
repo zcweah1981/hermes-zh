@@ -185,6 +185,24 @@ jobs:
           git push
           echo "Committed and pushed content sync for ${CONTENT_SHA}." >> "$GITHUB_STEP_SUMMARY"
 
+      - name: Deploy synchronized site to Vercel
+        if: steps.resolve.outputs.skip != 'true' && steps.changes.outputs.changed == 'true'
+        shell: bash
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          set -euo pipefail
+          if [ -z "${VERCEL_TOKEN:-}" ] || [ -z "${VERCEL_ORG_ID:-}" ] || [ -z "${VERCEL_PROJECT_ID:-}" ]; then
+            echo "VERCEL_TOKEN, VERCEL_ORG_ID, and VERCEL_PROJECT_ID are required for production deploy." >&2
+            exit 1
+          fi
+          npx vercel@latest pull --yes --environment=production --token "${VERCEL_TOKEN}"
+          npx vercel@latest build --prod --token "${VERCEL_TOKEN}"
+          deploy_url=$(npx vercel@latest deploy --prebuilt --prod --token "${VERCEL_TOKEN}")
+          echo "Deployed synchronized site: ${deploy_url}" >> "$GITHUB_STEP_SUMMARY"
+
   notify-failure:
     name: Optional Telegram failure notification
     runs-on: ubuntu-latest
