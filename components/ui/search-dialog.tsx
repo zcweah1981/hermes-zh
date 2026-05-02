@@ -62,12 +62,12 @@ export function SearchDialog() {
     <>
       <button 
         onClick={() => setOpen(true)}
-        className="flex items-center justify-center rounded-md p-2 text-[#6484a9] hover:bg-white/[0.04] hover:text-[#eaf6ff] lg:w-48 lg:justify-start lg:gap-2 lg:border lg:border-[#132c4a] lg:bg-[#07111F]/80 lg:px-3 lg:py-1.5 lg:shadow-sm"
+        className="group flex items-center justify-center rounded-md p-2 text-[#8b949e] hover:text-[#c9d1d9] lg:w-48 lg:gap-2 lg:border lg:border-[#30363d] lg:bg-[#0d1117] lg:px-3 lg:py-1.5 lg:shadow-sm lg:hover:border-[#8b949e] transition-colors"
         aria-label="搜索内容"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 lg:h-4 lg:w-4"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <span className="hidden text-sm font-medium lg:inline-block">Search</span>
-        <kbd className="ml-auto hidden rounded border border-[#132c4a] bg-[#0c182c] px-1.5 py-0.5 text-[11px] font-semibold text-[#6484a9] lg:inline-block">⌘K</kbd>
+        <span className="hidden text-[13px] font-medium lg:inline-block">Search</span>
+        <kbd className="ml-1 hidden rounded border border-[#30363d] bg-[#161b22] px-1.5 py-0.5 text-[10px] font-medium text-[#8b949e] lg:inline-block group-hover:border-[#8b949e] transition-colors">⌘K</kbd>
       </button>
 
       {open && (
