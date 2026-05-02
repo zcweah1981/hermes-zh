@@ -90,6 +90,16 @@ export function SiteHeader() {
               <GitHubIcon />
             </a>
             <SearchDialog />
+            <Link
+              href="/docs/start"
+              className="site-cta-primary hidden px-5 py-2.5 lg:inline-flex"
+              data-analytics-event="nav_start_click"
+              data-analytics-label="快速上手"
+              data-analytics-destination="/docs/start"
+              data-analytics-section="site-header"
+            >
+              快速上手
+            </Link>
           </div>
         </div>
       </div>
