@@ -12,6 +12,11 @@ const compat = new FlatCompat({
 const config = [
   ...compat.extends('next/core-web-vitals'),
   {
+    rules: {
+      '@next/next/no-page-custom-font': 'off',
+    },
+  },
+  {
     ignores: ['.next/**', '.vercel/**', 'content-cache/generated/**', 'node_modules/**'],
   },
 ]

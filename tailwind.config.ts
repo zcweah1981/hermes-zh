@@ -49,9 +49,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC', 'sans-serif'],
-        serif: ['Songti SC', 'STSong', 'Noto Serif CJK SC', 'serif'],
-        mono: ['SFMono-Regular', 'Menlo', 'Consolas', 'Liberation Mono', 'monospace'],
+        sans: ['Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+        serif: ['Noto Serif SC', 'Songti SC', 'serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'SFMono-Regular', 'monospace'],
       },
       borderRadius: {
         sm: '10px',

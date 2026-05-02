@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('/fonts/noto-sans-sc.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif SC';
+  src: url('/fonts/noto-serif-sc.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+}
+
 :root {
   color-scheme: dark;
   --site-bg: #08111f;
@@ -19,6 +35,9 @@
   --site-brand: #5ba7ff;
   --site-brand-hover: #7abbff;
   --site-accent-info: #62d0ff;
+  --font-noto-sans-sc: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-noto-serif-sc: 'Noto Serif SC', 'Songti SC', serif;
+  --font-jetbrains-mono: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', monospace;
   --site-radius-sm: 10px;
   --site-radius-md: 16px;
   --site-radius-lg: 20px;
@@ -417,7 +436,7 @@
 
   .site-capability-title-block h2 {
     margin: 0;
-    font-family: var(--font-noto-serif-sc), serif;
+    font-family: var(--font-noto-serif-sc);
     font-size: clamp(1.85rem, 2.65vw, 2.45rem);
     font-weight: 900;
     line-height: 1.16;
