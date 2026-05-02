@@ -146,20 +146,10 @@ export function SearchDialog() {
 
               {/* Empty state / Prompt state */}
               {query.trim().length === 0 && (
-                <div className="py-6 px-4 text-center text-sm text-[#8b949e] border-b border-[#30363d]">
+                <div className="py-6 px-4 text-center text-sm text-[#8b949e]">
                   输入关键字开始搜索
                 </div>
               )}
-
-              {/* 3. AI / Copilot Section (Third Section) */}
-              <div className="py-2">
-                <div className="px-4 py-1 text-xs font-semibold text-[#8b949e] mb-1">Agent 助理</div>
-                <div className="flex items-center px-4 py-2 hover:bg-[#161b22] cursor-pointer group">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[#8b949e] mr-3 shrink-0"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-                  <span className="text-sm font-semibold text-[#e6edf3] flex-1">与 Hermes Agent 对话</span>
-                  <span className="text-xs text-[#8b949e] opacity-0 group-hover:opacity-100 transition-opacity">开启新对话</span>
-                </div>
-              </div>
             </div>
             
           </div>
