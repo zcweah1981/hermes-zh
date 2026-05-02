@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, it } from 'node:test'
 
@@ -9,29 +9,54 @@ function read(path: string) {
   return readFileSync(join(repoRoot, path), 'utf8')
 }
 
-describe('font loading performance', () => {
-  it('does not use render-blocking Google Fonts CSS imports', () => {
+function exists(path: string) {
+  return existsSync(join(repoRoot, path))
+}
+
+function size(path: string) {
+  return statSync(join(repoRoot, path)).size
+}
+
+describe('font loading and visual fidelity', () => {
+  it('does not use runtime Google Fonts or gstatic font hosts', () => {
+    const layout = read('app/layout.tsx')
     const globals = read('app/globals.css')
 
-    assert.doesNotMatch(globals, /@import\s+url\(['"]?https:\/\/fonts\.googleapis\.com/i)
-    assert.doesNotMatch(globals, /fonts\.googleapis\.com/i)
+    assert.doesNotMatch(layout, /fonts\.googleapis\.com|fonts\.gstatic\.com/i)
+    assert.doesNotMatch(globals, /fonts\.googleapis\.com|fonts\.gstatic\.com/i)
+    assert.doesNotMatch(globals, /@import\s+url\(['"]?https?:\/\//i)
+    assert.doesNotMatch(layout, /<link[^>]+rel="stylesheet"/, 'layout should not add a manual runtime font stylesheet')
   })
 
-  it('uses local system font stacks without external font CSS or build-time font fetches', () => {
+  it('defines self-hosted Noto Sans SC and Noto Serif SC font faces in site CSS', () => {
     const layout = read('app/layout.tsx')
-    const tailwind = read('tailwind.config.ts')
+    const globals = read('app/globals.css')
 
     assert.doesNotMatch(layout, /from ['"]next\/font\/google['"]/, 'build should not depend on Google font downloads')
-    assert.doesNotMatch(layout, /from ['"]next\/font\/local['"]/, 'mobile homepage should avoid preloading large custom font files')
-    assert.doesNotMatch(layout, /Noto_Sans_SC|Noto_Serif_SC|JetBrains_Mono/, 'layout should not trigger font generation')
+    assert.match(globals, /font-family:\s*'Noto Sans SC'/, 'site CSS should define Noto Sans SC')
+    assert.match(globals, /font-family:\s*'Noto Serif SC'/, 'site CSS should define Noto Serif SC')
+    assert.match(globals, /url\('\/fonts\/noto-sans-sc\.woff2'\) format\('woff2'\)/, 'Noto Sans SC should resolve to a local woff2 asset')
+    assert.match(globals, /url\('\/fonts\/noto-serif-sc\.woff2'\) format\('woff2'\)/, 'Noto Serif SC should resolve to a local woff2 asset')
+    assert.match(globals, /font-display:\s*swap;/, 'self-hosted fonts should avoid blocking text rendering')
+  })
 
-    for (const externalFontHost of ['fonts.googleapis.com', 'fonts.gstatic.com']) {
-      assert.doesNotMatch(layout, new RegExp(externalFontHost, 'i'))
-      assert.doesNotMatch(tailwind, new RegExp(externalFontHost, 'i'))
-    }
+  it('commits the local font binaries used by the stylesheet', () => {
+    assert.equal(exists('public/fonts/noto-sans-sc.woff2'), true)
+    assert.equal(exists('public/fonts/noto-serif-sc.woff2'), true)
+    assert.ok(size('public/fonts/noto-sans-sc.woff2') > 10_000, 'Noto Sans SC font binary should not be an empty placeholder')
+    assert.ok(size('public/fonts/noto-serif-sc.woff2') > 10_000, 'Noto Serif SC font binary should not be an empty placeholder')
+  })
 
-    assert.match(tailwind, /PingFang SC/, 'Chinese UI should prefer native Chinese system fonts')
-    assert.match(tailwind, /Microsoft YaHei/, 'Windows Chinese fallback should remain available')
-    assert.match(tailwind, /SFMono-Regular/, 'code blocks should use native mono fonts without network fetches')
+  it('defines CSS font variables used by custom homepage selectors', () => {
+    const globals = read('app/globals.css')
+    const tailwind = read('tailwind.config.ts')
+
+    assert.match(tailwind, /sans: \['Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'\]/, 'Chinese UI should prefer Noto Sans SC')
+    assert.match(tailwind, /serif: \['Noto Serif SC', 'Songti SC', 'serif'\]/, 'large hero/homepage headings should prefer Noto Serif SC')
+    assert.match(tailwind, /mono: \['JetBrains Mono', 'Fira Code', 'SFMono-Regular', 'monospace'\]/, 'code blocks should keep JetBrains Mono first')
+    assert.match(globals, /--font-noto-sans-sc:\s*'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;/)
+    assert.match(globals, /--font-noto-serif-sc:\s*'Noto Serif SC', 'Songti SC', serif;/)
+    assert.match(globals, /--font-jetbrains-mono:\s*'JetBrains Mono', 'Fira Code', 'SFMono-Regular', monospace;/)
+    assert.doesNotMatch(globals, /var\(--font-noto-serif-sc\), serif/, 'custom selectors should not fall back because of an undefined font variable')
   })
 })
