@@ -75,34 +75,22 @@ export function SiteHeader() {
             ))}
           </nav>
           
-          <div className="hidden lg:flex items-center ml-auto mr-4">
+          <div className="hidden lg:flex items-center gap-3 ml-auto">
+            <a
+              href={githubHref}
+              target="_blank"
+              rel="noreferrer"
+              className="site-icon-link"
+              aria-label="打开 GitHub 真相源"
+              data-analytics-event="nav_github_click"
+              data-analytics-label="GitHub"
+              data-analytics-destination={githubHref}
+              data-analytics-section="site-header"
+            >
+              <GitHubIcon />
+            </a>
             <SearchDialog />
           </div>
-
-          <a
-            href={githubHref}
-            target="_blank"
-            rel="noreferrer"
-            className="site-icon-link hidden lg:inline-flex"
-            aria-label="打开 GitHub 真相源"
-            data-analytics-event="nav_github_click"
-            data-analytics-label="GitHub"
-            data-analytics-destination={githubHref}
-            data-analytics-section="site-header"
-          >
-            <GitHubIcon />
-          </a>
-
-          <Link
-            href="/docs/start"
-            className="site-cta-primary hidden px-5 py-2.5 lg:inline-flex"
-            data-analytics-event="nav_start_click"
-            data-analytics-label="快速上手"
-            data-analytics-destination="/docs/start"
-            data-analytics-section="site-header"
-          >
-            快速上手
-          </Link>
         </div>
       </div>
     </header>
