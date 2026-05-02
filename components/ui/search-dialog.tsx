@@ -62,7 +62,7 @@ export function SearchDialog() {
     <>
       <button 
         onClick={() => setOpen(true)}
-        className="flex items-center justify-center rounded-md p-2 text-[#6484a9] hover:bg-white/[0.04] hover:text-[#eaf6ff] lg:w-64 lg:justify-start lg:gap-2 lg:border lg:border-[#132c4a] lg:bg-[#07111F]/80 lg:px-3 lg:py-1.5 lg:shadow-sm"
+        className="flex items-center justify-center rounded-md p-2 text-[#6484a9] hover:bg-white/[0.04] hover:text-[#eaf6ff] lg:w-40 xl:w-48 lg:justify-start lg:gap-2 lg:border lg:border-[#132c4a] lg:bg-[#07111F]/80 lg:px-3 lg:py-1.5 lg:shadow-sm"
         aria-label="搜索内容"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 lg:h-4 lg:w-4"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
@@ -73,24 +73,24 @@ export function SearchDialog() {
       {open && (
         <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4">
           <div className="fixed inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setOpen(false)} />
-          <div className="relative z-50 w-full max-w-2xl overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900 shadow-2xl">
-            <div className="flex items-center border-b border-neutral-800 px-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-neutral-500"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <div className="relative z-50 w-full max-w-2xl overflow-hidden rounded-xl border border-[#132c4a] bg-[#07111F] shadow-2xl">
+            <div className="flex items-center border-b border-[#132c4a] px-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-[#6484a9]"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
               <input
-                className="flex h-14 w-full bg-transparent px-4 py-3 text-base text-neutral-200 outline-none placeholder:text-neutral-500"
+                className="flex h-14 w-full bg-transparent px-4 py-3 text-base text-[#eaf6ff] outline-none placeholder:text-[#6484a9]"
                 placeholder="搜索问题、方案或文档..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 autoFocus
               />
-              <button onClick={() => setOpen(false)} className="rounded p-1 text-neutral-400 hover:bg-neutral-800 hover:text-white">
+              <button onClick={() => setOpen(false)} className="rounded p-1 text-[#6484a9] hover:bg-white/[0.04] hover:text-[#eaf6ff]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
               </button>
             </div>
             
             <div className="max-h-[60vh] overflow-y-auto p-2">
                {isPending ? (
-                 <div className="p-4 text-center text-sm text-neutral-500">搜索中...</div>
+                 <div className="p-4 text-center text-sm text-[#6484a9]">搜索中...</div>
                ) : results.length > 0 ? (
                  <div className="flex flex-col gap-1">
                    {results.map((item, i) => {
@@ -111,14 +111,14 @@ export function SearchDialog() {
                          key={`${item.slug}-${item.id || ''}-${i}`}
                          href={href}
                          onClick={() => setOpen(false)}
-                         className="flex flex-col rounded-lg p-3 hover:bg-neutral-800/50"
+                         className="flex flex-col rounded-lg p-3 hover:bg-white/[0.04]"
                        >
                          <div className="flex items-center gap-2">
                            <span className="text-xs font-medium uppercase text-brand-primary">{item.type}</span>
-                           <span className="text-sm font-medium text-neutral-200">{item.title}</span>
+                           <span className="text-sm font-medium text-[#eaf6ff]">{item.title}</span>
                          </div>
                          {item.text && (
-                           <div className="mt-1 line-clamp-2 text-sm text-neutral-400">
+                           <div className="mt-1 line-clamp-2 text-sm text-[#6484a9]">
                              {item.text.length > 100 ? item.text.substring(0, 100) + '...' : item.text}
                            </div>
                          )}
@@ -127,9 +127,9 @@ export function SearchDialog() {
                    })}
                  </div>
                ) : query.trim().length >= 2 ? (
-                 <div className="p-4 text-center text-sm text-neutral-500">无匹配结果</div>
+                 <div className="p-4 text-center text-sm text-[#6484a9]">无匹配结果</div>
                ) : (
-                 <div className="p-4 text-center text-sm text-neutral-500">输入至少2个字符开始搜索</div>
+                 <div className="p-4 text-center text-sm text-[#6484a9]">输入至少2个字符开始搜索</div>
                )}
             </div>
           </div>
