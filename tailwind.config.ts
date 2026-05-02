@@ -5,6 +5,7 @@ const config: Config = {
     './app/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './lib/**/*.{ts,tsx}',
+    './styles/**/*.{css,scss}',
   ],
   theme: {
     extend: {
@@ -49,7 +50,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Noto Serif SC', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+        sans: ['Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
         serif: ['Noto Serif SC', 'Songti SC', 'serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'SFMono-Regular', 'monospace'],
       },
