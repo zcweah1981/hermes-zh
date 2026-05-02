@@ -41,10 +41,8 @@ export function SiteHeader() {
             </div>
           </Link>
 
-          <div className="flex items-center gap-2 lg:hidden">
-            <div className="mr-2">
-              <SearchDialog />
-            </div>
+          <div className="flex items-center lg:hidden">
+            <SearchDialog />
             <a
               href={githubHref}
               target="_blank"
@@ -78,7 +76,7 @@ export function SiteHeader() {
             ))}
           </nav>
           
-          <div className="hidden lg:flex items-center mx-4">
+          <div className="hidden lg:flex items-center ml-auto mr-4">
             <SearchDialog />
           </div>
 

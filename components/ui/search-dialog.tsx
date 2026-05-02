@@ -62,12 +62,12 @@ export function SearchDialog() {
     <>
       <button 
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 rounded-md border border-neutral-800 bg-neutral-950 px-3 py-1.5 text-sm text-neutral-400 hover:border-neutral-700 hover:text-neutral-300"
+        className="flex items-center justify-center rounded-md p-2 text-neutral-400 hover:bg-neutral-800 hover:text-neutral-300 lg:w-64 lg:justify-start lg:gap-2 lg:border lg:border-neutral-800 lg:bg-neutral-950 lg:px-3 lg:py-1.5"
+        aria-label="搜索内容"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <span className="hidden sm:inline-block">搜索内容...</span>
-        <span className="inline-block sm:hidden">搜索</span>
-        <kbd className="ml-auto hidden rounded bg-neutral-800 px-2 py-0.5 text-xs text-neutral-500 sm:inline-block">⌘K</kbd>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 lg:h-4 lg:w-4"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <span className="hidden lg:inline-block">搜索内容...</span>
+        <kbd className="ml-auto hidden rounded bg-neutral-800 px-2 py-0.5 text-xs text-neutral-500 lg:inline-block">⌘K</kbd>
       </button>
 
       {open && (
