@@ -70,67 +70,98 @@ export function SearchDialog() {
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4">
-          <div className="fixed inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setOpen(false)} />
-          <div className="relative z-50 w-full max-w-2xl overflow-hidden rounded-xl border border-[#132c4a] bg-[#07111F] shadow-2xl">
-            <div className="flex items-center border-b border-[#132c4a] px-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-[#6484a9]"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <div className="fixed inset-0 z-[100] flex items-start justify-center pt-16 sm:pt-24 px-4">
+          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={() => setOpen(false)} />
+          <div className="relative z-50 w-full max-w-[600px] overflow-hidden rounded-xl border border-[#30363d] bg-[#0d1117] shadow-2xl flex flex-col">
+            
+            {/* 1. Search Input Field (Top Section) */}
+            <div className="flex items-center px-3 py-2 border-b border-[#30363d] focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[#8b949e] mr-3 shrink-0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
               <input
-                className="flex h-14 w-full bg-transparent px-4 py-3 text-base text-[#eaf6ff] outline-none placeholder:text-[#6484a9]"
-                placeholder="搜索问题、方案或文档..."
+                className="flex-1 h-8 bg-transparent text-sm text-[#e6edf3] outline-none placeholder:text-[#8b949e]"
+                placeholder="搜索..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 autoFocus
               />
-              <button onClick={() => setOpen(false)} className="rounded p-1 text-[#6484a9] hover:bg-white/[0.04] hover:text-[#eaf6ff]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-              </button>
+              {query && (
+                <button 
+                  onClick={() => setQuery("")}
+                  className="rounded-sm p-0.5 text-[#8b949e] hover:bg-[#30363d] hover:text-[#e6edf3] ml-2 shrink-0 flex items-center justify-center bg-[#21262d] border border-[#30363d]"
+                  aria-label="Clear search"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+              )}
             </div>
             
-            <div className="max-h-[60vh] overflow-y-auto p-2">
-               {isPending ? (
-                 <div className="p-4 text-center text-sm text-[#6484a9]">搜索中...</div>
-               ) : results.length > 0 ? (
-                 <div className="flex flex-col gap-1">
-                   {results.map((item, i) => {
-                     let href = item.slug
-                     if (item.type === 'page') {
-                        href = `/docs/${item.slug.replace(/\.md$/, '')}`
-                     } else if (item.type === 'heading' || item.type === 'content') {
-                        href = `/docs/${item.slug.replace(/\.md$/, '')}${item.id ? '#' + item.id : ''}`
-                     } else if (item.type === 'pack') {
-                        href = `/packs/${item.slug}`
-                     } else {
-                        href = `/${item.slug}`
-                     }
-                     href = href.replace(/([^:])\/{2,}/g, '$1/')
+            <div className="flex-1 overflow-y-auto max-h-[60vh]">
+              {/* 2. Search Suggestions (Second Section) - Only show when there is a query */}
+              {query.trim().length > 0 && (
+                <div className="py-2 border-b border-[#30363d]">
+                  <div className="flex items-center px-4 py-2 hover:bg-[#161b22] cursor-pointer group">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[#8b949e] mr-3 shrink-0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <span className="text-sm font-semibold text-[#e6edf3] flex-1">{query}</span>
+                    <span className="text-xs text-[#8b949e] opacity-0 group-hover:opacity-100 transition-opacity">搜索全站指南</span>
+                  </div>
+                  
+                  {isPending ? (
+                    <div className="px-4 py-2 text-xs text-[#8b949e]">搜索中...</div>
+                  ) : results.length > 0 ? (
+                    results.map((item, i) => {
+                      let href = item.slug
+                      if (item.type === 'page') {
+                         href = `/docs/${item.slug.replace(/\.md$/, '')}`
+                      } else if (item.type === 'heading' || item.type === 'content') {
+                         href = `/docs/${item.slug.replace(/\.md$/, '')}${item.id ? '#' + item.id : ''}`
+                      } else if (item.type === 'pack') {
+                         href = `/packs/${item.slug}`
+                      } else {
+                         href = `/${item.slug}`
+                      }
+                      href = href.replace(/([^:])\/{2,}/g, '$1/')
 
-                     return (
-                       <Link 
-                         key={`${item.slug}-${item.id || ''}-${i}`}
-                         href={href}
-                         onClick={() => setOpen(false)}
-                         className="flex flex-col rounded-lg p-3 hover:bg-white/[0.04]"
-                       >
-                         <div className="flex items-center gap-2">
-                           <span className="text-xs font-medium uppercase text-brand-primary">{item.type}</span>
-                           <span className="text-sm font-medium text-[#eaf6ff]">{item.title}</span>
-                         </div>
-                         {item.text && (
-                           <div className="mt-1 line-clamp-2 text-sm text-[#6484a9]">
-                             {item.text.length > 100 ? item.text.substring(0, 100) + '...' : item.text}
-                           </div>
-                         )}
-                       </Link>
-                     )
-                   })}
-                 </div>
-               ) : query.trim().length >= 2 ? (
-                 <div className="p-4 text-center text-sm text-[#6484a9]">无匹配结果</div>
-               ) : (
-                 <div className="p-4 text-center text-sm text-[#6484a9]">输入至少2个字符开始搜索</div>
-               )}
+                      return (
+                        <Link 
+                          key={`${item.slug}-${item.id || ''}-${i}`}
+                          href={href}
+                          onClick={() => setOpen(false)}
+                          className="flex items-center px-4 py-2 hover:bg-[#161b22] cursor-pointer group"
+                        >
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[#8b949e] mr-3 shrink-0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                          <div className="flex items-center text-sm">
+                            <span className="text-[#8b949e] mr-1">匹配:</span>
+                            <span className="bg-[#1f242c] text-[#58a6ff] rounded px-1 font-mono text-[13px] mr-2">{item.title}</span>
+                            <span className="text-[#e6edf3] font-semibold">{query}</span>
+                          </div>
+                          <span className="ml-auto text-xs text-[#8b949e] opacity-0 group-hover:opacity-100 transition-opacity">跳转至内容</span>
+                        </Link>
+                      )
+                    })
+                  ) : query.trim().length >= 2 ? (
+                    <div className="px-4 py-2 text-xs text-[#8b949e]">无匹配结果</div>
+                  ) : null}
+                </div>
+              )}
+
+              {/* Empty state / Prompt state */}
+              {query.trim().length === 0 && (
+                <div className="py-6 px-4 text-center text-sm text-[#8b949e] border-b border-[#30363d]">
+                  输入关键字开始搜索
+                </div>
+              )}
+
+              {/* 3. AI / Copilot Section (Third Section) */}
+              <div className="py-2">
+                <div className="px-4 py-1 text-xs font-semibold text-[#8b949e] mb-1">Agent 助理</div>
+                <div className="flex items-center px-4 py-2 hover:bg-[#161b22] cursor-pointer group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 text-[#8b949e] mr-3 shrink-0"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                  <span className="text-sm font-semibold text-[#e6edf3] flex-1">与 Hermes Agent 对话</span>
+                  <span className="text-xs text-[#8b949e] opacity-0 group-hover:opacity-100 transition-opacity">开启新对话</span>
+                </div>
+              </div>
             </div>
+            
           </div>
         </div>
       )}
