@@ -36,8 +36,7 @@ export function SiteHeader() {
               className="h-11 w-11 object-contain"
             />
             <div>
-              <p className="text-sm font-semibold text-text-primary">Hermes Agent 中文站</p>
-              <p className="text-xs text-text-tertiary">安装、方案、国内落地、参考手册与 GitHub 真相源入口</p>
+              <p className="text-base font-semibold text-text-primary">Hermes Agent 中文站</p>
             </div>
           </Link>
 
