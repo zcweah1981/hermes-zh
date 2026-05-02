@@ -49,7 +49,7 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+        sans: ['Noto Serif SC', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
         serif: ['Noto Serif SC', 'Songti SC', 'serif'],
         mono: ['JetBrains Mono', 'Fira Code', 'SFMono-Regular', 'monospace'],
       },
