@@ -11,6 +11,8 @@ import { toDocPath } from '@/lib/routing/docs-path'
 import { SiteJsonLd, buildBreadcrumbJsonLd, buildSoftwareSourceCodeJsonLd } from '@/lib/seo/json-ld'
 import { buildSeoMetadata, getPackSeoDescription } from '@/lib/seo/metadata'
 
+import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/breadcrumb'
+
 const CONTENT_REPO_BRANCH = process.env.CONTENT_REPO_BRANCH ?? 'main'
 const CONTENT_REPO_OWNER = 'zcweah1981/awesome-hermes-agent-zh'
 
@@ -115,18 +117,25 @@ export default async function PackDetailPage({ params }: { params: Promise<{ id:
   const installFileName = path.posix.basename(pack.install)
   const downloadFileName = pack.download ? path.posix.basename(pack.download) : null
 
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { name: '首页', url: '/' },
+    { name: '现成方案', url: '/packs' },
+    { name: pack.title }
+  ]
+
   return (
     <div className="mx-auto flex max-w-site-marketing flex-col gap-8 px-6 py-16">
       <SiteJsonLd
         data={[
           buildSoftwareSourceCodeJsonLd(pack),
           buildBreadcrumbJsonLd([
-            { name: 'Hermes Agent 中文站', url: 'https://hermes-zh.com' },
-            { name: 'Packs', url: 'https://hermes-zh.com/packs' },
+            { name: '首页', url: 'https://hermes-zh.com' },
+            { name: '现成方案', url: 'https://hermes-zh.com/packs' },
             { name: pack.title, url: `https://hermes-zh.com/packs/${pack.id}` },
           ]),
         ]}
       />
+      <Breadcrumb items={breadcrumbItems} />
       <section className="site-panel-elevated relative overflow-hidden px-8 py-10 md:px-12 md:py-14">
         <div className="absolute inset-y-0 right-0 hidden w-1/3 bg-[radial-gradient(circle_at_center,rgba(45,184,110,0.14),transparent_68%)] lg:block" />
 

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { SearchDialog } from '@/components/ui/search-dialog'
 
 const navItems = [
   { href: '/docs/start', label: '从这开始', analyticsEvent: 'nav_start_docs_click' },
@@ -41,6 +42,9 @@ export function SiteHeader() {
           </Link>
 
           <div className="flex items-center gap-2 lg:hidden">
+            <div className="mr-2">
+              <SearchDialog />
+            </div>
             <a
               href={githubHref}
               target="_blank"
@@ -73,6 +77,10 @@ export function SiteHeader() {
               </Link>
             ))}
           </nav>
+          
+          <div className="hidden lg:flex items-center mx-4">
+            <SearchDialog />
+          </div>
 
           <a
             href={githubHref}
