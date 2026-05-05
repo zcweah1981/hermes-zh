@@ -1,0 +1,115 @@
+# hermes-zh — IndexNow Submit
+# Migrates IndexNow auto-submit from Hermes cron to GitHub Actions.
+name: IndexNow Submit
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Print the generated IndexNow URL list without submitting"
+        required: false
+        default: "true"
+        type: boolean
+      content_ref:
+        description: "awesome-hermes-agent-zh ref to checkout for manifest regeneration"
+        required: false
+        default: "main"
+        type: string
+  schedule:
+    - cron: "*/30 * * * *"
+
+permissions:
+  contents: read
+
+env:
+  INDEXNOW_HOST: hermes-zh.com
+  INDEXNOW_KEY_SECRET: ${{ secrets.INDEXNOW_KEY }}
+  CONTENT_REF: ${{ github.event.inputs.content_ref || 'main' }}
+
+concurrency:
+  group: indexnow-submit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  submit-indexnow:
+    name: Build manifests and submit IndexNow URLs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout hermes-zh (site repo)
+        uses: actions/checkout@v4
+
+      - name: Checkout awesome-hermes-agent-zh (content repo)
+        uses: actions/checkout@v4
+        with:
+          repository: zcweah1981/awesome-hermes-agent-zh
+          path: _content_repo
+          ref: ${{ env.CONTENT_REF }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build content manifests
+        run: npm run build:content
+        env:
+          CONTENT_REPO_PATH: ${{ github.workspace }}/_content_repo
+
+      - name: Resolve IndexNow key
+        shell: bash
+        env:
+          # Secret wins when configured. Fallback scans public/*.txt for a public/[0-9a-f]{32}.txt verification file.
+          INDEXNOW_KEY_SECRET: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          set -euo pipefail
+
+          key="${INDEXNOW_KEY_SECRET:-}"
+          key_source="secret"
+
+          if [ -z "${key}" ]; then
+            key_source="public-key-file"
+            for candidate in public/*.txt; do
+              [ -e "${candidate}" ] || continue
+              filename="$(basename "${candidate}" .txt)"
+              if [[ "${filename}" =~ ^[0-9a-f]{32}$ ]]; then
+                key="${filename}"
+                break
+              fi
+            done
+          fi
+
+          if [ -z "${key}" ]; then
+            echo "INDEXNOW_KEY is required: configure repository secret INDEXNOW_KEY or commit a public/<32hex>.txt verification file." >&2
+            exit 1
+          fi
+
+          if ! [[ "${key}" =~ ^[0-9a-f]{32}$ ]]; then
+            echo "INDEXNOW_KEY must be a lowercase 32-character hex string." >&2
+            exit 1
+          fi
+
+          echo "::add-mask::${key}"
+          echo "INDEXNOW_KEY=${key}" >> "${GITHUB_ENV}"
+          echo "INDEXNOW_KEY_LOCATION=https://hermes-zh.com/${key}.txt" >> "${GITHUB_ENV}"
+          fingerprint="$(printf '%s' "${key}" | sha256sum | cut -c1-12)"
+          echo "IndexNow key resolved from ${key_source}; fingerprint=${fingerprint}" >> "${GITHUB_STEP_SUMMARY}"
+
+      - name: Submit IndexNow URLs
+        run: |
+          set -euo pipefail
+          dry_run="false"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.dry_run }}" != "false" ]; then
+            dry_run="true"
+          fi
+
+          if [ "${dry_run}" = "true" ]; then
+            npm run submit:indexnow -- --dry-run
+          else
+            npm run submit:indexnow
+          fi
+        env:
+          INDEXNOW_HOST: ${{ env.INDEXNOW_HOST }}
