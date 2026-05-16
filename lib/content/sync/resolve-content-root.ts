@@ -64,6 +64,18 @@ async function runCommand(command: string, args: string[], cwd = process.cwd()) 
 
 async function cloneFallbackRepo() {
   if (await hasRequiredContentRoot(FALLBACK_CONTENT_ROOT)) {
+    try {
+      await runCommand('git', ['-C', FALLBACK_CONTENT_ROOT, 'pull', '--ff-only'])
+      console.log(`[content-sync] pulled latest for cached fallback at ${FALLBACK_CONTENT_ROOT}`)
+    } catch (pullError) {
+      console.warn(`[content-sync] git pull failed for cached fallback; will re-clone`)
+      console.warn(pullError)
+      await fs.rm(FALLBACK_CONTENT_ROOT, { recursive: true, force: true })
+      // fall through to clone below
+    }
+  }
+
+  if (await hasRequiredContentRoot(FALLBACK_CONTENT_ROOT)) {
     return FALLBACK_CONTENT_ROOT
   }
 
