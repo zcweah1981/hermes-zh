@@ -25,15 +25,21 @@ export const CORE_PAGE_SEO: Record<string, { title: string; description: string;
   },
   '/docs/solutions': {
     title: 'Hermes Agent 现成方案｜内容、办公与开发场景 Packs',
-    description: '按内容创作、办公效率、应用开发等真实任务整理 Hermes Agent 现成方案和对应 Packs。',
+    description: '按内容创作、办公效率、应用开发、团队工作流等真实任务整理 Hermes Agent 现成方案和对应 Packs。',
     aiSummary:
-      '这个模块面向已经有具体任务的用户。你可以从小红书、公众号、PPT、会议纪要、日报、资料总结、微信小程序、Web 原型等场景进入，先看可用方案，再决定是否安装对应 Pack。',
+      '这个模块面向已经有具体任务或团队工作流的用户。你可以从小红书、公众号、PPT、会议纪要、日报、资料总结、微信小程序、Web 原型等场景进入，先看可用方案，再决定是否安装对应 Pack。',
   },
   '/docs/china': {
     title: 'Hermes Agent 国内部署与模型接入指南',
     description: '围绕国内服务器、模型接口、消息入口和网络环境，整理 Hermes Agent 在国内落地的决策路径。',
     aiSummary:
       '国内落地最容易卡在服务器、模型接口、代理、消息入口和稳定性。这个模块把国内部署、国内模型和国内入口拆开说明，适合想用 DeepSeek、Kimi、智谱、百炼、腾讯云或自定义兼容接口的用户。',
+  },
+  '/docs/china/models': {
+    title: 'Hermes Agent 国内模型路线｜DeepSeek、Kimi、智谱、百炼与兼容接口',
+    description: '国内模型路线页帮助你在 DeepSeek 按量、Kimi、智谱 GLM、阿里云百炼、腾讯云 Token Plan、MiniMax 与 OpenAI 兼容接口之间做起步选择。',
+    aiSummary:
+      '国内模型路线页先解决模型入口怎么选，而不是直接堆 API 参数。你可以从最低门槛按量、统一套餐、单厂商深用或自定义兼容接口四条路线进入，再回到国内部署和国内入口完成闭环。',
   },
   '/docs/openclaw': {
     title: '从 OpenClaw 到 Hermes｜关系、共存与迁移路径',

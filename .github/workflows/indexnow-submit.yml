@@ -16,7 +16,8 @@ on:
         default: "main"
         type: string
   schedule:
-    - cron: "*/30 * * * *"
+    # Reduced from every 30 minutes: script now skips NO_CHANGE, but 6h cadence lowers Actions/API noise and FOT pressure.
+    - cron: "17 */6 * * *"
 
 permissions:
   contents: read

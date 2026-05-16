@@ -1,6 +1,12 @@
 import type { NextConfig } from 'next'
 
 const LEGACY_REDIRECTS = [
+  { source: '/quick-start.html', destination: '/docs/start' },
+  { source: '/models.html', destination: '/docs/china/models' },
+  { source: '/team-flow.html', destination: '/docs/solutions' },
+  { source: '/docs/quick-start', destination: '/docs/start' },
+  { source: '/docs/team-flow', destination: '/docs/solutions' },
+  { source: '/docs/china/models.html', destination: '/docs/china/models' },
   { source: '/docs/quickstart', destination: '/docs/start' },
   { source: '/docs/model-provider', destination: '/docs/china' },
   { source: '/docs/starter', destination: '/packs' },

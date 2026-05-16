@@ -15,7 +15,8 @@ describe('Baidu API URL submit tooling', () => {
     const script = readFileSync(`${repoRoot}/scripts/submit-baidu-urls.ts`, 'utf8')
 
     assert.match(script, /process\.env\.BAIDU_PUSH_TOKEN/)
-    assert.doesNotMatch(script, /gfwor2xsHTMlBftr/)
+    assert.doesNotMatch(script, /token=[A-Za-z0-9]{8,}/)
+    assert.doesNotMatch(script, /BAIDU_PUSH_TOKEN_PLACEHOLDER/)
   })
 
   it('uses Baidu official URL push endpoint', () => {

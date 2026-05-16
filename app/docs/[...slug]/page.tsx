@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
 import { DocOutline, DocPrevNext } from '@/components/docs/doc-outline'
@@ -87,6 +88,16 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
         <div className="mt-10">
           <MarkdownBody page={page} pages={pages} />
         </div>
+
+        <nav data-seo-internal-links="index-recovery" aria-label="索引恢复推荐入口" className="mt-10 rounded-2xl border border-border bg-surface-muted/70 p-5">
+          <p className="text-sm font-semibold text-text-primary">继续定位 Hermes Agent 路线</p>
+          <div className="mt-4 flex flex-wrap gap-3 text-sm">
+            <Link href="/docs/start" className="site-cta-secondary px-4 py-2">快速上手</Link>
+            <Link href="/docs/solutions" className="site-cta-secondary px-4 py-2">现成方案</Link>
+            <Link href="/docs/china/models" className="site-cta-secondary px-4 py-2">国内模型</Link>
+            <Link href="/packs" className="site-cta-secondary px-4 py-2">Packs</Link>
+          </div>
+        </nav>
 
         <DocPrevNext page={page} pages={pages} />
       </article>

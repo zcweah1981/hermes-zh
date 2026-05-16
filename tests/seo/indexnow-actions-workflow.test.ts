@@ -20,7 +20,7 @@ describe('IndexNow GitHub Actions migration', () => {
     assert.match(workflow, /workflow_dispatch:/)
     assert.match(workflow, /dry_run:/)
     assert.match(workflow, /schedule:/)
-    assert.match(workflow, /cron: ['"]\*\/30 \* \* \* \*['"]/)
+    assert.match(workflow, /cron: ['"]17 \*\/6 \* \* \*['"]/)
     assert.match(workflow, /concurrency:/)
   })
 
