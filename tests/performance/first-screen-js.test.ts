@@ -16,11 +16,20 @@ describe('first-screen JavaScript budget', () => {
     assert.ok(!existsSync(join(repoRoot, 'components/analytics/analytics-events.tsx')), 'obsolete React analytics component should be removed')
   })
 
-  it('renders the site header as a server component without pathname hydration', () => {
+  it('renders the site header and search entry as server-only first-screen markup', () => {
+    const shell = read('components/layout/site-shell.tsx')
     const header = read('components/layout/site-header.tsx')
+    const searchTrigger = read('components/ui/search-dialog.tsx')
 
     assert.doesNotMatch(header, /'use client'/, 'site header should remain a server component')
     assert.doesNotMatch(header, /usePathname|ActiveNavLinks|next\/navigation/, 'header navigation should not hydrate only to compute active pathname')
     assert.match(header, /navItems\.map/, 'header should render nav links directly on the server')
+
+    assert.doesNotMatch(shell, /SearchDialogRoot/, 'site shell should not hydrate a global search React root on every page')
+    assert.doesNotMatch(searchTrigger, /'use client'|useEffect|useState|useTransition|fetch\(/, 'closed search entry should stay static')
+    assert.match(searchTrigger, /href="\/search"/, 'search entry should keep search reachable without first-screen hydration')
+    assert.match(searchTrigger, /data-search-trigger="true"/, 'search trigger must keep a stable DOM marker')
+    assert.ok(!existsSync(join(repoRoot, 'components/ui/search-dialog-root.tsx')), 'obsolete global search root should be removed')
+    assert.ok(!existsSync(join(repoRoot, 'components/ui/search-dialog-panel.tsx')), 'obsolete lazy search panel should be removed')
   })
 })
