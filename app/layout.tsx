@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           }}
         />
         {children}
+        <Analytics />
         <Script
           id="cloudflare-web-analytics"
           src="https://static.cloudflareinsights.com/beacon.min.js"
