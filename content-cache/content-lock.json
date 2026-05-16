@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "contentRepo": "zcweah1981/awesome-hermes-agent-zh",
   "contentRef": "main",
-  "contentSha": "fa120705c961a003aab6c7aa839f6c0fa36f6331",
-  "lockedAt": "2026-05-16T18:20:00.000Z",
+  "contentSha": "9c6c472867bd445e3f1668c8734143f3e6517868",
+  "lockedAt": "2026-05-17T03:09:07.000+08:00",
   "sourceWorkflowRun": "manual-ops-sync",
   "sourceActor": "hyoga-ops-1"
 }
