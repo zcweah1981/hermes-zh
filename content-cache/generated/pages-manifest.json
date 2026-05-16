@@ -1249,7 +1249,7 @@
     "title": "04-PPT 助手",
     "module": "solutions",
     "section": "ppt",
-    "description": "一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成“可继续做成 PPT 的整套稿”。",
+    "description": "一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成\"可继续做成 PPT 的整套稿\"。",
     "order": 12,
     "status": "published",
     "updated": "2026-04-28",
@@ -1471,6 +1471,176 @@
     "body": "# 04-PPT 助手\n\n> 一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成“可继续做成 PPT 的整套稿”。\n\n---\n\n## 👀 先看结论\n\n如果你现在想的是：\n- 我知道这次 PPT 大概要讲什么，但不知道怎么排页\n- 我不想自己从标题、结构、逐页要点一路从零搭\n- 我想先让 Hermes 帮我出一版能直接继续做成 PPT 的大纲和逐页稿\n\n那这一页就是给你用的。\n\n你用完这页，先拿到的不是泛泛建议，而应该是这些东西：\n- 这套 PPT 最适合从哪个叙事切口讲\n- 一版完整页序结构\n- 每一页该写什么要点\n- 每一页适合放什么图 / 表 / 结论\n- 开场页和结尾页怎么收\n- 演讲备注 / 口播提示\n- 发给设计或自己继续做 PPT 时的执行清单\n- 跑完第一轮后下一句该怎么继续\n\n## 🗺 如果你现在只想看最短路线\n- 想先看这套东西值不值得用：直接看「⚡ 5 分钟跑一轮」\n- 想直接跑团队协作版：直接看「🤝 团队协作版怎么安装和开跑」\n- 想看最后会拿到什么：直接看「📦 你最后会拿到什么」\n- 想看第一轮跑完以后怎么继续：直接看「🪜 跑完第一轮后，下一句怎么说」\n- 想直接下载包：直接看「📁 你现在直接能用的东西」\n\n---\n\n## 🧩 一个真实用例：这页到底怎么帮人\n\n假设你现在要做一份 PPT，主题是：\n\n“季度业务复盘与下季度规划”\n\n你脑子里可能只有这些零散想法：\n- 想讲这季度发生了什么\n- 想把增长、问题、经验和下季度计划讲清楚\n- 想让老板或团队一眼看懂重点\n- 但不知道到底该分几页\n- 也不知道这份 PPT 应该先讲成绩、先讲问题，还是先讲结论\n\n这一页做的事，就是先把这些零散想法压成一版可继续做成 PPT 的整套稿。\n\n比如你跑完第一轮后，Hermes 应该先给你：\n- 1 个主切口：`先给结论，再讲数据，再落到下季度动作`\n- 1 版完整页序结构\n- 每页标题 + 核心要点\n- 每页配图 / 图表建议\n- 开场页、结尾页、Q&A 页建议\n- 一份交给自己或设计继续落版的执行清单\n\n这样你就不是“还在想 PPT 怎么排”，而是已经有一版能继续做、继续美化、继续讲的逐页稿。\n\n---\n\n## 🚦先选哪一种：先出一版结构 or 先出逐页讲稿\n\n先别被方法论吓到，直接按你现在的状态选。\n\n| 如果你现在更像这样 | 直接走哪条 | 你真正会拿到什么 |\n|---|---|---|\n| 先想知道这份 PPT 该怎么排页 | 先出一版结构 | 一次拿到页序、每页标题、每页核心内容 |\n| 结构已经差不多有了，只差展开 | 先出逐页讲稿 | 先拿每页要点、图表建议、讲稿备注 |\n| 还没想清楚这份汇报该先讲什么 | 先出一版结构 | Hermes 先帮你定叙事主线 |\n| 已经确定主题，只想快点做成稿 | 先出逐页讲稿 | 先拿逐页可执行内容，再进 PPT 工具 |\n\n![对比图：左边是先出一版结构，右边是先出逐页讲稿，内容结构保持清楚，背景统一到整体深蓝黑技术文档家族](../../assets/solution-ppt-structure-vs-script-review-candidate-07-integrated.png)\n\n如果你现在拿不准，默认先走：\n- 先出一版结构\n\n原因很简单：\n- 先跑通\n- 先把整套页序定清楚\n- 再决定要不要直接展开逐页讲稿\n\n---\n\n## 🧱 先出一版结构：适合谁，跑完会得到什么\n\n### 适合谁\n适合你现在是下面这种状态：\n- 这份 PPT 还没成型\n- 已经有主题，但页序和重点不清楚\n- 想先拿一版像样的结构骨架\n\n### 它会帮你做什么\n你把需求喂进去后，它会先帮你：\n- 收敛这份 PPT 的主切口\n- 先定页序结构\n- 先给每页标题与要点\n- 补每页图表 / 配图建议\n- 补开场页、结尾页和 Q&A 页建议\n- 补继续做版的执行清单\n\n### 你最终应该看到什么\n一个合格输出，应该至少让你看懂这些：\n- 这份 PPT 到底先讲什么、后讲什么\n- 每页分别负责什么\n- 哪几页该用图，哪几页该用表\n- 哪一页是结论页，哪一页是证据页\n- 如果要继续做版，先补哪些素材\n\n如果它只给你“建议逻辑清楚、建议图文结合”这种空话，那就不对。\n\n---\n\n## 🗒 先出逐页讲稿：适合谁，和先出一版结构差在哪\n\n### 适合谁\n适合你已经进入下面这种状态：\n- 页序大体已经有了\n- 现在更缺的是每一页该写什么\n- 想先拿逐页内容，再进入 PPT 工具或交给设计\n\n### 它和先出一版结构最大的区别\n先出一版结构：\n- 先把整套逻辑和页序搭出来\n- 重点是先知道怎么排这份 PPT\n- 适合还没定骨架的人\n\n先出逐页讲稿：\n- 先把每页内容展开\n- 重点是让你能立刻继续做版\n- 适合已经确认大方向的人\n\n### 逐页讲稿版里最应该拿到什么\n| 你会拿到什么 | 它在输出里大概长什么样 | 你拿它立刻能干嘛 |\n|---|---|---|\n| 页序清单 | `封面 / 结论 / 数据 / 问题 / 计划 / Q&A` | 先确认整套路径顺不顺 |\n| 每页标题 | `本季度核心结论`、`增长来源拆解` | 先决定每页讲什么 |\n| 每页 3～5 个要点 | `问题、证据、结论、动作` | 立刻开始填内容 |\n| 图表 / 配图建议 | `柱状图 / 趋势图 / 对比图 / 截图` | 先补素材再进 PPT 工具 |\n\n---\n\n## 🤝 团队协作版：适合谁，和单人版差在哪\n\n### 适合谁\n适合你已经不是一个人单独做 PPT，而是开始出现：\n- 有人定主线和页序\n- 有人负责逐页写内容\n- 有人负责润稿、口播和汇报前审校\n\n### 团队协作版怎么分工\n| 角色 | 它主要产出什么 | 下一个角色拿它干嘛 |\n|---|---|---|\n| 01-structure-planner | 主线、页序、每页职责 | 给 slide-writer 一个清楚的结构骨架 |\n| 02-slide-writer | 每页标题、要点、图表建议 | 给 polisher 一版逐页稿 |\n| 03-slide-polisher | 口播备注、删减建议、页间过渡 | 给 review 做汇报前把关 |\n| 04-review | 结构风险点、必须修改项、可讲判断 | 给 validator 做总体验收 |\n| 99-solution-validator | 最终结论：pass / pass with fixes / fail | 帮你判断这份 PPT 是否能进入正式汇报 |\n\n![团队接力图：structure-planner 先定主线与页序，slide-writer 接着展开逐页内容，polisher 再补口播与过渡，review 负责汇报前把关，validator 最后给出能否进入正式汇报的结论](../../assets/solution-ppt-team-handoff-review-candidate-02.png)\n\n上面这张图要表达的是：\n- 团队协作版不是把同一句需求扔给 5 个 Agent，而是按交接物一棒一棒往下传\n- 每个角色都只做自己最该做的那一段，避免一个 Agent 同时兼顾结构、写稿、润稿和审校\n- 最后一棒不是继续写内容，而是给出这份 PPT 能不能进入正式汇报的判断\n\n### 它和单人版最大的区别\n- 单人版：一个 Agent 先帮你压出整套逐页稿，重点是快\n- 团队协作版：多角色接力，重点是结构、逐页内容和汇报把关更稳\n\n\n---\n\n## 📦 你最后会拿到什么\n\n别把它想得太抽象。\n\n你跑完后，真正拿到的通常会长这样：\n\n| 你会拿到什么 | 它在输出里大概长什么样 | 你拿它立刻能干嘛 |\n|---|---|---|\n| 叙事切口 | `先给结论，再讲证据，再落到行动` | 先把整套 PPT 逻辑定住 |\n| 页序结构 | `封面 -> 结论 -> 数据 -> 问题 -> 计划 -> Q&A` | 先知道该分几页 |\n| 每页标题与要点 | `第 3 页讲增长来源，第 4 页讲主要问题` | 直接开始填每页内容 |\n| 图表 / 配图建议 | `折线图 / 漏斗图 / 三栏对比` | 立刻准备素材 |\n| 演讲备注 | `这一页口头重点是先讲结论，不先讲细节` | 方便自己讲或交给汇报人 |\n| 继续执行清单 | `缺哪些数据、截图、素材、图表` | 立刻推进下一轮落版 |\n\n![交付物总览图：先看你会拿到什么，再看它在输出里大概长什么样，最后看你下一步立刻能干嘛；标题与排版统一为深蓝黑技术文档家族内容页风格](../../assets/solution-ppt-output-map-review-candidate-09-cn-teamstyle.png)\n\n如果你觉得表格还是偏文字，这张图可以帮助你更快扫一眼：\n- 第一层看叙事主线\n- 第二层看逐页稿\n- 第三层看图表、备注和继续落版\n\n---\n\n## 🖥 CLI 和 ACP，到底怎么选\n\n这里尽量说得像人话一点。\n\n| 你现在要干嘛 | 用哪个 | 跑完你会看到什么 |\n|---|---|---|\n| 我先想看这份 PPT 能不能搭出一版像样结构 | CLI | 一次完整输出：页序、每页标题、每页要点、图表建议 |\n| 我还没进 PPT 工具，只想先拿一版整套稿 | CLI | 先确认这套汇报方向值不值得做 |\n| 我已经准备开始逐页落版 | ACP | 可以顺着结果继续细修每页内容、标题、备注和配图 |\n| 我想边做边改成自己的汇报语气 | ACP | 可以在编辑器里持续打磨，不只停在第一稿 |\n\n![对比图：左边是 CLI 先快速出一版 PPT 稿，右边是 ACP 进入编辑器继续精修逐页内容和表达，背景统一为深蓝黑技术文档家族并补足科技线条点缀](../../assets/solution-ppt-cli-vs-acp-review-candidate-02-lines.png)\n\n最简单的记法：\n- CLI：先拿整套稿\n- ACP：确认方向对了以后，继续把它改到真的能做成 PPT\n\n---\n\n## ⚡ 5 分钟跑一轮\n\n如果你现在只想先跑通一次，默认走“先出一版结构”。\n\n### 第一步：下载它\n先拿这个包：\n- [packs/ppt-lab/01-super-individual.zip](../../../packs/ppt-lab/01-super-individual.zip)\n\n### 第二步：解压后进入目录\n```bash\ncd /path/to/01-super-individual\n```\n\n### 第三步：创建一个独立 profile\n```bash\nhermes profile create ppt-solo --clone\n```\n\n### 第四步：安装\n```bash\nbash ./install_to_profile.sh ppt-solo\n```\n\n### 第五步：直接跑现成示例\n```bash\nhermes -p ppt-solo chat --skills ppt-assistant -q \"$(cat skills/solutions/ppt-assistant/examples/sample-input.md)\"\n```\n\n跑完以后，先看这 5 件事：\n- 有没有先收敛一个明确主线\n- 有没有把页序和每页标题定出来\n- 有没有把每页要点写出来\n- 有没有补图表 / 配图 / 备注建议\n- 有没有告诉你下一轮该怎么继续\n\n如果这 5 件事都没有，那说明输出不合格。\n\n### 🤝 团队协作版怎么安装和开跑\n如果你已经不是一个人单独做 PPT，而是想按角色接力推进，就直接走团队协作版。\n\n#### 第一步：下载团队包\n先拿这个包：\n- [packs/ppt-lab/02-team.zip](../../../packs/ppt-lab/02-team.zip)\n\n#### 第二步：解压后进入目录\n```bash\ncd /path/to/02-team\n```\n\n#### 第三步：先创建 5 个 profile\n```bash\nhermes profile create ppt-structure --clone\nhermes profile create ppt-slidewriter --clone\nhermes profile create ppt-polish --clone\nhermes profile create ppt-review --clone\nhermes profile create ppt-validator --clone\n```\n\n#### 第四步：一键安装\n```bash\nbash ./install_all.sh\n```\n\n默认不传参数时，这个脚本会按 `ppt` 作为前缀，把内容分别装进：\n- `ppt-structure`\n- `ppt-slidewriter`\n- `ppt-polish`\n- `ppt-review`\n- `ppt-validator`\n\n#### 第五步：先跑第一棒\n```bash\nhermes -p ppt-structure chat --skills ppt-structure-planner -q \"$(cat 01-structure-planner/skills/solutions/ppt-structure-planner/examples/sample-input.md)\"\n```\n\n跑完以后，先看这 4 件事：\n- 有没有先把主线讲法压清楚\n- 有没有把页序和每页职责定下来\n- 有没有产出可交给 slide-writer 的结构骨架\n- 有没有知道第二棒该怎么继续写\n\n如果第一棒还没把结构压清楚，就不要急着进入逐页写稿。\n\n### 🏃 跑完第一棒，怎么接第二棒？\n当 `ppt-structure` 已经把主线、页序和每页职责压出来以后，第二棒就交给 `ppt-slidewriter` 开始逐页填内容。\n\n```bash\nhermes -p ppt-slidewriter chat --skills ppt-slide-writer -q \"$(cat 02-slide-writer/skills/solutions/ppt-slide-writer/examples/sample-input.md)\"\n```\n\n更稳的用法是：\n- 先把第一棒已经确认的页序结构和每页职责贴进去\n- 再让 slide-writer 开始写每页标题、要点和图表建议\n- 如果第一页还没定清楚，就先不要往后面润稿和审校接\n\n### 🤝 全链路接力图谱\n| 这一棒是谁 | 这一棒主要做什么 | 交给下一棒时，手里应该有什么 |\n|---|---|---|\n| 第一棒：`ppt-structure` | 定主线、页序、每页职责 | 一版清楚的结构骨架 |\n| 第二棒：`ppt-slidewriter` | 写每页标题、要点、图表建议 | 一版可继续润的逐页稿 |\n| 第三棒：`ppt-polish` | 补口播备注、删减建议、页间过渡 | 一版更适合正式汇报的润稿 |\n| 第四棒：`ppt-review` | 查结构风险、查汇报断点、列必须修改项 | 一版汇报前审校结论 |\n| 终点站：`ppt-validator` | 判断 pass / pass with fixes / fail | 最终“这份 PPT 现在能不能进正式汇报”的结论 |\n\n你可以把这条链理解成：\n- `ppt-structure` 先把讲法和页序定清楚\n- `ppt-slidewriter` 再把每页真正写出来\n- `ppt-polish` 负责把口播、过渡和删减建议补齐\n- `ppt-review` 负责汇报前把关\n- `ppt-validator` 最后只回答一件事：这份 PPT 现在能不能进入正式汇报\n\n### ⚡ 团队协作：最短命令总览\n| 第一棒：结构（Structure） | 第二棒：逐页写稿（Slide Writer） | 最终棒：验收（Validator） |\n|---|---|---|\n| `hermes -p ppt-structure chat --skills ppt-structure-planner -q \"$(cat 01-structure-planner/skills/solutions/ppt-structure-planner/examples/sample-input.md)\"` | `hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q \"$(cat 02-slide-writer/skills/solutions/ppt-slide-writer/examples/sample-input.md)\"` | `hermes -p ppt-validator chat --skills solution-validator-ppt -q \"$(cat 99-solution-validator/skills/solutions/solution-validator-ppt/examples/sample-input.md)\"` |\n| 先拿主线、页序、每页职责 | 先拿每页标题、要点、图表建议 | 最后拿到 `pass / pass with fixes / fail` |\n\n### 🚦 什么时候不要往下一棒走\n- 不要交第二棒：如果 `ppt-structure` 还没把主线、页序和每页职责定清楚，整套讲法还是散的。\n- 不要交第三棒：如果 `ppt-slidewriter` 还没把每页标题、要点和图表建议写出来，只停在页序层。\n- 不要交第四棒：如果 `ppt-polish` 还没补齐口播备注、页间过渡和删减建议。\n- 不要交 Validator：如果 `ppt-review` 还没把结构风险、必须修改项和可讲判断压清楚。\n\n### 🛠️ 交付验收：怎么交给 Validator？\n当 `ppt-review` 已经把结构风险、必须修改项和可讲判断压清楚以后，再把这一版交给 `ppt-validator`。\n\n交过去前，最少要准备这 3 类东西：\n- 当前最终稿：页序、每页标题、每页要点\n- 汇报辅助：图表建议、口播备注、页间过渡\n- 审校结论：风险点、必须修改项、当前是否建议正式汇报\n\n`ppt-validator` 主要只看这几件事：\n- 这份 PPT 现在是不是已经能进入正式汇报\n- 页序逻辑、结论页和证据页是不是已经顺到可讲\n- 图表建议、口播备注和删减建议是不是和整套主线对齐\n\n如果返回的是 `pass with fixes`，默认这样回：\n- 页间过渡、口播、删减建议还没收干净：回 `ppt-polish`\n- 结构风险、汇报断点、可讲标准还没压清：回 `ppt-review`\n\n### ✅ 团队协作版最小通过标准\n- 最终输出的 PPT 结构大纲与每页视觉建议完整且符合逻辑，且经由 `ppt-validator` 判定为 `pass`，才算这一页的团队版真的跑通。\n\n---\n\n## 🪜 跑完第一轮后，下一句怎么说\n\n很多人卡在这里：\n第一轮跑完了，然后呢？\n\n你不用自己想复杂，直接这样继续说就行：\n\n```text\n基于刚才这版 PPT 结构稿，继续往“能直接做版”收：\n1. 把每一页扩成更完整的逐页讲稿\n2. 给我每页 3～5 个 bullet 的最终版\n3. 给我适合这一页的图表 / 配图建议\n4. 标出哪些页需要老板一眼看懂，哪些页适合讲细一点\n5. 给我一版开场口播和结尾收口\n6. 最后列一个做版前检查单，提醒我哪些数据和素材还没补齐\n```\n\n你可以把这段理解成：\n- 第一轮：先拿整套结构稿\n- 第二轮：开始把它改成真的能做成 PPT 的逐页稿\n\n---\n\n## 📁 你现在直接能用的东西\n\n- 超级个体版下载：[packs/ppt-lab/01-super-individual.zip](../../../packs/ppt-lab/01-super-individual.zip)\n- 团队协作版下载：[packs/ppt-lab/02-team.zip](../../../packs/ppt-lab/02-team.zip)\n- 安装说明：[packs/ppt-lab/INSTALL.md](../../../packs/ppt-lab/INSTALL.md)\n- 使用说明：当前页里的「⚡ 5 分钟跑一轮」和「🤝 团队协作版怎么安装和开跑」就是默认 doc 入口\n\n---\n\n## 🎯 这页写对了，用户应该一眼看懂什么\n\n一页合格的“PPT 助手”，用户应该一眼就能看懂这 4 件事：\n- 这页是帮我把一个主题压成可继续做成 PPT 的整套稿，不是教我系统学排版\n- 我现在应该先出一版结构，还是先出逐页讲稿\n- 我第一步具体该怎么跑\n- 我跑完后下一句该怎么继续\n\n如果这 4 件事看不出来，这页就还没写对。\n\n---\n\n## ➡️ 下一步\n\n完成后进入：\n\n- [01-总览｜办公效率与知识整理](../02-办公效率与知识整理/01-总览.md)\n\n如果你想先回到现成方案入口重新确认位置：\n\n- [01-总览｜现成方案](../01-总览.md)\n\n---\n\n## 🔗 相关入口\n\n- Pack 详情：[PPT 助手 Pack](/packs/ppt-lab)，先确认适合谁用、安装入口和下载入口。\n- 同类方案：回到[当前方案分组](/docs/solutions/content)，继续比较同一类任务。\n- 下一步延展：如果这个方案不完全匹配，可以继续看[相邻方案](/docs/solutions/xiaohongshu)。\n- 跑不起来时：先去[遇到问题](/docs/issues)按安装、模型、Tools、Profiles 分类排查。\n- 要查命令和配置：进入[Reference](/docs/reference)查看 CLI、Slash Commands、Profiles、Tools、Skills 与环境变量。\n",
     "githubUrl": "https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md",
     "prev": "/solutions/wechat-writer",
+    "next": "/solutions/x-twitter"
+  },
+  {
+    "sourcePath": "docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md",
+    "slug": "/solutions/x-twitter",
+    "title": "05-X/Twitter 内容与互动助手",
+    "module": "solutions",
+    "section": "x-twitter",
+    "description": "一句话先说清楚：这一页是帮你把 X/Twitter 上的搜索、阅读、发推、回复、互动等操作，通过一个第三方插件接入 Hermes Agent，让你能用对话方式完成 X 平台的内容工作。",
+    "order": 12.5,
+    "status": "published",
+    "updated": "2026-05-16",
+    "sourceType": "original",
+    "navGroup": "01-内容创作与发布",
+    "pageType": "doc-page",
+    "headings": [
+      {
+        "depth": 1,
+        "text": "05-X/Twitter 内容与互动助手",
+        "id": "05-xtwitter-内容与互动助手"
+      },
+      {
+        "depth": 2,
+        "text": "👀 先看结论",
+        "id": "先看结论"
+      },
+      {
+        "depth": 2,
+        "text": "🧩 这个插件到底解决什么",
+        "id": "这个插件到底解决什么"
+      },
+      {
+        "depth": 2,
+        "text": "🚦 它能做什么：读取 vs 写操作",
+        "id": "它能做什么读取-vs-写操作"
+      },
+      {
+        "depth": 3,
+        "text": "读取能力（默认可用）",
+        "id": "读取能力默认可用"
+      },
+      {
+        "depth": 3,
+        "text": "写操作（需要显式启用）",
+        "id": "写操作需要显式启用"
+      },
+      {
+        "depth": 2,
+        "text": "🛡️ 安全与授权说明",
+        "id": "安全与授权说明"
+      },
+      {
+        "depth": 3,
+        "text": "谁在控制你的 X 数据",
+        "id": "谁在控制你的-x-数据"
+      },
+      {
+        "depth": 3,
+        "text": "写操作授权方式",
+        "id": "写操作授权方式"
+      },
+      {
+        "depth": 1,
+        "text": "启用写操作（发推、回复、点赞等）",
+        "id": "启用写操作发推回复点赞等"
+      },
+      {
+        "depth": 1,
+        "text": "不设置或设置为 false 时，只有读取能力可用",
+        "id": "不设置或设置为-false-时只有读取能力可用"
+      },
+      {
+        "depth": 3,
+        "text": "你需要准备什么",
+        "id": "你需要准备什么"
+      },
+      {
+        "depth": 2,
+        "text": "⚡ 5 分钟跑一轮（读取）",
+        "id": "5-分钟跑一轮读取"
+      },
+      {
+        "depth": 3,
+        "text": "第一步：安装插件",
+        "id": "第一步安装插件"
+      },
+      {
+        "depth": 3,
+        "text": "第二步：配置 API 凭据",
+        "id": "第二步配置-api-凭据"
+      },
+      {
+        "depth": 3,
+        "text": "第三步：在 Hermes 中加载并测试",
+        "id": "第三步在-hermes-中加载并测试"
+      },
+      {
+        "depth": 2,
+        "text": "✍️ 如果你准备好启用写操作",
+        "id": "如果你准备好启用写操作"
+      },
+      {
+        "depth": 3,
+        "text": "第一步：显式启用写操作",
+        "id": "第一步显式启用写操作"
+      },
+      {
+        "depth": 3,
+        "text": "第二步：先试一个低风险操作",
+        "id": "第二步先试一个低风险操作"
+      },
+      {
+        "depth": 3,
+        "text": "第三步：确认后再发推",
+        "id": "第三步确认后再发推"
+      },
+      {
+        "depth": 2,
+        "text": "📦 你最后会拿到什么",
+        "id": "你最后会拿到什么"
+      },
+      {
+        "depth": 2,
+        "text": "🖥 常见用法参考",
+        "id": "常见用法参考"
+      },
+      {
+        "depth": 2,
+        "text": "🔧 安装方式",
+        "id": "安装方式"
+      },
+      {
+        "depth": 3,
+        "text": "pip 安装",
+        "id": "pip-安装"
+      },
+      {
+        "depth": 3,
+        "text": "验证安装",
+        "id": "验证安装"
+      },
+      {
+        "depth": 3,
+        "text": "完整文档",
+        "id": "完整文档"
+      },
+      {
+        "depth": 2,
+        "text": "🎯 这页写对了，用户应该一眼看懂什么",
+        "id": "这页写对了用户应该一眼看懂什么"
+      },
+      {
+        "depth": 2,
+        "text": "➡️ 下一步",
+        "id": "下一步"
+      },
+      {
+        "depth": 2,
+        "text": "🔗 相关入口",
+        "id": "相关入口"
+      },
+      {
+        "depth": 2,
+        "text": "📋 来源与核验",
+        "id": "来源与核验"
+      }
+    ],
+    "body": "# 05-X/Twitter 内容与互动助手\n\n> 一句话先说清楚：这一页是帮你把 X/Twitter 上的搜索、阅读、发推、回复、互动等操作，通过一个第三方插件接入 Hermes Agent，让你能用对话方式完成 X 平台的内容工作。\n\n> ⚠️ **第三方插件声明**\n> Hermes Tweet 是由 [Xquik-dev](https://github.com/Xquik-dev) 开发和维护的**第三方 Hermes Agent 插件**，不是 Hermes 官方内置功能。它的功能边界、更新节奏和安全策略由第三方作者负责。本页仅做中文介绍与使用引导，不对其稳定性、安全性和持续维护做官方背书。\n\n---\n\n## 👀 先看结论\n\n如果你现在想的是：\n- 我想在 Hermes 里直接搜索 X 上的推文和趋势\n- 我想让 Agent 帮我读某个账号的内容、监控回复\n- 我想通过对话发推、回复、点赞、转推，而不是手动操作 X\n- 我想把 X 上的内容工作流接入 Hermes 的日常工作链路\n\n那这一页就是给你用的。\n\n你用完这页，先拿到的不是泛泛建议，而应该是这些东西：\n- 明确知道这个插件能做什么、不能做什么\n- 知道读取操作和写操作的安全边界\n- 知道怎么安装、配置和验证\n- 能直接跑一轮搜索或读取，确认插件可用\n- 知道发推、回复等写动作需要显式授权才能启用\n\n---\n\n## 🧩 这个插件到底解决什么\n\n假设你现在是这种场景：\n\n- 你在做产品推广，需要每天搜索 X 上和你产品相关的讨论\n- 你想快速读取某个意见领袖的最新推文和上下文\n- 你想监控自己账号下的回复和提及\n- 你想在确认内容后，直接从 Hermes 里发推或回复，而不是切换到 X 网页/App\n- 你想把这些操作串进 Hermes 的自动化工作流\n\nHermes Tweet 做的事，就是把这些 X 平台操作变成 Hermes Agent 可直接调用的工具能力。\n\n---\n\n## 🚦 它能做什么：读取 vs 写操作\n\nHermes Tweet 把能力分成两层，这是你需要先搞清楚的：\n\n### 读取能力（默认可用）\n\n这些操作**不需要额外授权**，安装完成后即可使用：\n\n| 能力 | 说明 | 你什么时候会用 |\n|---|---|---|\n| 搜索推文 | 按关键词、话题、用户搜索 | 找竞品讨论、找用户反馈、找行业趋势 |\n| 读取推文 | 查看单条推文的完整内容 | 看某条推文的原文和上下文 |\n| 查看用户信息 | 查看账号资料、关注数等 | 快速了解某个账号 |\n| 读取趋势 | 查看 X 上的热门话题 | 内容选题参考 |\n| 读取回复/提及 | 看到人对你账号的回复和 @ | 监控品牌提及 |\n| 读取时间线 | 看指定账号或自己的时间线 | 快速扫一圈最新动态 |\n\n### 写操作（需要显式启用）\n\n这些操作**默认关闭**，必须设置环境变量 `HERMES_TWEET_ENABLE_ACTIONS=true` 后才会启用：\n\n| 能力 | 说明 | 风险边界 |\n|---|---|---|\n| 发推 | 发布新推文 | 会直接在你的 X 账号上发布公开内容 |\n| 回复 | 回复别人的推文 | 会以你的账号名义公开回复 |\n| 点赞 | 对推文点赞 | 会留下公开的互动记录 |\n| 转推 | 转推或引用推文 | 会出现在你的时间线上 |\n| 关注/取关 | 关注或取消关注用户 | 会改变你的社交图谱 |\n| 发送 DM | 发私信 | 会直接向他人发送消息 |\n\n> ⚠️ **写操作风险边界**\n> - 所有写操作都以**你的 X 账号身份**执行，等同于你手动操作\n> - 发推和回复是**公开且不可撤回**的（删除不算撤回）\n> - DM 是**私密通信**，一旦发出无法撤回\n> - X 平台有 API 调用频率限制，高频操作可能触发限流\n> - 你需要自行承担因自动化操作带来的账号风险（包括但不限于被 X 限流、标记为机器人等）\n> - **强烈建议**：先用读取能力验证环境正确，再考虑启用写操作\n\n---\n\n## 🛡️ 安全与授权说明\n\n### 谁在控制你的 X 数据\n\n- Hermes Tweet 通过 X 官方 API 访问你的数据\n- 你的 API 凭据只存储在你自己的环境中（本地配置文件或环境变量）\n- 插件不会将你的凭据发送到任何第三方服务器\n\n### 写操作授权方式\n\n写操作受一个环境变量显式控制：\n\n```bash\n# 启用写操作（发推、回复、点赞等）\nexport HERMES_TWEET_ENABLE_ACTIONS=true\n\n# 不设置或设置为 false 时，只有读取能力可用\n```\n\n这个设计的意思是：\n- **默认安全**：装完只能读，不会意外发推\n- **显式授权**：你必须主动设置，才开启写操作\n- **可控边界**：你随时可以把环境变量改回 false 来关闭写操作\n\n### 你需要准备什么\n\n使用前，你需要自己准备：\n1. 一个 X 开发者账号（在 https://developer.x.com 申请）\n2. API 凭据（API Key、API Secret、Bearer Token 等）\n3. 按插件文档配置好凭据\n\n---\n\n## ⚡ 5 分钟跑一轮（读取）\n\n如果你现在只想先试一下读取能力，跟着走就行。\n\n### 第一步：安装插件\n\n```bash\npip install hermes-tweet\n```\n\n### 第二步：配置 API 凭据\n\n按 [官方使用指南](https://docs.xquik.com/guides/hermes-tweet) 配置你的 X API 凭据。\n\n### 第三步：在 Hermes 中加载并测试\n\n```bash\nhermes chat --skills hermes-tweet -q \"搜索 X 上最近关于 AI Agent 的讨论，给我看前 5 条\"\n```\n\n跑完后，先看这 3 件事：\n- 有没有正常返回搜索结果\n- 返回的内容是否是真实的推文（不是模拟数据）\n- 有没有报 API 权限或认证错误\n\n如果这 3 件事都正常，说明读取链路通了。\n\n---\n\n## ✍️ 如果你准备好启用写操作\n\n> 以下操作涉及公开的 X 账号动作，请确认你已经理解上面的风险边界。\n\n### 第一步：显式启用写操作\n\n```bash\nexport HERMES_TWEET_ENABLE_ACTIONS=true\n```\n\n### 第二步：先试一个低风险操作\n\n```bash\nhermes chat --skills hermes-tweet -q \"帮我点赞这条推文：https://x.com/someuser/status/1234567890\"\n```\n\n### 第三步：确认后再发推\n\n```bash\nhermes chat --skills hermes-tweet -q \"帮我发一条推文：独立开发者用 AI Agent 接管重复工作流，真的不是噱头。用了三个月，节省了每周至少 5 小时。\"\n```\n\n> **重要提醒**：\n> - 发推前让 Agent 先给你看拟发布的文本，确认无误再执行\n> - 不要直接让 Agent 不经确认就发推\n> - 避免高频发布，X 会对自动化行为做限流\n\n---\n\n## 📦 你最后会拿到什么\n\n装完并跑通后，你能在 Hermes 里直接做的事：\n\n| 你会拿到什么 | 它大概长什么样 | 你拿它立刻能干嘛 |\n|---|---|---|\n| 推文搜索结果 | 关键词匹配的推文列表 + 用户 + 时间 | 快速了解某个话题的讨论现状 |\n| 账号信息 | 用户名、简介、关注数、推文数 | 快速了解目标账号 |\n| 趋势话题 | 当前 X 上的热门话题列表 | 内容选题参考 |\n| 回复/提及监控 | @你的推文列表 | 及时响应互动 |\n| 推文发布能力 | 从 Hermes 对话中直接发推 | 不用切到 X 就能发内容 |\n\n---\n\n## 🖥 常见用法参考\n\n| 你想做什么 | 在 Hermes 里怎么说 |\n|---|---|\n| 搜竞品讨论 | \"搜索 X 上最近提到 [产品名] 的推文\" |\n| 看大 V 在说什么 | \"读取 @username 最近 10 条推文\" |\n| 监控品牌提及 | \"看最近谁 @了我的账号\" |\n| 查趋势选题 | \"X 上现在什么话题最火\" |\n| 发一条推文 | \"帮我发一条推文：[内容]\"（需启用写操作） |\n| 回复一条推文 | \"帮我回复这条推文 [链接]：[回复内容]\"（需启用写操作） |\n\n---\n\n## 🔧 安装方式\n\n### pip 安装\n\n```bash\npip install hermes-tweet\n```\n\n### 验证安装\n\n```bash\nhermes chat --skills hermes-tweet -q \"检查 Hermes Tweet 插件状态\"\n```\n\n### 完整文档\n\n- GitHub: https://github.com/Xquik-dev/hermes-tweet\n- PyPI: https://pypi.org/project/hermes-tweet/\n- 使用指南: https://docs.xquik.com/guides/hermes-tweet\n- AgentSkill: https://agentskill.sh/@xquik-dev/hermes-tweet\n\n---\n\n## 🎯 这页写对了，用户应该一眼看懂什么\n\n一页合格的\"X/Twitter 内容与互动助手\"，用户应该一眼就能看懂这 4 件事：\n- 这是一个**第三方插件**，不是 Hermes 官方内置功能\n- 它能帮我做 X 上的搜索和阅读（读取），也能帮我发推和回复（写操作，需显式启用）\n- 我第一步具体该怎么安装和配置\n- 写操作有风险边界，我需要自己决定是否启用\n\n如果这 4 件事看不出来，这页就还没写对。\n\n---\n\n## ➡️ 下一步\n\n完成后进入：\n\n- [01-总览｜内容创作与发布](./01-总览.md)\n\n如果你想先回到现成方案入口重新确认位置：\n\n- [01-总览｜现成方案](../01-总览.md)\n\n---\n\n## 🔗 相关入口\n\n- 插件详情：[Hermes Tweet on GitHub](https://github.com/Xquik-dev/hermes-tweet)，先确认版本和兼容性。\n- 同类方案：回到[当前方案分组](./01-总览.md)，继续比较同一类任务。\n- 跑不起来时：先去[遇到问题](/docs/issues)按安装、模型、Tools、Profiles 分类排查。\n- 要查命令和配置：进入[Reference](/docs/reference)查看 CLI、Slash Commands、Profiles、Tools、Skills 与环境变量。\n\n---\n\n## 📋 来源与核验\n\n> 本块用于记录本页所引用第三方方案的来源信息与核验状态，确保内容可追溯。\n\n| 项目 | 值 |\n|---|---|\n| 方案名称 | Hermes Tweet |\n| 性质 | **第三方 Hermes Agent 插件**（非官方内置） |\n| 维护者 | [Xquik-dev](https://github.com/Xquik-dev) |\n| GitHub | https://github.com/Xquik-dev/hermes-tweet |\n| PyPI | https://pypi.org/project/hermes-tweet/ |\n| 使用指南 | https://docs.xquik.com/guides/hermes-tweet |\n| AgentSkill | https://agentskill.sh/@xquik-dev/hermes-tweet |\n| 当前记录版本 | 0.1.6 |\n| 本页最后核验 | 2026-05-16 |\n| 来源 Issue | [#5 建议补充 Hermes Tweet：X/Twitter 搜索与自动化插件入口](https://github.com/zcweah1981/awesome-hermes-agent-zh/issues/5) |\n| 核验人 | ikki-content-1 |\n\n> **版本说明**：当前记录版本 0.1.6 为本页创建时通过 PyPI 确认的版本号。如需确认最新版本，请直接访问上方 PyPI 链接。\n",
+    "githubUrl": "https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md",
+    "prev": "/solutions/ppt",
     "next": "/solutions/office"
   },
   {
@@ -1545,7 +1715,7 @@
     ],
     "body": "# 01-总览｜办公效率与知识整理\n\n> 一句话先说清楚：这一层不是教你系统学项目管理或知识管理，而是帮你先挑一套已经能直接试跑的办公效率方案，把第一轮纪要、日报或总结做出来。\n\n## 👀 这一层现在有什么\n\n当前这一层已经能直接进入 3 套现成方案：\n\n| 页面 | 这套方案主要解决什么 | 你什么时候先看它 |\n|---|---|---|\n| [02-会议纪要助手](./02-会议纪要助手.md) | 先把会议内容压成可发纪要、动作项和待办清单 | 你会刚开完，想先把结论、决定和待办整理出来 |\n| [03-项目日报助手](./03-项目日报助手.md) | 先把日报压成标准版或管理者版 | 你今天就得把同步内容发出去，不想自己重写一遍 |\n| [04-资料总结助手](./04-资料总结助手.md) | 先把零散资料压成结构化总结 | 你手里有文档、报告、调研材料，想先抓重点和结论 |\n\n如果你现在的目标是：\n- 会刚开完，想先把纪要整理出来\n- 今天就得把日报发出去\n- 手里有一堆资料，想先压成一版结构化总结\n\n那就直接从这一层进。\n\n## 🧩 这三套方案分别解决什么\n\n### 会议纪要助手\n适合你想先做：\n- 把会议内容压成一版可直接发的纪要\n- 区分结论、决定、待办和未决问题\n- 拉出动作项、负责人和截止时间\n\n直接进入：\n- [02-会议纪要助手](./02-会议纪要助手.md)\n\n### 项目日报助手\n适合你想先做：\n- 今天就能发出去的一版项目日报\n- 标准日报和管理者版日报两种输出\n- 今日事项、关键结果、风险阻塞、明日计划一次整理清楚\n\n直接进入：\n- [03-项目日报助手](./03-项目日报助手.md)\n\n### 资料总结助手\n适合你想先做：\n- 把零散资料先压成结构化总结\n- 快速提炼重点、结论、风险和建议动作\n- 先给自己一版能继续展开或继续汇报的摘要底稿\n\n直接进入：\n- [04-资料总结助手](./04-资料总结助手.md)\n\n## 🚦 如果你现在只想快速选一个\n\n直接按当前状态走：\n\n- 会刚开完，先要纪要和动作项 → [02-会议纪要助手](./02-会议纪要助手.md)\n- 今天必须发同步内容 → [03-项目日报助手](./03-项目日报助手.md)\n- 手里是资料、报告、调研材料 → [04-资料总结助手](./04-资料总结助手.md)\n\n## 🗺 默认主线\n\n如果你不想自己选，最稳的顺序是：\n\n1. 会后整理优先走 [02-会议纪要助手](./02-会议纪要助手.md)\n2. 如果你的刚需是日更同步，再进 [03-项目日报助手](./03-项目日报助手.md)\n3. 如果你手里是文档、报告、调研材料，再进 [04-资料总结助手](./04-资料总结助手.md)\n\n## ✅ 看完这页你应该立刻能判断什么\n\n看完后，你应该能马上判断：\n- 我现在更需要纪要、日报，还是资料总结\n- 我该先出完整记录，还是先出更偏管理者 / 决策者视角的版本\n- 我下一步该不该直接进会议纪要、项目日报，还是资料总结助手页\n\n## ➡️ 下一步\n\n完成后进入：\n\n- [02-会议纪要助手](./02-会议纪要助手.md)\n- [03-项目日报助手](./03-项目日报助手.md)\n- [04-资料总结助手](./04-资料总结助手.md)\n\n如果你想先回到现成方案总入口重新确认位置：\n\n- [01-总览｜现成方案](../01-总览.md)\n\n---\n\n## 🔗 办公效率相关 Packs\n\n- 会议纪要：先看[会议纪要助手](/docs/solutions/meeting)，再打开 [会议纪要助手 Pack](/packs/meeting-lab)。\n- 项目日报：先看[项目日报助手](/docs/solutions/daily-report)，再打开 [项目日报助手 Pack](/packs/daily-report-lab)。\n- 资料总结：先看[资料总结助手](/docs/solutions/summary)，再打开 [资料总结助手 Pack](/packs/summary-lab)。\n- 如果输出不稳定：去[遇到问题](/docs/issues)检查模型、上下文和 Profiles。\n",
     "githubUrl": "https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/docs/02-现成方案/02-办公效率与知识整理/01-总览.md",
-    "prev": "/solutions/ppt",
+    "prev": "/solutions/x-twitter",
     "next": "/solutions/meeting"
   },
   {
