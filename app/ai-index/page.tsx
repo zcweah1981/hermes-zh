@@ -13,9 +13,12 @@ export const metadata: Metadata = buildSeoMetadata({
   pathname: '/ai-index',
 })
 
+const xTwitterPath = '/docs/solutions/x-twitter'
+
 const primaryLinks = [
   ['从这开始', '/docs/start', '第一次接触 Hermes Agent，先完成环境、安装、模型配置和第一次互动。'],
   ['现成方案', '/docs/solutions', '已有明确任务时，从内容创作、办公效率、知识整理和应用开发方案进入。'],
+  ['X/Twitter 内容与互动助手', xTwitterPath, '通过 Hermes Tweet 第三方插件接入 X/Twitter 搜索、阅读、发推和回复；Hermes Tweet 第三方插件，不是 Hermes 官方内置功能。'],
   ['国内落地', '/docs/china', '关注国内服务器、国内模型、消息入口、网络环境与稳定使用路径。'],
   ['从 OpenClaw 过来', '/docs/openclaw', '理解 OpenClaw 与 Hermes 的关系、共存方式、迁移步骤和检查清单。'],
   ['遇到问题', '/docs/issues', '按安装、模型、CLI、Gateway、Tools、Profiles、Docker、SSH 等症状排查。'],
