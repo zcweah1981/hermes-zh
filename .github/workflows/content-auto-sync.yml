@@ -215,8 +215,8 @@ jobs:
         run: |
           set -euo pipefail
           if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] || [ -z "${CLOUDFLARE_ZONE_ID:-}" ]; then
-            echo "CLOUDFLARE_API_TOKEN and CLOUDFLARE_ZONE_ID are required for cache purge." >&2
-            exit 1
+            echo "CLOUDFLARE_API_TOKEN or CLOUDFLARE_ZONE_ID is missing; skipping Cloudflare purge (non-blocking)." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
           fi
 
           node <<'NODE' > /tmp/cloudflare-purge-payloads.jsonl
