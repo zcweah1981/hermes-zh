@@ -29,9 +29,9 @@ test('site repository accepts content-updated repository_dispatch and locks cont
   assert.match(workflow, /build-meta\.json\.sourceSha/) 
   assert.match(workflow, /contents:\s*write/)
   assert.match(workflow, /concurrency:/)
-  assert.match(workflow, /Deploy synchronized site to Vercel/)
-  assert.match(workflow, /VERCEL_TOKEN/)
-  assert.match(workflow, /vercel@latest deploy --prebuilt --prod/)
+  assert.doesNotMatch(workflow, /Deploy synchronized site to Vercel/)
+  assert.doesNotMatch(workflow, /VERCEL_TOKEN/)
+  assert.doesNotMatch(workflow, /vercel@latest deploy --prebuilt --prod/)
 })
 
 test('content lock records the exact content source used by generated manifests', () => {

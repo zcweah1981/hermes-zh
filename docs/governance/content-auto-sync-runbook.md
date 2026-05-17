@@ -13,7 +13,7 @@
 5. 站点仓 checkout 内容仓到 payload 中的 `content_sha`。
 6. 站点仓执行 typecheck、lint、test、build、smoke、content verify 与 freshness 校验。
 7. 校验通过后写入 `content-cache/content-lock.json`，并提交 `content-cache/generated/*.json`。
-8. 站点仓 workflow 使用 `VERCEL_TOKEN` / `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` 执行 Vercel CLI 生产部署，避免 GitHub Actions bot commit 不触发后续 GitHub/Vercel 自动部署的问题。
+16. 站点仓将生成的 manifests 与锁文件提交并推送到 `main` 分支，利用 Vercel 与 GitHub 的原生集成触发生产环境部署。这种方式移除了重复的 Vercel CLI 生产部署（`npx vercel deploy`），从而显著降低了 Fluid Active CPU 的不必要消耗。
 
 ## 必需 Secret
 
@@ -23,13 +23,7 @@
 
 权限要求：该 token 只需要能对 `zcweah1981/hermes-zh` 调用 `repository_dispatch`。建议使用 fine-grained token，限定目标仓库，并只给 Contents read/write 或 Actions 触发所需最小权限。不要把 token 写入仓库、治理文件或聊天记录。
 
-站点仓还需要配置生产部署 Secret：
-
-- `VERCEL_TOKEN`
-- `VERCEL_ORG_ID`
-- `VERCEL_PROJECT_ID`
-
-这些值只用于 `content-auto-sync` workflow 在内容锁定成功后执行 Vercel CLI 生产部署；不要写入仓库、治理文件或聊天记录。
+站点仓不再需要在 workflow 中显式使用 `VERCEL_TOKEN` / `VERCEL_ORG_ID` / `VERCEL_PROJECT_ID` 进行生产部署。这些凭据仍建议保留在 GitHub Secrets 中以备手动运维使用，但 `content-auto-sync` workflow 已不再依赖它们。
 
 站点仓可选配置：
 
@@ -91,7 +85,7 @@
 - 内容仓校验失败：不会触发站点仓 dispatch；先修内容仓 docs、packs、route map 或治理文件。
 - 缺少 `SITE_REPO_DISPATCH_TOKEN`：内容仓 workflow 明确失败，不会打印 secret。
 - 站点仓构建失败：不会提交新 lock，线上保留上一版成功部署。
-- Vercel 部署失败：回看站点仓自动同步 commit 和 Vercel build log；必要时 revert。
+- Cloudflare 缓存清理：由于 `content-auto-sync` 不再执行显式部署，Cloudflare 的缓存清理已从该 workflow 移除。后续由独立运维流程或 Vercel 的 Webhook 触发。
 
 ## 验收命令
 

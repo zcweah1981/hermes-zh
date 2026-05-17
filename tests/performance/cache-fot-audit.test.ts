@@ -32,18 +32,12 @@ describe('Vercel FOT cache amplification guards', () => {
     assert.match(route, /\.slice\(0, 20\)/)
   })
 
-  it('purges Cloudflare cache only after content-auto-sync production deploy succeeds', () => {
+  it('does not execute Cloudflare purge within content-auto-sync to avoid redundant Active CPU overhead', () => {
     const workflow = read('.github/workflows/content-auto-sync.yml')
 
-    assert.match(workflow, /id:\s*vercel-deploy/)
-    assert.match(workflow, /Purge Cloudflare cache after production deploy/)
-    assert.match(workflow, /if:\s*steps\.vercel-deploy\.outcome == 'success'/)
-    assert.match(workflow, /CLOUDFLARE_API_TOKEN:\s*\$\{\{ secrets\.CLOUDFLARE_API_TOKEN \}\}/)
-    assert.match(workflow, /CLOUDFLARE_ZONE_ID:\s*\$\{\{ secrets\.CLOUDFLARE_ZONE_ID \}\}/)
-    assert.match(workflow, /\/purge_cache/)
-    assert.match(workflow, /content-cache\/generated\/routes-manifest\.json/)
-    assert.match(workflow, /content-cache\/generated\/packs-manifest\.json/)
-    assert.doesNotMatch(workflow, /purge_everything\s*:\s*true/)
+    assert.doesNotMatch(workflow, /id:\s*vercel-deploy/)
+    assert.doesNotMatch(workflow, /Purge Cloudflare cache after production deploy/)
+    assert.doesNotMatch(workflow, /\/purge_cache/)
   })
 
   it('does not add timestamp or random cache-busting query parameters in app and component code', () => {
