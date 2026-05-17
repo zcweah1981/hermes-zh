@@ -71,6 +71,7 @@ export function resolveMarkdownHref(href: string, page: SitePage, pages: SitePag
     return hash ? `${toDocHref(targetPage.slug)}#${hash}` : toDocHref(targetPage.slug)
   }
 
+  // Links to non-markdown files still go to GitHub blob/raw for now
   return toRawUrl(resolvedPath)
 }
 
@@ -86,7 +87,10 @@ export function resolveMarkdownImage(src: string, page: SitePage) {
   }
 
   const { pathname } = splitHash(normalized)
-  return toRawUrl(resolveRepoPath(page.sourcePath, pathname))
+  const resolvedPath = resolveRepoPath(page.sourcePath, pathname)
+  
+  // Use local API proxy to serve images from content-cache/raw
+  return `/api/assets/raw?path=${encodeURIComponent(resolvedPath)}`
 }
 
 export function isExternalMarkdownHref(href: string) {

@@ -54,7 +54,7 @@ test('resolveMarkdownHref preserves local anchors on internal doc links', () => 
   assert.equal(href, '/docs/issues/model-provider-endpoint#faq-base-url')
 })
 
-test('resolveMarkdownImage maps relative assets to raw github urls', () => {
+test('resolveMarkdownImage maps relative assets to local proxy urls', () => {
   const src = resolveMarkdownImage('../../assets/solution-miniapp-3-layer-map-v7.png', {
     ...page,
     sourcePath: 'docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md',
@@ -62,7 +62,7 @@ test('resolveMarkdownImage maps relative assets to raw github urls', () => {
 
   assert.equal(
     src,
-    'https://raw.githubusercontent.com/zcweah1981/awesome-hermes-agent-zh/main/docs/assets/solution-miniapp-3-layer-map-v7.png',
+    '/api/assets/raw?path=docs%2Fassets%2Fsolution-miniapp-3-layer-map-v7.png',
   )
 })
 
