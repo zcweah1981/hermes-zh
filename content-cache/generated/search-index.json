@@ -361,7 +361,7 @@
     "description": "通过第三方插件 Hermes Tweet 将 X/Twitter 搜索、阅读、发推、回复等操作接入 Hermes Agent，用对话方式完成 X 平台内容工作。第三方方案，非官方内置。",
     "module": "solutions",
     "headings": [
-      "05-X/Twitter 内容与互动助手",
+      "X/Twitter 内容与互动助手",
       "👀 先看结论",
       "🧩 这个插件到底解决什么",
       "🚦 它能做什么：读取 vs 写操作",
