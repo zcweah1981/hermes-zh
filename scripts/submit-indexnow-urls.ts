@@ -220,7 +220,8 @@ async function main() {
 
   const body = await response.text()
   if (!response.ok) {
-    throw new Error(`IndexNow submit failed: status=${response.status} body=${body}`)
+    const blocker = response.status === 403 ? ' blocker=indexnow_key_location_403' : ''
+    throw new Error(`IndexNow submit failed: status=${response.status}${blocker} body=${body.replace(key, '<masked>')}`)
   }
 
   writeState(stateFile, {

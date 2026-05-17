@@ -5,6 +5,8 @@ import type { SitePack, SitePage } from '../lib/content/types'
 import { toDocPath } from '../lib/routing/docs-path'
 import { buildCanonicalUrl } from '../lib/seo/canonical'
 
+import { classifyBaiduPushResult, redactSeoSecrets } from '../lib/seo/platform-clients'
+
 type BaiduPushResult = {
   remain?: number
   success?: number
@@ -66,8 +68,9 @@ async function submitToBaidu(urls: string[], site: string, token: string) {
     signal: controller.signal,
   }).finally(() => clearTimeout(timeout))
   const result = (await response.json()) as BaiduPushResult
-  if (!response.ok || result.error) {
-    throw new Error(`Baidu URL submit failed: status=${response.status} body=${JSON.stringify(result)}`)
+  const classified = classifyBaiduPushResult(result)
+  if (!response.ok || (result.error && classified.blocker !== 'baidu_quota')) {
+    throw new Error(redactSeoSecrets(`Baidu URL submit failed: status=${response.status} body=${JSON.stringify(result)}`))
   }
   return result
 }
@@ -98,8 +101,9 @@ async function main() {
   }
 
   const result = await submitToBaidu(urls, site, token as string)
-  console.log(`Baidu token: ${redactToken(token as string)}`)
-  console.log(`Baidu API result: ${JSON.stringify(result)}`)
+  const classified = classifyBaiduPushResult(result)
+  console.log(`Baidu token: ${redactToken(token as string)} fingerprint=${classified.status === 'blocked' ? 'blocked' : 'ok'}`)
+  console.log(`Baidu API result: ${redactSeoSecrets(JSON.stringify({ ...result, blocker: classified.blocker, status: classified.status }))}`)
 }
 
 main().catch((error) => {
