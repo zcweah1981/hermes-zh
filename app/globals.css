@@ -7,7 +7,7 @@
   src: url('/fonts/noto-sans-sc.woff2') format('woff2');
   font-style: normal;
   font-weight: 400 800;
-  font-display: block;
+  font-display: swap;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   src: url('/fonts/noto-serif-sc.woff2') format('woff2');
   font-style: normal;
   font-weight: 700 900;
-  font-display: block;
+  font-display: swap;
 }
 
 :root {
