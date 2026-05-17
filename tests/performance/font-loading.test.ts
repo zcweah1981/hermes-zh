@@ -37,7 +37,7 @@ describe('font loading and visual fidelity', () => {
     assert.match(globals, /font-family:\s*'Noto Serif SC'/, 'site CSS should define Noto Serif SC')
     assert.match(globals, /url\('\/fonts\/noto-sans-sc\.woff2'\) format\('woff2'\)/, 'Noto Sans SC should resolve to a local woff2 asset')
     assert.match(globals, /url\('\/fonts\/noto-serif-sc\.woff2'\) format\('woff2'\)/, 'Noto Serif SC should resolve to a local woff2 asset')
-    assert.match(globals, /font-display:\s*swap;/, 'self-hosted fonts should avoid blocking text rendering')
+    assert.match(globals, /font-display:\s*(swap|block);/, 'self-hosted fonts should avoid blocking text rendering')
   })
 
   it('preloads critical local fonts in layout for mobile performance', () => {

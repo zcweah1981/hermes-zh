@@ -30,6 +30,9 @@ const LEGACY_REDIRECTS = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   async redirects() {
     return LEGACY_REDIRECTS.map((redirect) => ({
       ...redirect,

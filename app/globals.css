@@ -7,7 +7,7 @@
   src: url('/fonts/noto-sans-sc.woff2') format('woff2');
   font-style: normal;
   font-weight: 400 800;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   src: url('/fonts/noto-serif-sc.woff2') format('woff2');
   font-style: normal;
   font-weight: 700 900;
-  font-display: swap;
+  font-display: block;
 }
 
 :root {
@@ -59,6 +59,7 @@
       radial-gradient(circle at top, rgba(91, 167, 255, 0.14), transparent 28%),
       radial-gradient(circle at 100% 0, rgba(98, 208, 255, 0.08), transparent 24%),
       linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 28%);
+    min-height: 100vh;
   }
 
   a {
@@ -99,6 +100,8 @@
 
   .site-hero-fullscreen {
     min-height: calc(100vh - var(--site-header-height));
+    contain-intrinsic-size: 100vh;
+    content-visibility: auto;
     overflow: hidden;
     background:
       radial-gradient(circle at 50% 20%, rgba(91, 167, 255, 0.22), transparent 30%),
