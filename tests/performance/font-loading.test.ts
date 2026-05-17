@@ -40,6 +40,18 @@ describe('font loading and visual fidelity', () => {
     assert.match(globals, /font-display:\s*swap;/, 'self-hosted fonts should avoid blocking text rendering')
   })
 
+  it('preloads critical local fonts in layout for mobile performance', () => {
+    const layout = read('app/layout.tsx')
+    assert.match(layout, /rel="preload"\s+href="\/fonts\/noto-sans-sc\.woff2"\s+as="font"\s+type="font\/woff2"\s+crossOrigin="anonymous"/, 'Noto Sans SC should be preloaded')
+    assert.match(layout, /rel="preload"\s+href="\/fonts\/noto-serif-sc\.woff2"\s+as="font"\s+type="font\/woff2"\s+crossOrigin="anonymous"/, 'Noto Serif SC should be preloaded')
+  })
+
+  it('uses lazy loading strategy for non-critical third-party and analytics scripts', () => {
+    const layout = read('app/layout.tsx')
+    assert.match(layout, /id="cloudflare-web-analytics"[^>]+strategy="lazyOnload"/, 'Cloudflare beacon should use lazyOnload')
+    assert.match(layout, /id="hermes-analytics-events"[^>]+strategy="lazyOnload"/, 'Hermes internal analytics should use lazyOnload')
+  })
+
   it('commits the local font binaries used by the stylesheet', () => {
     assert.equal(exists('public/fonts/noto-sans-sc.woff2'), true)
     assert.equal(exists('public/fonts/noto-serif-sc.woff2'), true)

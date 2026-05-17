@@ -56,11 +56,27 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/noto-sans-sc.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/noto-serif-sc.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
         <Script
           id="hermes-analytics-events"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
 (function () {
@@ -96,7 +112,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           id="cloudflare-web-analytics"
           src="https://static.cloudflareinsights.com/beacon.min.js"
           data-cf-beacon={JSON.stringify({ token: CLOUDFLARE_WEB_ANALYTICS_TOKEN })}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
       </body>
     </html>

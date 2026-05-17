@@ -51,12 +51,13 @@ describe('X/Twitter solution SEO and AI index coverage', () => {
     assert.ok(searchEntry, 'search-index must include /solutions/x-twitter')
 
     for (const item of [page, route, searchEntry]) {
-      assert.equal(item.title, '05-X/Twitter 内容与互动助手')
-      assert.match(item.description, /第三方插件接入 Hermes Agent/)
+      assert.equal(item.title, 'X/Twitter 内容与互动助手')
+      assert.match(item.description, /第三方插件 Hermes Tweet/)
+      assert.match(item.description, /非官方内置/)
     }
 
-    assert.equal(page.updated, '2026-05-16')
-    assert.equal(route.updated, '2026-05-16')
+    assert.equal(page.updated, '2026-05-17')
+    assert.equal(route.updated, '2026-05-17')
     assert.equal(page.status, 'published')
     assert.equal(route.status, 'published')
     assert.match(page.body, /Hermes Tweet 是由 \[Xquik-dev]/)

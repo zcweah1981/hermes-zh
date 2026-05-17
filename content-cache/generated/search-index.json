@@ -356,9 +356,9 @@
   },
   {
     "type": "page",
-    "title": "05-X/Twitter 内容与互动助手",
+    "title": "X/Twitter 内容与互动助手",
     "slug": "/solutions/x-twitter",
-    "description": "一句话先说清楚：这一页是帮你把 X/Twitter 上的搜索、阅读、发推、回复、互动等操作，通过一个第三方插件接入 Hermes Agent，让你能用对话方式完成 X 平台的内容工作。",
+    "description": "通过第三方插件 Hermes Tweet 将 X/Twitter 搜索、阅读、发推、回复等操作接入 Hermes Agent，用对话方式完成 X 平台内容工作。第三方方案，非官方内置。",
     "module": "solutions",
     "headings": [
       "05-X/Twitter 内容与互动助手",
