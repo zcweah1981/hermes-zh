@@ -1,5 +1,5 @@
 {
-  "manifestHash": "8bff789e5f9182b3734751a3315d06ef711bf768ede7069b8f53b18afe8d7684",
+  "manifestHash": "740753824d1eaf9e7a4d00ed52216f824a82e78df02772f7d40f83d6c9a35fdb",
   "urlFingerprints": {
     "https://hermes-zh.com/": "271e065054d7cae862e1a4837a3b74cd7e7f36ea4f911e7ac91f0197d7fd6737",
     "https://hermes-zh.com/ai-index": "6decbd2f359ec3989cf99f9f4b9aaa9844a148e3528ebe95a979bced8dc9cace",
@@ -48,14 +48,14 @@
     "https://hermes-zh.com/docs/reference/slash-commands": "fbe1cb680f888fb045781c9c8de6314b803d26233cb3f98f5ba56fa506986d30",
     "https://hermes-zh.com/docs/reference/toolsets": "80ee8cfccf853fc76e5b6ba8dbdce1b5253df34a647ae446a65e2184e769ac3f",
     "https://hermes-zh.com/docs/solutions": "f098ec3f6feedf30dd787bc257ae9d108044b9a14b4327486bbcc76079c4511b",
-    "https://hermes-zh.com/docs/solutions/action-plan": "41730120541e6fa4f7226257663729151299a05135a13c5b8ce639027249348e",
+    "https://hermes-zh.com/docs/solutions/action-plan": "4eadca4e07a00f2dd81dbfd61f2eac3274b8a5a1152f73c8b2f7ff45761f1046",
     "https://hermes-zh.com/docs/solutions/content": "78b576d8d1e24cc1f1bc421f1001c9b4fcd67f93d8251a8e0b00be2699140181",
     "https://hermes-zh.com/docs/solutions/daily-report": "9805ea9a4b18cb55e9f38e54c236bc1344e020e2df25e7f5d0b596e9b2e46ab1",
     "https://hermes-zh.com/docs/solutions/dev": "0d2cce41099fcacb2c261e226904050daf597828d8f48a84e216629a2eb9b41b",
     "https://hermes-zh.com/docs/solutions/meeting": "a3ce9348c75356b6d4ec10e21a255f75271f19acec335bbe615333215bd2a23b",
-    "https://hermes-zh.com/docs/solutions/message-summary": "cb219b35458e5ce17d676c2a5bdc3c88706d56525fa26ba90d0d894009403ad3",
+    "https://hermes-zh.com/docs/solutions/message-summary": "ae2a8b91241f370f78d377d8a10f407f0d33678b944b900617fd9bdccacbef71",
     "https://hermes-zh.com/docs/solutions/miniapp": "35293b79fef786e06f7ddf15a412f77511da009b00975fb319936753b1b2fdc7",
-    "https://hermes-zh.com/docs/solutions/multi-platform-rewrite": "c32a53754b83eb03c11e9d594ac465127c0b625a9697d123c7b05dd31732d886",
+    "https://hermes-zh.com/docs/solutions/multi-platform-rewrite": "c47a465fc7818f7ea34c2a2787a1c7b9727de086b252dd85cfe09a14266f19b0",
     "https://hermes-zh.com/docs/solutions/office": "ce35fdd72d7b1a98539627f161d20fba5e68ba8e0b5cd947eea8d9650afafeb2",
     "https://hermes-zh.com/docs/solutions/ppt": "e804c76233ef0bd4ae8c7fd27a8c86114cc7ceb02445dde10527368dbf163ed8",
     "https://hermes-zh.com/docs/solutions/summary": "b5440a1ff442b505f31f5291a7cc1c7e78099ed4a6eb4c8bea6209dfe83d3c90",
@@ -95,9 +95,12 @@
     "https://hermes-zh.com/docs/start/personalize/toolsets-and-workflow": "bf0cfe4d83bfc20ba65e5c486e9f7c2bb385dd273ab1dd7555f8eb335435b6e3",
     "https://hermes-zh.com/llms.txt": "379271c0deb5f3d0a4880b3c6d9ee342d915fd1ae6626a172df25af4272a5a42",
     "https://hermes-zh.com/packs": "6a39b7d95c41ee666bb1dbad0ad75a5098b966a9002edb66374665fd83e5365f",
+    "https://hermes-zh.com/packs/action-plan-lab": "4910e6bed9ab3bc4f6aa76cdac2d4c5612e6f206bad352490eab8396e6ea0fbb",
     "https://hermes-zh.com/packs/daily-report-lab": "95bd3e660ab98cdcf03ab465351f6fa154384b0dfc64239c12ea965ff71106b7",
     "https://hermes-zh.com/packs/meeting-lab": "e25189b2f720bd26f3a6da36d38490607432004e82522328188e221c800b8057",
+    "https://hermes-zh.com/packs/message-summary-lab": "7aadb08b73cbee2ff4fc61452d79159492d21d18117757ace8ee4cdd6b96c76c",
     "https://hermes-zh.com/packs/miniapp-lab": "53525749d8fc1415ff15790e50ca8bfa5b9557dff8269fd86720f2d3a0fb9a98",
+    "https://hermes-zh.com/packs/multi-platform-rewrite-lab": "fd4bc11eb453851c0ea0aee8c58bdfebfe117665a03c9154535f299ce19c142d",
     "https://hermes-zh.com/packs/ppt-lab": "7f8177cc2d0067d47de8dfda1fa2e7b82598759a43f86575f5c5fa36cf616608",
     "https://hermes-zh.com/packs/summary-lab": "54f3a2cf6e1fede622e9803a63ef8ef2dbf8053bf98a70eebaf32c2e0e5da7e7",
     "https://hermes-zh.com/packs/webdev-lab": "98602eb6295b912e14e6965595e12731241c62dbe530af2491f00241d9a0041c",
@@ -106,5 +109,5 @@
     "https://hermes-zh.com/robots.txt": "d92ee24c593daa15cc2f488efefd44a2a103c4f54ff2bb642d1ba4a5e4ad34ba",
     "https://hermes-zh.com/sitemap.xml": "1e94f3b5dbf7e6db670c8117599bc4b746673f2d738c6d013cd3668332a0da78"
   },
-  "submittedAt": "2026-05-18T06:30:05.136Z"
+  "submittedAt": "2026-05-18T07:30:05.191Z"
 }
