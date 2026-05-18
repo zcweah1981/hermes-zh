@@ -1,6 +1,9 @@
 {
+  "schemaVersion": 1,
   "contentRepo": "zcweah1981/awesome-hermes-agent-zh",
   "contentRef": "main",
-  "contentSha": "58420307961c0c74fcb35623edda535f1acaddf0",
-  "lockedAt": "2026-05-18T14:30:00Z"
+  "contentSha": "bd52afb0954ebd566895a46d09bab336a8de43b0",
+  "lockedAt": "2026-05-18T08:25:16.577Z",
+  "sourceWorkflowRun": "26021994318",
+  "sourceActor": "zcweah1981"
 }
