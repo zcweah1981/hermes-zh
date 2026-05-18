@@ -98,6 +98,11 @@ function buildBodyFallback(title: string, description?: string) {
   return [`# ${title}`, description].filter(Boolean).join('\n\n')
 }
 
+/** Strip leading numeric prefix like "05-", "06—" from titles extracted from markdown headings or route-map */
+function stripTitlePrefix(title: string) {
+  return title.replace(/^\d+[-_\s、—]+/, '').trim()
+}
+
 function routeMapItemFromRecord(record: Record<string, unknown>): RouteMapItem | undefined {
   const sourcePath = readString(record.source)
   const slug = readString(record.slug)
@@ -216,7 +221,8 @@ export async function loadContentPages(contentRoot = DEFAULT_CONTENT_REPO): Prom
     const routeInfo = routeIndex.get(file)
     const route = routeInfo?.item
     const markdownBody = parsed.content.trim()
-    const title = readString(data.title) ?? route?.title ?? firstMarkdownHeading(markdownBody) ?? titleFromPath(file)
+    const rawTitle = readString(data.title) ?? route?.title ?? firstMarkdownHeading(markdownBody) ?? titleFromPath(file)
+    const title = stripTitlePrefix(rawTitle)
     const description = stripMarkdown(readString(data.description) ?? route?.description ?? firstMarkdownSummary(markdownBody) ?? '')
     const slug = readString(data.slug) ?? route?.slug
 
