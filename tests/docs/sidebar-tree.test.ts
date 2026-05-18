@@ -72,12 +72,12 @@ test('generated docs sidebar root groups match the real content repository top-l
 
   const start = tree.find((node) => node.label === '01-从这开始')
   assert.ok(start)
-  assert.ok(start.children.some((node) => node.label === '01-先跑起来'))
-  assert.ok(start.children.some((node) => node.label === '02-开始上手'))
-  assert.ok(start.children.some((node) => node.label === '03-玩出花样'))
-  assert.ok(start.children.some((node) => node.label === '04-自己造东西'))
+  assert.ok(start!.children.some((node) => node.label === '01-先跑起来'))
+  assert.ok(start!.children.some((node) => node.label === '02-开始上手'))
+  assert.ok(start!.children.some((node) => node.label === '03-玩出花样'))
+  assert.ok(start!.children.some((node) => node.label === '04-自己造东西'))
 
-  const build = start.children.find((node) => node.label === '04-自己造东西')
+  const build = start!.children.find((node) => node.label === '04-自己造东西')
   assert.ok(build?.children.some((node) => node.label === '03-接入外部记忆系统'))
   assert.ok(build?.children.some((node) => node.label === '04-上下文系统'))
 })
@@ -132,12 +132,12 @@ test('buildDocSidebarTree orders nested build docs by real content path prefixes
   assert.ok(build)
 
   assert.deepEqual(
-    build.children.map((node) => node.label),
+    build!.children.map((node: any) => node.label),
     ['03-接入外部记忆系统', '04-上下文系统'],
   )
 
   assert.deepEqual(
-    build.pages.map((item) => item.sourcePath.split('/').at(-1)),
+    build!.pages.map((item: any) => item.sourcePath.split('/').at(-1)),
     [
       '01-总览.md',
       '02-多个助手一起工作.md',
@@ -156,7 +156,7 @@ test('getOrderedSidebarItems mixes pages and child folders by source path with o
   assert.ok(build)
 
   assert.deepEqual(
-    getOrderedSidebarItems(build).map((item) => item.label),
+    getOrderedSidebarItems(build!).map((item: any) => item.label),
     [
       '01-总览',
       '02-多个助手一起工作',
@@ -169,12 +169,12 @@ test('getOrderedSidebarItems mixes pages and child folders by source path with o
     ],
   )
 
-  const externalMemory = build.children.find((node) => node.label === '03-接入外部记忆系统')
-  const contextSystem = build.children.find((node) => node.label === '04-上下文系统')
+  const externalMemory = build!.children.find((node: any) => node.label === '03-接入外部记忆系统')
+  const contextSystem = build!.children.find((node: any) => node.label === '04-上下文系统')
   assert.ok(externalMemory)
   assert.ok(contextSystem)
-  assert.equal(getOrderedSidebarItems(externalMemory)[0]?.label, '01-总览')
-  assert.equal(getOrderedSidebarItems(contextSystem)[0]?.label, '01-总览')
+  assert.equal(getOrderedSidebarItems(externalMemory!)[0]?.label, '01-总览')
+  assert.equal(getOrderedSidebarItems(contextSystem!)[0]?.label, '01-总览')
 })
 
 test('DocSidebar VFIX8 uses same-parent single-open accordion state and ordered mixed rendering', () => {

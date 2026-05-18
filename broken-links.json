@@ -1,0 +1,4760 @@
+[
+  {
+    "file": "docs/00-文档总览.md",
+    "link": "./06-reference/01-%E6%80%BB%E8%A7%88.md",
+    "absolute": "docs/06-reference/01-%E6%80%BB%E8%A7%88.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/00-文档总览.md",
+    "link": "./06-reference/01-%E6%80%BB%E8%A7%88.md",
+    "absolute": "docs/06-reference/01-%E6%80%BB%E8%A7%88.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/00-文档总览.md",
+    "link": "./06-reference/01-%E6%80%BB%E8%A7%88.md",
+    "absolute": "docs/06-reference/01-%E6%80%BB%E8%A7%88.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/01-先跑起来/01-总览.md",
+    "link": "<./04-%E6%8A%8A%20Hermes%20%E8%A3%85%E4%B8%8A%E5%8E%BB.md>",
+    "absolute": "docs/01-从这开始/01-先跑起来/<./04-%E6%8A%8A%20Hermes%20%E8%A3%85%E4%B8%8A%E5%8E%BB.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/01-先跑起来/01-总览.md",
+    "link": "<./05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "absolute": "docs/01-从这开始/01-先跑起来/<./05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/01-先跑起来/01-总览.md",
+    "link": "<./04-%E6%8A%8A%20Hermes%20%E8%A3%85%E4%B8%8A%E5%8E%BB.md>",
+    "absolute": "docs/01-从这开始/01-先跑起来/<./04-%E6%8A%8A%20Hermes%20%E8%A3%85%E4%B8%8A%E5%8E%BB.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/01-先跑起来/01-总览.md",
+    "link": "<./05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "absolute": "docs/01-从这开始/01-先跑起来/<./05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/01-先跑起来/03-进入终端并连接服务器.md",
+    "link": "<./04-%E6%8A%8A%20Hermes%20%E8%A3%85%E4%B8%8A%E5%8E%BB.md>",
+    "absolute": "docs/01-从这开始/01-先跑起来/<./04-%E6%8A%8A%20Hermes%20%E8%A3%85%E4%B8%8A%E5%8E%BB.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md",
+    "link": "<./05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "absolute": "docs/01-从这开始/01-先跑起来/<./05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md",
+    "link": "<./04-%E6%8A%8A%20Hermes%20%E8%A3%85%E4%B8%8A%E5%8E%BB.md>",
+    "absolute": "docs/01-从这开始/01-先跑起来/<./04-%E6%8A%8A%20Hermes%20%E8%A3%85%E4%B8%8A%E5%8E%BB.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md",
+    "link": "<../02-开始上手/01-总览.md>",
+    "absolute": "docs/01-从这开始/01-先跑起来/<../02-开始上手/01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/01-先跑起来/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/01-总览.md",
+    "link": "<./02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/01-总览.md",
+    "link": "<./04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/01-总览.md",
+    "link": "<./02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/01-总览.md",
+    "link": "<./04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/01-总览.md",
+    "link": "<./02-认识%20Hermes%20的基本使用方式.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./02-认识%20Hermes%20的基本使用方式.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/01-总览.md",
+    "link": "<../01-先跑起来/01-总览.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<../01-先跑起来/01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md",
+    "link": "<../01-%E5%85%88%E8%B7%91%E8%B5%B7%E6%9D%A5/05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<../01-%E5%85%88%E8%B7%91%E8%B5%B7%E6%9D%A5/05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md",
+    "link": "<./03-常用斜杠命令与会话管理.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./03-常用斜杠命令与会话管理.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md",
+    "link": "<./02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md",
+    "link": "<../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md",
+    "link": "<./04-常用%20Skills%EF%BC%88按日常使用场景精选%EF%BC%89.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./04-常用%20Skills%EF%BC%88按日常使用场景精选%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md",
+    "link": "<./05-接入一个消息平台（推荐飞书）.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./05-接入一个消息平台（推荐飞书）.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md",
+    "link": "<./04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md",
+    "link": "<../03-玩出花样/01-总览.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<../03-玩出花样/01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/02-开始上手/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<../04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<../04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<./02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<./03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<./04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<./02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<./03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<./04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<../04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<../04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<../04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<../04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<../04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<../04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/01-总览.md",
+    "link": "<./02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md",
+    "link": "<./03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md",
+    "link": "<./04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md",
+    "link": "<./04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md",
+    "link": "<03-让 Hermes 记住你.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<03-让 Hermes 记住你.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md",
+    "link": "<02-让 Hermes 更像你.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<02-让 Hermes 更像你.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md",
+    "link": "<02-让 Hermes 更像你.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<02-让 Hermes 更像你.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md",
+    "link": "<04-自定义 AI 大模型.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<04-自定义 AI 大模型.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/04-自定义 AI 大模型.md",
+    "link": "<../01-%E5%85%88%E8%B7%91%E8%B5%B7%E6%9D%A5/05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<../01-%E5%85%88%E8%B7%91%E8%B5%B7%E6%9D%A5/05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/04-自定义 AI 大模型.md",
+    "link": "<../01-%E5%85%88%E8%B7%91%E8%B5%B7%E6%9D%A5/05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<../01-%E5%85%88%E8%B7%91%E8%B5%B7%E6%9D%A5/05-%E9%85%8D%E5%A5%BD%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B9%B6%E5%AE%8C%E6%88%90%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BA%92%E5%8A%A8.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/03-玩出花样/06-让终端更顺眼.md",
+    "link": "<./02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/03-玩出花样/<./02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/04-%E8%87%AA%E5%AE%9A%E4%B9%89%20AI%20%E5%A4%A7%E6%A8%A1%E5%9E%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./06-%E6%8A%8A%20Hermes%20%E6%9A%B4%E9%9C%B2%E6%88%90%E5%90%8E%E7%AB%AF%E6%9C%8D%E5%8A%A1.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<./02-多个助手一起工作.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./02-多个助手一起工作.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/01-总览.md",
+    "link": "<../03-玩出花样/01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<../03-玩出花样/01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/02-多个助手一起工作.md",
+    "link": "<./03-接入外部记忆系统/01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./03-接入外部记忆系统/01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/02-多个助手一起工作.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/01-总览.md",
+    "link": "<./02-Holographic记忆.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/<./02-Holographic记忆.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/01-总览.md",
+    "link": "<../01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/<../01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/02-Holographic记忆.md",
+    "link": "<./03-Honcho记忆.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/<./03-Honcho记忆.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/02-Holographic记忆.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/03-Honcho记忆.md",
+    "link": "<./04-外部记忆对比.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/<./04-外部记忆对比.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/03-Honcho记忆.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/04-外部记忆对比.md",
+    "link": "<../../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/04-外部记忆对比.md",
+    "link": "<../04-上下文系统/01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/<../04-上下文系统/01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/04-外部记忆对比.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/04-上下文系统/01-总览.md",
+    "link": "<./02-上下文文件.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/04-上下文系统/<./02-上下文文件.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/04-上下文系统/01-总览.md",
+    "link": "<../01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/04-上下文系统/<../01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/04-上下文系统/02-上下文文件.md",
+    "link": "<./03-上下文引用.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/04-上下文系统/<./03-上下文引用.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/04-上下文系统/02-上下文文件.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/04-上下文系统/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/04-上下文系统/03-上下文引用.md",
+    "link": "<../05-把%20Hermes%20接进外部系统.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/04-上下文系统/<../05-把%20Hermes%20接进外部系统.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/04-上下文系统/03-上下文引用.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/04-上下文系统/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md",
+    "link": "<./06-把%20Hermes%20暴露成后端服务.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./06-把%20Hermes%20暴露成后端服务.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md",
+    "link": "<./07-让%20Hermes%20自己自动跑.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./07-让%20Hermes%20自己自动跑.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/07-让 Hermes 自己自动跑.md",
+    "link": "<./08-放进编辑器里用.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./08-放进编辑器里用.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/07-让 Hermes 自己自动跑.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/08-放进编辑器里用.md",
+    "link": "<../总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<../总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/01-从这开始/04-自己造东西/08-放进编辑器里用.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/01-从这开始/04-自己造东西/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "/docs/solutions/xiaohongshu",
+    "absolute": "../../../docs/solutions/xiaohongshu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "/packs/xhs-lab",
+    "absolute": "../../../packs/xhs-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "/docs/solutions/wechat-writer",
+    "absolute": "../../../docs/solutions/wechat-writer",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "/packs/wechat-writer-lab",
+    "absolute": "../../../packs/wechat-writer-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "/docs/solutions/ppt",
+    "absolute": "../../../docs/solutions/ppt",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "/packs/ppt-lab",
+    "absolute": "../../../packs/ppt-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "/docs/solutions/x-twitter",
+    "absolute": "../../../docs/solutions/x-twitter",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/01-总览.md",
+    "link": "/docs/solutions",
+    "absolute": "../../../docs/solutions",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md",
+    "link": "/packs/xhs-lab",
+    "absolute": "../../../packs/xhs-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md",
+    "link": "/docs/solutions/content",
+    "absolute": "../../../docs/solutions/content",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md",
+    "link": "/docs/solutions/wechat-writer",
+    "absolute": "../../../docs/solutions/wechat-writer",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md",
+    "link": "<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/<./04-PPT%20%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md",
+    "link": "/packs/wechat-writer-lab",
+    "absolute": "../../../packs/wechat-writer-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md",
+    "link": "/docs/solutions/content",
+    "absolute": "../../../docs/solutions/content",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md",
+    "link": "/docs/solutions/ppt",
+    "absolute": "../../../docs/solutions/ppt",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md",
+    "link": "/packs/ppt-lab",
+    "absolute": "../../../packs/ppt-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md",
+    "link": "/docs/solutions/content",
+    "absolute": "../../../docs/solutions/content",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md",
+    "link": "/docs/solutions/xiaohongshu",
+    "absolute": "../../../docs/solutions/xiaohongshu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "./01-内容创作与发布/05-X-Twitter%20内容与互动助手.md",
+    "absolute": "docs/02-现成方案/01-内容创作与发布/05-X-Twitter%20内容与互动助手.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/packs",
+    "absolute": "../../../packs",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/solutions/xiaohongshu",
+    "absolute": "../../../docs/solutions/xiaohongshu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/solutions/wechat-writer",
+    "absolute": "../../../docs/solutions/wechat-writer",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/solutions/ppt",
+    "absolute": "../../../docs/solutions/ppt",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/solutions/x-twitter",
+    "absolute": "../../../docs/solutions/x-twitter",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/solutions/meeting",
+    "absolute": "../../../docs/solutions/meeting",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/solutions/daily-report",
+    "absolute": "../../../docs/solutions/daily-report",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/solutions/summary",
+    "absolute": "../../../docs/solutions/summary",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/solutions/miniapp",
+    "absolute": "../../../docs/solutions/miniapp",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/solutions/webdev",
+    "absolute": "../../../docs/solutions/webdev",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/01-总览.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/01-总览.md",
+    "link": "/docs/solutions/meeting",
+    "absolute": "../../../docs/solutions/meeting",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/01-总览.md",
+    "link": "/packs/meeting-lab",
+    "absolute": "../../../packs/meeting-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/01-总览.md",
+    "link": "/docs/solutions/daily-report",
+    "absolute": "../../../docs/solutions/daily-report",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/01-总览.md",
+    "link": "/packs/daily-report-lab",
+    "absolute": "../../../packs/daily-report-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/01-总览.md",
+    "link": "/docs/solutions/summary",
+    "absolute": "../../../docs/solutions/summary",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/01-总览.md",
+    "link": "/packs/summary-lab",
+    "absolute": "../../../packs/summary-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/01-总览.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md",
+    "link": "/packs/meeting-lab",
+    "absolute": "../../../packs/meeting-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md",
+    "link": "/docs/solutions/office",
+    "absolute": "../../../docs/solutions/office",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md",
+    "link": "/docs/solutions/daily-report",
+    "absolute": "../../../docs/solutions/daily-report",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md",
+    "link": "/packs/daily-report-lab",
+    "absolute": "../../../packs/daily-report-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md",
+    "link": "/docs/solutions/office",
+    "absolute": "../../../docs/solutions/office",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md",
+    "link": "/docs/solutions/summary",
+    "absolute": "../../../docs/solutions/summary",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md",
+    "link": "/packs/summary-lab",
+    "absolute": "../../../packs/summary-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md",
+    "link": "/docs/solutions/office",
+    "absolute": "../../../docs/solutions/office",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md",
+    "link": "/docs/solutions/meeting",
+    "absolute": "../../../docs/solutions/meeting",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "<./03-%E6%95%8F%E6%8D%B7%20Web%20%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/03-应用开发与快速原型/<./03-%E6%95%8F%E6%8D%B7%20Web%20%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "<./03-%E6%95%8F%E6%8D%B7%20Web%20%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/03-应用开发与快速原型/<./03-%E6%95%8F%E6%8D%B7%20Web%20%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "<./03-%E6%95%8F%E6%8D%B7%20Web%20%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/03-应用开发与快速原型/<./03-%E6%95%8F%E6%8D%B7%20Web%20%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "<./03-%E6%95%8F%E6%8D%B7%20Web%20%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B.md>",
+    "absolute": "docs/02-现成方案/03-应用开发与快速原型/<./03-%E6%95%8F%E6%8D%B7%20Web%20%E5%BC%80%E5%8F%91%E5%8A%A9%E6%89%8B.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "/docs/solutions/miniapp",
+    "absolute": "../../../docs/solutions/miniapp",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "/packs/miniapp-lab",
+    "absolute": "../../../packs/miniapp-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "/docs/solutions/webdev",
+    "absolute": "../../../docs/solutions/webdev",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "/packs/webdev-lab",
+    "absolute": "../../../packs/webdev-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "/docs/start/build/profiles",
+    "absolute": "../../../docs/start/build/profiles",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/01-总览.md",
+    "link": "/docs/reference/toolsets",
+    "absolute": "../../../docs/reference/toolsets",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md",
+    "link": "<./03-敏捷 Web 开发助手.md>",
+    "absolute": "docs/02-现成方案/03-应用开发与快速原型/<./03-敏捷 Web 开发助手.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md",
+    "link": "/packs/miniapp-lab",
+    "absolute": "../../../packs/miniapp-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md",
+    "link": "/docs/solutions/dev",
+    "absolute": "../../../docs/solutions/dev",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md",
+    "link": "/docs/solutions/webdev",
+    "absolute": "../../../docs/solutions/webdev",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md",
+    "link": "/packs/webdev-lab",
+    "absolute": "../../../packs/webdev-lab",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md",
+    "link": "/docs/solutions/dev",
+    "absolute": "../../../docs/solutions/dev",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md",
+    "link": "/docs/solutions/miniapp",
+    "absolute": "../../../docs/solutions/miniapp",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/01-总览.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/01-总览.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/01-总览.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/01-总览.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/01-总览.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/01-总览.md",
+    "link": "/docs/china/entry",
+    "absolute": "../../../docs/china/entry",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/01-总览.md",
+    "link": "/docs/issues/docker-nix-remote",
+    "absolute": "../../../docs/issues/docker-nix-remote",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md",
+    "link": "/docs/china/entry",
+    "absolute": "../../../docs/china/entry",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md",
+    "link": "/docs/issues/docker-nix-remote",
+    "absolute": "../../../docs/issues/docker-nix-remote",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md",
+    "link": "/docs/china/entry",
+    "absolute": "../../../docs/china/entry",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md",
+    "link": "/docs/issues/docker-nix-remote",
+    "absolute": "../../../docs/issues/docker-nix-remote",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "<./02-%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9E%8B/02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "absolute": "docs/03-国内落地/<./02-%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9E%8B/02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "<./02-%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9E%8B/03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/<./02-%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9E%8B/03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "<./02-%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9E%8B/04-%E6%99%BA%E8%B0%B1GLM%20Coding%20Plan.md>",
+    "absolute": "docs/03-国内落地/<./02-%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9E%8B/04-%E6%99%BA%E8%B0%B1GLM%20Coding%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "<./02-%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9E%8B/05-MiniMax%20Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/<./02-%E5%9B%BD%E5%86%85%E6%A8%A1%E5%9E%8B/05-MiniMax%20Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "<./03-%E5%9B%BD%E5%86%85%E5%85%A5%E5%8F%A3/03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "absolute": "docs/03-国内落地/<./03-%E5%9B%BD%E5%86%85%E5%85%A5%E5%8F%A3/03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "<./03-%E5%9B%BD%E5%86%85%E5%85%A5%E5%8F%A3/06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "absolute": "docs/03-国内落地/<./03-%E5%9B%BD%E5%86%85%E5%85%A5%E5%8F%A3/06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "/docs/china/entry",
+    "absolute": "../../../docs/china/entry",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "/docs/issues/docker-nix-remote",
+    "absolute": "../../../docs/issues/docker-nix-remote",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "./02-国内模型/02-阿里云百炼Token%20plan.md",
+    "absolute": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token%20plan.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "./02-国内模型/03-腾讯云Token%20Plan.md",
+    "absolute": "docs/03-国内落地/02-国内模型/03-腾讯云Token%20Plan.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "./03-国内入口/06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md",
+    "absolute": "docs/03-国内落地/03-国内入口/06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/01-总览.md",
+    "link": "./03-国内入口/03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md",
+    "absolute": "docs/03-国内落地/03-国内入口/03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md",
+    "absolute": "docs/03-国内落地/02-国内模型/02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md",
+    "absolute": "docs/03-国内落地/02-国内模型/03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./04-%E6%99%BA%E8%B0%B1GLM%20Coding%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./04-%E6%99%BA%E8%B0%B1GLM%20Coding%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./05-MiniMax%20Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./05-MiniMax%20Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./04-%E6%99%BA%E8%B0%B1GLM%20Coding%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./04-%E6%99%BA%E8%B0%B1GLM%20Coding%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./05-MiniMax%20Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./05-MiniMax%20Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/china/models/glm-coding-plan",
+    "absolute": "../../../docs/china/models/glm-coding-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/china/models/alibaba-bailian-token-plan",
+    "absolute": "../../../docs/china/models/alibaba-bailian-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/china/models/tencent-token-plan",
+    "absolute": "../../../docs/china/models/tencent-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/01-总览.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/china/models/glm-coding-plan",
+    "absolute": "../../../docs/china/models/glm-coding-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/china/models/alibaba-bailian-token-plan",
+    "absolute": "../../../docs/china/models/alibaba-bailian-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/china/models/tencent-token-plan",
+    "absolute": "../../../docs/china/models/tencent-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "<./04-%E6%99%BA%E8%B0%B1GLM%20Coding%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./04-%E6%99%BA%E8%B0%B1GLM%20Coding%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/china/models/glm-coding-plan",
+    "absolute": "../../../docs/china/models/glm-coding-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/china/models/alibaba-bailian-token-plan",
+    "absolute": "../../../docs/china/models/alibaba-bailian-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/china/models/tencent-token-plan",
+    "absolute": "../../../docs/china/models/tencent-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "<./05-MiniMax%20Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./05-MiniMax%20Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/china/models/glm-coding-plan",
+    "absolute": "../../../docs/china/models/glm-coding-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/china/models/alibaba-bailian-token-plan",
+    "absolute": "../../../docs/china/models/alibaba-bailian-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/china/models/tencent-token-plan",
+    "absolute": "../../../docs/china/models/tencent-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "absolute": "docs/03-国内落地/02-国内模型/<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/china/models/glm-coding-plan",
+    "absolute": "../../../docs/china/models/glm-coding-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/china/models/alibaba-bailian-token-plan",
+    "absolute": "../../../docs/china/models/alibaba-bailian-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/china/models/tencent-token-plan",
+    "absolute": "../../../docs/china/models/tencent-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/china/models/glm-coding-plan",
+    "absolute": "../../../docs/china/models/glm-coding-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/china/models/alibaba-bailian-token-plan",
+    "absolute": "../../../docs/china/models/alibaba-bailian-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/china/models/tencent-token-plan",
+    "absolute": "../../../docs/china/models/tencent-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/china/models/glm-coding-plan",
+    "absolute": "../../../docs/china/models/glm-coding-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/china/models/alibaba-bailian-token-plan",
+    "absolute": "../../../docs/china/models/alibaba-bailian-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/china/models/tencent-token-plan",
+    "absolute": "../../../docs/china/models/tencent-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/china/models/deepseek-metered-api",
+    "absolute": "../../../docs/china/models/deepseek-metered-api",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/china/models/kimi-plan",
+    "absolute": "../../../docs/china/models/kimi-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/china/models/glm-coding-plan",
+    "absolute": "../../../docs/china/models/glm-coding-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/china/models/alibaba-bailian-token-plan",
+    "absolute": "../../../docs/china/models/alibaba-bailian-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/china/models/tencent-token-plan",
+    "absolute": "../../../docs/china/models/tencent-token-plan",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "/docs/start/build/api-server",
+    "absolute": "../../../docs/start/build/api-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "/docs/china/entry/api-service-open-webui",
+    "absolute": "../../../docs/china/entry/api-service-open-webui",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "/docs/china/entry/feishu",
+    "absolute": "../../../docs/china/entry/feishu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "/docs/china/entry/wecom-ai-bot",
+    "absolute": "../../../docs/china/entry/wecom-ai-bot",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "/docs/china/entry/dingtalk",
+    "absolute": "../../../docs/china/entry/dingtalk",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "/docs/china/entry/personal-wechat",
+    "absolute": "../../../docs/china/entry/personal-wechat",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/01-总览.md",
+    "link": "/docs/issues/gateway-messaging",
+    "absolute": "../../../docs/issues/gateway-messaging",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "/docs/start/build/api-server",
+    "absolute": "../../../docs/start/build/api-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "/docs/china/entry/api-service-open-webui",
+    "absolute": "../../../docs/china/entry/api-service-open-webui",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "/docs/china/entry/feishu",
+    "absolute": "../../../docs/china/entry/feishu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "/docs/china/entry/wecom-ai-bot",
+    "absolute": "../../../docs/china/entry/wecom-ai-bot",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "/docs/china/entry/dingtalk",
+    "absolute": "../../../docs/china/entry/dingtalk",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "/docs/china/entry/personal-wechat",
+    "absolute": "../../../docs/china/entry/personal-wechat",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md",
+    "link": "/docs/issues/gateway-messaging",
+    "absolute": "../../../docs/issues/gateway-messaging",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "link": "<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "link": "/docs/start/build/api-server",
+    "absolute": "../../../docs/start/build/api-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "link": "/docs/china/entry/api-service-open-webui",
+    "absolute": "../../../docs/china/entry/api-service-open-webui",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "link": "/docs/china/entry/feishu",
+    "absolute": "../../../docs/china/entry/feishu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "link": "/docs/china/entry/wecom-ai-bot",
+    "absolute": "../../../docs/china/entry/wecom-ai-bot",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "link": "/docs/china/entry/dingtalk",
+    "absolute": "../../../docs/china/entry/dingtalk",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "link": "/docs/china/entry/personal-wechat",
+    "absolute": "../../../docs/china/entry/personal-wechat",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md",
+    "link": "/docs/issues/gateway-messaging",
+    "absolute": "../../../docs/issues/gateway-messaging",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "/docs/start/build/api-server",
+    "absolute": "../../../docs/start/build/api-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "/docs/china/entry/api-service-open-webui",
+    "absolute": "../../../docs/china/entry/api-service-open-webui",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "/docs/china/entry/feishu",
+    "absolute": "../../../docs/china/entry/feishu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "/docs/china/entry/wecom-ai-bot",
+    "absolute": "../../../docs/china/entry/wecom-ai-bot",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "/docs/china/entry/dingtalk",
+    "absolute": "../../../docs/china/entry/dingtalk",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "/docs/china/entry/personal-wechat",
+    "absolute": "../../../docs/china/entry/personal-wechat",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/04-命令行（CLI）.md",
+    "link": "/docs/issues/gateway-messaging",
+    "absolute": "../../../docs/issues/gateway-messaging",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "link": "<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "absolute": "docs/03-国内落地/03-国内入口/<./06-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%EF%BC%88AI%20Bot%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "link": "/docs/start/build/api-server",
+    "absolute": "../../../docs/start/build/api-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "link": "/docs/china/entry/api-service-open-webui",
+    "absolute": "../../../docs/china/entry/api-service-open-webui",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "link": "/docs/china/entry/feishu",
+    "absolute": "../../../docs/china/entry/feishu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "link": "/docs/china/entry/wecom-ai-bot",
+    "absolute": "../../../docs/china/entry/wecom-ai-bot",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "link": "/docs/china/entry/dingtalk",
+    "absolute": "../../../docs/china/entry/dingtalk",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "link": "/docs/china/entry/personal-wechat",
+    "absolute": "../../../docs/china/entry/personal-wechat",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/05-飞书.md",
+    "link": "/docs/issues/gateway-messaging",
+    "absolute": "../../../docs/issues/gateway-messaging",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md",
+    "link": "/docs/start/build/api-server",
+    "absolute": "../../../docs/start/build/api-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md",
+    "link": "/docs/china/entry/api-service-open-webui",
+    "absolute": "../../../docs/china/entry/api-service-open-webui",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md",
+    "link": "/docs/china/entry/feishu",
+    "absolute": "../../../docs/china/entry/feishu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md",
+    "link": "/docs/china/entry/wecom-ai-bot",
+    "absolute": "../../../docs/china/entry/wecom-ai-bot",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md",
+    "link": "/docs/china/entry/dingtalk",
+    "absolute": "../../../docs/china/entry/dingtalk",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md",
+    "link": "/docs/china/entry/personal-wechat",
+    "absolute": "../../../docs/china/entry/personal-wechat",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md",
+    "link": "/docs/issues/gateway-messaging",
+    "absolute": "../../../docs/issues/gateway-messaging",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/07-钉钉.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/07-钉钉.md",
+    "link": "/docs/start/build/api-server",
+    "absolute": "../../../docs/start/build/api-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/07-钉钉.md",
+    "link": "/docs/china/entry/api-service-open-webui",
+    "absolute": "../../../docs/china/entry/api-service-open-webui",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/07-钉钉.md",
+    "link": "/docs/china/entry/feishu",
+    "absolute": "../../../docs/china/entry/feishu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/07-钉钉.md",
+    "link": "/docs/china/entry/wecom-ai-bot",
+    "absolute": "../../../docs/china/entry/wecom-ai-bot",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/07-钉钉.md",
+    "link": "/docs/china/entry/dingtalk",
+    "absolute": "../../../docs/china/entry/dingtalk",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/07-钉钉.md",
+    "link": "/docs/china/entry/personal-wechat",
+    "absolute": "../../../docs/china/entry/personal-wechat",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/07-钉钉.md",
+    "link": "/docs/issues/gateway-messaging",
+    "absolute": "../../../docs/issues/gateway-messaging",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/08-个人微信.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/08-个人微信.md",
+    "link": "/docs/start/build/api-server",
+    "absolute": "../../../docs/start/build/api-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/08-个人微信.md",
+    "link": "/docs/china/entry/api-service-open-webui",
+    "absolute": "../../../docs/china/entry/api-service-open-webui",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/08-个人微信.md",
+    "link": "/docs/china/entry/feishu",
+    "absolute": "../../../docs/china/entry/feishu",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/08-个人微信.md",
+    "link": "/docs/china/entry/wecom-ai-bot",
+    "absolute": "../../../docs/china/entry/wecom-ai-bot",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/08-个人微信.md",
+    "link": "/docs/china/entry/dingtalk",
+    "absolute": "../../../docs/china/entry/dingtalk",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/08-个人微信.md",
+    "link": "/docs/china/entry/personal-wechat",
+    "absolute": "../../../docs/china/entry/personal-wechat",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/03-国内落地/03-国内入口/08-个人微信.md",
+    "link": "/docs/issues/gateway-messaging",
+    "absolute": "../../../docs/issues/gateway-messaging",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./02-OpenClaw%20%E5%92%8C%20Hermes%20%E7%9A%84%E5%85%B3%E7%B3%BB.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./02-OpenClaw%20%E5%92%8C%20Hermes%20%E7%9A%84%E5%85%B3%E7%B3%BB.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./02-OpenClaw%20%E5%92%8C%20Hermes%20%E7%9A%84%E5%85%B3%E7%B3%BB.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./02-OpenClaw%20%E5%92%8C%20Hermes%20%E7%9A%84%E5%85%B3%E7%B3%BB.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./02-OpenClaw%20%E5%92%8C%20Hermes%20%E7%9A%84%E5%85%B3%E7%B3%BB.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./02-OpenClaw%20%E5%92%8C%20Hermes%20%E7%9A%84%E5%85%B3%E7%B3%BB.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./06-OpenClaw%20%E7%94%A8%E6%88%B7%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./06-OpenClaw%20%E7%94%A8%E6%88%B7%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./02-OpenClaw%20%E5%92%8C%20Hermes%20%E7%9A%84%E5%85%B3%E7%B3%BB.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./02-OpenClaw%20%E5%92%8C%20Hermes%20%E7%9A%84%E5%85%B3%E7%B3%BB.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "/docs/openclaw/relationship",
+    "absolute": "../../../docs/openclaw/relationship",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "/docs/openclaw/decision",
+    "absolute": "../../../docs/openclaw/decision",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "/docs/openclaw/coexistence",
+    "absolute": "../../../docs/openclaw/coexistence",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "/docs/openclaw/migration-path",
+    "absolute": "../../../docs/openclaw/migration-path",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/01-总览.md",
+    "link": "/docs/openclaw/checklist",
+    "absolute": "../../../docs/openclaw/checklist",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md",
+    "link": "/docs/openclaw/decision",
+    "absolute": "../../../docs/openclaw/decision",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md",
+    "link": "/docs/openclaw/coexistence",
+    "absolute": "../../../docs/openclaw/coexistence",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md",
+    "link": "/docs/openclaw/migration-path",
+    "absolute": "../../../docs/openclaw/migration-path",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md",
+    "link": "/docs/reference",
+    "absolute": "../../../docs/reference",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md",
+    "link": "/docs/openclaw/coexistence",
+    "absolute": "../../../docs/openclaw/coexistence",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md",
+    "link": "/docs/openclaw/migration-path",
+    "absolute": "../../../docs/openclaw/migration-path",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md",
+    "link": "/docs/openclaw/checklist",
+    "absolute": "../../../docs/openclaw/checklist",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md",
+    "link": "/docs/openclaw/migration-path",
+    "absolute": "../../../docs/openclaw/migration-path",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md",
+    "link": "/docs/issues/config-profiles-environment",
+    "absolute": "../../../docs/issues/config-profiles-environment",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md",
+    "link": "/docs/start/build/profiles",
+    "absolute": "../../../docs/start/build/profiles",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md",
+    "link": "/docs/start/build/context-system",
+    "absolute": "../../../docs/start/build/context-system",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "<./06-OpenClaw%20%E7%94%A8%E6%88%B7%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./06-OpenClaw%20%E7%94%A8%E6%88%B7%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "/docs/openclaw/checklist",
+    "absolute": "../../../docs/openclaw/checklist",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "/docs/start/build/profiles",
+    "absolute": "../../../docs/start/build/profiles",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "/docs/start/build/context-system/context-files",
+    "absolute": "../../../docs/start/build/context-system/context-files",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "/docs/issues/tools-skills-mcp",
+    "absolute": "../../../docs/issues/tools-skills-mcp",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/04-从OpenClaw过来/<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "absolute": "docs/04-从OpenClaw过来/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "/docs/openclaw/decision",
+    "absolute": "../../../docs/openclaw/decision",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "/docs/openclaw/coexistence",
+    "absolute": "../../../docs/openclaw/coexistence",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "/docs/openclaw/migration-path",
+    "absolute": "../../../docs/openclaw/migration-path",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./08-Docker%20Nix%20SSH%20%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%90%8E%E7%AB%AF%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./08-Docker%20Nix%20SSH%20%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%90%8E%E7%AB%AF%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./08-Docker%20Nix%20SSH%20%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%90%8E%E7%AB%AF%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./08-Docker%20Nix%20SSH%20%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%90%8E%E7%AB%AF%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<./02-安装更新与环境问题.md>",
+    "absolute": "docs/05-遇到问题/<./02-安装更新与环境问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "<../00-文档总览.md>",
+    "absolute": "docs/05-遇到问题/<../00-文档总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "/docs/issues/install-environment",
+    "absolute": "../../../docs/issues/install-environment",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "/docs/issues/provider-endpoint",
+    "absolute": "../../../docs/issues/provider-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "/docs/issues/cli-tui-session",
+    "absolute": "../../../docs/issues/cli-tui-session",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "/docs/issues/gateway-messaging",
+    "absolute": "../../../docs/issues/gateway-messaging",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "/docs/issues/tools-skills-mcp",
+    "absolute": "../../../docs/issues/tools-skills-mcp",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "/docs/issues/config-profiles-environment",
+    "absolute": "../../../docs/issues/config-profiles-environment",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "/docs/issues/docker-nix-remote",
+    "absolute": "../../../docs/issues/docker-nix-remote",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/01-总览.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/02-安装更新与环境问题.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/02-安装更新与环境问题.md",
+    "link": "/docs/start/get-running/prepare-environment",
+    "absolute": "../../../docs/start/get-running/prepare-environment",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/02-安装更新与环境问题.md",
+    "link": "/docs/start/get-running/install-hermes",
+    "absolute": "../../../docs/start/get-running/install-hermes",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/02-安装更新与环境问题.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/02-安装更新与环境问题.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "<./04-CLI%20TUI%20与会话问题.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20与会话问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "<./04-CLI%20TUI%20与会话问题.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20与会话问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "<./06-Tools%20Skills%20MCP%20问题.md>",
+    "absolute": "docs/05-遇到问题/<./06-Tools%20Skills%20MCP%20问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "<./04-CLI%20TUI%20与会话问题.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20与会话问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "<./06-Tools%20Skills%20MCP%20问题.md>",
+    "absolute": "docs/05-遇到问题/<./06-Tools%20Skills%20MCP%20问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "<./04-CLI%20TUI%20与会话问题.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20与会话问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/05-遇到问题/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "/docs/china/models",
+    "absolute": "../../../docs/china/models",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "/docs/china/models/openai-compatible-endpoint",
+    "absolute": "../../../docs/china/models/openai-compatible-endpoint",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "absolute": "docs/05-遇到问题/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "<./05-Gateway%20Messaging%20与推送问题.md>",
+    "absolute": "docs/05-遇到问题/<./05-Gateway%20Messaging%20与推送问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/05-遇到问题/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "/docs/start/getting-started/basic-usage",
+    "absolute": "../../../docs/start/getting-started/basic-usage",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "/docs/start/getting-started/slash-commands-and-sessions",
+    "absolute": "../../../docs/start/getting-started/slash-commands-and-sessions",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "absolute": "docs/05-遇到问题/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "<./06-Tools%20Skills%20MCP%20问题.md>",
+    "absolute": "docs/05-遇到问题/<./06-Tools%20Skills%20MCP%20问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/05-遇到问题/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "/docs/china/entry",
+    "absolute": "../../../docs/china/entry",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "/docs/china/entry/api-service-open-webui",
+    "absolute": "../../../docs/china/entry/api-service-open-webui",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "/docs/start/build/api-server",
+    "absolute": "../../../docs/start/build/api-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "/docs/reference/environment-variables",
+    "absolute": "../../../docs/reference/environment-variables",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/05-遇到问题/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/05-遇到问题/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "absolute": "docs/05-遇到问题/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<./07-配置%20Profiles%20与环境隔离问题.md>",
+    "absolute": "docs/05-遇到问题/<./07-配置%20Profiles%20与环境隔离问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/05-遇到问题/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "/docs/reference/toolsets",
+    "absolute": "../../../docs/reference/toolsets",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./08-Docker%20Nix%20SSH%20与远程后端问题.md>",
+    "absolute": "docs/05-遇到问题/<./08-Docker%20Nix%20SSH%20与远程后端问题.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/05-遇到问题/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "/docs/start/build/profiles",
+    "absolute": "../../../docs/start/build/profiles",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "/docs/start/build/context-system",
+    "absolute": "../../../docs/start/build/context-system",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "/docs/openclaw/coexistence",
+    "absolute": "../../../docs/openclaw/coexistence",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/05-遇到问题/<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "<../00-文档总览.md>",
+    "absolute": "docs/05-遇到问题/<../00-文档总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "<./01-总览.md>",
+    "absolute": "docs/05-遇到问题/<./01-总览.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "/docs/china/deploy",
+    "absolute": "../../../docs/china/deploy",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "/docs/china/deploy/alicloud-lite-server",
+    "absolute": "../../../docs/china/deploy/alicloud-lite-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "/docs/china/deploy/tencent-lite-server",
+    "absolute": "../../../docs/china/deploy/tencent-lite-server",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "/docs/start/get-running/prepare-environment",
+    "absolute": "../../../docs/start/get-running/prepare-environment",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./05-环境变量参考.md>",
+    "absolute": "docs/06-reference/<./05-环境变量参考.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./05-环境变量参考.md>",
+    "absolute": "docs/06-reference/<./05-环境变量参考.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./05-环境变量参考.md>",
+    "absolute": "docs/06-reference/<./05-环境变量参考.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/08-Docker%20Nix%20SSH%20%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%90%8E%E7%AB%AF%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/08-Docker%20Nix%20SSH%20%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%90%8E%E7%AB%AF%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/01-总览.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "absolute": "docs/06-reference/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "absolute": "docs/06-reference/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/02-CLI 命令参考.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/03-Slash Commands 参考.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<../04-%E4%BB%8EOpenClaw%E8%BF%87%E6%9D%A5/05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "absolute": "docs/06-reference/<../04-%E4%BB%8EOpenClaw%E8%BF%87%E6%9D%A5/05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<../04-%E4%BB%8EOpenClaw%E8%BF%87%E6%9D%A5/06-OpenClaw%20%E7%94%A8%E6%88%B7%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95.md>",
+    "absolute": "docs/06-reference/<../04-%E4%BB%8EOpenClaw%E8%BF%87%E6%9D%A5/06-OpenClaw%20%E7%94%A8%E6%88%B7%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "<./05-环境变量参考.md>",
+    "absolute": "docs/06-reference/<./05-环境变量参考.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/04-Profile 命令参考.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./04-Profile%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/05-环境变量参考.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/06-Built-in Tools 参考.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/07-Toolsets 参考.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./07-Toolsets%20%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/08-MCP 配置参考.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/06-reference/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/06-reference/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/09-内置 Skills 目录.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/06-reference/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "absolute": "docs/06-reference/<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "absolute": "docs/06-reference/<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "absolute": "docs/06-reference/<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "absolute": "docs/06-reference/<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "/docs/start",
+    "absolute": "../../../docs/start",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "/docs/reference/cli-commands",
+    "absolute": "../../../docs/reference/cli-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "/docs/reference/slash-commands",
+    "absolute": "../../../docs/reference/slash-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "/docs/reference/profile-commands",
+    "absolute": "../../../docs/reference/profile-commands",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "/docs/reference/built-in-tools",
+    "absolute": "../../../docs/reference/built-in-tools",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "/docs/reference/bundled-skills",
+    "absolute": "../../../docs/reference/bundled-skills",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "/docs/reference/mcp-config",
+    "absolute": "../../../docs/reference/mcp-config",
+    "reason": "File not found"
+  },
+  {
+    "file": "docs/06-reference/10-可选 Skills 目录.md",
+    "link": "/docs/issues",
+    "absolute": "../../../docs/issues",
+    "reason": "File not found"
+  }
+]

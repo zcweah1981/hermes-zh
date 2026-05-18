@@ -74,7 +74,7 @@ describe('X/Twitter solution SEO and AI index coverage', () => {
 
     assert.ok(contentOverview, 'content overview must exist')
     assert.equal(contentOverview.updated, '2026-05-16')
-    assert.match(contentOverview.body, /当前这一层已经能直接进入 4 套现成方案/)
+    assert.match(contentOverview.body, /当前这一层已经能直接进入 5 套现成方案/)
     assert.match(contentOverview.body, /X\/Twitter 内容与互动助手/)
     assert.match(contentOverview.body, /05-X-Twitter%20/)
 

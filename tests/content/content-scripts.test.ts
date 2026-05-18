@@ -29,10 +29,10 @@ async function readGeneratedJson<T>(fileName: string): Promise<T> {
 
 test('sync-content writes the published pages manifest from the real content repo', async () => {
   const { stdout } = await runScript('scripts/sync-content.ts')
-  assert.match(stdout, /synced 88 pages -> content-cache\/generated\/pages-manifest\.json/)
+  assert.match(stdout, /synced 91 pages -> content-cache\/generated\/pages-manifest\.json/)
 
   const pages = await readGeneratedJson<Array<{ slug: string; status: string }>>('pages-manifest.json')
-  assert.equal(pages.length, 88)
+  assert.equal(pages.length, 91)
   assert.ok(pages.every((page) => page.status === 'published'))
   assert.ok(pages.some((page) => page.slug === '/start'))
   assert.ok(pages.some((page) => page.slug === '/solutions/x-twitter'))
@@ -40,7 +40,7 @@ test('sync-content writes the published pages manifest from the real content rep
 
 test('build-manifests writes pages, routes, packs, and search manifests', async () => {
   const { stdout } = await runScript('scripts/build-manifests.ts')
-  assert.match(stdout, /built pages=88 routes=88 packs=8 search=96/)
+  assert.match(stdout, /built pages=91 routes=91 packs=8 search=99/)
 
   const [pages, routes, packs, search, buildMeta] = await Promise.all([
     readGeneratedJson<Array<{ slug: string; status: string }>>('pages-manifest.json'),
@@ -56,7 +56,7 @@ test('build-manifests writes pages, routes, packs, and search manifests', async 
     }>('build-meta.json'),
   ])
 
-  assert.equal(pages.length, 88)
+  assert.equal(pages.length, 91)
   assert.equal(routes.length, pages.length)
   assert.equal(packs.length, 8)
   assert.equal(search.length, pages.length + packs.length)
@@ -72,5 +72,5 @@ test('build-manifests writes pages, routes, packs, and search manifests', async 
   assert.ok(search.some((entry) => entry.type === 'pack' && entry.slug === '/packs/webdev-lab'))
   assert.equal(buildMeta.sourceBranch, 'main')
   assert.match(buildMeta.sourceSha ?? '', /^[0-9a-f]{40}$/)
-  assert.deepEqual(buildMeta.counts, { pages: 88, routes: 88, packs: 8, search: 96 })
+  assert.deepEqual(buildMeta.counts, { pages: 91, routes: 91, packs: 8, search: 99 })
 })
