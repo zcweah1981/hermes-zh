@@ -38,6 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug?: st
     description,
     pathname: docPath,
     type: 'article',
+    noIndex: page.status !== 'published',
   })
 }
 
