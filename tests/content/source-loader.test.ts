@@ -145,7 +145,7 @@ test('buildRouteMap preserves page metadata for generated routes manifest', () =
 test('loadPackEntries reads real pack manifests from the content repo', async () => {
   const packs = await loadPackEntries(contentRoot)
 
-  assert.equal(packs.length, 8)
+  assert.equal(packs.length, 11)
 
   const webdev = packs.find((pack) => pack.id === 'webdev-lab')
   assert.ok(webdev)
