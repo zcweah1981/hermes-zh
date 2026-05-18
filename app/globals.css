@@ -100,8 +100,6 @@
 
   .site-hero-fullscreen {
     min-height: calc(100vh - var(--site-header-height));
-    contain-intrinsic-size: 100vh;
-    content-visibility: auto;
     overflow: hidden;
     background:
       radial-gradient(circle at 50% 20%, rgba(91, 167, 255, 0.22), transparent 30%),
@@ -296,6 +294,8 @@
     position: relative;
     overflow: hidden;
     background: #f8fafc;
+    content-visibility: auto;
+    contain-intrinsic-size: 800px;
   }
 
   [data-home-section="primary-paths"]::after {
@@ -320,6 +320,8 @@
     margin-top: -1px;
     scroll-margin-top: var(--site-header-height);
     background: #030812;
+    content-visibility: auto;
+    contain-intrinsic-size: 1000px;
   }
 
   [data-home-section="evolving-assistant"]::before {
@@ -1115,12 +1117,14 @@
   }
 
   @screen xl {
-    .site-doc-sidebar-shell {
-      position: sticky;
-      top: calc(var(--site-header-height) + 1rem);
-      display: flex;
-      max-height: calc(100vh - var(--site-header-height) - 2rem);
-      flex-direction: column;
+  .site-doc-sidebar {
+    position: sticky;
+    top: calc(var(--site-header-height) + 2rem);
+    height: calc(100vh - var(--site-header-height) - 4rem);
+    overflow-y: auto;
+    content-visibility: auto;
+    contain-intrinsic-size: 300px 800px;
+  }
       overflow: hidden;
     }
   }
@@ -1262,4 +1266,3 @@
   .site-doc-prose th > :last-child {
     @apply mb-0;
   }
-}

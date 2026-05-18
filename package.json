@@ -16,7 +16,8 @@
     "build:content": "npm run sync:content && npm run build:manifests",
     "verify:content": "tsx scripts/verify-content.ts",
     "verify:content:freshness": "tsx scripts/verify-content-freshness.ts",
-    "test": "tsx --test tests/**/*.test.ts"
+    "test": "tsx --test tests/**/*.test.ts",
+    "test:perf": "tsx --test tests/performance/*.test.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

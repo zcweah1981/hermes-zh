@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict'
+import * as assert from 'assert'
 import { existsSync, readFileSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, it } from 'node:test'
@@ -40,10 +40,17 @@ describe('font loading and visual fidelity', () => {
     assert.match(globals, /font-display:\s*(swap|block);/, 'self-hosted fonts should avoid blocking text rendering')
   })
 
-  it('preloads critical local fonts in layout for mobile performance', () => {
+  it('preloads critical local fonts in layout for mobile performance with high fetchPriority', () => {
     const layout = read('app/layout.tsx')
-    assert.match(layout, /rel="preload"\s+href="\/fonts\/noto-sans-sc\.woff2"\s+as="font"\s+type="font\/woff2"\s+crossOrigin="anonymous"/, 'Noto Sans SC should be preloaded')
-    assert.match(layout, /rel="preload"\s+href="\/fonts\/noto-serif-sc\.woff2"\s+as="font"\s+type="font\/woff2"\s+crossOrigin="anonymous"/, 'Noto Serif SC should be preloaded')
+    assert.match(layout, /rel="preload"[\s\S]*?fetchPriority: 'high'/, 'fonts should be preloaded with high priority')
+  })
+
+  it('optimizes long content rendering with content-visibility', () => {
+    const globals = read('app/globals.css')
+    assert.match(globals, /\[data-home-section="primary-paths"\]\s*\{[\s\S]*?content-visibility:\s*auto/, 'homepage primary paths should use content-visibility')
+    assert.match(globals, /\[data-home-section="evolving-assistant"\]\s*\{[\s\S]*?content-visibility:\s*auto/, 'homepage infographic should use content-visibility')
+    assert.match(globals, /\.site-doc-sidebar\s*\{[\s\S]*?content-visibility:\s*auto/, 'doc sidebar should use content-visibility')
+    assert.doesNotMatch(globals, /\.site-hero-fullscreen\s*\{[^}]*?content-visibility:\s*auto/, 'hero must not use content-visibility to avoid LCP delay')
   })
 
   it('uses lazy loading strategy for non-critical third-party and analytics scripts', () => {

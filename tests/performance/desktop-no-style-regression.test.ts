@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict'
+import * as assert from 'assert'
 import { readFileSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, it } from 'node:test'

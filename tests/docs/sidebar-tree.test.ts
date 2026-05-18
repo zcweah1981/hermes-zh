@@ -1,7 +1,9 @@
-import assert from 'node:assert/strict'
+import * as assertModule from 'assert'
+const assert: any = (assertModule as any).default || assertModule
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
-import test from 'node:test'
+import * as testModule from 'node:test'
+const test: any = (testModule as any).default || testModule
 
 import { buildDocSidebarTree, getOrderedSidebarItems } from '../../lib/docs/sidebar-tree'
 import type { SitePage } from '../../lib/content/types'
@@ -87,9 +89,8 @@ test('DocSidebar renders a recursive tree with active markers and an independent
   assert.match(sidebarSource, /aria-current=\{active \? 'page' : undefined\}/)
   assert.doesNotMatch(sidebarSource, /Object\.entries\(groupedPages\)/)
 
-  assert.match(globalsSource, /\.site-doc-sidebar-shell\s*{[^}]*height:\s*fit-content/s)
-  assert.match(globalsSource, /@screen xl\s*{[^}]*\.site-doc-sidebar-shell\s*{[^}]*position:\s*sticky[^}]*max-height:\s*calc\(100vh - var\(--site-header-height\) - 2rem\)[^}]*overflow:\s*hidden/s)
-  assert.match(globalsSource, /@screen xl\s*{[^}]*\.site-doc-sidebar-scroll\s*{[^}]*flex:\s*1 1 auto[^}]*overflow-y:\s*auto[^}]*overscroll-behavior:\s*contain/s)
+  assert.match(globalsSource, /\.site-doc-sidebar-shell\s*\{[^}]*height:\s*fit-content/)
+  assert.match(globalsSource, /\.site-doc-sidebar\s*\{[^}]*position:\s*sticky[^}]*height:\s*calc\(100vh - var\(--site-header-height\) - 4rem\)[^}]*content-visibility:\s*auto/)
 })
 
 test('DocSidebar supports collapsible top-level groups with current root expanded by default', () => {

@@ -63,6 +63,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
+          {...({ fetchPriority: 'high' } as any)}
         />
         <link
           rel="preload"
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
+          {...({ fetchPriority: 'high' } as any)}
         />
       </head>
       <body>
