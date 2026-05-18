@@ -88,9 +88,10 @@ export function resolveMarkdownImage(src: string, page: SitePage) {
 
   const { pathname } = splitHash(normalized)
   const resolvedPath = resolveRepoPath(page.sourcePath, pathname)
-  
-  // Use local API proxy to serve images from content-cache/raw
-  return `/api/assets/raw?path=${encodeURIComponent(resolvedPath)}`
+  const basename = path.posix.basename(resolvedPath)
+
+  // Serve from public/content-assets/ which is committed to git and deployed to Vercel
+  return `/content-assets/${basename}`
 }
 
 export function isExternalMarkdownHref(href: string) {
