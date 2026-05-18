@@ -122,11 +122,14 @@ export function buildSeoMetadata(input: {
   const canonical = buildCanonicalUrl(input.pathname)
   const image = absoluteOgImage(input.image)
 
+  const isHome = input.pathname === '/'
+  const effectiveCanonical = isHome ? `${SITE_URL}/` : canonical
+
   return {
     title: input.title,
     description: input.description,
     alternates: {
-      canonical,
+      canonical: effectiveCanonical,
     },
     openGraph: {
       type: input.type ?? 'website',
