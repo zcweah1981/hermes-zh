@@ -91,8 +91,7 @@ export function resolveMarkdownImage(src: string, page: SitePage) {
   const basename = path.posix.basename(resolvedPath)
 
   // Serve from public/content-assets/ which is committed to git and deployed to Vercel
-  // return `/content-assets/${basename}`
-  return `/api/assets/raw?path=${encodeURIComponent(resolvedPath)}`
+  return `/content-assets/${basename}`
 }
 
 export function isExternalMarkdownHref(href: string) {
