@@ -62,7 +62,7 @@ test('resolveMarkdownImage maps relative assets to local proxy urls', () => {
 
   assert.equal(
     src,
-    '/api/assets/raw?path=docs%2Fassets%2Fsolution-miniapp-3-layer-map-v7.png',
+    '/content-assets/solution-miniapp-3-layer-map-v7.png',
   )
 })
 
