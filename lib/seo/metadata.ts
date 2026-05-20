@@ -71,7 +71,35 @@ export const CORE_PAGE_SEO: Record<string, { title: string; description: string;
     aiSummary:
       '这个页面用于帮助 AI 搜索和 LLM 正确理解 Hermes Agent 中文站。它说明本站是什么、不是什么、和官方文档及 GitHub 内容仓的关系，并列出适合引用的新手入口、国内落地、OpenClaw 迁移、问题排查、Reference 与 Packs 页面。',
   },
-}
+  '/docs/solutions/x-twitter': {
+    title: 'X/Twitter 内容与互动助手｜Hermes Agent 现成方案',
+    description:
+      '通过第三方插件 Hermes Tweet 将 X/Twitter 搜索、阅读、发推、回复等操作接入 Hermes Agent，用对话方式完成 X 平台内容工作。第三方方案，非官方内置。',
+    aiSummary:
+      '通过第三方插件 Hermes Tweet 将 X/Twitter 操作接入 Hermes Agent。支持搜索、阅读、发推、回复等。注意这是第三方插件，非官方内置，写操作需要显式启用环境变量。',
+  },
+  '/docs/solutions/multi-platform-rewrite': {
+    title: '多平台内容改写助手｜Hermes Agent 现成方案',
+    description:
+      '把一篇现成内容，改写成适配小红书、公众号、X/Twitter 等不同平台风格的可发布稿件，直接复制就能发。',
+    aiSummary:
+      '多平台内容改写助手帮助用户将单篇内容快速转化为适配小红书、公众号、X/Twitter 等不同社交平台的风格，提升内容分发效率。',
+  },
+  '/docs/solutions/action-plan': {
+    title: '行动计划助手｜Hermes Agent 现成方案',
+    description:
+      '把项目目标、会议结论或头脑风暴的结果，直接拆成有负责人、截止时间和优先级的可执行行动计划表，适合发到飞书/企微/钉钉群。',
+    aiSummary:
+      '行动计划助手专注于将零散的会议结论或项目目标转化为结构化的行动计划表，包含任务、负责人、截止时间、优先级和依赖关系，并生成可直接分发的群消息。',
+  },
+  '/docs/solutions/message-summary': {
+    title: '邮件群消息摘要助手｜Hermes Agent 现成方案',
+    description:
+      '把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要，适合快速掌握要点和待办。',
+    aiSummary:
+      '邮件群消息摘要助手能够快速处理长邮件或高频群聊消息，提炼核心结论、待办事项和关键时间点，生成精简的转发版摘要。',
+  },
+};
 
 export function absoluteOgImage(pathname = DEFAULT_OG_IMAGE) {
   return new URL(pathname, SITE_URL).toString()

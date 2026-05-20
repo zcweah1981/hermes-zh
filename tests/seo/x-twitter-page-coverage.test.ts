@@ -66,7 +66,7 @@ describe('X/Twitter solution SEO and AI index coverage', () => {
     assert.ok(searchEntry.headings.some((heading) => heading.includes('X/Twitter 内容与互动助手')))
   })
 
-  it('keeps content overview links and AI index/llms recommendations aligned with the X/Twitter page', () => {
+  it('keeps content overview links and AI index/llms recommendations aligned with the new solution pages', () => {
     const pages = readJson<GeneratedPage[]>('content-cache/generated/pages-manifest.json')
     const contentOverview = pages.find((item) => item.slug === '/solutions/content')
     const llmsRoute = read('app/llms.txt/route.ts')
@@ -78,12 +78,18 @@ describe('X/Twitter solution SEO and AI index coverage', () => {
     assert.match(contentOverview.body, /X\/Twitter 内容与互动助手/)
     assert.match(contentOverview.body, /05-X-Twitter%20/)
 
+    // llms.txt coverage
     assert.match(llmsRoute, /X\/Twitter 内容与互动助手：https:\/\/hermes-zh\.com\/docs\/solutions\/x-twitter/)
-    assert.match(llmsRoute, /Hermes Tweet 第三方插件，不是 Hermes 官方内置功能/)
+    assert.match(llmsRoute, /多平台内容改写助手：https:\/\/hermes-zh\.com\/docs\/solutions\/multi-platform-rewrite/)
+    assert.match(llmsRoute, /行动计划助手：https:\/\/hermes-zh\.com\/docs\/solutions\/action-plan/)
+    assert.match(llmsRoute, /邮件群消息摘要助手：https:\/\/hermes-zh\.com\/docs\/solutions\/message-summary/)
+
+    // ai-index coverage
     assert.match(aiIndexPage, /X\/Twitter 内容与互动助手/)
+    assert.match(aiIndexPage, /多平台内容改写助手/)
+    assert.match(aiIndexPage, /行动计划助手/)
+    assert.match(aiIndexPage, /邮件群消息摘要助手/)
     assert.match(aiIndexPage, /const xTwitterPath = '\/docs\/solutions\/x-twitter'/)
-    assert.match(aiIndexPage, /\['X\/Twitter 内容与互动助手', xTwitterPath,/)
-    assert.match(aiIndexPage, /Hermes Tweet 第三方插件，不是 Hermes 官方内置功能/)
   })
 
   it('renders docs metadata and structured data through the shared docs route', () => {

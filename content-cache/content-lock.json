@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "contentRepo": "zcweah1981/awesome-hermes-agent-zh",
   "contentRef": "main",
-  "contentSha": "d4166dd1a5b0a8a1f8fe4640fe607fc262ce095d",
-  "lockedAt": "2026-05-19T15:03:24.727Z",
-  "sourceWorkflowRun": "26105565018",
-  "sourceActor": "zcweah1981"
+  "contentSha": "d12f80893a280074891b66068866dafcdb1c0e11",
+  "lockedAt": "2026-05-20T15:16:36.922Z",
+  "sourceWorkflowRun": "manual-pm-ci-remediation-20260520",
+  "sourceActor": "seiya"
 }

@@ -1,5 +1,5 @@
 {
-  "inputHash": "35627a66b40995e9e9e745c5791500922233394b337f73e9fc373853dfdcbb1a",
+  "inputHash": "47f890b9fb237dc7c85a1ee5a7115e9ee90e7e2de3b28fbc44faa41e7b2f652c",
   "urlFingerprints": {
     "https://hermes-zh.com/docs/china": "01093951bcd74a96d0104c1c5d3487f9f56bc932715f82d1655868845b04a88d",
     "https://hermes-zh.com/docs/china/deploy": "c59822a94aaa22594195717616a624db593f118f44cd34711401591f126db61a",
@@ -104,5 +104,5 @@
     "https://hermes-zh.com/docs/solutions/x-twitter": "655bd0da2d1f00ca1e987644ab03ae0a3ae3452cc910529b2d45c83dab121a07",
     "https://hermes-zh.com/packs/multi-platform-rewrite-lab": "362b29ac0ec4d9cc67d27eb726ca52790ed7c277ddd67ce6f1f5724c6f56cb92"
   },
-  "generatedAt": "2026-05-20T14:56:33.859Z"
+  "generatedAt": "2026-05-20T15:08:54.308Z"
 }

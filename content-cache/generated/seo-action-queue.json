@@ -1,25 +1,1505 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-20T14:56:33.859Z",
+  "generatedAt": "2026-05-20T15:08:54.308Z",
   "status": "CHANGED",
   "source": {
     "contentRepo": "zcweah1981/awesome-hermes-agent-zh",
     "contentRef": "main",
-    "contentSha": "c81eec8860d09f327c035c983a452177397a4fe9",
-    "lockedAt": "2026-05-19T05:42:00.000Z"
+    "contentSha": "d4166dd1a5b0a8a1f8fe4640fe607fc262ce095d",
+    "lockedAt": "2026-05-19T15:03:24.727Z"
   },
   "summary": {
     "candidateCount": 102,
-    "queuedCount": 2,
+    "queuedCount": 102,
     "gscMode": "read_report_only",
     "baiduQuota": "daily_quota_controlled"
   },
   "actions": [
     {
+      "url": "https://hermes-zh.com/docs/china",
+      "path": "/docs/china",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "国内落地",
+      "description": "Hermes 中文站国内部署、模型与入口选择总览。",
+      "updated": "2026-04-28",
+      "fingerprint": "01093951bcd74a96d0104c1c5d3487f9f56bc932715f82d1655868845b04a88d",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/deploy",
+      "path": "/docs/china/deploy",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "国内部署 | 总览",
+      "description": "一句话先说清楚：这一页不是教你立刻敲命令，而是先帮你选对国内部署路线，再进入正确的云厂商教程。",
+      "updated": "2026-04-28",
+      "fingerprint": "c59822a94aaa22594195717616a624db593f118f44cd34711401591f126db61a",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/deploy/alicloud-lite-server",
+      "path": "/docs/china/deploy/alicloud-lite-server",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "阿里云轻量服务器部署教程",
+      "description": "一句话先说清楚：这一页不教你选模型，也不教你接入口，它只做一件事——用阿里云轻量应用服务器的官方 Hermes 镜像，把第一台国内机器真正跑起来。",
+      "updated": "2026-04-28",
+      "fingerprint": "bf5647542f41ab7d84bfb09389aabe94028f966ce763464d83725fa6c37094e4",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/deploy/tencent-lite-server",
+      "path": "/docs/china/deploy/tencent-lite-server",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "腾讯云轻量服务器部署教程",
+      "description": "一句话先说清楚：这一页不讲模型选型，也不展开入口接入，它只做一件事——用腾讯云轻量应用服务器的 Hermes Agent 模板，把第一台国内机器真正跑起来。",
+      "updated": "2026-04-28",
+      "fingerprint": "9ee2a8351e51004b32d6edd0ce77ee925563a063c2a2a0b98a2b893dd6b93486",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/entry",
+      "path": "/docs/china/entry",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "国内入口 | 总览",
+      "description": "一句话先说清楚：这一页不是直接教你配某个平台，而是先帮你选对 Hermes 的使用入口，再进入正确的入口页面。",
+      "updated": "2026-04-28",
+      "fingerprint": "322f9e9629227316473412bbd359fdd7badda866e903491fd41d18019a380fb8",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/entry/api-service-open-webui",
+      "path": "/docs/china/entry/api-service-open-webui",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "API 服务与 Open WebUI",
+      "description": "🎯 一句话结论：如果你真正想要的是“网页聊天界面”，重点不是先折腾 Dashboard，而是先把 Hermes API Server 作为后端跑起来，再让 Open WebUI 这样的前端连上它。",
+      "updated": "2026-04-28",
+      "fingerprint": "7e69f20405027c6d417d317321979af19410c4d1c66b711201758f833dcc8790",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/entry/cli",
+      "path": "/docs/china/entry/cli",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "命令行（CLI）",
+      "description": "🎯 一句话结论：如果你要选一个最完整、最适合排错、最适合先跑顺 Hermes 的入口，那默认就应该是 CLI。无论你后面要接 Dashboard、Open WebUI，还是飞书、企业微信、钉钉，这一页都应该先跑通。",
+      "updated": "2026-04-28",
+      "fingerprint": "2c3273968b7cf7adea04bcf43f17b5c86cc5dd047865efeca5d48a70ef24ed15",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/entry/dingtalk",
+      "path": "/docs/china/entry/dingtalk",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "钉钉",
+      "description": "🎯 一句话结论：如果你的团队本来就在钉钉里协作，而且你希望用 官方推荐的 Stream 模式 把 Hermes 接进去，那么这页要帮你先把“创建应用 → 配置机器人并选 Stream → 获取 Client ID / Client Secret → 填回 Hermes”这条主线跑顺。",
+      "updated": "2026-04-28",
+      "fingerprint": "7aba10837ac116285cbb624a717239872a671e38c6c2275b03dff690b9600b9e",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "warn",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/entry/feishu",
+      "path": "/docs/china/entry/feishu",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "飞书",
+      "description": "🎯 一句话结论：如果你想让团队成员在国内环境里先通过一个熟悉的消息入口触达 Hermes，飞书通常是最值得优先落地的第一站；但这页讲的是飞书入口接入，不是模型购买，也不是云部署。",
+      "updated": "2026-04-28",
+      "fingerprint": "1680c9c7295d651c19bb16fd9803215ee052fcb6b8571998ca15ba0d65b03fd8",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "warn",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/entry/personal-wechat",
+      "path": "/docs/china/entry/personal-wechat",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "个人微信",
+      "description": "🎯 一句话结论：如果你希望把 Hermes 放进自己最常用的移动端聊天入口里，随时随地直接发消息提问，那么这页要帮你先把“运行 Setup Wizard → 选择 Weixin → 扫终端二维码 → 手机确认登录 → 保存账号凭据 → 启动 Gateway”这条主线跑顺。",
+      "updated": "2026-04-28",
+      "fingerprint": "16ac4266c6297f23715af58e344124a1213dc696d4718185c43fa534f0c3a17e",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/entry/wecom-ai-bot",
+      "path": "/docs/china/entry/wecom-ai-bot",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "企业微信（AI Bot）",
+      "description": "🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用官方推荐的 AI Bot 长连接方式把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回 Hermes”这条主线走顺。",
+      "updated": "2026-04-28",
+      "fingerprint": "3e6f0ed918fb395414c0119e2a03c16d6ff49f65cd8a54ac7e9dd8b96b03ea25",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/models",
+      "path": "/docs/china/models",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "国内模型 | 总览",
+      "description": "一句话先说清楚：这一页不是让你马上挑最强模型，而是先帮你选对国内模型路线，再进入正确的厂商或接口页面。",
+      "updated": "2026-04-28",
+      "fingerprint": "c944a9ed27e477ccd23cf36d43db6b8e5f6aabea283a208a44048f4bb6b4350e",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/models/alibaba-bailian-token-plan",
+      "path": "/docs/china/models/alibaba-bailian-token-plan",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "阿里云百炼 Token Plan",
+      "description": "🎯 一句话先说清楚：如果你想先买一个“多模型统一入口”，并且希望预算按包月控制、后面还能在阿里云生态里继续扩展，那么阿里云百炼 Token Plan 值得先看。",
+      "updated": "2026-04-28",
+      "fingerprint": "1934317d005bb986c092b9e6013909836ecfd9bb2060bc918d5b29d370737403",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/models/deepseek-metered-api",
+      "path": "/docs/china/models/deepseek-metered-api",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "DeepSeek按量计费接口",
+      "description": "🎯 一句话先说清楚：如果你当前最重要的目标是“先用最低门槛把 Hermes 跑起来”，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 02-国内模型 里最值得先走的默认起步页。",
+      "updated": "2026-04-28",
+      "fingerprint": "19055b40c5170806129530bc4a42ee2bb2d650d84d5d3f64a587953b5c276198",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/models/kimi-plan",
+      "path": "/docs/china/models/kimi-plan",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "Kimi登月计划",
+      "description": "🎯 一句话先说清楚：如果你最看重的是 Kimi 的 Coding 体验，或者你正在判断“先买会员权益”还是“直接走开放平台接口”，那这页必须拆成两条线看：Kimi Code 和 Kimi API。",
+      "updated": "2026-04-28",
+      "fingerprint": "1bafead2c148d2d4da444f133866ef8a02f5dc78e8f33e252b2c06e189c7f14d",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/models/tencent-token-plan",
+      "path": "/docs/china/models/tencent-token-plan",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "腾讯云 Token Plan",
+      "description": "🎯 一句话先说清楚：如果你已经偏向腾讯云生态，或者你想先买一个能把国产主流模型和 AI 编程工具统一收口的套餐入口，腾讯云 Token Plan 值得先看。",
+      "updated": "2026-04-28",
+      "fingerprint": "77a2cad6fa685d3830d7e88cf0fe9425a3caa52c5f24cf77bb267c562f7b40fb",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/docs-overview",
+      "path": "/docs/docs-overview",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "文档总览",
+      "description": "Hermes 中文站文档总入口，帮助用户先选对模块入口。",
+      "updated": "2026-04-28",
+      "fingerprint": "1633cd173e0226a9cb58bb5b54e929fbd7a0c0cfe82b300130df46163a5d2626",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/issues/cli-tui-session",
+      "path": "/docs/issues/cli-tui-session",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "CLI / TUI / 会话问题",
+      "description": "一句话结论：这一页只处理“界面显示怪、按键像没反应、slash command 不出现、会话恢复不对、看起来像卡住了”这类问题。只要 hermes 能启动，很多时候就不是“完全坏了”，而是入口、交互方式、会话预期或终端环境没对齐。",
+      "updated": "2026-04-28",
+      "fingerprint": "44b3d92b6c3f405ec3d94d6aeab2c6767d74d0a82d58a1f36032c0b5c466fc06",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/issues/config-profiles-environment",
+      "path": "/docs/issues/config-profiles-environment",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "配置 / Profiles / 环境隔离问题",
+      "description": "一句话结论：这页只处理“为什么改了配置没生效、为什么明明装过却当前看不到、为什么 session / gateway / skills 像跑到别的环境里”这类排障问题；先分清你改的是哪份配置、当前是谁在读、你现在到底在哪个 profile。",
+      "updated": "2026-04-28",
+      "fingerprint": "884f230057014feac24ee61a4cde25e936cde1a3323e7afc1925ac8ebf2fe6fd",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/issues/docker-nix-remote",
+      "path": "/docs/issues/docker-nix-remote",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "Docker / Nix / SSH / 远程后端问题",
+      "description": "一句话结论：这页只处理“为什么容器里起不来、为什么 SSH backend 连不上、为什么远端文件和本地不一致、为什么我以为在一台机器上运行，实际跑在另一台”这类排障问题；先分清到底是谁在执行、谁在读文件、谁持有依赖和配置。",
+      "updated": "2026-04-28",
+      "fingerprint": "43a072205ef2a97212456e1f885a3d641e7b005c62d6843d33f3ac5aee81bc11",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/issues/gateway-messaging",
+      "path": "/docs/issues/gateway-messaging",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "Gateway / Messaging / 推送问题",
+      "description": "一句话结论：这页只处理“消息为什么没进来、为什么不回、为什么会话乱、为什么 gateway status 不对”这类排障问题；先分清是平台接入层、gateway 运行层，还是会话 / 权限层。",
+      "updated": "2026-04-28",
+      "fingerprint": "ad19c0f643f4439bb2598e2fdd9a5e63ef16fe4f941106e4f504f450846d63d9",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/issues/provider-endpoint",
+      "path": "/docs/issues/provider-endpoint",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "模型 / Provider / 自定义 endpoint 问题",
+      "description": "一句话结论：这一页只处理“Key 不过、401 / 403 / 404 / 429、model 不存在、custom endpoint 半通不通”这类问题。只要 hermes 命令本身正常，先不要再把问题归成安装失败。",
+      "updated": "2026-04-28",
+      "fingerprint": "55025e4ce91d035301b28181dd5b288326bdd49d9daa9c7003ef1e6833a65131",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/issues/tools-skills-mcp",
+      "path": "/docs/issues/tools-skills-mcp",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "Tools / Skills / MCP 问题",
+      "description": "一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server 根本没接通。",
+      "updated": "2026-04-28",
+      "fingerprint": "577cf7d7cd70e9628854559938fb00d76eb8ad2e47b4d77b60d1cb5e921a923b",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/openclaw",
+      "path": "/docs/openclaw",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "从 OpenClaw 过来",
+      "description": "帮助 OpenClaw 用户判断继续用、共存还是迁移到 Hermes。",
+      "updated": "2026-04-28",
+      "fingerprint": "cb0c701f52ecf7d61f9f57710ce6a86e8b379ccc0cbd3fd0f0b179aed0b78f31",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/openclaw/checklist",
+      "path": "/docs/openclaw/checklist",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "OpenClaw 用户常见问题与检查清单",
+      "description": "一句话先说清楚：这一页不是替你重做迁移判断，而是帮你把“共存 / 迁移过程中卡住的问题”先分到正确类别，再用最小检查单收缩问题范围。",
+      "updated": "2026-04-28",
+      "fingerprint": "2422231565781e9f5f7d13663a3998f794d96251c29351690656936f05404bd4",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/openclaw/coexistence",
+      "path": "/docs/openclaw/coexistence",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "OpenClaw + Hermes 共存指南",
+      "description": "一句话先说清楚：共存不是折中方案，而是从“临时使用”走向“长期复用”的最稳升级路径。",
+      "updated": "2026-04-28",
+      "fingerprint": "b3e031f53ec911cfcc62fef7b942746b08449ce86c538730321b4f2991a0e9f1",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/openclaw/decision",
+      "path": "/docs/openclaw/decision",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "继续用、共存，还是迁移",
+      "description": "一句话先说清楚：不要根据工具名做选择，而要根据你的任务是否稳定、是否重复、是否值得复用，以及你是不是已经需要自动化和团队协作来做选择。",
+      "updated": "2026-04-28",
+      "fingerprint": "261ae368e4cc25ed2588749575fa63a674a85ae321cf59ab48311eeca669b999",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/openclaw/migration-path",
+      "path": "/docs/openclaw/migration-path",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "从 OpenClaw 到 Hermes：迁移路径",
+      "description": "一句话先说清楚：迁移不是复制配置，而是把 OpenClaw 中已经跑通的经验，重构成 Hermes 中可复用的角色、技能、模板和工作流。",
+      "updated": "2026-04-28",
+      "fingerprint": "5a08cec8446b184c0fdf3442134af4fe99a50acf2a0db3b45f865cd0e98e4fbb",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/openclaw/relationship",
+      "path": "/docs/openclaw/relationship",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "OpenClaw 和 Hermes 的关系",
+      "description": "一句话先说清楚：如果你把 Hermes 理解成 OpenClaw 的直接替代品，一开始就容易做错判断。更准确的理解是：OpenClaw 更像实验场，Hermes 更像沉淀层和长期运行层。",
+      "updated": "2026-04-28",
+      "fingerprint": "80085dc35274ae76b5f87551787f6a541059b6c1bf09e1f16f1bf7db57e1557e",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference",
+      "path": "/docs/reference",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "Reference 参考手册",
+      "description": "Hermes 官方 Reference 的中文查表入口。",
+      "updated": "2026-04-28",
+      "fingerprint": "d33708360a367009f2b1974c6a91c56958388368623db5970453cd5aa486f018",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference/built-in-tools",
+      "path": "/docs/reference/built-in-tools",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧰 06-Built-in Tools 参考",
+      "description": "这页查的是 Hermes 内置工具（built-in tools），以及它们和 toolsets、平台、凭据之间的关系。 如果你要查 MCP server 暴露出来的工具，请看 08-MCP 配置参考。",
+      "updated": "2026-04-28",
+      "fingerprint": "bec3f2821dd00f4b88cf2a802c574f110f1b6d37a6da0bf8773c23d972a68e38",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference/cli-commands",
+      "path": "/docs/reference/cli-commands",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "⌨️ 02-CLI 命令参考",
+      "description": "这页查的是你在终端 shell 里运行的 hermes ... 命令。 如果你要查聊天窗口里的 /help、/tools、/model，请看 03-Slash Commands 参考。",
+      "updated": "2026-04-28",
+      "fingerprint": "ca8710c2f2b731eeba5bd6652fe70cf9441c5acf2374b4b476be9c9eb454c13a",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference/mcp-config",
+      "path": "/docs/reference/mcp-config",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🔌 08-MCP 配置参考",
+      "description": "这页查的是 mcp_servers 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 05-遇到问题 / 06-Tools Skills MCP 问题。",
+      "updated": "2026-04-28",
+      "fingerprint": "9cc12f4c2adae68a2bff5f6c5f5f6472c69bcf95b4fc0b88fc6594e0c08c61d0",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference/optional-skills",
+      "path": "/docs/reference/optional-skills",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧩 10-可选 Skills 目录",
+      "description": "这页查的是 Hermes 官方 optional skills，也就是仓库里有、但默认不会自动激活的扩展技能。 如果你要查默认随 Hermes 提供的技能库，请看 09-内置 Skills 目录。",
+      "updated": "2026-04-28",
+      "fingerprint": "cadcf19840a7616333d8102ef45ff4731ae06dead3ba263597063b603eb0cd9b",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference/profile-commands",
+      "path": "/docs/reference/profile-commands",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "👤 04-Profile 命令参考",
+      "description": "这页查的是 hermes profile ... 这一组命令，用来管理不同的 Hermes profile。 如果你要查一般 CLI 命令，请看 02-CLI 命令参考。",
+      "updated": "2026-04-28",
+      "fingerprint": "74ae8b61be095c4859920397bdf81331271b6354d59d6fbaef39b01a1cdd8bea",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference/slash-commands",
+      "path": "/docs/reference/slash-commands",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧭 03-Slash Commands 参考",
+      "description": "这页查的是你已经进入 Hermes 对话之后，在会话里输入的 /xxx 命令。 如果你要查终端 shell 里的 hermes ...，请看 02-CLI 命令参考。",
+      "updated": "2026-04-28",
+      "fingerprint": "ac52799c68b51da0b7e51447d3ec4cae84eea0f118223e6f6aa7235da601eaae",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference/toolsets",
+      "path": "/docs/reference/toolsets",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🗂️ 07-Toolsets 参考",
+      "description": "这页查的是 Hermes 的 toolsets，也就是“工具包”层，不是单个工具细节。 如果你要查具体内置工具，请看 06-Built-in Tools 参考。",
+      "updated": "2026-04-28",
+      "fingerprint": "e9461c17b6ee97a9f41d46a7fb5b7b9d584676867f29ceea085e4686080f54a8",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
       "url": "https://hermes-zh.com/docs/solutions/action-plan",
       "path": "/docs/solutions/action-plan",
       "sourceKind": "page",
-      "changeType": "updated",
+      "changeType": "new",
       "title": "行动计划助手",
       "description": "把项目目标、会议结论或头脑风暴的结果，直接拆成有负责人、截止时间和优先级的可执行行动计划表，适合发到飞书/企微/钉钉群。",
       "updated": "2026-05-18",
@@ -56,10 +1536,130 @@
       ]
     },
     {
+      "url": "https://hermes-zh.com/docs/solutions/daily-report",
+      "path": "/docs/solutions/daily-report",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "项目日报助手",
+      "description": "一句话先说清楚：这一页不是教你系统学项目管理，而是帮你把一天的零散进展，直接压成“能发给老板、团队或项目群的项目日报”。",
+      "updated": "2026-04-28",
+      "fingerprint": "5623e30737b31f1705a5b3f68fc60c6ee75674da06c7259af02da909b9be9d24",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/dev",
+      "path": "/docs/solutions/dev",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "总览｜应用开发与快速原型",
+      "description": "一句话先说清楚：这一层不是教你系统学前端或后端，而是帮你先挑一套已经能直接试跑的开发原型方案，把一个想法先压成第一版可开工结构。",
+      "updated": "2026-04-28",
+      "fingerprint": "6ae8c603f46264033a4582f06ff7aa1b6fb41b8608682a6fea4940a28747cade",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/meeting",
+      "path": "/docs/solutions/meeting",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "会议纪要助手",
+      "description": "一句话先说清楚：这一页不是教你系统学会议管理，而是帮你把一段会议内容，直接压成“能发给团队执行的会议纪要”。",
+      "updated": "2026-04-28",
+      "fingerprint": "64bfe908fa1bade4489a857f3d92ff140b8dac904983c0a0234efb46dd248b67",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
       "url": "https://hermes-zh.com/docs/solutions/message-summary",
       "path": "/docs/solutions/message-summary",
       "sourceKind": "page",
-      "changeType": "updated",
+      "changeType": "new",
       "title": "邮件群消息摘要助手",
       "description": "把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要，适合快速掌握要点和待办。",
       "updated": "2026-05-18",
@@ -93,6 +1693,2329 @@
         "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
         "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
         "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/miniapp",
+      "path": "/docs/solutions/miniapp",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "微信小程序助手",
+      "description": "一句话先说清楚：这一页不是教你写方案，而是帮你把一个微信小程序想法，直接推进到“能开始搭代码”的状态。",
+      "updated": "2026-04-28",
+      "fingerprint": "2677a01694e3c6fb2b8442741d641636e34f2a48aea7da8be0a71b8166f73455",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/office",
+      "path": "/docs/solutions/office",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "总览｜办公效率与知识整理",
+      "description": "一句话先说清楚：这一层不是教你系统学项目管理或知识管理，而是帮你先挑一套已经能直接试跑的办公效率方案，把第一轮纪要、日报或总结做出来。",
+      "updated": "2026-04-28",
+      "fingerprint": "d9c1e7b30f7c88a9fc2ddf63f11cbc430c25af83b4df917ef15aba0210912c2e",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/summary",
+      "path": "/docs/solutions/summary",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "资料总结助手",
+      "description": "一句话先说清楚：这一页不是教你系统学做研究摘要，而是帮你把一堆零散资料、文章、会议记录或网页内容，直接压成“能继续看、能继续用、能继续转给别人”的总结稿。",
+      "updated": "2026-04-28",
+      "fingerprint": "cc478612dcebd64f7af87fe18e0f881ff23d5b4f29dacbeb3358930278a0c465",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/webdev",
+      "path": "/docs/solutions/webdev",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "敏捷 Web 开发助手",
+      "description": "一句话先说清楚：这一页不是教你系统学 Web 开发，而是帮你把一个 Web 工具想法，直接推进到“能开始搭页面、接口和代码骨架”的状态。",
+      "updated": "2026-04-28",
+      "fingerprint": "4de5d6ad2e34cb3b66871a64c882ef52ef808ea9d9598fd595f3a08639c95032",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/wechat-writer",
+      "path": "/docs/solutions/wechat-writer",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "公众号写作助手",
+      "description": "一句话先说清楚：这一页不是教你系统学公众号运营，而是帮你把一个观点、案例、产品更新或行业判断，直接压成“能发的一篇公众号草稿”。",
+      "updated": "2026-04-28",
+      "fingerprint": "9812d3b1b81d95efba6ece1cc57eabb8b57f2a696f5687b954a4c8f05df5ff16",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/xiaohongshu",
+      "path": "/docs/solutions/xiaohongshu",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "小红书内容助手",
+      "description": "一句话先说清楚：这一页不是教你系统学小红书运营，而是帮你把一个产品、服务或观点，直接压成“今天就能发”的小红书内容包。",
+      "updated": "2026-04-28",
+      "fingerprint": "bf718bb66deaedae6a236fb39d625f157ca6952ae0043d5974f6f0a6d19cbcd6",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start",
+      "path": "/docs/start",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "从这开始",
+      "description": "Hermes 中文站学习主线入口。",
+      "updated": "2026-04-28",
+      "fingerprint": "ca1561313f873c64ddef074b1a58ea676d30597d324bae129c10366f462b92ad",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build",
+      "path": "/docs/start/build",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🛠️ 04-自己造东西",
+      "description": "一句话先说清楚：这一阶段不是“再学几个功能”，而是把你的 Hermes 使用方式，从“一个助手”推进到“开始搭一套系统”。",
+      "updated": "2026-04-28",
+      "fingerprint": "147dd914566944ade1f85885471f6499afa3bad1a1586ae3c45c93ec390b9e81",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/acp-ide",
+      "path": "/docs/start/build/acp-ide",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧑‍💻 08-放进编辑器里用",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "17a8dacce22ccc87fd681aff34e380d1f55df164b375b7a895092f40bdf6d428",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/api-server",
+      "path": "/docs/start/build/api-server",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🌐 06-把 Hermes 暴露成后端服务",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "d0843f14dd8768fb0878c57a05f8d7ded291cdf9d2eef54bde8925c6e577512b",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/automation",
+      "path": "/docs/start/build/automation",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🤖 07-让 Hermes 自己自动跑",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "750047da37aec5f3132aa5897eb73b34e629743f35371335b4f8006fc781551a",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/context-system",
+      "path": "/docs/start/build/context-system",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧩 04-上下文系统",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "09b5c13db33855eaab1c49da5121b0f3478c1981622e0a7df50d7027f3793b60",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/context-system/context-files",
+      "path": "/docs/start/build/context-system/context-files",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "📄 02-上下文文件",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "3be08b78ef2563629b9657b867077aee50c1ea4b11e54368f594f45b29c8d27a",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/context-system/context-references",
+      "path": "/docs/start/build/context-system/context-references",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🔗 03-上下文引用",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "c77eef39f7cd566434428a904cab07f9e6e7adad855bf06c7bac9dc5c0d1193e",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/mcp-and-plugins",
+      "path": "/docs/start/build/mcp-and-plugins",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🔌 05-把 Hermes 接进外部系统",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "3caa4afbd290bf418118c198aa1aad6ec51119e67fd918c93d0ee0f00c568685",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/memory-providers",
+      "path": "/docs/start/build/memory-providers",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧠 03-接入外部记忆系统",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "b7fe01c8ac2683408e4f5e9514bbf22e1803e03111e37ef7ec0f68edff787eea",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/memory-providers/compare",
+      "path": "/docs/start/build/memory-providers/compare",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "⚖️ 04-外部记忆对比",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "ce2da31e768bad2fd814f6c55221d8c234e8cbb5d6d2e40ebe281a3f2d85b473",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/memory-providers/holographic",
+      "path": "/docs/start/build/memory-providers/holographic",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🪞 02-Holographic记忆",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "383fae41abca6d37dd4bc03e7a29fe88c69be673e8cd15091d0387bd8c3a5971",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/memory-providers/honcho",
+      "path": "/docs/start/build/memory-providers/honcho",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧠 03-Honcho记忆",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "4e29340893a86ea50a75de494803125b3d136e1ba8e7030dbf5be95611202d3b",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/build/profiles",
+      "path": "/docs/start/build/profiles",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "👥 02-多个助手一起工作",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "63e7a79277a55eb39c08029dc623c937cf219fedd97f618e005f395e19d9064a",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/get-running",
+      "path": "/docs/start/get-running",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🚀 01-先跑起来",
+      "description": "一句话先说清楚：这一阶段不追求你懂完所有能力，而是先让你第一次把 Hermes 真正跑通。",
+      "updated": "2026-04-28",
+      "fingerprint": "eb41370e61a5a5ddd9aa55195ab31e4bec4bb20c66cf7e1856b55b29ba894b10",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/get-running/connect-terminal",
+      "path": "/docs/start/get-running/connect-terminal",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "💻 03-进入终端并连接服务器",
+      "description": "一句话先说清楚：这一页不教你安装 Hermes，而是先带你进入“后面真正要执行命令的那个终端”。",
+      "updated": "2026-04-28",
+      "fingerprint": "b6f8120f0c6282d70e6600e5900bf1ffbecb8f8d826e56feeac99decd71ad685",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/get-running/first-hello",
+      "path": "/docs/start/get-running/first-hello",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "💬 05-配好 AI 大模型并完成第一次互动",
+      "description": "这一页只做最后一个闭环：给 Hermes 配好一个现在就能用的模型，然后亲眼看到它回你第一句话。",
+      "updated": "2026-04-28",
+      "fingerprint": "7af445106c1651f8fb2d732fd868f6cc8b3273dd444fa7ee560b63bc825f4a66",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/get-running/install-hermes",
+      "path": "/docs/start/get-running/install-hermes",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "📦 04-把 Hermes 装上去",
+      "description": "一句话先说清楚：这一页不再帮你选环境、也不再帮你进终端，它只做一件事——把 Hermes 真正装上去，并确认 hermes 命令已经能用。",
+      "updated": "2026-04-28",
+      "fingerprint": "9ad61cc8617682952af64300993f12bd507bf9898cd0a32bc8efd1c73b03ee78",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/get-running/prepare-environment",
+      "path": "/docs/start/get-running/prepare-environment",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧱 02-先准备运行环境",
+      "description": "一句话先说清楚：这一页不教你安装 Hermes，而是先帮你把“它到底跑在哪台机器上”选清楚。",
+      "updated": "2026-04-28",
+      "fingerprint": "3696b0824dba5094ac51fb2515140659ce82154020df950d93ca06be216b27e0",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/getting-started",
+      "path": "/docs/start/getting-started",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧰 02-开始上手",
+      "description": "一句话先说清楚：这一阶段只做一件事——把 Hermes 从“能跑一次”变成“你会反复使用的日常助手”。",
+      "updated": "2026-04-28",
+      "fingerprint": "e98ea626460c009a34a03363cac07dceb8dc94a63580741da6f552b15e37be93",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/getting-started/basic-usage",
+      "path": "/docs/start/getting-started/basic-usage",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "⚙️ 02-认识 Hermes 的基本使用方式",
+      "description": "这一页不讲高级玩法，只帮你把每天最常用的那条路径练顺：打开 Hermes、问一句、接着追问、最后正常退出。",
+      "updated": "2026-04-28",
+      "fingerprint": "13f9b700525153913decb95bbdba65daab4f9d402b3837f3f72e1757d9379822",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/getting-started/connect-message-platform",
+      "path": "/docs/start/getting-started/connect-message-platform",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "📡 05-接入一个消息平台（推荐飞书）",
+      "description": "到这一页时，你应该已经在命令行里把 Hermes 用顺了。现在再把它接进消息平台，排错会简单很多，也更容易真的放进日常工作流。",
+      "updated": "2026-04-28",
+      "fingerprint": "ea40b06eca2a9fe28129c92c69e4282cc857b6cf06f0ce3994dcefcbdb7e5cbe",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/getting-started/curated-skills",
+      "path": "/docs/start/getting-started/curated-skills",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🏷️ 04-常用 Skills（按日常使用场景精选）",
+      "description": "这一页不是让你背完整技能目录，而是帮你建立第一层判断：我现在手上的任务属于哪一类，应该先试哪一类 Skill。",
+      "updated": "2026-04-28",
+      "fingerprint": "23174da253cc16bb7e6b37ccb5e3025bb2dc9a2479c9a68b13ca8ed290caa14d",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/getting-started/slash-commands-and-sessions",
+      "path": "/docs/start/getting-started/slash-commands-and-sessions",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "⌨️ 03-常用斜杠命令与会话管理",
+      "description": "第一次开始用 Hermes，不需要背完整命令表。你现在最需要先学会的是两件事：找得到常用入口，以及别把正在做的会话弄丢。",
+      "updated": "2026-04-28",
+      "fingerprint": "b3931cef5257de6a8e2b02990b1fcac16c89e95c51b5185340b056e07c8ed426",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/personalize",
+      "path": "/docs/start/personalize",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🎨 03-玩出花样",
+      "description": "一句话先说清楚：这一阶段仍然只围绕一个助手，先把它调成“更像你、更懂你、更顺手”的长期助手，还不是进入多助手和系统层。",
+      "updated": "2026-04-28",
+      "fingerprint": "abacf5c750ec90c6020d584f7278b97dcff59f2a0c2828db34a858917cc0e4cf",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/personalize/custom-model",
+      "path": "/docs/start/personalize/custom-model",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🤖 04-自定义 AI 大模型",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "acafad52ca85b46f623cc252b0919bf775786458db1d678940f10b4a724ddeb2",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/personalize/memory-basics",
+      "path": "/docs/start/personalize/memory-basics",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧠 03-让 Hermes 记住你",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "e435bbc21398954c40e9d242a385261344fd3be3a100c2bf5d6279e1e22cb278",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/personalize/skins-and-themes",
+      "path": "/docs/start/personalize/skins-and-themes",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🎭 06-让终端更顺眼",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "f80e9dfd285d21ff751cca174ee6a6feae4bfd3896757eb46a77366333119ea4",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/personalize/soul",
+      "path": "/docs/start/personalize/soul",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🪞 02-让 Hermes 更像你",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "31f120bf93203bc2e4f7de114215789261316b2839319994907ba29b8a87d9a8",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/start/personalize/toolsets-and-workflow",
+      "path": "/docs/start/personalize/toolsets-and-workflow",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧩 05-让工具更顺手",
+      "description": "这一页只解决一件事：",
+      "updated": "2026-04-28",
+      "fingerprint": "fc381f8cbc8bffed942b4cdefbe060e76881ed94838f39d09688a764e3bed11e",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 10,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "自动检查 title/description/canonical/OG/Twitter/Breadcrumb/JSON-LD/sitemap/llms/search-index/内部链接/lastmod；不做关键词堆砌。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。",
+        "Baidu 提交由每日 quota 控制，队列按优先级消费。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/action-plan-lab",
+      "path": "/packs/action-plan-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "行动计划助手",
+      "description": "把一个项目目标、会议结论或头脑风暴的结果，直接压成有负责人、截止时间和优先级的可执行行动计划表。",
+      "fingerprint": "22aef96e9ca138b94d65484d36ddfe02aa6db1809482c0584d602624c8911b28",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/daily-report-lab",
+      "path": "/packs/daily-report-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "项目日报助手",
+      "description": "把项目进度整理成日报、汇总与跟进输出。",
+      "fingerprint": "e1ada42f5dbf40cfaeaad58ef2ba414d803d44548ebef40ce6de600c586eb3b8",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/meeting-lab",
+      "path": "/packs/meeting-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "会议纪要助手",
+      "description": "把会议输入快速整理成结构化纪要与跟进项。",
+      "fingerprint": "ae8634d262c17edb896eb9bf75951eb7dd9a65171bad71cb1a5c41bbbed329d5",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/message-summary-lab",
+      "path": "/packs/message-summary-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "邮件群消息摘要助手",
+      "description": "把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要。",
+      "fingerprint": "2a106a6b97998e58c2da579379f77566fc8b504cd0d8839d608029c3380df24c",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/miniapp-lab",
+      "path": "/packs/miniapp-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "微信小程序助手",
+      "description": "帮你把一个微信小程序想法快速压成可开工骨架。",
+      "fingerprint": "aad467a60acb50e2fd78c772ed74dd3d6bdbb7089a1a42e2a57dec084a251c07",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/ppt-lab",
+      "path": "/packs/ppt-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "PPT 助手",
+      "description": "帮你生成 PPT 结构、逐页要点与讲稿评审流程。",
+      "fingerprint": "55c793461f381ef1e6d0580d095aae14898ca8e39cf5007bcfe529a9fa7bec0d",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/summary-lab",
+      "path": "/packs/summary-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "资料总结助手",
+      "description": "把散资料压缩成结构化总结和发送版输出。",
+      "fingerprint": "c7c801b73700efffcc3c6a2f9c844b71a311f8d78a4af580d8d8d6af2e7af269",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/webdev-lab",
+      "path": "/packs/webdev-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "敏捷 Web 开发助手",
+      "description": "帮你把 Web 应用想法拆成页面、接口和第一版开发骨架。",
+      "fingerprint": "76d24c1f831e0b6cc349e1f225e3253b93ebb70e5128d35cc856ef87275c10bc",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/wechat-writer-lab",
+      "path": "/packs/wechat-writer-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "公众号写作助手",
+      "description": "帮你完成公众号文章选题、初稿、编辑与审校。",
+      "fingerprint": "fd52010c86e2ab36db09d925ac4a33144efcebad3620f2684b4fb27c0914a016",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/xhs-lab",
+      "path": "/packs/xhs-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "小红书内容助手",
+      "description": "帮你完成小红书选题、标题、正文和发布检查。",
+      "fingerprint": "7e312796354934eaf81e82893c469f3c0c762fce1c26f0bfeae303bbf9c39e4f",
+      "platforms": [
+        "indexnow",
+        "bing",
+        "baidu",
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "daily_quota_controlled",
+      "priority": 20,
+      "thirdPartyBoundary": "first_party_content",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "Pack 页面进入 IndexNow/Bing/Baidu/GSC 监控队列；Baidu 由每日 quota 控制。",
+        "GSC 仅进入读取与覆盖率报告监控，不伪造 URL 提交能力。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/entry/dashboard",
+      "path": "/docs/china/entry/dashboard",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "网页控制台（Dashboard）",
+      "description": "🎯 一句话结论：如果你要的是一个本地浏览器里的管理面板，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。",
+      "updated": "2026-04-28",
+      "fingerprint": "7b67b544fef04b9034a900558c25183021554dc22b909b0c602937231e01119e",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/models/glm-coding-plan",
+      "path": "/docs/china/models/glm-coding-plan",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "智谱 GLM Coding Plan",
+      "description": "🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。",
+      "updated": "2026-04-28",
+      "fingerprint": "98cda09da8e0a48443df1852b028d4d27fc472989cfbdb6f3c368a4ba0fb5966",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/models/minimax-token-plan",
+      "path": "/docs/china/models/minimax-token-plan",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "MiniMax Token Plan",
+      "description": "🎯 一句话先说清楚：如果你想买的不只是文本能力，而是一份能把 MiniMax 的 M2.7、图像、语音、音乐、视频和开发工具一起打通的订阅，那么 MiniMax Token Plan 值得单独看。",
+      "updated": "2026-04-28",
+      "fingerprint": "1c752b9c986042dca17559df22f26821c7089cb7ad6c18c87080022fbe8d8fcd",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/china/models/openai-compatible-endpoint",
+      "path": "/docs/china/models/openai-compatible-endpoint",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "自定义兼容接口",
+      "description": "🎯 一句话先说清楚：如果你手上已经有一个稳定的 OpenAI-Compatible 入口——不管它是 LM Studio、Ollama、OneAPI、NewAPI，还是企业自己的私有网关——那么“自定义兼容接口”就是最省重复劳动的一条路线；前提是你真的已经有这个入口。",
+      "updated": "2026-04-28",
+      "fingerprint": "f1d213e0ba6329942b953f03ad4c8a805a4c7da50e05923c62475be6db77e6f3",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/issues",
+      "path": "/docs/issues",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "遇到问题",
+      "description": "Hermes 中文站排障入口，先定位问题类型再进入排查页。",
+      "updated": "2026-04-28",
+      "fingerprint": "28a3fac17249373f02b8f41879f773cfbadbdd3a412390338fa0ec60270ba57e",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/issues/install-environment",
+      "path": "/docs/issues/install-environment",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "安装 / 更新 / 环境问题",
+      "description": "一句话结论：这一页只处理“命令起不来、装不上、更新后变怪、环境边界混乱”这类问题。只要你还没确认 hermes 命令本身是否正常，就先不要跳去查模型、Gateway、Tools。",
+      "updated": "2026-04-28",
+      "fingerprint": "2232f35703baa37ee573032be02be5313215be69810339652002c0ff7c5a34f7",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference/bundled-skills",
+      "path": "/docs/reference/bundled-skills",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "🧠 09-内置 Skills 目录",
+      "description": "这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 ~/.hermes/skills/ 的技能库。 如果你要查按需安装的扩展技能，请看 10-可选 Skills 目录。",
+      "updated": "2026-04-28",
+      "fingerprint": "f2bb50f9a897dc42708bc18a8259a593a81155cf1bf5a9e1a0964a8defe441dd",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/reference/environment-variables",
+      "path": "/docs/reference/environment-variables",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "⚙️ 05-环境变量参考",
+      "description": "这页查的是 Hermes 的环境变量、API Key、token 与 base URL。 如果你要排查 key 为什么不通过，请看 05-遇到问题 / 03-模型 Provider 与自定义 endpoint 问题。",
+      "updated": "2026-04-28",
+      "fingerprint": "c74ed8cddf36297b907fca720a616a7383b0b8396b4fd66d0ac894e2b12d4d8a",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions",
+      "path": "/docs/solutions",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "现成方案",
+      "description": "Hermes 中文站现成方案入口。",
+      "updated": "2026-04-28",
+      "fingerprint": "f5c830a68886fe48cf608d51dba332ab71ae042871173ef4dfe4091258afa232",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "warn",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/content",
+      "path": "/docs/solutions/content",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "总览｜内容创作与发布",
+      "description": "一句话先说清楚：这一层不是教你系统学内容运营，而是帮你先挑一套已经能直接试跑的内容生成方案，先把第一轮内容做出来。",
+      "updated": "2026-05-16",
+      "fingerprint": "f450f42ed74640b19cbb13ca478a08124388c260e2a0e92d863b05331849c6df",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/multi-platform-rewrite",
+      "path": "/docs/solutions/multi-platform-rewrite",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "多平台内容改写助手",
+      "description": "把一篇现成内容，改写成适配小红书、公众号、X/Twitter 等不同平台风格的可发布稿件，直接复制就能发。",
+      "updated": "2026-05-18",
+      "fingerprint": "02e03520f19e967a74870950fdf2f806a59fe7a7d3c3986ea31ab831324f9eaa",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/ppt",
+      "path": "/docs/solutions/ppt",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "PPT 助手",
+      "description": "一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成\"可继续做成 PPT 的整套稿\"。",
+      "updated": "2026-04-28",
+      "fingerprint": "019b15c0a66ec6dc7eab727879371ae5d84a1fc62c39a7ee0303b9c4f06b4433",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/docs/solutions/x-twitter",
+      "path": "/docs/solutions/x-twitter",
+      "sourceKind": "page",
+      "changeType": "new",
+      "title": "X/Twitter 内容与互动助手",
+      "description": "通过第三方插件 Hermes Tweet 将 X/Twitter 搜索、阅读、发推、回复等操作接入 Hermes Agent，用对话方式完成 X 平台内容工作。第三方方案，非官方内置。",
+      "updated": "2026-05-17",
+      "fingerprint": "655bd0da2d1f00ca1e987644ab03ae0a3ae3452cc910529b2d45c83dab121a07",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
+      ]
+    },
+    {
+      "url": "https://hermes-zh.com/packs/multi-platform-rewrite-lab",
+      "path": "/packs/multi-platform-rewrite-lab",
+      "sourceKind": "pack",
+      "changeType": "new",
+      "title": "多平台内容改写助手",
+      "description": "把一篇已有内容，直接改写成适配小红书、公众号、X/Twitter 等不同平台风格的可发布稿件，复制就能发。",
+      "fingerprint": "362b29ac0ec4d9cc67d27eb726ca52790ed7c277ddd67ce6f1f5724c6f56cb92",
+      "platforms": [
+        "gsc_monitor"
+      ],
+      "gscMode": "read_report_only",
+      "baiduQuotaClass": "not_submitted_third_party_boundary",
+      "priority": 90,
+      "thirdPartyBoundary": "third_party_reference",
+      "seoChecks": {
+        "title": "pass",
+        "description": "pass",
+        "canonical": "pass",
+        "openGraph": "pass",
+        "twitterCard": "pass",
+        "breadcrumb": "pass",
+        "jsonLd": "pass",
+        "sitemap": "pass",
+        "llms": "pass",
+        "searchIndex": "pass",
+        "internalLinks": "pass",
+        "lastmod": "pass",
+        "keywordStuffing": "pass"
+      },
+      "notes": [
+        "第三方页面只作为外部引用边界监控；not official built-in capability，不写成 Hermes 中文站官方内置能力。",
+        "GSC 仅读取和报告第三方引用入口在本站页面的覆盖情况。"
       ]
     }
   ]

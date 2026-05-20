@@ -3,7 +3,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { mkdirSync } from 'node:fs'
 
-import { redactSeoSecrets } from '../lib/seo/platform-clients'
+import { redactSeoSecrets } from '../lib/seo/platform-clients.ts'
 
 type Status = 'published' | 'draft' | 'archived'
 type SeoCheckStatus = 'pass' | 'warn' | 'fail'
