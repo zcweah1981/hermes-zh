@@ -3,7 +3,7 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { mkdirSync } from 'node:fs'
 
-import { redactSeoSecrets } from '../lib/seo/platform-clients.ts'
+import { redactSeoSecrets } from '../lib/seo/platform-clients'
 
 type Status = 'published' | 'draft' | 'archived'
 type SeoCheckStatus = 'pass' | 'warn' | 'fail'
@@ -147,12 +147,12 @@ function keywordStuffingPass(title: string, description: string) {
   const words = text.match(/[a-z0-9\u4e00-\u9fa5]{2,}/g) ?? []
   const counts = new Map<string, number>()
   for (const word of words) counts.set(word, (counts.get(word) ?? 0) + 1)
-  return [...counts.values()].every((count) => count <= 4)
+  return Array.from(counts.values()).every((count) => count <= 4)
 }
 
 function checkInternalLinks(body: string | undefined) {
   if (!body) return true
-  const links = [...body.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)].map((match) => match[1] ?? '')
+  const links = Array.from(body.matchAll(/\[[^\]]+\]\(([^)]+)\)/g), (match) => match[1] ?? '')
   return links.every((link) => {
     if (!link || link.startsWith('#')) return true
     if (/^(https?:|mailto:|tel:)/.test(link)) return true
