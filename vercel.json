@@ -48,11 +48,38 @@
       ]
     },
     {
-      "source": "/((?!api/|_next/data/|fonts/|assets/|og/|hermes-logo.png|hermes-logo-source.jpg).*)",
+      "source": "/favicon.ico",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=1800, s-maxage=7200, stale-while-revalidate=3600"
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/favicon.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/apple-icon.png",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/((?!api/|_next/data/|fonts/|assets/|og/|favicon.ico|favicon.png|apple-icon.png|hermes-logo.png|hermes-logo-source.jpg).*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=1800, s-maxage=14400, stale-while-revalidate=7200"
         }
       ]
     },

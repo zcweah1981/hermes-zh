@@ -9,3 +9,6 @@ content-cache/raw/*
 tsconfig.tsbuildinfo
 npm-debug.log*
 .vercel
+
+__pycache__/
+*.py[cod]

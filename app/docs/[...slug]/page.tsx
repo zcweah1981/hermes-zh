@@ -8,7 +8,7 @@ import { MarkdownBody } from '@/components/docs/markdown-body'
 import { loadPagesManifest } from '@/lib/content/loaders/pages'
 import { toDocPath } from '@/lib/routing/docs-path'
 import { buildCanonicalUrl } from '@/lib/seo/canonical'
-import { SiteJsonLd, buildBreadcrumbJsonLd, buildFAQPageJsonLd, buildTechArticleJsonLd } from '@/lib/seo/json-ld'
+import { SiteJsonLd, buildBreadcrumbJsonLd, buildFAQPageJsonLd, buildTechArticleJsonLd, buildCreativeWorkJsonLd } from '@/lib/seo/json-ld'
 import { buildSeoMetadata, CORE_PAGE_SEO, getCorePageSeo, getDocsSeoDescription } from '@/lib/seo/metadata'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
@@ -59,6 +59,7 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
     { name: page.module || '文档', url: buildCanonicalUrl(toDocPath(page.slug).split('/').slice(0, 3).join('/') || '/docs') },
     { name: page.title, url: buildCanonicalUrl(toDocPath(page.slug)) },
   ])
+  const creativeWorkJsonLd = buildCreativeWorkJsonLd(page)
 
   const breadcrumbItems: BreadcrumbItem[] = [
     { name: '首页', url: '/' },
@@ -68,7 +69,7 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
 
   return (
     <div className="site-doc-page-grid mx-auto grid max-w-site-docs gap-6 px-6 py-8 xl:grid-cols-[280px_minmax(0,1fr)_250px]">
-      <SiteJsonLd data={faqJsonLd ? [buildTechArticleJsonLd(page), breadcrumbJsonLd, faqJsonLd] : [buildTechArticleJsonLd(page), breadcrumbJsonLd]} />
+      <SiteJsonLd data={faqJsonLd ? [buildTechArticleJsonLd(page), breadcrumbJsonLd, creativeWorkJsonLd, faqJsonLd] : [buildTechArticleJsonLd(page), breadcrumbJsonLd, creativeWorkJsonLd]} />
       <DocSidebar pages={pages} currentSlug={page.slug} />
 
       <article className="site-panel-docs site-doc-article overflow-hidden p-6 lg:p-8">

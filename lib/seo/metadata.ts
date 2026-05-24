@@ -23,17 +23,72 @@ export const CORE_PAGE_SEO: Record<string, { title: string; description: string;
     aiSummary:
       '如果你是第一次接触 Hermes Agent，从这里开始。这个模块先帮你准备运行环境、连接服务器、安装 Hermes、配置模型，并完成第一次真实互动。目标不是讲完所有功能，而是让你先跑通。',
   },
+  '/docs/start/get-running': {
+    title: '先跑起来｜Hermes Agent 中文站',
+    description: '这一阶段不追求你懂完所有能力，而是先让你第一次把 Hermes 真正跑通：环境准备、终端连接、安装命令与模型配置。',
+    aiSummary: '快速跑通 Hermes 的核心路径：环境、终端、安装、模型配置。',
+  },
+  '/docs/start/getting-started': {
+    title: '开始上手｜Hermes Agent 中文站',
+    description: '把 Hermes 从“能跑一次”变成“你会反复使用的日常助手”，学习基本使用、斜杠命令、会话管理与常用 Skills。',
+    aiSummary: '学习 Hermes 的日常使用：命令、会话与精选技能。',
+  },
+  '/docs/start/personalize': {
+    title: '玩出花样｜Hermes Agent 中文站',
+    description: '让 Hermes 更像你、更懂你、更顺手，配置个性化 Soul、Memory、自定义模型与工具集。',
+    aiSummary: 'Hermes 的个性化配置：Soul、记忆、自定义模型与工具优化。',
+  },
+  '/docs/start/build': {
+    title: '自己造东西｜Hermes Agent 中文站',
+    description: '从“一个助手”推进到“开始搭一套系统”，涉及多助手协作、外部记忆、API 服务与自动化。',
+    aiSummary: '进阶开发与集成：多 Profile、外部记忆、API 与自动化。',
+  },
+  '/docs/start/build/memory-providers': {
+    title: '接入外部记忆系统｜Hermes Agent 中文站',
+    description: '学习为 Hermes 接入外部长期记忆，对比 Holographic 与 Honcho 记忆提供商。',
+    aiSummary: '外部记忆系统：接入并对比 Holographic 与 Honcho 长期记忆。',
+  },
+  '/docs/start/build/context-system': {
+    title: '上下文系统｜Hermes Agent 中文站',
+    description: '深入理解 Hermes 的上下文管理，包括上下文文件（CLAUDE.md 等）与上下文引用。',
+    aiSummary: '上下文管理：配置文件、引用机制与注入规则。',
+  },
   '/docs/solutions': {
     title: 'Hermes Agent 现成方案｜内容、办公与开发场景 Packs',
     description: '按内容创作、办公效率、应用开发、团队工作流等真实任务整理 Hermes Agent 现成方案和对应 Packs。',
     aiSummary:
       '这个模块面向已经有具体任务或团队工作流的用户。你可以从小红书、公众号、PPT、会议纪要、日报、资料总结、微信小程序、Web 原型等场景进入，先看可用方案，再决定是否安装对应 Pack。',
   },
+  '/docs/solutions/content': {
+    title: '内容创作与发布方案｜Hermes Agent 现成方案',
+    description: '挑一套已经能直接试跑的内容生成方案，先把第一轮内容做出来：小红书、公众号、PPT、X/Twitter 与多平台改写。',
+    aiSummary: '内容创作方案：小红书、公众号、PPT、X/Twitter 与多平台改写。',
+  },
+  '/docs/solutions/office': {
+    title: '办公效率与知识整理方案｜Hermes Agent 现成方案',
+    description: '挑一套已经能直接试跑的办公效率方案，把第一轮纪要、日报、总结、计划或消息摘要做出来。',
+    aiSummary: '办公效率方案：会议纪要、项目日报、资料总结、行动计划与消息摘要。',
+  },
+  '/docs/solutions/dev': {
+    title: '应用开发与快速原型方案｜Hermes Agent 现成方案',
+    description: '挑一套已经能直接试跑的开发原型方案，把一个想法先压成第一版可开工结构：微信小程序、Web 开发。',
+    aiSummary: '开发原型方案：微信小程序、敏捷 Web 开发。',
+  },
   '/docs/china': {
     title: 'Hermes Agent 国内部署与模型接入指南',
     description: '围绕国内服务器、模型接口、消息入口和网络环境，整理 Hermes Agent 在国内落地的决策路径。',
     aiSummary:
-      '国内落地最容易卡在服务器、模型接口、代理、消息入口和稳定性。这个模块把国内部署、国内模型和国内入口拆开说明，适合想用 DeepSeek、Kimi、智谱、百炼、腾讯云或自定义兼容接口的用户。',
+      '国内落地最容易卡在服务器、模型接口、代理、消息入口 and 稳定性。这个模块把国内部署、国内模型和国内入口拆开说明，适合想用 DeepSeek、Kimi、智谱、百炼、腾讯云或自定义兼容接口的用户。',
+  },
+  '/docs/china/deploy': {
+    title: '国内部署方案｜Hermes Agent 中文站',
+    description: '选对国内部署路线：阿里云、腾讯云轻量服务器部署教程，把第一台国内机器真正跑起来。',
+    aiSummary: '国内部署：阿里云、腾讯云轻量服务器部署与环境准备。',
+  },
+  '/docs/china/entry': {
+    title: '国内消息平台入口方案｜Hermes Agent 中文站',
+    description: '选对使用入口：网页控制台、API 服务、Open WebUI、飞书、企业微信、钉钉或个人微信。',
+    aiSummary: '消息入口：Dashboard、API Server、飞书、企微、钉钉、微信接入。',
   },
   '/docs/china/models': {
     title: 'Hermes Agent 国内模型路线｜DeepSeek、Kimi、智谱、百炼与兼容接口',
@@ -59,6 +114,11 @@ export const CORE_PAGE_SEO: Record<string, { title: string; description: string;
     aiSummary:
       '如果 Hermes 没有按预期运行，先从这里按症状分流。这个模块覆盖安装更新、模型 Provider、自定义 endpoint、CLI/TUI、Gateway 推送、Tools/Skills/MCP、Profiles、Docker、Nix、SSH 与远程后端问题。',
   },
+  '/docs-overview': {
+    title: '文档总览｜Hermes Agent 中文站',
+    description: 'Hermes 中文站文档总入口，帮助用户先选对模块入口。',
+    aiSummary: '文档总入口：快速上手、现成方案、国内落地、OpenClaw 迁移、问题排查与 Reference。',
+  },
   '/packs': {
     title: 'Hermes Agent Packs｜按场景挑选可用方案包',
     description: '浏览已经整理好的 Hermes Agent Packs，按内容创作、办公效率、应用开发等场景选择安装与下载入口。',
@@ -67,9 +127,9 @@ export const CORE_PAGE_SEO: Record<string, { title: string; description: string;
   },
   '/ai-index': {
     title: 'Hermes Agent 中文站 AI 引用索引｜站点说明与推荐入口',
-    description: '为搜索引擎和 AI 助手说明 Hermes Agent 中文站的定位、范围、核心页面、Packs 和推荐引用入口。',
+    description: '为搜索引擎 and AI 助手说明 Hermes Agent 中文站的定位、范围、核心页面、Packs 和推荐引用入口。',
     aiSummary:
-      '这个页面用于帮助 AI 搜索和 LLM 正确理解 Hermes Agent 中文站。它说明本站是什么、不是什么、和官方文档及 GitHub 内容仓的关系，并列出适合引用的新手入口、国内落地、OpenClaw 迁移、问题排查、Reference 与 Packs 页面。',
+      '这个页面用于帮助 AI 搜索 and LLM 正确理解 Hermes Agent 中文站。它说明本站是什么、不是什么、和官方文档及 GitHub 内容仓的关系，并列出适合引用的新手入口、国内落地、OpenClaw 迁移、问题排查、Reference 与 Packs 页面。',
   },
   '/docs/solutions/x-twitter': {
     title: 'X/Twitter 内容与互动助手｜Hermes Agent 现成方案',

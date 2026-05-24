@@ -24,6 +24,7 @@ export default async function PacksPage() {
         eyebrow="Packs"
         title="按场景挑选可用 Packs"
         description={packsSeo.aiSummary}
+        isH1={true}
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {packs.map((pack) => (

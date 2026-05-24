@@ -41,6 +41,10 @@ const LEGACY_REDIRECTS = [
   { source: '/docs/00-文档总览', destination: '/docs/docs-overview' },
   { source: '/docs/00-%E6%96%87%E6%A1%A3%E6%80%BB%E8%A7%88', destination: '/docs/docs-overview' },
   { source: '/docs/packs', destination: '/packs' },
+  { source: '/solutions/:slug*', destination: '/docs/solutions/:slug*' },
+  { source: '/api/assets/raw/:path*', destination: '/content-assets/:path*' },
+  { source: '/officialsite', destination: '/' },
+  { source: '/examples', destination: '/docs/solutions' },
 ]
 
 const nextConfig: NextConfig = {

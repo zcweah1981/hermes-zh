@@ -54,6 +54,20 @@ export function buildBreadcrumbJsonLd(items: Array<{ name: string; url: string }
   }
 }
 
+export function buildCreativeWorkJsonLd(page: SitePage): JsonLdObject {
+  const url = buildCanonicalUrl(toDocPath(page.slug))
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: page.title,
+    description: page.description,
+    url,
+    inLanguage: 'zh-CN',
+    dateModified: page.updated || undefined,
+    author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+  }
+}
+
 export function buildDocBreadcrumbJsonLd(page: SitePage): JsonLdObject {
   return buildBreadcrumbJsonLd([
     { name: SITE_NAME, url: SITE_URL },
