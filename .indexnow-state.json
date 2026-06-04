@@ -1,12 +1,16 @@
 {
-  "manifestHash": "3f066b0691795920119633d812a9b364c83da3533a8e43ad50573c48b8088501",
+  "manifestHash": "9bcfa4431fc52d380e6a117a2bf02afbad7567ac2eccf288923f1fb3c3168dab",
   "urlFingerprints": {
     "https://hermes-zh.com/": "271e065054d7cae862e1a4837a3b74cd7e7f36ea4f911e7ac91f0197d7fd6737",
     "https://hermes-zh.com/ai-index": "6decbd2f359ec3989cf99f9f4b9aaa9844a148e3528ebe95a979bced8dc9cace",
     "https://hermes-zh.com/docs/china": "abafd62b27062bf3744421ef8512efc1c7830bc73a8d5fc2c6cdf0fd38744855",
     "https://hermes-zh.com/docs/china/deploy": "c41f786c925abf869704528a0b41aa04eb62c74b57141d5d9e056fb8429f4b9a",
     "https://hermes-zh.com/docs/china/deploy/alicloud-lite-server": "5ead7a7684fca23450bcb08a12119b82746427e90762517e4b86a29652cf4684",
+    "https://hermes-zh.com/docs/china/deploy/community-use-cases": "4646f80e3f48bef16bce884b8c23ac95e95814a85127ffb7b516a0c8234851c1",
+    "https://hermes-zh.com/docs/china/deploy/self-hosting-ecosystem": "c23654c5872ef8d52adcdd5597e60e1af69aaa67b184efde307a7020ac55f58e",
     "https://hermes-zh.com/docs/china/deploy/tencent-lite-server": "bacb72a02435685a19aea1291ff1784e1e088058c7d64dd42fb5f942a9b7b01e",
+    "https://hermes-zh.com/docs/china/deploy/third-party-tutorials": "9279f6e759a9eb7552bc7dffcfbc5a0fc00d6e5594d366b6912d8f6c0856e88c",
+    "https://hermes-zh.com/docs/china/deploy/who-is-hermes-for": "0facade76d940154482d88007088dac7fc45ec9db3f3d8c4d25b4a11674fe71e",
     "https://hermes-zh.com/docs/china/entry": "36772e7133c58c0c1410b23a1429e210570eb5e0534f8ce7b9151e51f9571ce3",
     "https://hermes-zh.com/docs/china/entry/api-service-open-webui": "f6bcda84761793b6846409f46d8820ff9f2910530ea29ea50b9e4987ebec24a6",
     "https://hermes-zh.com/docs/china/entry/cli": "991f2aa0c83a03468733a4bfa818afabeea4bd04bec42268179e22bcd130974f",
@@ -76,6 +80,7 @@
     "https://hermes-zh.com/docs/start/build/memory-providers/compare": "17b1f265b3e4715a97a2e3b097796de2dcf9ef788a699701ebaf951d52710128",
     "https://hermes-zh.com/docs/start/build/memory-providers/holographic": "1315ced9b4d81c7685a68de3bf354e2e46fa7c5024ea00a4f9466601a16c90db",
     "https://hermes-zh.com/docs/start/build/memory-providers/honcho": "24a4e9ea5d206b394e93d51e08ed37ad86227afdf23c36bfe824a86b13d6f4e9",
+    "https://hermes-zh.com/docs/start/build/profile-distribution": "27fc53b25cb305ccf616bf8fee896e57c3c90c9dc2c7db3dad13fd1c4e5a3127",
     "https://hermes-zh.com/docs/start/build/profiles": "128a9007e705eafc37c3ff290cae25fbf28abd2e96287a747ebc4efb0c659df8",
     "https://hermes-zh.com/docs/start/get-running": "d715b4bf9d49099569bc8d6843dceba487213cc2045654226e189f48395e6327",
     "https://hermes-zh.com/docs/start/get-running/connect-terminal": "3ebb2a2ee8de568664a6ed4b063ef8acb4f23406bcfd8cf0d1796806490f7b18",
@@ -89,6 +94,7 @@
     "https://hermes-zh.com/docs/start/getting-started/slash-commands-and-sessions": "08f8d29284efd973903106d331c957cf010666e4ae0c10dc8496b98f781c0217",
     "https://hermes-zh.com/docs/start/personalize": "493f2c4dbdb0a069e31fc974a2dfdf3a3dd04c2d8981d5fda327347822f18ed8",
     "https://hermes-zh.com/docs/start/personalize/custom-model": "c0bf29e9c4fd9eba4f01777297d05c18ec56ff7e411bca7bf9d7d275fb6b7e7d",
+    "https://hermes-zh.com/docs/start/personalize/desktop-app": "5a73940b37784ece44efd828ea42ada655587286665f3d8e93ba880f2f37318e",
     "https://hermes-zh.com/docs/start/personalize/memory-basics": "d8bb35ffd88dd7b7d6e36446e6ef71e24a41376271979b43cbf50e9065b019f5",
     "https://hermes-zh.com/docs/start/personalize/skins-and-themes": "8354f214981987914faa1feb2674ed82ad77a806981401300cff7375673c2ceb",
     "https://hermes-zh.com/docs/start/personalize/soul": "9800e3d06cd1f204752d12ff78922282d2ec7706dbeace646697bd4b7d6aaeee",
@@ -109,5 +115,5 @@
     "https://hermes-zh.com/robots.txt": "d92ee24c593daa15cc2f488efefd44a2a103c4f54ff2bb642d1ba4a5e4ad34ba",
     "https://hermes-zh.com/sitemap.xml": "1e94f3b5dbf7e6db670c8117599bc4b746673f2d738c6d013cd3668332a0da78"
   },
-  "submittedAt": "2026-05-20T15:00:05.559Z"
+  "submittedAt": "2026-06-04T01:30:07.672Z"
 }

@@ -40,9 +40,14 @@ describe('font loading and visual fidelity', () => {
     assert.match(globals, /font-display:\s*(swap|block);/, 'self-hosted fonts should avoid blocking text rendering')
   })
 
-  it('preloads critical local fonts in layout for mobile performance with high fetchPriority', () => {
+  it('keeps self-hosted CJK font faces for visual fidelity without high-priority full-font preloads', () => {
     const layout = read('app/layout.tsx')
-    assert.match(layout, /rel="preload"[\s\S]*?fetchPriority: 'high'/, 'fonts should be preloaded with high priority')
+    const globals = read('app/globals.css')
+
+    assert.doesNotMatch(layout, /href="\/fonts\/noto-sans-sc\.woff2"[\s\S]{0,220}?rel="preload"|rel="preload"[\s\S]{0,220}?href="\/fonts\/noto-sans-sc\.woff2"/, 'full Noto Sans SC must not be preloaded on the mobile critical path')
+    assert.doesNotMatch(layout, /href="\/fonts\/noto-serif-sc\.woff2"[\s\S]{0,220}?rel="preload"|rel="preload"[\s\S]{0,220}?href="\/fonts\/noto-serif-sc\.woff2"/, 'full Noto Serif SC must not be preloaded on the mobile critical path')
+    assert.match(globals, /font-family:\s*'Noto Sans SC'/, 'Noto Sans SC font-face stays available for final visual fidelity')
+    assert.match(globals, /font-family:\s*'Noto Serif SC'/, 'Noto Serif SC font-face stays available for final visual fidelity')
   })
 
   it('optimizes long content rendering with content-visibility', () => {

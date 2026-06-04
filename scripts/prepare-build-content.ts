@@ -44,22 +44,33 @@ async function writeJson(fileName: string, payload: unknown) {
 
 function buildSearchIndex(pages: SitePage[], packs: SitePack[]) {
   return [
-    ...pages.map((page) => ({
-      type: 'page',
-      title: page.title,
-      slug: page.slug,
-      description: page.description,
-      module: page.module,
-      headings: page.headings.map((heading) => heading.text),
-    })),
-    ...packs.map((pack) => ({
-      type: 'pack',
-      title: pack.title,
-      slug: `/packs/${pack.id}`,
-      description: pack.summary ?? '',
-      module: 'packs',
-      headings: pack.tags ?? [],
-    })),
+    ...pages.map((page) => {
+      const headings = page.headings.map((heading) => heading.text)
+      return {
+        type: 'page',
+        title: page.title,
+        slug: page.slug,
+        description: page.description,
+        module: page.module,
+        headings,
+        text: [page.title, page.description, page.module, page.section, page.navGroup, ...headings, page.body]
+          .filter(Boolean)
+          .join(' ')
+          .slice(0, 12000),
+      }
+    }),
+    ...packs.map((pack) => {
+      const headings = pack.tags ?? []
+      return {
+        type: 'pack',
+        title: pack.title,
+        slug: `/packs/${pack.id}`,
+        description: pack.summary ?? '',
+        module: 'packs',
+        headings,
+        text: [pack.title, pack.summary ?? '', pack.category, ...headings].filter(Boolean).join(' '),
+      }
+    }),
   ]
 }
 

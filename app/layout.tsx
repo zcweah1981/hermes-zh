@@ -56,24 +56,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN">
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/noto-sans-sc.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-          {...({ fetchPriority: 'high' } as any)}
-        />
-        <link
-          rel="preload"
-          href="/fonts/noto-serif-sc.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-          {...({ fetchPriority: 'high' } as any)}
-        />
-      </head>
       <body>
         <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
         <Script

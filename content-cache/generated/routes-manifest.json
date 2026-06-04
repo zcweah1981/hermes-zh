@@ -532,6 +532,20 @@
     "navGroup": "03-玩出花样"
   },
   {
+    "sourcePath": "docs/01-从这开始/03-玩出花样/07-用桌面端操作 Hermes.md",
+    "slug": "/start/personalize/desktop-app",
+    "pageType": "doc-page",
+    "module": "start",
+    "title": "🖥 07-用桌面端操作 Hermes",
+    "section": "desktop-app",
+    "description": "Desktop 不是独立产品，而是和 CLI 同一个 runtime 的桌面入口。",
+    "order": 35.5,
+    "status": "published",
+    "updated": "2026-06-04",
+    "sourceType": "generated",
+    "navGroup": "03-玩出花样"
+  },
+  {
     "sourcePath": "docs/01-从这开始/04-自己造东西/01-总览.md",
     "slug": "/start/build",
     "pageType": "module-overview",
@@ -714,6 +728,20 @@
     "navGroup": "04-自己造东西"
   },
   {
+    "sourcePath": "docs/01-从这开始/04-自己造东西/09-把一整套 Agent 打包分享.md",
+    "slug": "/start/build/profile-distribution",
+    "pageType": "doc-page",
+    "module": "start",
+    "title": "📦 09-把一整套 Agent 打包分享",
+    "section": "profile-distribution",
+    "description": "用 Profile Distribution 把你的 Agent 打包成一个 Git 仓库，别人一条命令就能装上、用起来。",
+    "order": 48.5,
+    "status": "published",
+    "updated": "2026-06-04",
+    "sourceType": "generated",
+    "navGroup": "04-自己造东西"
+  },
+  {
     "sourcePath": "docs/03-国内落地/01-国内部署/01-总览.md",
     "slug": "/china/deploy",
     "pageType": "module-overview",
@@ -753,6 +781,62 @@
     "status": "published",
     "updated": "2026-04-28",
     "sourceType": "original",
+    "navGroup": "01-国内部署"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/01-国内部署/04-国外教程精选.md",
+    "slug": "/china/deploy/third-party-tutorials",
+    "pageType": "doc-page",
+    "module": "03-国内落地",
+    "title": "国外教程精选：社区怎么教 Hermes",
+    "section": "01-国内部署",
+    "description": "精选国外社区的高质量 Hermes Agent 教程和深度文章，帮助中文用户找到适合自己的学习路径。",
+    "order": 4,
+    "status": "published",
+    "updated": "2026-06-04",
+    "sourceType": "generated",
+    "navGroup": "01-国内部署"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/01-国内部署/05-别人正在用 Hermes 做什么.md",
+    "slug": "/china/deploy/community-use-cases",
+    "pageType": "doc-page",
+    "module": "03-国内落地",
+    "title": "别人正在用 Hermes 做什么：社区场景库",
+    "section": "01-国内部署",
+    "description": "收集整理国内外社区中真实用户正在用 Hermes Agent 做的事情，帮你找到适合自己的使用场景。",
+    "order": 5,
+    "status": "published",
+    "updated": "2026-06-04",
+    "sourceType": "generated",
+    "navGroup": "01-国内部署"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/01-国内部署/06-Hermes 适合谁：和其他 Agent 工具怎么选.md",
+    "slug": "/china/deploy/who-is-hermes-for",
+    "pageType": "doc-page",
+    "module": "03-国内落地",
+    "title": "Hermes 适合谁：和其他 Agent 工具怎么选",
+    "section": "01-国内部署",
+    "description": "基于第三方对比文章和社区讨论，帮你判断 Hermes 是否适合你的需求，以及与其他 Agent 工具的核心差异。",
+    "order": 6,
+    "status": "published",
+    "updated": "2026-06-04",
+    "sourceType": "generated",
+    "navGroup": "01-国内部署"
+  },
+  {
+    "sourcePath": "docs/03-国内落地/01-国内部署/07-国外自托管生态参考.md",
+    "slug": "/china/deploy/self-hosting-ecosystem",
+    "pageType": "doc-page",
+    "module": "03-国内落地",
+    "title": "国外自托管生态参考：Umbrel、TrueNAS、AUR、Docker",
+    "section": "01-国内部署",
+    "description": "整理国外社区的自托管部署方案（Umbrel、TrueNAS、AUR、Docker Hub），作为国内用户部署的参考。",
+    "order": 7,
+    "status": "published",
+    "updated": "2026-06-04",
+    "sourceType": "generated",
     "navGroup": "01-国内部署"
   },
   {

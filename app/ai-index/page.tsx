@@ -17,12 +17,16 @@ const xTwitterPath = '/docs/solutions/x-twitter'
 
 const primaryLinks = [
   ['从这开始', '/docs/start', '第一次接触 Hermes Agent，先完成环境、安装、模型配置和第一次互动。'],
+  ['Desktop App', '/docs/start/personalize/desktop-app', '不想长期使用终端时，了解 Desktop App 与 CLI/TUI/Gateway 的关系和启动方式。'],
+  ['Profile Distribution', '/docs/start/build/profile-distribution', '把一整套 Agent 打包成可安装的 Git 仓库，方便团队或社区复用。'],
   ['现成方案', '/docs/solutions', '已有明确任务时，从内容创作、办公效率、知识整理和应用开发方案进入。'],
   ['X/Twitter 内容与互动助手', xTwitterPath, '通过 Hermes Tweet 第三方插件接入 X/Twitter 搜索、阅读、发推和回复；Hermes Tweet 第三方插件，不是 Hermes 官方内置功能。'],
   ['多平台内容改写助手', '/docs/solutions/multi-platform-rewrite', '把一篇现成内容改写成适配小红书、公众号、X/Twitter 等不同平台风格的可发布稿件。'],
   ['行动计划助手', '/docs/solutions/action-plan', '把项目目标、会议结论或头脑风暴的结果，直接拆成有负责人、截止时间和优先级的可执行行动计划表，适合发到飞书/企微/钉钉群。'],
   ['邮件群消息摘要助手', '/docs/solutions/message-summary', '把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要，适合快速掌握要点和待办。'],
   ['国内落地', '/docs/china', '关注国内服务器、国内模型、消息入口、网络环境与稳定使用路径。'],
+  ['国外教程精选', '/docs/china/deploy/third-party-tutorials', '第三方教程和视频的中文精选入口，标注适合谁、可借鉴点与时效风险。'],
+  ['社区场景库', '/docs/china/deploy/community-use-cases', '整理别人正在用 Hermes 做什么，覆盖自动简报、代码备份、研究助理、开发工作流等场景。'],
   ['从 OpenClaw 过来', '/docs/openclaw', '理解 OpenClaw 与 Hermes 的关系、共存方式、迁移步骤和检查清单。'],
   ['遇到问题', '/docs/issues', '按安装、模型、CLI、Gateway、Tools、Profiles、Docker、SSH 等症状排查。'],
   ['Reference', '/docs/reference', '查询命令、配置、环境变量、Profiles、Tools、Skills、MCP、Cron 和 Gateway。'],

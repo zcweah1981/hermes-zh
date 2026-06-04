@@ -224,7 +224,9 @@ export async function loadContentPages(contentRoot = DEFAULT_CONTENT_REPO): Prom
     const rawTitle = readString(data.title) ?? route?.title ?? firstMarkdownHeading(markdownBody) ?? titleFromPath(file)
     const title = stripTitlePrefix(rawTitle)
     const description = stripMarkdown(readString(data.description) ?? route?.description ?? firstMarkdownSummary(markdownBody) ?? '')
-    const slug = readString(data.slug) ?? route?.slug
+    // Route map is the canonical URL source. Frontmatter slug is accepted only as a
+    // fallback for newly added pages before route-map governance catches up.
+    const slug = route?.slug ?? readString(data.slug)
 
     if (!slug) {
       continue
