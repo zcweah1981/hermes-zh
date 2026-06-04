@@ -76,6 +76,11 @@ test('generated docs sidebar root groups match the real content repository top-l
   assert.ok(start!.children.some((node) => node.label === '02-开始上手'))
   assert.ok(start!.children.some((node) => node.label === '03-玩出花样'))
   assert.ok(start!.children.some((node) => node.label === '04-自己造东西'))
+  assert.ok(start!.children.some((node) => node.label === '05-实战应用'))
+
+  const practical = start!.children.find((node) => node.label === '05-实战应用')
+  assert.equal(practical?.pages.length, 11)
+  assert.ok(practical?.pages.some((page) => page.slug === '/start/practical/home-assistant'))
 
   const build = start!.children.find((node) => node.label === '04-自己造东西')
   assert.ok(build?.children.some((node) => node.label === '03-接入外部记忆系统'))
@@ -145,6 +150,7 @@ test('buildDocSidebarTree orders nested build docs by real content path prefixes
       '06-把 Hermes 暴露成后端服务.md',
       '07-让 Hermes 自己自动跑.md',
       '08-放进编辑器里用.md',
+      '09-把一整套 Agent 打包分享.md',
     ],
   )
 })
@@ -166,6 +172,7 @@ test('getOrderedSidebarItems mixes pages and child folders by source path with o
       '06-把 Hermes 暴露成后端服务',
       '07-让 Hermes 自己自动跑',
       '08-放进编辑器里用',
+      '09-把一整套 Agent 打包分享',
     ],
   )
 

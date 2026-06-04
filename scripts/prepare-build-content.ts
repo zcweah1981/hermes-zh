@@ -5,6 +5,7 @@ import { buildRouteMap } from '../lib/content/resolvers/build-route-map'
 import { resolveContentRoot } from '../lib/content/sync/resolve-content-root'
 import { loadContentPages, loadPackEntries } from '../lib/content/sync/source-loader'
 import type { SitePack, SitePage } from '../lib/content/types'
+import { syncReferencedContentAssets } from './lib/content-assets'
 import { writeContentBuildMeta } from './lib/content-build-meta'
 
 const generatedDir = path.join(process.cwd(), 'content-cache', 'generated')
@@ -82,6 +83,7 @@ async function buildGeneratedContent(contentRoot: string) {
   const publishedPacks = packs.filter((pack) => pack.status === 'published')
   const routes = buildRouteMap(publishedPages)
   const search = buildSearchIndex(publishedPages, publishedPacks)
+  const syncedAssets = await syncReferencedContentAssets(contentRoot, publishedPages)
 
   await writeJson('pages-manifest.json', publishedPages)
   await writeJson('routes-manifest.json', routes)
@@ -95,7 +97,7 @@ async function buildGeneratedContent(contentRoot: string) {
   })
 
   console.log(
-    `[content-build] refreshed manifests from ${contentRoot} pages=${publishedPages.length} routes=${routes.length} packs=${publishedPacks.length} search=${search.length}`,
+    `[content-build] refreshed manifests from ${contentRoot} pages=${publishedPages.length} routes=${routes.length} packs=${publishedPacks.length} search=${search.length} assets=${syncedAssets.copied}`,
   )
 }
 

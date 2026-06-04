@@ -5,6 +5,7 @@ import { buildRouteMap } from '../lib/content/resolvers/build-route-map'
 import { loadContentPages, loadPackEntries } from '../lib/content/sync/source-loader'
 import { resolveContentRoot } from '../lib/content/sync/resolve-content-root'
 import type { SitePack, SitePage } from '../lib/content/types'
+import { syncReferencedContentAssets } from './lib/content-assets'
 import { writeContentBuildMeta } from './lib/content-build-meta'
 
 const generatedDir = path.join(process.cwd(), 'content-cache', 'generated')
@@ -54,6 +55,7 @@ async function main() {
   const publishedPacks = packs.filter((pack) => pack.status === 'published')
   const routes = buildRouteMap(publishedPages)
   const search = buildSearchIndex(publishedPages, publishedPacks)
+  const syncedAssets = await syncReferencedContentAssets(repoPath, publishedPages)
 
   await writeJson('pages-manifest.json', publishedPages)
   await writeJson('routes-manifest.json', routes)
@@ -66,7 +68,9 @@ async function main() {
     search: search.length,
   })
 
-  console.log(`built pages=${publishedPages.length} routes=${routes.length} packs=${publishedPacks.length} search=${search.length}`)
+  console.log(
+    `built pages=${publishedPages.length} routes=${routes.length} packs=${publishedPacks.length} search=${search.length} assets=${syncedAssets.copied}`,
+  )
 }
 
 main().catch((error) => {
