@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-04T17:39:08.311Z",
-  "sourceRoot": "/opt/projects/awesome-hermes-agent-zh",
+  "generatedAt": "2026-06-04T17:42:40.389Z",
+  "sourceRoot": "/home/runner/work/hermes-zh/hermes-zh/.content-cache/awesome-hermes-agent-zh-main",
   "sourceBranch": "main",
-  "sourceSha": "3b85c607b3247e7b287eb88aaec00fe109d84a5d",
-  "routeMapPath": "/opt/projects/awesome-hermes-agent-zh/governance/site-route-map.yaml",
+  "sourceSha": "24e12bd29d23e6687ab5b0bacbdea0ae3f792fab",
+  "routeMapPath": "/home/runner/work/hermes-zh/hermes-zh/.content-cache/awesome-hermes-agent-zh-main/governance/site-route-map.yaml",
   "counts": {
     "pages": 108,
     "routes": 108,
