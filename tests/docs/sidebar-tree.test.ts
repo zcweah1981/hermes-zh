@@ -79,7 +79,7 @@ test('generated docs sidebar root groups match the real content repository top-l
   assert.ok(start!.children.some((node) => node.label === '05-实战应用'))
 
   const practical = start!.children.find((node) => node.label === '05-实战应用')
-  assert.equal(practical?.pages.length, 18)
+  assert.equal(practical?.pages.length, 23)
   assert.ok(practical?.pages.some((page) => page.slug === '/start/practical/home-assistant'))
   for (const slug of [
     '/start/practical/discord-entry',

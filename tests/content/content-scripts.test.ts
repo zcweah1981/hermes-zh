@@ -31,13 +31,18 @@ const approvedPracticalSlugs = [
   '/start/practical/discord-entry',
   '/start/practical/mcp-universal-plug',
   '/start/practical/ollama-local-model',
-  '/start/practical/github-pr-reviewer',
+  '/start/practical/hermes-ollama-fastest',
   '/start/practical/custom-skills',
+  '/start/practical/github-pr-reviewer',
+  '/start/practical/hermes-advanced-production',
+  '/start/practical/hermes-control-room',
+  '/start/practical/60day-analyst-lessons',
+  '/start/practical/hermes-deep-dive-build-your-own',
   '/start/practical/security-hardening',
   '/start/practical/voice-mode',
 ]
 
-const expectedPublishedPages = 115
+const expectedPublishedPages = 120
 const expectedPublishedPacks = 11
 const expectedSearchEntries = expectedPublishedPages + expectedPublishedPacks
 

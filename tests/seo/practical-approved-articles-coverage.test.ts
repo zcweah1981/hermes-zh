@@ -28,14 +28,19 @@ const approvedPracticalSlugs = [
   '/start/practical/discord-entry',
   '/start/practical/mcp-universal-plug',
   '/start/practical/ollama-local-model',
-  '/start/practical/github-pr-reviewer',
+  '/start/practical/hermes-ollama-fastest',
   '/start/practical/custom-skills',
+  '/start/practical/github-pr-reviewer',
+  '/start/practical/hermes-advanced-production',
+  '/start/practical/hermes-control-room',
+  '/start/practical/60day-analyst-lessons',
+  '/start/practical/hermes-deep-dive-build-your-own',
   '/start/practical/security-hardening',
   '/start/practical/voice-mode',
 ]
 
 describe('approved practical articles SEO/GEO coverage', () => {
-  it('keeps all 7 newly approved practical docs in generated pages, routes, and search manifests', () => {
+  it('keeps all 12 approved practical docs in generated pages, routes, and search manifests', () => {
     const pages = readJson<GeneratedPage[]>('content-cache/generated/pages-manifest.json')
     const routes = readJson<GeneratedRoute[]>('content-cache/generated/routes-manifest.json')
     const searchIndex = readJson<SearchEntry[]>('content-cache/generated/search-index.json')
@@ -56,7 +61,7 @@ describe('approved practical articles SEO/GEO coverage', () => {
     }
   })
 
-  it('exposes the 7 new practical docs through llms.txt and ai-index without leaking internal proof artifacts', () => {
+  it('exposes the 12 approved practical docs through llms.txt and ai-index without leaking internal proof artifacts', () => {
     const llmsRoute = read('app/llms.txt/route.ts')
     const aiIndexPage = read('app/ai-index/page.tsx')
     const publicSurface = `${llmsRoute}\n${aiIndexPage}`
