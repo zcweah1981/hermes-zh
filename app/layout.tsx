@@ -9,7 +9,8 @@ import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 import './globals.css'
 
-const CLOUDFLARE_WEB_ANALYTICS_TOKEN = 'b653102bed904fb289cf6e3dd1f8baaa'
+const CLOUDFLARE_WEB_ANALYTICS_TOKEN='b653102bed904fb289cf6e3dd1f8baaa'
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-N2Q0TXQDRZ'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -58,6 +59,18 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="zh-CN">
       <body>
         <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
+        <Script id="ga4-gtag-js" src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
+        <Script
+          id="ga4-gtag-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+window.dataLayer = window.dataLayer || [];
+function gtag() { window.dataLayer.push(arguments); }
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`,
+          }}
+        />
         <Script
           id="hermes-analytics-events"
           strategy="lazyOnload"
