@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-05T00:20:15.936Z",
+  "generatedAt": "2026-06-05T02:04:29.463Z",
   "sourceRoot": "/opt/projects/awesome-hermes-agent-zh",
   "sourceBranch": "main",
-  "sourceSha": "24e12bd29d23e6687ab5b0bacbdea0ae3f792fab",
+  "sourceSha": "0c0d656c94234110dcbcb26cd3a466a8cf0ecfc0",
   "routeMapPath": "/opt/projects/awesome-hermes-agent-zh/governance/site-route-map.yaml",
   "counts": {
     "pages": 108,
