@@ -1,5 +1,5 @@
 {
-  "manifestHash": "9bcfa4431fc52d380e6a117a2bf02afbad7567ac2eccf288923f1fb3c3168dab",
+  "manifestHash": "fb75df2dca1ed37568d4899a68ad750a9450100d431ffbdd5ec7ffd3b25b3371",
   "urlFingerprints": {
     "https://hermes-zh.com/": "271e065054d7cae862e1a4837a3b74cd7e7f36ea4f911e7ac91f0197d7fd6737",
     "https://hermes-zh.com/ai-index": "6decbd2f359ec3989cf99f9f4b9aaa9844a148e3528ebe95a979bced8dc9cace",
@@ -99,6 +99,24 @@
     "https://hermes-zh.com/docs/start/personalize/skins-and-themes": "8354f214981987914faa1feb2674ed82ad77a806981401300cff7375673c2ceb",
     "https://hermes-zh.com/docs/start/personalize/soul": "9800e3d06cd1f204752d12ff78922282d2ec7706dbeace646697bd4b7d6aaeee",
     "https://hermes-zh.com/docs/start/personalize/toolsets-and-workflow": "bf0cfe4d83bfc20ba65e5c486e9f7c2bb385dd273ab1dd7555f8eb335435b6e3",
+    "https://hermes-zh.com/docs/start/practical": "12c4501991649458c6a9d4eeacef376f810d0e98df28cb621f44e95dd15225ef",
+    "https://hermes-zh.com/docs/start/practical/custom-skills": "a6af7f4f9f9bf4c36fe33efa52da77969703347a8b4a236f7410bf4c28b0bd59",
+    "https://hermes-zh.com/docs/start/practical/daily-briefing": "f135b422d9d1516debb24e9142aef73e50b2bb94f6d66162c8c4b1ced2a24c08",
+    "https://hermes-zh.com/docs/start/practical/discord-entry": "1e8646b8b16c354b0829a977a0dd2228357462bbaeeb335b747f69e143ffdb48",
+    "https://hermes-zh.com/docs/start/practical/github-backup-cron": "07ba7a34bf12f15d0b882a9e91895490008b576c993e73c44b5e15f75208170c",
+    "https://hermes-zh.com/docs/start/practical/github-pr-reviewer": "2493b67f1d36a5cfa871f53a165ae0b23de173cddc86f2137f15e5e82bd08b2d",
+    "https://hermes-zh.com/docs/start/practical/home-assistant": "b2ffe51a5a0e341bec9762ba3769b06e680d22baf96d10a89bbc4143265e87e3",
+    "https://hermes-zh.com/docs/start/practical/kanban-multi-agent": "8f879a7c95826326d9e588ebb74c529f71c2f1b4b45ad2ed21eadb9deb84a085",
+    "https://hermes-zh.com/docs/start/practical/mcp-universal-plug": "67ecefa4da0c2f981b914cddff5e061d912150bbfe0f60bc6d9254b51d7a06d0",
+    "https://hermes-zh.com/docs/start/practical/obsidian-second-brain": "f2e9f9a39ff1d80f1741f59cb07b1800ae3bc08fd650b13552c10a787d40c3c1",
+    "https://hermes-zh.com/docs/start/practical/ollama-local-model": "b0bb769738241e2bdbf398be38354db46d419e21320940ef2fcb9a11e7be24f8",
+    "https://hermes-zh.com/docs/start/practical/security-hardening": "5cfccca3c462f0c5cc4205566caf0d537afa761641b9d6a92d67dce43c8f111b",
+    "https://hermes-zh.com/docs/start/practical/soul-persona": "453a8eb1c2319fdba0ad91aeb4f027d0d7ec72adc6ef6f2a1ff134dbc3e9f7d9",
+    "https://hermes-zh.com/docs/start/practical/telegram-entry": "c6046dbcf2f29c487af38c8d42798da3769cdb989a0d2d7848e5de46d7535bd8",
+    "https://hermes-zh.com/docs/start/practical/three-tier-model-routing": "aef1794d8f842c4b52886c19435e968000893558775e3a966352f8324195425b",
+    "https://hermes-zh.com/docs/start/practical/token-cost-optimization": "b57ab331b505a4f383b06e366d29ead075a3f7d1678fc2b2fb3d9b05838b3401",
+    "https://hermes-zh.com/docs/start/practical/voice-mode": "2b802b9927f0ca42cf7b7a94f4096b7efb41621bf3f90de5878df74b2060ecb5",
+    "https://hermes-zh.com/docs/start/practical/vps-self-hosting": "b8f74c896b7fee63563f2cfe0450d05e625ae37f12f77ef171e0de483b6b03c7",
     "https://hermes-zh.com/llms.txt": "379271c0deb5f3d0a4880b3c6d9ee342d915fd1ae6626a172df25af4272a5a42",
     "https://hermes-zh.com/packs": "6a39b7d95c41ee666bb1dbad0ad75a5098b966a9002edb66374665fd83e5365f",
     "https://hermes-zh.com/packs/action-plan-lab": "4910e6bed9ab3bc4f6aa76cdac2d4c5612e6f206bad352490eab8396e6ea0fbb",
@@ -115,5 +133,5 @@
     "https://hermes-zh.com/robots.txt": "d92ee24c593daa15cc2f488efefd44a2a103c4f54ff2bb642d1ba4a5e4ad34ba",
     "https://hermes-zh.com/sitemap.xml": "1e94f3b5dbf7e6db670c8117599bc4b746673f2d738c6d013cd3668332a0da78"
   },
-  "submittedAt": "2026-06-04T01:30:07.672Z"
+  "submittedAt": "2026-06-05T08:30:06.159Z"
 }

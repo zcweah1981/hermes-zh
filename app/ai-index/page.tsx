@@ -15,6 +15,16 @@ export const metadata: Metadata = buildSeoMetadata({
 
 const xTwitterPath = '/docs/solutions/x-twitter'
 
+const approvedPracticalLinks = [
+  ['Discord 接入', '/docs/start/practical/discord-entry', '把 Hermes 接入 Discord 服务器，让团队直接在频道里调用 AI 助手。'],
+  ['MCP 接入指南', '/docs/start/practical/mcp-universal-plug', '理解 MCP 在 Hermes 中的定位，把外部工具和数据源接成可调用能力。'],
+  ['Ollama 本地模型', '/docs/start/practical/ollama-local-model', '用本地模型降低推理成本，并保留隐私敏感任务的本机执行路径。'],
+  ['GitHub PR 自动审查', '/docs/start/practical/github-pr-reviewer', '给仓库配置不睡觉的 Code Reviewer，自动读取 PR 并输出审查意见。'],
+  ['自定义 Skills', '/docs/start/practical/custom-skills', '把团队的独门工作流沉淀成 Hermes 可复用的技能说明。'],
+  ['安全加固', '/docs/start/practical/security-hardening', '给 AI Agent 划清权限、凭据、网络与输出边界，降低误操作风险。'],
+  ['语音模式', '/docs/start/practical/voice-mode', '让 Hermes 支持语音输入与语音回答，适合移动或低打字场景。'],
+]
+
 const primaryLinks = [
   ['从这开始', '/docs/start', '第一次接触 Hermes Agent，先完成环境、安装、模型配置和第一次互动。'],
   ['Desktop App', '/docs/start/personalize/desktop-app', '不想长期使用终端时，了解 Desktop App 与 CLI/TUI/Gateway 的关系和启动方式。'],
@@ -87,6 +97,21 @@ export default function AiIndexPage() {
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {primaryLinks.map(([title, href, description]) => (
+            <Link key={href} href={href} className="site-section-card block p-6 transition hover:-translate-y-1 hover:border-border-strong">
+              <h3 className="text-xl font-bold">{title}</h3>
+              <p className="mt-3 text-sm leading-7 text-text-secondary">{description}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-8">
+        <div className="mb-6">
+          <p className="site-eyebrow">Practical Entrypoints</p>
+          <h2 className="mt-3 text-3xl font-black">新增实战应用入口</h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {approvedPracticalLinks.map(([title, href, description]) => (
             <Link key={href} href={href} className="site-section-card block p-6 transition hover:-translate-y-1 hover:border-border-strong">
               <h3 className="text-xl font-bold">{title}</h3>
               <p className="mt-3 text-sm leading-7 text-text-secondary">{description}</p>

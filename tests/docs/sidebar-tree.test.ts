@@ -79,8 +79,19 @@ test('generated docs sidebar root groups match the real content repository top-l
   assert.ok(start!.children.some((node) => node.label === '05-实战应用'))
 
   const practical = start!.children.find((node) => node.label === '05-实战应用')
-  assert.equal(practical?.pages.length, 11)
+  assert.equal(practical?.pages.length, 18)
   assert.ok(practical?.pages.some((page) => page.slug === '/start/practical/home-assistant'))
+  for (const slug of [
+    '/start/practical/discord-entry',
+    '/start/practical/mcp-universal-plug',
+    '/start/practical/ollama-local-model',
+    '/start/practical/github-pr-reviewer',
+    '/start/practical/custom-skills',
+    '/start/practical/security-hardening',
+    '/start/practical/voice-mode',
+  ]) {
+    assert.ok(practical?.pages.some((page) => page.slug === slug), `practical sidebar missing ${slug}`)
+  }
 
   const build = start!.children.find((node) => node.label === '04-自己造东西')
   assert.ok(build?.children.some((node) => node.label === '03-接入外部记忆系统'))
