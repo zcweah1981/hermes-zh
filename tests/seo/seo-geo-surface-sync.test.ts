@@ -59,4 +59,14 @@ describe('SEO/GEO discovery surface sync', () => {
     assert.doesNotMatch(llmsRoute + aiIndexPage, /const approvedPracticalLinks|const primaryLinks/)
     assert.doesNotMatch(llmsRoute + aiIndexPage, /proof|dispatch|worker|prompt|BLOCKED/i)
   })
+
+  it('keeps docs canonical and BreadcrumbList aligned with the visible breadcrumb UI', () => {
+    const docsPage = read('app/docs/[...slug]/page.tsx')
+
+    assert.match(docsPage, /const parentDocPath = toDocPath\(page\.slug\)\.split\('\/'\)\.slice\(0, 3\)\.join\('\/'\) \|\| '\/docs'/)
+    assert.match(docsPage, /const parentName = page\.module \|\| '文档'/)
+    assert.match(docsPage, /const breadcrumbItems:[\s\S]*\{ name: parentName, url: parentDocPath \}/)
+    assert.match(docsPage, /const breadcrumbJsonLd = buildBreadcrumbJsonLd\(\[[\s\S]*\{ name: parentName, url: buildCanonicalUrl\(parentDocPath\) \}/)
+    assert.doesNotMatch(docsPage, /\{ name: page\.module, url: `\/docs#\$\{page\.module\}` \}/)
+  })
 })
