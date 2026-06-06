@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict'
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
 import { describe, it } from 'node:test'
 
 import {
@@ -57,10 +59,10 @@ describe('SEO platform secret contract and clients', () => {
   it('loads secrets only from the fixed env contract and GSC_SERVICE_ACCOUNT_JSON', () => {
     const env = [
       `GSC_SERVICE_ACCOUNT_JSON=${JSON.stringify(sampleServiceAccount)}`,
-      'GOOGLE_APPLICATION_CREDENTIALS=/tmp/must-not-be-read.json',
+      'GOOGLE_APPLICATION_CREDENTIALS=/tmp/masked-service-account.json',
       'BING_WEBMASTER_API_KEY=bing-secret-token',
       'BAIDU_PUSH_TOKEN=baidu-secret-token',
-      'BAIDU_PUSH_ENDPOINT=http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhermes-zh.com&token=baidu-secret-token',
+      'BAIDU_PUSH_ENDPOINT=http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhermes-zh.com&token=***',
       'INDEXNOW_KEY=0123456789abcdef0123456789abcdef',
       'INDEXNOW_KEY_LOCATION=https://hermes-zh.com/0123456789abcdef0123456789abcdef.txt',
     ].join('\n')
@@ -71,8 +73,32 @@ describe('SEO platform secret contract and clients', () => {
     assert.equal(secrets.gsc?.clientEmail, sampleServiceAccount.client_email)
     assert.equal(secrets.gsc?.privateKeyFingerprint.length, 12)
     assert.equal(secrets.bing?.apiKey, 'bing-secret-token')
-    assert.equal(secrets.baidu?.endpoint, 'http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhermes-zh.com&token=baidu-secret-token')
+    assert.equal(secrets.baidu?.endpoint, 'http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhermes-zh.com&token=***')
     assert.equal(secrets.indexNow?.key, '0123456789abcdef0123456789abcdef')
+  })
+
+  it('accepts GSC_SERVICE_ACCOUNT_JSON as an env file path without exposing secret payloads', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'hermes-zh-gsc-'))
+    const jsonPath = join(dir, 'service-account.json')
+    try {
+      writeFileSync(jsonPath, JSON.stringify(sampleServiceAccount), 'utf8')
+      const secrets = loadSeoPlatformSecrets({
+        envText: [
+          `GSC_SERVICE_ACCOUNT_JSON=${jsonPath}`,
+          'BING_WEBMASTER_API_KEY=bing-secret-token',
+          'BAIDU_PUSH_TOKEN=baidu-secret-token',
+          'INDEXNOW_KEY=0123456789abcdef0123456789abcdef',
+        ].join('\n'),
+      })
+      const report = redactSeoSecrets(JSON.stringify(secrets))
+
+      assert.equal(secrets.gsc?.clientEmail, sampleServiceAccount.client_email)
+      assert.equal(secrets.gsc?.privateKeyFingerprint.length, 12)
+      assert.doesNotMatch(report, /\[REDACTED PRIVATE KEY\]|seo-service-account@hermes-zh-test\.iam\.gserviceaccount\.com/)
+      assert.match(report, /sha256:/)
+    } finally {
+      rmSync(dir, { recursive: true, force: true })
+    }
   })
 
   it('redacts token, private_key and client_email values from logs/reports', () => {
@@ -114,7 +140,7 @@ describe('SEO platform secret contract and clients', () => {
           `GSC_SERVICE_ACCOUNT_JSON=${JSON.stringify(sampleServiceAccount)}`,
           'BING_WEBMASTER_API_KEY=bing-secret-token',
           'BAIDU_PUSH_TOKEN=baidu-secret-token',
-          'BAIDU_PUSH_ENDPOINT=http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhermes-zh.com&token=baidu-secret-token',
+          'BAIDU_PUSH_ENDPOINT=http://data.zz.baidu.com/urls?site=https%3A%2F%2Fhermes-zh.com&token=***',
           'INDEXNOW_KEY=0123456789abcdef0123456789abcdef',
           'INDEXNOW_KEY_LOCATION=https://hermes-zh.com/0123456789abcdef0123456789abcdef.txt',
         ].join('\n'),

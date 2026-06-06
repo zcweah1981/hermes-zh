@@ -87,8 +87,11 @@ export function maskSecret(value: string | undefined) {
 }
 
 function parseGscServiceAccount(raw: string | undefined) {
-  if (!raw) return undefined
-  const parsed = JSON.parse(raw) as Record<string, unknown>
+  const value = raw?.trim()
+  if (!value) return undefined
+
+  const jsonText = value.startsWith('{') ? value : readFileSync(value, 'utf8')
+  const parsed = JSON.parse(jsonText) as Record<string, unknown>
   const clientEmail = typeof parsed.client_email === 'string' ? parsed.client_email : ''
   const privateKey = typeof parsed.private_key === 'string' ? parsed.private_key : ''
   if (!clientEmail || !privateKey) {
@@ -138,7 +141,7 @@ export function redactSeoSecrets(input: string) {
     (_match, prefix: string, value: string, suffix: string) => `${prefix}${maskSecret(value)}${suffix}`,
   )
   output = output.replace(
-    /("?client_email"?\s*[:=]\s*")([^"\n@]+@[^"\n]+)(")/gi,
+    /("?(?:client_email|clientEmail)"?\s*[:=]\s*")([^"\n@]+@[^"\n]+)(")/gi,
     (_match, prefix: string, value: string, suffix: string) => `${prefix}${maskSecret(value)}${suffix}`,
   )
   output = output.replace(/-----BEGIN PRIVATE KEY-----[\s\S]*?-----END PRIVATE KEY-----/g, '<masked private_key>')

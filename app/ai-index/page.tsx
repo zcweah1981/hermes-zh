@@ -45,8 +45,10 @@ export default async function AiIndexPage() {
     [
       '/docs/start',
       '/docs/start/get-running',
+      '/docs/start/get-running/install-hermes',
       '/docs/start/getting-started',
       '/docs/start/personalize',
+      '/docs/start/personalize/desktop-app',
       '/docs/start/build',
       '/docs/start/practical',
       '/docs/start/practical/discord-entry',
@@ -69,7 +71,11 @@ export default async function AiIndexPage() {
       '/docs/china',
       '/docs/openclaw',
       '/docs/issues',
+      '/docs/issues/install-environment',
+      '/docs/issues/provider-endpoint',
+      '/docs/issues/config-profiles-environment',
       '/docs/reference',
+      '/docs/reference/cli-commands',
       '/packs',
     ].includes(entry.href),
   )

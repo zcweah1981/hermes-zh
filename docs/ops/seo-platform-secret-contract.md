@@ -14,7 +14,7 @@ Hermes 中文站 V3 的 SEO/GEO 自动化只从固定本地密钥文件读取运
 
 | 平台 | 变量 | 说明 |
 | --- | --- | --- |
-| Google Search Console | `GSC_SERVICE_ACCOUNT_JSON` | service account JSON，建议单行 JSON；`private_key` 使用 `\n` 表示换行。 |
+| Google Search Console | `GSC_SERVICE_ACCOUNT_JSON` | service account JSON 或本地 JSON 文件路径；inline JSON 建议单行，`private_key` 使用 `\n` 表示换行。 |
 | Google SDK 兼容 | `GOOGLE_APPLICATION_CREDENTIALS` | 可选文件路径，仅允许指向 `/root/.hermes/secrets/` 下的本地文件。 |
 | Bing Webmaster | `BING_WEBMASTER_API_KEY` | Bing Webmaster API key。 |
 | Baidu URL Push | `BAIDU_PUSH_TOKEN` | 百度 URL 推送 token。 |

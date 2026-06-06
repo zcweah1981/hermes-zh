@@ -101,4 +101,19 @@ describe('SEO/GEO R2 recovery contracts', () => {
     )
     assert.match(String((faq.mainEntity as Array<any>)[1].acceptedAnswer.text), /不需要|长连接|公网回调地址/)
   })
+
+  it('accepts R3 speed-answer marker variants from synced content without exposing markdown/script payloads', () => {
+    const markerVariants = [
+      '💡 速答：BotFather 默认开启隐私模式，Bot 在群里只能收到 @ 它的消息。',
+      '**速答**：Hermes 本地数据全部存在 `~/.hermes/` 目录下，零遥测，不上报任何使用数据到官方。',
+      '> 💡 **速答**：Hermes Agent 接入 Ollama 只需两步——装 Ollama 并拉模型 → 在 Hermes 用 `hermes model` 选 Ollama provider。',
+    ]
+
+    for (const body of markerVariants) {
+      const answerBlock = buildAnswerBlockJsonLd({ ...basePage, body })
+      assert.ok(answerBlock, `speed-answer variant must emit schema: ${body}`)
+      assert.equal(answerBlock['@type'], 'CreativeWork')
+      assert.doesNotMatch(String(answerBlock.abstract), /```|<script|\*\*速答\*\*|^速答/i)
+    }
+  })
 })

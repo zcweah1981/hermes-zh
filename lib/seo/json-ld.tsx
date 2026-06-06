@@ -83,15 +83,23 @@ function truncateText(value: string, maxLength = 220) {
   return value.length > maxLength ? `${value.slice(0, maxLength).trim()}…` : value
 }
 
-export function buildAnswerBlockJsonLd(page: SitePage): JsonLdObject | null {
-  const speedAnswer = page.body
+function extractSpeedAnswerLine(body: string) {
+  return body
     .split('\n')
     .map((line) => line.trim())
-    .find((line) => /^>\s*💡\s*\*\*速答\*\*[:：]/.test(line))
+    .find((line) => /^(?:>\s*)?(?:💡\s*)?\*\*速答\*\*[:：]|^(?:>\s*)?💡\s*速答[:：]/.test(line))
+}
+
+function stripSpeedAnswerMarker(line: string) {
+  return line.replace(/^(?:>\s*)?(?:💡\s*)?(?:\*\*速答\*\*|速答)[:：]\s*/, '')
+}
+
+export function buildAnswerBlockJsonLd(page: SitePage): JsonLdObject | null {
+  const speedAnswer = extractSpeedAnswerLine(page.body)
 
   if (!speedAnswer) return null
 
-  const answer = cleanInlineMarkdown(speedAnswer.replace(/^>\s*💡\s*\*\*速答\*\*[:：]\s*/, ''))
+  const answer = cleanInlineMarkdown(stripSpeedAnswerMarker(speedAnswer))
   if (!answer) return null
 
   const url = buildCanonicalUrl(toDocPath(page.slug))
