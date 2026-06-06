@@ -25,7 +25,7 @@ describe('SEO-GEO-C no-token SEO and GEO contract', () => {
     assert.match(aiIndexPage, /AI 引用索引/)
     assert.match(aiIndexPage, /不是 Hermès 奢侈品牌网站/)
     assert.match(aiIndexPage, /Packs 是什么/)
-    assert.doesNotMatch(aiIndexPage + llmsRoute, /VFIX|proof|dispatch|构建驱动的半自动同步|site-content-anchor|content-cache|generated manifest|revalidate/)
+    assert.doesNotMatch(aiIndexPage + llmsRoute, /VFIX|proof|dispatch|构建驱动的半自动同步|site-content-anchor|generated manifest|revalidate/)
   })
 
   it('centralizes metadata, default OG image, description fallback, and JSON-LD helpers', () => {

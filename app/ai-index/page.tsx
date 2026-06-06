@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { SiteJsonLd, buildBreadcrumbJsonLd, buildWebPageJsonLd } from '@/lib/seo/json-ld'
-import { buildSeoMetadata, getCorePageSeo } from '@/lib/seo/metadata'
+import { buildSeoMetadata, getCorePageSeo, getDocsSeoDescription } from '@/lib/seo/metadata'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
+import { loadPagesManifest } from '@/lib/content/loaders/pages'
+import { loadPacksManifest } from '@/lib/content/loaders/packs'
+import { toDocPath } from '@/lib/routing/docs-path'
 
 const seo = getCorePageSeo('/ai-index')
+const xTwitterPath = '/docs/solutions/x-twitter'
+const generatedDiscoveryExamples = 'X/Twitter 内容与互动助手、多平台内容改写助手、行动计划助手、邮件群消息摘要助手'
 
 export const metadata: Metadata = buildSeoMetadata({
   title: seo.title,
@@ -13,42 +18,62 @@ export const metadata: Metadata = buildSeoMetadata({
   pathname: '/ai-index',
 })
 
-const xTwitterPath = '/docs/solutions/x-twitter'
+function shortDescription(value: string) {
+  return value.length > 132 ? `${value.slice(0, 132).trim()}…` : value
+}
 
-const approvedPracticalLinks = [
-  ['Discord 接入', '/docs/start/practical/discord-entry', '把 Hermes 接入 Discord 服务器，让团队直接在频道里调用 AI 助手。'],
-  ['MCP 接入指南', '/docs/start/practical/mcp-universal-plug', '理解 MCP 在 Hermes 中的定位，把外部工具和数据源接成可调用能力。'],
-  ['Ollama 本地模型', '/docs/start/practical/ollama-local-model', '用本地模型降低推理成本，并保留隐私敏感任务的本机执行路径。'],
-  ['Hermes + Ollama 最快路径', '/docs/start/practical/hermes-ollama-fastest', '按最短路径跑通本地 Ollama 后端，适合只想快速验证本地推理闭环的人。'],
-  ['自定义 Skills', '/docs/start/practical/custom-skills', '把团队的独门工作流沉淀成 Hermes 可复用的技能说明。'],
-  ['GitHub PR 自动审查', '/docs/start/practical/github-pr-reviewer', '给仓库配置不睡觉的 Code Reviewer，自动读取 PR 并输出审查意见。'],
-  ['Hermes Agent 进阶实战', '/docs/start/practical/hermes-advanced-production', '把 Skills、MCP、Subagent 和生产纪律整理成长期运行的治理框架。'],
-  ['Hermes Agent 控制室', '/docs/start/practical/hermes-control-room', '从一个 Agent 演进到专员团队时，用登记册、任务总线和运行手册降低失控风险。'],
-  ['60 天分析师工作流', '/docs/start/practical/60day-analyst-lessons', '用真实 60 天工作流复盘 Provider、Tools/Skills、Memory 与反馈循环的架构教训。'],
-  ['Hermes Agent 深度拆解与自建指南', '/docs/start/practical/hermes-deep-dive-build-your-own', '理解 Agent Loop、系统指令、Tools Registry 与 API 模式切换，为二开做准备。'],
-  ['安全加固', '/docs/start/practical/security-hardening', '给 AI Agent 划清权限、凭据、网络与输出边界，降低误操作风险。'],
-  ['语音模式', '/docs/start/practical/voice-mode', '让 Hermes 支持语音输入与语音回答，适合移动或低打字场景。'],
-]
+export default async function AiIndexPage() {
+  const [pages, packs] = await Promise.all([loadPagesManifest(), loadPacksManifest()])
+  const publishedPages = pages
+    .filter((page) => page.status === 'published')
+    .map((page) => ({
+      title: page.title,
+      href: toDocPath(page.slug),
+      description: shortDescription(getDocsSeoDescription(page, toDocPath(page.slug))),
+      module: page.module,
+    }))
+  const publishedPacks = packs
+    .filter((pack) => pack.status === 'published')
+    .map((pack) => ({
+      title: `${pack.title} Pack`,
+      href: `/packs/${pack.id}`,
+      description: shortDescription(pack.summary ?? `${pack.title} 是面向「${pack.category}」场景的 Hermes Agent Pack。`),
+      module: 'Packs',
+    }))
+  const allEntries = [...publishedPages, ...publishedPacks]
+  const primaryEntries = allEntries.filter((entry) =>
+    [
+      '/docs/start',
+      '/docs/start/get-running',
+      '/docs/start/getting-started',
+      '/docs/start/personalize',
+      '/docs/start/build',
+      '/docs/start/practical',
+      '/docs/start/practical/discord-entry',
+      '/docs/start/practical/mcp-universal-plug',
+      '/docs/start/practical/ollama-local-model',
+      '/docs/start/practical/hermes-ollama-fastest',
+      '/docs/start/practical/custom-skills',
+      '/docs/start/practical/github-pr-reviewer',
+      '/docs/start/practical/hermes-advanced-production',
+      '/docs/start/practical/hermes-control-room',
+      '/docs/start/practical/60day-analyst-lessons',
+      '/docs/start/practical/hermes-deep-dive-build-your-own',
+      '/docs/start/practical/security-hardening',
+      '/docs/start/practical/voice-mode',
+      '/docs/solutions',
+      xTwitterPath,
+      '/docs/solutions/multi-platform-rewrite',
+      '/docs/solutions/action-plan',
+      '/docs/solutions/message-summary',
+      '/docs/china',
+      '/docs/openclaw',
+      '/docs/issues',
+      '/docs/reference',
+      '/packs',
+    ].includes(entry.href),
+  )
 
-const primaryLinks = [
-  ['从这开始', '/docs/start', '第一次接触 Hermes Agent，先完成环境、安装、模型配置和第一次互动。'],
-  ['Desktop App', '/docs/start/personalize/desktop-app', '不想长期使用终端时，了解 Desktop App 与 CLI/TUI/Gateway 的关系和启动方式。'],
-  ['Profile Distribution', '/docs/start/build/profile-distribution', '把一整套 Agent 打包成可安装的 Git 仓库，方便团队或社区复用。'],
-  ['现成方案', '/docs/solutions', '已有明确任务时，从内容创作、办公效率、知识整理和应用开发方案进入。'],
-  ['X/Twitter 内容与互动助手', xTwitterPath, '通过 Hermes Tweet 第三方插件接入 X/Twitter 搜索、阅读、发推和回复；Hermes Tweet 第三方插件，不是 Hermes 官方内置功能。'],
-  ['多平台内容改写助手', '/docs/solutions/multi-platform-rewrite', '把一篇现成内容改写成适配小红书、公众号、X/Twitter 等不同平台风格的可发布稿件。'],
-  ['行动计划助手', '/docs/solutions/action-plan', '把项目目标、会议结论或头脑风暴的结果，直接拆成有负责人、截止时间和优先级的可执行行动计划表，适合发到飞书/企微/钉钉群。'],
-  ['邮件群消息摘要助手', '/docs/solutions/message-summary', '把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要，适合快速掌握要点和待办。'],
-  ['国内落地', '/docs/china', '关注国内服务器、国内模型、消息入口、网络环境与稳定使用路径。'],
-  ['国外教程精选', '/docs/china/deploy/third-party-tutorials', '第三方教程和视频的中文精选入口，标注适合谁、可借鉴点与时效风险。'],
-  ['社区场景库', '/docs/china/deploy/community-use-cases', '整理别人正在用 Hermes 做什么，覆盖自动简报、代码备份、研究助理、开发工作流等场景。'],
-  ['从 OpenClaw 过来', '/docs/openclaw', '理解 OpenClaw 与 Hermes 的关系、共存方式、迁移步骤和检查清单。'],
-  ['遇到问题', '/docs/issues', '按安装、模型、CLI、Gateway、Tools、Profiles、Docker、SSH 等症状排查。'],
-  ['Reference', '/docs/reference', '查询命令、配置、环境变量、Profiles、Tools、Skills、MCP、Cron 和 Gateway。'],
-  ['Packs', '/packs', '按真实任务挑选方案包，查看适合谁用、安装说明、下载入口和关联文档。'],
-]
-
-export default function AiIndexPage() {
   return (
     <main className="mx-auto max-w-site-marketing px-6 py-16 text-text-primary">
       <SiteJsonLd
@@ -101,10 +126,11 @@ export default function AiIndexPage() {
           <h2 className="mt-3 text-3xl font-black">推荐引用入口</h2>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
-          {primaryLinks.map(([title, href, description]) => (
-            <Link key={href} href={href} className="site-section-card block p-6 transition hover:-translate-y-1 hover:border-border-strong">
-              <h3 className="text-xl font-bold">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-text-secondary">{description}</p>
+          {primaryEntries.map((entry) => (
+            <Link key={entry.href} href={entry.href} className="site-section-card block p-6 transition hover:-translate-y-1 hover:border-border-strong">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-primary">{entry.module}</p>
+              <h3 className="mt-3 text-xl font-bold">{entry.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-text-secondary">{entry.description}</p>
             </Link>
           ))}
         </div>
@@ -112,14 +138,18 @@ export default function AiIndexPage() {
 
       <section className="mt-8">
         <div className="mb-6">
-          <p className="site-eyebrow">Practical Entrypoints</p>
-          <h2 className="mt-3 text-3xl font-black">新增实战应用入口</h2>
+          <p className="site-eyebrow">Generated Discovery Surface</p>
+          <h2 className="mt-3 text-3xl font-black">已发布页面索引</h2>
+          <p className="mt-3 max-w-3xl leading-8 text-text-secondary">
+            下面列表从 content-cache/generated/pages-manifest.json 与 packs-manifest.json 生成，用于让搜索引擎和 AI 助手发现当前所有已发布页面，不维护第二套手写真相源；代表入口包括 {generatedDiscoveryExamples}。
+          </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
-          {approvedPracticalLinks.map(([title, href, description]) => (
-            <Link key={href} href={href} className="site-section-card block p-6 transition hover:-translate-y-1 hover:border-border-strong">
-              <h3 className="text-xl font-bold">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-text-secondary">{description}</p>
+          {allEntries.map((entry) => (
+            <Link key={entry.href} href={entry.href} className="site-section-card block p-6 transition hover:-translate-y-1 hover:border-border-strong">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-primary">{entry.module}</p>
+              <h3 className="mt-3 text-xl font-bold">{entry.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-text-secondary">{entry.description}</p>
             </Link>
           ))}
         </div>

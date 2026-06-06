@@ -3,6 +3,8 @@ import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, it } from 'node:test'
 
+import { GET as getLlmsText } from '../../app/llms.txt/route'
+
 const repoRoot = process.cwd()
 const read = (path: string) => readFileSync(join(repoRoot, path), 'utf8')
 const readJson = <T>(path: string): T => JSON.parse(read(path)) as T
@@ -61,8 +63,8 @@ describe('approved practical articles SEO/GEO coverage', () => {
     }
   })
 
-  it('exposes the 12 approved practical docs through llms.txt and ai-index without leaking internal proof artifacts', () => {
-    const llmsRoute = read('app/llms.txt/route.ts')
+  it('exposes the 12 approved practical docs through llms.txt and ai-index without leaking internal proof artifacts', async () => {
+    const llmsRoute = await (await getLlmsText()).text()
     const aiIndexPage = read('app/ai-index/page.tsx')
     const publicSurface = `${llmsRoute}\n${aiIndexPage}`
 

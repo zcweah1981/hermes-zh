@@ -68,6 +68,44 @@ export function buildCreativeWorkJsonLd(page: SitePage): JsonLdObject {
   }
 }
 
+function cleanInlineMarkdown(value: string) {
+  return value
+    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]+)]\([^)]*\)/g, '$1')
+    .replace(/`([^`]+)`/g, '$1')
+    .replace(/\*\*([^*]+)\*\*/g, '$1')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function truncateText(value: string, maxLength = 220) {
+  return value.length > maxLength ? `${value.slice(0, maxLength).trim()}…` : value
+}
+
+export function buildAnswerBlockJsonLd(page: SitePage): JsonLdObject | null {
+  const speedAnswer = page.body
+    .split('\n')
+    .map((line) => line.trim())
+    .find((line) => /^>\s*💡\s*\*\*速答\*\*[:：]/.test(line))
+
+  if (!speedAnswer) return null
+
+  const answer = cleanInlineMarkdown(speedAnswer.replace(/^>\s*💡\s*\*\*速答\*\*[:：]\s*/, ''))
+  if (!answer) return null
+
+  const url = buildCanonicalUrl(toDocPath(page.slug))
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: `${page.title}：速答`,
+    abstract: truncateText(answer, 360),
+    isPartOf: { '@type': 'CreativeWork', name: page.title, url },
+    url,
+    inLanguage: 'zh-CN',
+  }
+}
+
 export function buildDocBreadcrumbJsonLd(page: SitePage): JsonLdObject {
   return buildBreadcrumbJsonLd([
     { name: SITE_NAME, url: SITE_URL },
@@ -118,18 +156,13 @@ function cleanFaqHeading(value: string) {
   return value
     .replace(/^#+\s*/, '')
     .replace(/\s*\{#faq-[^}]+}\s*$/i, '')
+    .replace(/^\s*(?:❓\s*)?(?:常见问题|FAQ)\s*/i, '')
     .replace(/^\d+[｜|、.．\s-]+/, '')
     .trim()
 }
 
 function cleanFaqAnswer(value: string) {
-  return value
-    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
-    .replace(/\[([^\]]+)]\([^)]*\)/g, '$1')
-    .replace(/`([^`]+)`/g, '$1')
-    .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
+  return cleanInlineMarkdown(value)
 }
 
 function extractFaqEntitiesFromBody(body: string) {
@@ -138,9 +171,11 @@ function extractFaqEntitiesFromBody(body: string) {
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index].trim()
-    const isFaqHeading = /^#{2,4}\s+/.test(line) && /\{#faq-[^}]+}/i.test(line)
+    const isFaqHeading =
+      /^#{2,4}\s+/.test(line) &&
+      (/\{#faq-[^}]+}/i.test(line) || /[？?]/.test(line) || /^#{2,4}\s*(?:❓\s*)?(?:常见问题|FAQ|问题)\s*\d*[:：]?/.test(line))
 
-    if (!isFaqHeading) continue
+    if (!isFaqHeading || /^#{2,4}\s*(?:❓\s*)?(?:常见问题|FAQ)\s*$/i.test(line)) continue
 
     const question = cleanFaqHeading(line)
     if (!question) continue
@@ -175,10 +210,6 @@ function extractFaqEntitiesFromBody(body: string) {
 }
 
 export function buildFAQPageJsonLd(page: SitePage): JsonLdObject | null {
-  if (!/问题|FAQ|排查|常见/.test(`${page.title} ${page.module} ${page.section}`)) {
-    return null
-  }
-
   const mainEntity = extractFaqEntitiesFromBody(page.body)
   if (mainEntity.length === 0) {
     return null

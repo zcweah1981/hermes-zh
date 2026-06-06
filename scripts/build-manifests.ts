@@ -5,6 +5,8 @@ import { buildRouteMap } from '../lib/content/resolvers/build-route-map'
 import { loadContentPages, loadPackEntries } from '../lib/content/sync/source-loader'
 import { resolveContentRoot } from '../lib/content/sync/resolve-content-root'
 import type { SitePack, SitePage } from '../lib/content/types'
+import { toDocPath } from '../lib/routing/docs-path'
+import { getDocsSeoDescription } from '../lib/seo/metadata'
 import { syncReferencedContentAssets } from './lib/content-assets'
 import { writeContentBuildMeta } from './lib/content-build-meta'
 
@@ -18,14 +20,15 @@ function buildSearchIndex(pages: SitePage[], packs: SitePack[]) {
   return [
     ...pages.map((page) => {
       const headings = page.headings.map((heading) => heading.text)
+      const description = getDocsSeoDescription(page, toDocPath(page.slug))
       return {
         type: 'page',
         title: page.title,
         slug: page.slug,
-        description: page.description,
+        description,
         module: page.module,
         headings,
-        text: [page.title, page.description, page.module, page.section, page.navGroup, ...headings, page.body]
+        text: [page.title, description, page.module, page.section, page.navGroup, ...headings, page.body]
           .filter(Boolean)
           .join(' ')
           .slice(0, 12000),

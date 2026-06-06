@@ -21,25 +21,26 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: '*',
         allow: '/',
       },
-      // 2. AI & LLM Crawlers: Explicitly block training/scraping bots
-      // This achieves the same goal as Cloudflare's 'ai-train=no' via standard REP
+      // 2. AI & LLM Crawlers: Allow public docs/solution discovery for GEO,
+      // while keeping non-public runtime and noisy technical paths out of scope.
       {
         userAgent: [
-          'GPTBot',             // OpenAI
-          'ClaudeBot',          // Anthropic
-          'Google-Extended',    // Google Gemini/Vertex training
-          'Amazonbot',          // Amazon
-          'Applebot-Extended',  // Apple
-          'CCBot',              // Common Crawl
-          'Bytespider',         // ByteDance (Lark/TikTok)
+          'GPTBot', // OpenAI
+          'ClaudeBot', // Anthropic
+          'Google-Extended', // Google Gemini/Vertex training
+          'Amazonbot', // Amazon
+          'Applebot-Extended', // Apple
+          'CCBot', // Common Crawl
+          'Bytespider', // ByteDance (Lark/TikTok)
           'meta-externalagent', // Meta
-          'cohere-ai',          // Cohere
+          'cohere-ai', // Cohere
           'Diffbot',
           'Omgilibot',
           'PerplexityBot',
           'YouBot',
         ],
-        disallow: '/',
+        allow: ['/docs/', '/docs/solutions/', '/docs/start/practical/', '/ai-index', '/llms.txt', '/sitemap.xml'],
+        disallow: ['/api/', '/search', '/_next/', '/admin/', '/private/', '/drafts/', '/preview'],
       },
     ],
     host: 'hermes-zh.com',
