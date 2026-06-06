@@ -77,6 +77,16 @@ function buildWhatYouGet(pack: SitePack, relatedDoc?: SitePage) {
   return items
 }
 
+export const dynamicParams = false
+
+export async function generateStaticParams() {
+  const packs = await loadPacksManifest()
+
+  return packs
+    .filter((pack) => pack.status === 'published')
+    .map((pack) => ({ id: pack.id }))
+}
+
 async function getPack(id: string) {
   const packs = await loadPacksManifest()
   return packs.find((item) => item.id === id && item.status === 'published')

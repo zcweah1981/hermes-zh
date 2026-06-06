@@ -14,6 +14,18 @@ import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/breadcrumb'
 
+export const dynamicParams = false
+
+export async function generateStaticParams() {
+  const pages = await loadPagesManifest()
+
+  return pages
+    .filter((page) => page.status === 'published')
+    .map((page) => ({
+      slug: toDocPath(page.slug).replace(/^\/docs\/?/, '').split('/').filter(Boolean),
+    }))
+}
+
 async function getCurrentPage(slugParts?: string[]) {
   const slug = `/${(slugParts ?? []).join('/')}`.replace(/\/$/, '') || '/'
   const pages = await loadPagesManifest()
@@ -53,19 +65,21 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
   const docPath = toDocPath(page.slug)
   const corePageSeo = CORE_PAGE_SEO[docPath] ? getCorePageSeo(docPath) : null
   const effectiveDescription = corePageSeo?.aiSummary ?? getDocsSeoDescription(page, docPath)
+  const parentDocPath = toDocPath(page.slug).split('/').slice(0, 3).join('/') || '/docs'
+  const parentName = page.module || '文档'
   const faqJsonLd = buildFAQPageJsonLd(page)
   const answerBlockJsonLd = buildAnswerBlockJsonLd(page)
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
     { name: '首页', url: SITE_URL },
-    { name: page.module || '文档', url: buildCanonicalUrl(toDocPath(page.slug).split('/').slice(0, 3).join('/') || '/docs') },
-    { name: page.title, url: buildCanonicalUrl(toDocPath(page.slug)) },
+    { name: parentName, url: buildCanonicalUrl(parentDocPath) },
+    { name: page.title, url: buildCanonicalUrl(docPath) },
   ])
   const creativeWorkJsonLd = buildCreativeWorkJsonLd(page)
 
   const breadcrumbItems: BreadcrumbItem[] = [
     { name: '首页', url: '/' },
-    { name: page.module, url: `/docs#${page.module}` },
-    { name: page.title }
+    { name: parentName, url: parentDocPath },
+    { name: page.title },
   ]
 
   const jsonLdData = [
