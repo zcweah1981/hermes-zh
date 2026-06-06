@@ -3,6 +3,15 @@
   "framework": "nextjs",
   "headers": [
     {
+      "source": "/content-assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
       "source": "/fonts/(.*)",
       "headers": [
         {
@@ -75,7 +84,7 @@
       ]
     },
     {
-      "source": "/((?!api/|_next/data/|fonts/|assets/|og/|favicon.ico|favicon.png|apple-icon.png|hermes-logo.png|hermes-logo-source.jpg).*)",
+      "source": "/((?!api/|_next/data/|fonts/|assets/|og/|content-assets/|favicon.ico|favicon.png|apple-icon.png|hermes-logo.png|hermes-logo-source.jpg).*)",
       "headers": [
         {
           "key": "Cache-Control",

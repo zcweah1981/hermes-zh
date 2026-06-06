@@ -17,5 +17,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/((?!_next|api/revalidate).*)'],
+  matcher: [
+    '/((?!_next|api|fonts|content-assets|assets|og|favicon|logo|icon|apple-icon|.*\\.(?:png|jpg|jpeg|gif|webp|avif|svg|ico|css|js|mjs|map|txt|xml|json|woff|woff2|ttf|otf|eot|pdf|zip|gz|br)$).*)',
+  ],
 }

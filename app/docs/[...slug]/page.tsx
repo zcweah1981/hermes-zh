@@ -14,6 +14,18 @@ import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/breadcrumb'
 
+export const dynamicParams = false
+
+export async function generateStaticParams() {
+  const pages = await loadPagesManifest()
+
+  return pages
+    .filter((page) => page.status === 'published')
+    .map((page) => ({
+      slug: toDocPath(page.slug).replace(/^\/docs\/?/, '').split('/').filter(Boolean),
+    }))
+}
+
 async function getCurrentPage(slugParts?: string[]) {
   const slug = `/${(slugParts ?? []).join('/')}`.replace(/\/$/, '') || '/'
   const pages = await loadPagesManifest()
