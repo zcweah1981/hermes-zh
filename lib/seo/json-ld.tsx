@@ -25,6 +25,40 @@ export function buildOrganizationJsonLd(): JsonLdObject {
   }
 }
 
+export function buildSoftwareApplicationJsonLd(pack?: SitePack): JsonLdObject {
+  const isPack = Boolean(pack)
+  const pathname = pack ? `/packs/${pack.id}` : '/'
+  const description = pack
+    ? getPackSeoDescription(pack)
+    : 'Hermes Agent 中文站帮助中文用户学习、部署和使用 Hermes Agent，覆盖快速上手、现成方案、Packs、国内模型入口和问题排查。'
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: pack ? `${pack.title} Pack` : SITE_NAME,
+    description,
+    url: buildCanonicalUrl(pathname),
+    inLanguage: 'zh-CN',
+    applicationCategory: 'DeveloperApplication',
+    operatingSystem: 'Linux, macOS, Windows, Web',
+    softwareHelp: buildCanonicalUrl('/docs/docs-overview'),
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+    },
+    ...(isPack
+      ? {
+          isPartOf: { '@type': 'SoftwareApplication', name: SITE_NAME, url: SITE_URL },
+          downloadUrl: pack?.download ? `https://raw.githubusercontent.com/zcweah1981/awesome-hermes-agent-zh/main/${pack.download}` : undefined,
+        }
+      : {
+          sameAs: ['https://github.com/NousResearch/hermes-agent', 'https://github.com/zcweah1981/awesome-hermes-agent-zh'],
+        }),
+  }
+}
+
 export function buildWebSiteJsonLd(): JsonLdObject {
   return {
     '@context': 'https://schema.org',

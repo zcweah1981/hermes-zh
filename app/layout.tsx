@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
 
-import { SiteJsonLd, buildOrganizationJsonLd, buildWebSiteJsonLd } from '@/lib/seo/json-ld'
+import { SiteJsonLd, buildOrganizationJsonLd, buildSoftwareApplicationJsonLd, buildWebSiteJsonLd } from '@/lib/seo/json-ld'
 import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, DEFAULT_TITLE, absoluteOgImage } from '@/lib/seo/metadata'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
@@ -58,7 +58,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN">
       <body>
-        <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd()]} />
+        <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd(), buildSoftwareApplicationJsonLd()]} />
         <Script id="ga4-gtag-js" src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
         <Script
           id="ga4-gtag-config"

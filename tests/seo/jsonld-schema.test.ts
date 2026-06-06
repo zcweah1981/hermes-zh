@@ -6,6 +6,7 @@ import {
   buildBreadcrumbJsonLd,
   buildFAQPageJsonLd,
   buildOrganizationJsonLd,
+  buildSoftwareApplicationJsonLd,
   buildTechArticleJsonLd,
   buildWebSiteJsonLd,
 } from '../../lib/seo/json-ld'
@@ -33,6 +34,7 @@ describe('Schema.org JSON-LD builders', () => {
     const graph = [
       buildWebSiteJsonLd(),
       buildOrganizationJsonLd(),
+      buildSoftwareApplicationJsonLd(),
       buildBreadcrumbJsonLd([
         { name: 'Hermes Agent 中文站', url: 'https://hermes-zh.com' },
         { name: '首页', url: 'https://hermes-zh.com/' },
@@ -41,8 +43,13 @@ describe('Schema.org JSON-LD builders', () => {
 
     assert.deepEqual(
       graph.map((item) => item['@type']),
-      ['WebSite', 'Organization', 'BreadcrumbList'],
+      ['WebSite', 'Organization', 'SoftwareApplication', 'BreadcrumbList'],
     )
+
+    const app = graph[2]
+    assert.equal(app.applicationCategory, 'DeveloperApplication')
+    assert.equal(app.operatingSystem, 'Linux, macOS, Windows, Web')
+    assert.match(String(app.description), /AI Agent|中文/)
   })
 
   it('builds docs TechArticle with fallback description and breadcrumb separately', () => {

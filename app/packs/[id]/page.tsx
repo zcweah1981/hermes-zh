@@ -8,7 +8,7 @@ import { loadPagesManifest } from '@/lib/content/loaders/pages'
 import { loadPacksManifest } from '@/lib/content/loaders/packs'
 import type { SitePack, SitePage } from '@/lib/content/types'
 import { toDocPath } from '@/lib/routing/docs-path'
-import { SiteJsonLd, buildBreadcrumbJsonLd, buildSoftwareSourceCodeJsonLd } from '@/lib/seo/json-ld'
+import { SiteJsonLd, buildBreadcrumbJsonLd, buildSoftwareApplicationJsonLd, buildSoftwareSourceCodeJsonLd } from '@/lib/seo/json-ld'
 import { buildSeoMetadata, getPackSeoDescription } from '@/lib/seo/metadata'
 
 import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/breadcrumb'
@@ -127,6 +127,7 @@ export default async function PackDetailPage({ params }: { params: Promise<{ id:
     <div className="mx-auto flex max-w-site-marketing flex-col gap-8 px-6 py-16">
       <SiteJsonLd
         data={[
+          buildSoftwareApplicationJsonLd(pack),
           buildSoftwareSourceCodeJsonLd(pack),
           buildBreadcrumbJsonLd([
             { name: '首页', url: 'https://hermes-zh.com' },
