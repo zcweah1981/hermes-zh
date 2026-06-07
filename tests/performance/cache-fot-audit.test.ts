@@ -12,6 +12,7 @@ describe('Vercel FOT cache amplification guards', () => {
 
     assert.match(vercel, /"source":\s*"\/\(\(\?!api\/\|_next\/data\/\|fonts\/\|assets\/\|og\//)
     assert.match(vercel, /public, max-age=1800, s-maxage=14400, stale-while-revalidate=7200/)
+    assert.match(vercel, /"key":\s*"Vercel-CDN-Cache-Control"/)
     assert.match(vercel, /"source":\s*"\/api\/\(\.\*\)"/)
     assert.match(vercel, /private, no-cache, no-store, max-age=0, must-revalidate/)
     assert.match(vercel, /"source":\s*"\/_next\/static\/\(\.\*\)"/)
@@ -21,11 +22,12 @@ describe('Vercel FOT cache amplification guards', () => {
     assert.match(vercel, /public, max-age=31536000, immutable/)
   })
 
-  it('keeps search API responses edge-cacheable and bounded to reduce repeated origin reads and JSON payload amplification', () => {
+  it('keeps search API responses CDN-cacheable through Vercel-CDN-Cache-Control and bounds repeated origin reads', () => {
     const route = read('app/api/search/route.ts')
 
-    assert.match(route, /s-maxage=300/)
-    assert.match(route, /stale-while-revalidate=600/)
+    assert.match(route, /'Cache-Control': 'public, max-age=60'/)
+    assert.match(route, /'Vercel-CDN-Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600'/)
+    assert.doesNotMatch(route, /'Cache-Control': 'public, max-age=60, s-maxage=300/)
     assert.match(route, /let cachedIndex:/)
     assert.match(route, /slice\(0, 64\)/)
     assert.match(route, /q\.length < 2/)

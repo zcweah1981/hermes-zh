@@ -11,7 +11,8 @@ type SearchIndexItem = {
 }
 
 const SEARCH_CACHE_HEADERS = {
-  'Cache-Control': 'public, max-age=60, s-maxage=300, stale-while-revalidate=600',
+  'Cache-Control': 'public, max-age=60',
+  'Vercel-CDN-Cache-Control': 'public, s-maxage=300, stale-while-revalidate=600',
 }
 
 let cachedIndex: SearchIndexItem[] | null = null

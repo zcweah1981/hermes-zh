@@ -11,16 +11,26 @@ import { GET as llmsGET } from '../../app/llms.txt/route'
 const repoRoot = process.cwd()
 const read = (path: string) => readFileSync(join(repoRoot, path), 'utf8')
 
-const DISCOVERY_CACHE = 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800'
-const SEARCH_CACHE_RE = /public,\s*max-age=60,\s*s-maxage=300,\s*stale-while-revalidate=600/
+const LLMS_BROWSER_CACHE = 'public, max-age=3600'
+const LLMS_CDN_CACHE = 'public, s-maxage=86400, stale-while-revalidate=604800'
+const SEARCH_BROWSER_CACHE = 'public, max-age=60'
+const SEARCH_CDN_CACHE = 'public, s-maxage=300, stale-while-revalidate=600'
 
 type HeaderRule = {
   source: string
   headers: Array<{ key: string; value: string }>
 }
 
+function headerValue(rule: HeaderRule | undefined, key: string) {
+  return rule?.headers.find((header) => header.key.toLowerCase() === key.toLowerCase())?.value ?? ''
+}
+
 function cacheHeader(rule: HeaderRule | undefined) {
-  return rule?.headers.find((header) => header.key.toLowerCase() === 'cache-control')?.value ?? ''
+  return headerValue(rule, 'Cache-Control')
+}
+
+function cdnCacheHeader(rule: HeaderRule | undefined) {
+  return headerValue(rule, 'Vercel-CDN-Cache-Control') || headerValue(rule, 'CDN-Cache-Control')
 }
 
 describe('route redirect/cache response contracts', () => {
@@ -49,12 +59,14 @@ describe('route redirect/cache response contracts', () => {
     assert.equal(invalid.status, 400)
   })
 
-  it('declares /llms.txt as a dynamic route-handler response with the full discovery cache header', async () => {
+  it('declares /llms.txt as a dynamic route-handler response with browser cache separated from CDN cache', async () => {
     const source = read('app/llms.txt/route.ts')
     const response = await llmsGET()
 
     assert.match(source, /export const dynamic = ['"]force-dynamic['"]/, 'hosted Preview must run the route handler instead of a static prerender artifact')
-    assert.equal(response.headers.get('cache-control'), DISCOVERY_CACHE)
+    assert.equal(response.headers.get('cache-control'), LLMS_BROWSER_CACHE)
+    assert.equal(response.headers.get('vercel-cdn-cache-control'), LLMS_CDN_CACHE)
+    assert.doesNotMatch(response.headers.get('cache-control') ?? '', /s-maxage|stale-while-revalidate/)
   })
 
   it('declares Vercel platform headers after broader fallbacks so hosted Preview egress is not downgraded', () => {
@@ -73,15 +85,19 @@ describe('route redirect/cache response contracts', () => {
     assert.notEqual(searchIndex, -1, 'missing explicit /api/search platform header rule')
     assert.ok(llmsIndex > pageFallbackIndex, '/llms.txt must be declared after the broad page fallback')
     assert.ok(searchIndex > apiFallbackIndex, '/api/search must be declared after /api/(.*)')
-    assert.equal(llmsCache, DISCOVERY_CACHE)
-    assert.match(searchCache, /s-maxage=300/)
-    assert.match(searchCache, /stale-while-revalidate=600/)
-    assert.doesNotMatch(searchCache, /no-store|no-cache|private/)
+    assert.equal(llmsCache, LLMS_BROWSER_CACHE)
+    assert.equal(cdnCacheHeader(vercel.headers[llmsIndex]), LLMS_CDN_CACHE)
+    assert.doesNotMatch(llmsCache, /s-maxage|stale-while-revalidate/)
+    assert.equal(searchCache, SEARCH_BROWSER_CACHE)
+    assert.equal(cdnCacheHeader(vercel.headers[searchIndex]), SEARCH_CDN_CACHE)
+    assert.doesNotMatch(searchCache, /s-maxage|stale-while-revalidate|no-store|no-cache|private/)
   })
 
-  it('serves /api/search with the contracted edge cache header', async () => {
+  it('serves /api/search with browser cache separated from CDN cache', async () => {
     const response = await searchGET(new Request('https://hermes-zh.com/api/search?q=hermes'))
 
-    assert.match(response.headers.get('cache-control') ?? '', SEARCH_CACHE_RE)
+    assert.equal(response.headers.get('cache-control'), SEARCH_BROWSER_CACHE)
+    assert.equal(response.headers.get('vercel-cdn-cache-control'), SEARCH_CDN_CACHE)
+    assert.doesNotMatch(response.headers.get('cache-control') ?? '', /s-maxage|stale-while-revalidate/)
   })
 })
