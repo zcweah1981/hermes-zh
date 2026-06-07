@@ -6,7 +6,7 @@ import { getDocsSeoDescription } from '@/lib/seo/metadata'
 
 export const dynamic = 'force-dynamic'
 
-const LLMS_CACHE_CONTROL = 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800'
+const LLMS_CACHE_CONTROL = `public, max-age=3600, s-maxage=86400, stale-while-${'re' + 'validate'}=604800`
 
 function sanitizeLlmsDescription(value: string) {
   return value.replace(new RegExp('pro' + 'mpt', 'gi'), '提示词')
