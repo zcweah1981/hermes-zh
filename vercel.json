@@ -102,6 +102,15 @@
       ]
     },
     {
+      "source": "/api/search",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=60, s-maxage=300, stale-while-revalidate=600"
+        }
+      ]
+    },
+    {
       "source": "/sitemap.xml",
       "headers": [
         {
@@ -124,7 +133,7 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=14400, stale-while-revalidate=7200"
+          "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800"
         }
       ]
     },

@@ -4,6 +4,10 @@ import { toDocPath } from '@/lib/routing/docs-path'
 import { buildCanonicalUrl } from '@/lib/seo/canonical'
 import { getDocsSeoDescription } from '@/lib/seo/metadata'
 
+export const dynamic = 'force-dynamic'
+
+const LLMS_CACHE_CONTROL = 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800'
+
 function sanitizeLlmsDescription(value: string) {
   return value.replace(new RegExp('pro' + 'mpt', 'gi'), '提示词')
 }
@@ -99,7 +103,7 @@ GitHub 内容仓：https://github.com/zcweah1981/awesome-hermes-agent-zh
   return new Response(llmsText, {
     headers: {
       'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600',
+      'Cache-Control': LLMS_CACHE_CONTROL,
     },
   })
 }
