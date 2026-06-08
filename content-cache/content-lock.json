@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "contentRepo": "zcweah1981/awesome-hermes-agent-zh",
   "contentRef": "main",
-  "contentSha": "6415c40c65b9112fcaf92ed3f4d7fb791a191e5b",
-  "lockedAt": "2026-06-07T08:36:58.061Z",
-  "sourceWorkflowRun": "27087494328",
-  "sourceActor": "zcweah1981"
+  "contentSha": "711cd74fce56e0208407326c6a714fc02a0c5d59",
+  "lockedAt": "2026-06-08T12:28:48Z",
+  "sourceWorkflowRun": "local-dispatch-HERMES-ZH-P0-WEBP-CONTENT-SITE-DEPLOY-R1-20260608-202200",
+  "sourceActor": "long-coder-1"
 }
