@@ -4,9 +4,9 @@
 
 ## 1. 统一主 Logo
 
-- Canonical source：`/root/.hermes/image_cache/img_3c9f9a72b4fc.jpg`
-- 仓内审计副本：`public/hermes-logo-source.jpg`
-- 站点统一展示资产：`public/hermes-logo.png`
+- Canonical source：`/root/.hermes/image_cache/img_3c9f9a72b4fc.webp`
+- 仓内审计副本：`public/hermes-logo-source.webp`
+- 站点统一展示资产：`public/hermes-logo.webp`
 - Favicon / App Icon：`app/icon.png`
 - Apple Touch Icon：`app/apple-icon.png`
 
@@ -31,20 +31,20 @@
 
 | 使用位置 | 文件 | 尺寸/比例 | 规范 |
 |---|---|---:|---|
-| Canonical source | `/root/.hermes/image_cache/img_3c9f9a72b4fc.jpg` | 795×800 JPG | 唯一主视觉来源，保留原图，不直接改写 |
-| 仓内 source 副本 | `public/hermes-logo-source.jpg` | 795×800 JPG | 用于审计与后续再生成，不作为组件默认引用 |
-| README 展示 | `public/hermes-logo.png` | 512×512 PNG | 建议显示宽度 96–128px，居中，alt 固定为 `Hermes Agent 中文站 Logo` |
-| Header Logo | `public/hermes-logo.png` | 512×512 PNG | 组件显示 44×44px；保留圆角与轻边框，不拉伸变形 |
-| Footer Logo | `public/hermes-logo.png` | 512×512 PNG | 组件显示 40×40px；与 header 同源同视觉 |
+| Canonical source | `/root/.hermes/image_cache/img_3c9f9a72b4fc.webp` | 795×800 JPG | 唯一主视觉来源，保留原图，不直接改写 |
+| 仓内 source 副本 | `public/hermes-logo-source.webp` | 795×800 JPG | 用于审计与后续再生成，不作为组件默认引用 |
+| README 展示 | `public/hermes-logo.webp` | 512×512 PNG | 建议显示宽度 96–128px，居中，alt 固定为 `Hermes Agent 中文站 Logo` |
+| Header Logo | `public/hermes-logo.webp` | 512×512 PNG | 组件显示 44×44px；保留圆角与轻边框，不拉伸变形 |
+| Footer Logo | `public/hermes-logo.webp` | 512×512 PNG | 组件显示 40×40px；与 header 同源同视觉 |
 | Favicon / App Icon | `app/icon.png` | 512×512 PNG | Next.js App Router 自动暴露为 `/icon.png` |
 | Apple Touch Icon | `app/apple-icon.png` | 180×180 PNG | Next.js App Router 自动暴露为 `/apple-icon.png` |
 
 ## 4. 页面引用口径
 
-- Header：`components/layout/site-header.tsx` 使用 `/hermes-logo.png`。
-- Footer：`components/layout/site-footer.tsx` 使用 `/hermes-logo.png`。
-- Metadata：`app/layout.tsx` 使用 `/icon.png`、`/apple-icon.png`，并保留 `/hermes-logo.png` 作为 icon fallback。
-- README：顶部使用 `public/hermes-logo.png` 展示项目标识。
+- Header：`components/layout/site-header.tsx` 使用 `/hermes-logo.webp`。
+- Footer：`components/layout/site-footer.tsx` 使用 `/hermes-logo.webp`。
+- Metadata：`app/layout.tsx` 使用 `/icon.png`、`/apple-icon.png`，并保留 `/hermes-logo.webp` 作为 icon fallback。
+- README：顶部使用 `public/hermes-logo.webp` 展示项目标识。
 
 ## 5. 验收点
 

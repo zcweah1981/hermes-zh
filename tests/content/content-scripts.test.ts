@@ -97,12 +97,12 @@ test('build-manifests writes pages, routes, packs, and search manifests', async 
     assert.ok(routes.some((route) => route.slug === slug), `routes-manifest missing approved practical slug ${slug}`)
     assert.ok(search.some((entry) => entry.type === 'page' && entry.slug === slug), `search-index missing approved practical slug ${slug}`)
   }
-  const practicalPages = pages.filter((page) => page.slug.startsWith('/start/practical/') && /solution-practical-.*\.png/.test(page.body))
+  const practicalPages = pages.filter((page) => page.slug.startsWith('/start/practical/') && /solution-practical-.*\.webp/.test(page.body))
   assert.equal(practicalPages.length, 10)
 
   for (const page of practicalPages) {
-    const imageName = page.body.match(/solution-practical-[^)]+\.png/)?.[0]
-    assert.ok(imageName, `missing practical image reference in ${page.slug}`)
+    const imageName = page.body.match(/solution-practical-[^)]+\.webp/)?.[0]
+    assert.ok(imageName, `missing practical WebP image reference in ${page.slug}`)
     assert.equal(existsSync(path.join(projectRoot, 'public', 'content-assets', imageName)), true)
   }
 

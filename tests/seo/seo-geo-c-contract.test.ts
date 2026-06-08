@@ -33,7 +33,7 @@ describe('SEO-GEO-C no-token SEO and GEO contract', () => {
     const jsonLd = assertFile('lib/seo/json-ld.tsx')
 
     assert.match(metadata, /DEFAULT_OG_IMAGE/)
-    assert.match(metadata, /hermes-zh-og\.png/)
+    assert.match(metadata, /hermes-zh-og\.webp/)
     assert.match(metadata, /buildSeoMetadata/)
     assert.match(metadata, /getEffectiveDescription/)
     assert.match(metadata, /getDocsSeoDescription/)

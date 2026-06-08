@@ -28,7 +28,7 @@ export function SiteHeader() {
         <div className="flex min-h-[var(--site-header-height)] items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/hermes-logo.png"
+              src="/hermes-logo.webp"
               alt="Hermes Agent 中文站 Logo"
               width={44}
               height={44}

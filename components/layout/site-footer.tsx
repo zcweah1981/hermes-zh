@@ -24,7 +24,7 @@ export function SiteFooter() {
         <div>
           <Link href="/" className="inline-flex items-center gap-3">
             <Image
-              src="/hermes-logo.png"
+              src="/hermes-logo.webp"
               alt="Hermes Agent 中文站 Logo"
               width={40}
               height={40}

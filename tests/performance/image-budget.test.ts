@@ -9,7 +9,7 @@ const sizeOf = (path: string) => statSync(join(repoRoot, path)).size
 describe('first-screen image budget', () => {
   it('keeps the header logo small enough for mobile preload', () => {
     assert.ok(
-      sizeOf('public/hermes-logo.png') <= 96 * 1024,
+      sizeOf('public/hermes-logo.webp') <= 96 * 1024,
       'header priority logo should stay <= 96KB because it is preloaded on every page',
     )
   })

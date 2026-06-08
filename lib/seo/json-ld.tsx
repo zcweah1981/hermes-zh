@@ -20,7 +20,7 @@ export function buildOrganizationJsonLd(): JsonLdObject {
     '@type': 'Organization',
     name: SITE_NAME,
     url: SITE_URL,
-    logo: buildCanonicalUrl('/hermes-logo.png'),
+    logo: buildCanonicalUrl('/hermes-logo.webp'),
     sameAs: ['https://github.com/zcweah1981/awesome-hermes-agent-zh'],
   }
 }

@@ -55,14 +55,14 @@ test('resolveMarkdownHref preserves local anchors on internal doc links', () => 
 })
 
 test('resolveMarkdownImage maps relative assets to local proxy urls', () => {
-  const src = resolveMarkdownImage('../../assets/solution-miniapp-3-layer-map-v7.png', {
+  const src = resolveMarkdownImage('../../assets/solution-miniapp-3-layer-map-v7.webp', {
     ...page,
     sourcePath: 'docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md',
   })
 
   assert.equal(
     src,
-    '/content-assets/solution-miniapp-3-layer-map-v7.png',
+    '/content-assets/solution-miniapp-3-layer-map-v7.webp',
   )
 })
 
@@ -71,7 +71,7 @@ test('MarkdownBody renders standalone image figures outside paragraph tags', () 
     React.createElement(MarkdownBody, {
       page: {
         ...page,
-        body: '正文前。\n\n![钉钉接入主线图](./assets/dingtalk-entry-structure-v3.png)\n\n正文后。',
+        body: '正文前。\n\n![钉钉接入主线图](./assets/dingtalk-entry-structure-v3.webp)\n\n正文后。',
         sourcePath: 'docs/03-消息入口/07-钉钉.md',
       },
       pages: [page],

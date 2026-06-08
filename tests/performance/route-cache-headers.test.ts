@@ -43,11 +43,11 @@ describe('route redirect/cache response contracts', () => {
     )
 
     const response = await rawAssetGET(
-      new NextRequest('https://hermes-zh.com/api/assets/raw?path=docs/diagram.png'),
+      new NextRequest('https://hermes-zh.com/api/assets/raw?path=docs/diagram.webp'),
     )
 
     assert.equal(response.status, 308)
-    assert.equal(response.headers.get('location'), 'https://hermes-zh.com/content-assets/docs/diagram.png')
+    assert.equal(response.headers.get('location'), 'https://hermes-zh.com/content-assets/docs/diagram.webp')
     assert.doesNotMatch(response.headers.get('location') ?? '', /\?path=/)
   })
 
@@ -93,6 +93,31 @@ describe('route redirect/cache response contracts', () => {
     assert.doesNotMatch(searchCache, /s-maxage|stale-while-revalidate|no-store|no-cache|private/)
   })
 
+
+
+  it('declares docs HTML routes as static CDN-cacheable pages without weakening API no-store defaults', () => {
+    const vercel = JSON.parse(read('vercel.json')) as { headers: HeaderRule[] }
+    const sources = vercel.headers.map((entry) => entry.source)
+    const docsIndex = sources.indexOf('/docs/(.*)')
+    const apiFallbackIndex = sources.indexOf('/api/(.*)')
+    const docsCache = cacheHeader(vercel.headers[docsIndex])
+    const docsCdnCache = cdnCacheHeader(vercel.headers[docsIndex])
+
+    assert.notEqual(docsIndex, -1, 'missing explicit /docs/(.*) HTML cache rule for Cloudflare-observed docs routes')
+    assert.notEqual(apiFallbackIndex, -1, 'missing broad API no-store fallback header rule')
+    assert.ok(docsIndex < apiFallbackIndex, 'docs HTML cache rule must not override or shadow /api/* no-store policy')
+    assert.equal(docsCache, 'public, max-age=1800')
+    assert.equal(docsCdnCache, 'public, s-maxage=86400, stale-while-revalidate=604800')
+    assert.doesNotMatch(docsCache, /private|no-cache|no-store|s-maxage|stale-while-revalidate/)
+  })
+
+  it('keeps docs pages build-static so docs cache hits do not depend on ISR regeneration', () => {
+    const source = read('app/docs/[...slug]/page.tsx')
+
+    assert.match(source, /export const dynamic = ['"]force-static['"]/, 'docs catch-all must remain a static page')
+    assert.match(source, /export const revalidate = false/, 'docs catch-all must not schedule ISR revalidation for unchanged content')
+    assert.match(source, /export const fetchCache = ['"]force-cache['"]/, 'docs catch-all should not opt into per-request origin reads')
+  })
   it('serves /api/search with browser cache separated from CDN cache', async () => {
     const response = await searchGET(new Request('https://hermes-zh.com/api/search?q=hermes'))
 

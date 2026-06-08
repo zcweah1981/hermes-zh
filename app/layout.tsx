@@ -4,6 +4,7 @@ import Script from 'next/script'
 import type { ReactNode } from 'react'
 
 import { SiteJsonLd, buildOrganizationJsonLd, buildSoftwareApplicationJsonLd, buildWebSiteJsonLd } from '@/lib/seo/json-ld'
+import { buildCanonicalUrl } from '@/lib/seo/canonical'
 import { DEFAULT_DESCRIPTION, DEFAULT_OG_IMAGE, DEFAULT_TITLE, absoluteOgImage } from '@/lib/seo/metadata'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
@@ -23,12 +24,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/icon.png', type: 'image/png' },
-      { url: '/hermes-logo.png', type: 'image/png' },
+      { url: '/hermes-logo.webp', type: 'image/png' },
     ],
     apple: [{ url: '/apple-icon.png', type: 'image/png' }],
   },
   alternates: {
-    canonical: '/',
+    canonical: buildCanonicalUrl('/'),
   },
   openGraph: {
     type: 'website',

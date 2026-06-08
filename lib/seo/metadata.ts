@@ -5,7 +5,7 @@ import { getDocNavSummary } from '@/lib/docs/nav-summary'
 import { buildCanonicalUrl } from '@/lib/seo/canonical'
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/lib/site-config'
 
-export const DEFAULT_OG_IMAGE = '/og/hermes-zh-og.png'
+export const DEFAULT_OG_IMAGE = '/og/hermes-zh-og.webp'
 export const DEFAULT_TITLE = 'Hermes Agent 中文站：快速上手、现成方案、国内落地与 OpenClaw 迁移'
 export const DEFAULT_DESCRIPTION =
   'Hermes Agent 中文站是一套面向中文用户的 AI Agent 全流程实践指南，覆盖快速上手、现成方案、国内模型与入口、OpenClaw 迁移、参考手册、Packs 方案包与问题排查。'

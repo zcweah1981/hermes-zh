@@ -16,7 +16,7 @@ describe('Vercel FOT cache amplification guards', () => {
     assert.match(vercel, /"source":\s*"\/api\/\(\.\*\)"/)
     assert.match(vercel, /private, no-cache, no-store, max-age=0, must-revalidate/)
     assert.match(vercel, /"source":\s*"\/_next\/static\/\(\.\*\)"/)
-    for (const source of ['/_next/static/(.*)', '/fonts/(.*)', '/assets/(.*)', '/og/(.*)', '/hermes-logo.png']) {
+    for (const source of ['/_next/static/(.*)', '/fonts/(.*)', '/assets/(.*)', '/og/(.*)', '/hermes-logo.webp']) {
       assert.ok(vercel.includes(`"source": "${source}"`), `missing immutable static header for ${source}`)
     }
     assert.match(vercel, /public, max-age=31536000, immutable/)

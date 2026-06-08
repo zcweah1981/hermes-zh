@@ -39,7 +39,7 @@
       ]
     },
     {
-      "source": "/hermes-logo.png",
+      "source": "/hermes-logo.webp",
       "headers": [
         {
           "key": "Cache-Control",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "source": "/hermes-logo-source.jpg",
+      "source": "/hermes-logo-source.webp",
       "headers": [
         {
           "key": "Cache-Control",
@@ -84,7 +84,20 @@
       ]
     },
     {
-      "source": "/((?!api/|_next/data/|fonts/|assets/|og/|content-assets/|favicon.ico|favicon.png|apple-icon.png|hermes-logo.png|hermes-logo-source.jpg).*)",
+      "source": "/docs/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=1800"
+        },
+        {
+          "key": "Vercel-CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=604800"
+        }
+      ]
+    },
+    {
+      "source": "/((?!api/|_next/data/|fonts/|assets/|og/|content-assets/|favicon.ico|favicon.png|apple-icon.png|hermes-logo.webp|hermes-logo-source.webp).*)",
       "headers": [
         {
           "key": "Cache-Control",

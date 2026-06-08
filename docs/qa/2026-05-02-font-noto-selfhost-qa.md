@@ -155,7 +155,7 @@ URL：`http://127.0.0.1:3102/?fontqa=1`
 }
 ```
 
-视觉截图：`/root/.hermes/profiles/ops/cache/screenshots/browser_screenshot_0aee21983d6e4a3b854ad9de12c64d5c.png`
+视觉截图：`/root/.hermes/profiles/ops/cache/screenshots/browser_screenshot_0aee21983d6e4a3b854ad9de12c64d5c.webp`
 
 视觉结论：Hero 标题完整，中文清晰，无乱码、无方框字、无明显异常 fallback，也未见标题裁切。
 
@@ -197,7 +197,7 @@ URL：`http://127.0.0.1:3102/docs/start?fontqa=1`
 
 说明：Docs 页面正文与目录使用 `Noto Sans SC`；该页面没有使用 serif 标题，因此 `document.fonts.check('32px "Noto Serif SC"')` 返回 false 不构成问题。首页已验证 serif 命中。
 
-视觉截图：`/root/.hermes/profiles/ops/cache/screenshots/browser_screenshot_37975d9cfd79465aa8d13b962b51860a.png`
+视觉截图：`/root/.hermes/profiles/ops/cache/screenshots/browser_screenshot_37975d9cfd79465aa8d13b962b51860a.webp`
 
 视觉结论：左侧目录和正文均清晰可读，无乱码、无方框字、无明显 fallback。
 

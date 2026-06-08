@@ -51,14 +51,14 @@ test('getDocNavSummary extracts concrete text after a template prefix on the nex
 })
 
 test('extractSummaryFromBody skips headings images separators links and route-like fragments', () => {
-  const summary = extractSummaryFromBody(`---\ntitle: bad\n---\n# Page\n\n这一页只解决一件事：\n![示意图](../../assets/demo.png)\n\n如果你想先回到上一阶段入口重新确认位置：\n\n把 Hermes 接到更适合自己的模型路由上，让成本、速度和稳定性贴近真实使用场景。 [查看配置](../../reference/config.md)`)
+  const summary = extractSummaryFromBody(`---\ntitle: bad\n---\n# Page\n\n这一页只解决一件事：\n![示意图](../../assets/demo.webp)\n\n如果你想先回到上一阶段入口重新确认位置：\n\n把 Hermes 接到更适合自己的模型路由上，让成本、速度和稳定性贴近真实使用场景。 [查看配置](../../reference/config.md)`)
 
   assert.equal(summary, '把 Hermes 接到更适合自己的模型路由上，让成本、速度和稳定性贴近真实使用场景。 查看配置')
 })
 
 test('getDocNavSummary falls back to title only after metadata and body are unusable', () => {
   assert.equal(
-    getDocNavSummary(page({ title: '04-自定义 AI 大模型', description: '这一页只解决一件事：', body: '# 04-自定义 AI 大模型\n\n---\n\n![图](../../assets/model.png)' })),
+    getDocNavSummary(page({ title: '04-自定义 AI 大模型', description: '这一页只解决一件事：', body: '# 04-自定义 AI 大模型\n\n---\n\n![图](../../assets/model.webp)' })),
     '阅读「04-自定义 AI 大模型」，继续完成当前学习路径。',
   )
 })

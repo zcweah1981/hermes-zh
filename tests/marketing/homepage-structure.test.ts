@@ -91,7 +91,7 @@ describe('R19 homepage structure', () => {
     assert.match(globalsSource, /\.site-capability-compare-heading::before,[\s\S]*\.site-capability-compare-heading::after/s)
     assert.match(homePageSource, /data-home-section="ready-made-solutions" className="relative bg-\[#030812\]/)
     assert.doesNotMatch(globalsSource, /\.site-capability-(?:layout|comparison)\s*{[^}]*max-width:\s*1480px/s)
-    assert.doesNotMatch(sectionSource, /<img|<Image|hermes-agent-capability-1to1\.jpg|site-capability-reference/)
+    assert.doesNotMatch(sectionSource, /<img|<Image|hermes-agent-capability-1to1\.webp|site-capability-reference/)
   })
 
   it('keeps VFIX7 homepage split strict: no gradient seam and six connector lines without arrows', () => {

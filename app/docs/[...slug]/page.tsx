@@ -14,7 +14,10 @@ import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 import { Breadcrumb, type BreadcrumbItem } from '@/components/ui/breadcrumb'
 
+export const dynamic = 'force-static'
 export const dynamicParams = false
+export const revalidate = false
+export const fetchCache = 'force-cache'
 
 export async function generateStaticParams() {
   const pages = await loadPagesManifest()
