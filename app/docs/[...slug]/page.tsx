@@ -6,6 +6,7 @@ import { DocOutline, DocPrevNext } from '@/components/docs/doc-outline'
 import { DocSidebar } from '@/components/docs/doc-sidebar'
 import { MarkdownBody } from '@/components/docs/markdown-body'
 import { loadPagesManifest } from '@/lib/content/loaders/pages'
+import { toDocLinkTargets, toDocSidebarItems } from '@/lib/docs/docs-page-projections'
 import { toDocPath } from '@/lib/routing/docs-path'
 import { buildCanonicalUrl } from '@/lib/seo/canonical'
 import { SiteJsonLd, buildAnswerBlockJsonLd, buildBreadcrumbJsonLd, buildFAQPageJsonLd, buildTechArticleJsonLd, buildCreativeWorkJsonLd } from '@/lib/seo/json-ld'
@@ -92,11 +93,13 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
     faqJsonLd,
     answerBlockJsonLd,
   ].filter(Boolean) as Record<string, unknown>[]
+  const sidebarItems = toDocSidebarItems(pages)
+  const linkTargets = toDocLinkTargets(pages)
 
   return (
     <div className="site-doc-page-grid mx-auto grid max-w-site-docs gap-6 px-6 py-8 xl:grid-cols-[280px_minmax(0,1fr)_250px]">
       <SiteJsonLd data={jsonLdData} />
-      <DocSidebar pages={pages} currentSlug={page.slug} />
+      <DocSidebar items={sidebarItems} currentSlug={page.slug} />
 
       <article className="site-panel-docs site-doc-article overflow-hidden p-6 lg:p-8">
         <Breadcrumb items={breadcrumbItems} />
@@ -114,7 +117,7 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
         </div>
 
         <div className="mt-10">
-          <MarkdownBody page={page} pages={pages} />
+          <MarkdownBody page={page} linkTargets={linkTargets} />
         </div>
 
         <nav data-seo-internal-links="index-recovery" aria-label="索引恢复推荐入口" className="mt-10 rounded-2xl border border-border bg-surface-muted/70 p-5">

@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import { useEffect, useMemo, useRef, useState, type RefObject } from 'react'
 
+import type { DocSidebarItem } from '@/lib/docs/docs-page-projections'
 import { buildDocSidebarTree, getOrderedSidebarItems, type DocSidebarTreeNode } from '@/lib/docs/sidebar-tree'
-import type { SitePage } from '@/lib/content/types'
 import { toDocPath } from '@/lib/routing/docs-path'
 
 type ExpandedByParent = Record<string, string>
@@ -15,7 +15,7 @@ function DocSidebarPageLink({
   activeRef,
   displayLabel,
 }: {
-  page: SitePage
+  page: DocSidebarItem
   currentSlug: string
   activeRef: RefObject<HTMLAnchorElement | null>
   displayLabel?: string
@@ -181,8 +181,8 @@ function DocSidebarNode({
   )
 }
 
-export function DocSidebar({ pages, currentSlug }: { pages: SitePage[]; currentSlug: string }) {
-  const sidebarTree = useMemo(() => buildDocSidebarTree(pages), [pages])
+export function DocSidebar({ items, currentSlug }: { items: DocSidebarItem[]; currentSlug: string }) {
+  const sidebarTree = useMemo(() => buildDocSidebarTree(items), [items])
   const currentRoot = useMemo(() => findRootNodeForSlug(sidebarTree, currentSlug), [sidebarTree, currentSlug])
   const defaultExpandedNodeIds = useMemo(() => findExpandedAncestorIds(sidebarTree, currentSlug), [sidebarTree, currentSlug])
   const defaultExpandedByParent = useMemo(() => buildDefaultExpandedByParent(sidebarTree, currentSlug), [sidebarTree, currentSlug])

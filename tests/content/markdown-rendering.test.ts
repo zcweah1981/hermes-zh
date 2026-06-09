@@ -74,7 +74,7 @@ test('MarkdownBody renders standalone image figures outside paragraph tags', () 
         body: '正文前。\n\n![钉钉接入主线图](./assets/dingtalk-entry-structure-v3.webp)\n\n正文后。',
         sourcePath: 'docs/03-消息入口/07-钉钉.md',
       },
-      pages: [page],
+      linkTargets: [page],
     }),
   )
 
@@ -91,7 +91,7 @@ test('MarkdownBody removes the leading duplicate title and never emits body h1 t
         title: '从这开始',
         body: '# 从这开始\n\n## 先跑起来\n\n正文内容。',
       },
-      pages: [page],
+      linkTargets: [page],
     }),
   )
 

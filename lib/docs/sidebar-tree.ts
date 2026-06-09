@@ -1,16 +1,16 @@
-import type { SitePage } from '@/lib/content/types'
+import type { DocSidebarItem } from '@/lib/docs/docs-page-projections'
 
 export interface DocSidebarTreeNode {
   id: string
   label: string
   depth: number
-  pages: SitePage[]
+  pages: DocSidebarItem[]
   children: DocSidebarTreeNode[]
   pageCount: number
 }
 
 export type DocSidebarOrderedItem =
-  | { type: 'page'; key: string; label: string; orderKey: string; page: SitePage; isOverview: boolean }
+  | { type: 'page'; key: string; label: string; orderKey: string; page: DocSidebarItem; isOverview: boolean }
   | { type: 'node'; key: string; label: string; orderKey: string; node: DocSidebarTreeNode; isOverview: false }
 
 function normalizeSourcePath(sourcePath: string) {
@@ -30,15 +30,15 @@ function isOverviewFileName(fileName: string) {
   return /^(?:00-文档总览|(?:01-)?总览)\.md$/i.test(fileName)
 }
 
-function isOverviewPage(page: SitePage) {
+function isOverviewPage(page: DocSidebarItem) {
   return isOverviewFileName(getFileName(page.sourcePath))
 }
 
-function getPageOrderKey(page: SitePage) {
+function getPageOrderKey(page: DocSidebarItem) {
   return stripMarkdownExtension(getFileName(page.sourcePath))
 }
 
-function compareByOrderThenPath(a: SitePage, b: SitePage) {
+function compareByOrderThenPath(a: DocSidebarItem, b: DocSidebarItem) {
   const overviewDelta = Number(isOverviewPage(b)) - Number(isOverviewPage(a))
   return overviewDelta || a.order - b.order || a.sourcePath.localeCompare(b.sourcePath, 'zh-Hans-CN', { numeric: true })
 }
@@ -132,7 +132,7 @@ export function getOrderedSidebarItems(node: DocSidebarTreeNode): DocSidebarOrde
   return [...pageItems, ...childItems].sort(compareOrderedItems)
 }
 
-export function buildDocSidebarTree(pages: SitePage[]): DocSidebarTreeNode[] {
+export function buildDocSidebarTree(pages: DocSidebarItem[]): DocSidebarTreeNode[] {
   const roots: DocSidebarTreeNode[] = []
 
   for (const page of [...pages].sort(compareByOrderThenPath)) {

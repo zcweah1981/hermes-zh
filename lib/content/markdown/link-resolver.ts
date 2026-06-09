@@ -1,6 +1,7 @@
 import path from 'node:path'
 
 import type { SitePage } from '@/lib/content/types'
+import type { DocLinkTarget } from '@/lib/docs/docs-page-projections'
 
 const CONTENT_REPO_BRANCH = process.env.CONTENT_REPO_BRANCH ?? 'main'
 const CONTENT_REPO_OWNER = 'zcweah1981/awesome-hermes-agent-zh'
@@ -47,7 +48,7 @@ function splitHash(href: string) {
   return { pathname, hash }
 }
 
-export function resolveMarkdownHref(href: string, page: SitePage, pages: SitePage[]) {
+export function resolveMarkdownHref(href: string, page: SitePage, pages: DocLinkTarget[]) {
   const normalized = normalizeMarkdownTarget(href)
 
   if (!normalized || normalized.startsWith('#') || normalized.startsWith('/')) {

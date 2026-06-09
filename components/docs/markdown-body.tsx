@@ -9,6 +9,7 @@ import { CopyableCodeBlock } from '@/components/docs/copyable-code-block'
 import { isExternalMarkdownHref, resolveMarkdownHref, resolveMarkdownImage } from '@/lib/content/markdown/link-resolver'
 import { slugifyHeadingText } from '@/lib/content/markdown/slugify'
 import type { SitePage } from '@/lib/content/types'
+import type { DocLinkTarget } from '@/lib/docs/docs-page-projections'
 
 function flattenText(children: ReactNode): string {
   return React.Children.toArray(children)
@@ -76,7 +77,7 @@ function stripLeadingDuplicateTitle(body: string, title: string) {
   return body
 }
 
-export function MarkdownBody({ page, pages }: { page: SitePage; pages: SitePage[] }) {
+export function MarkdownBody({ page, linkTargets }: { page: SitePage; linkTargets: DocLinkTarget[] }) {
   const body = stripLeadingDuplicateTitle(page.body, page.title)
 
   return (
@@ -99,7 +100,7 @@ export function MarkdownBody({ page, pages }: { page: SitePage; pages: SitePage[
             return <p className="my-4 text-base leading-8 text-text-secondary">{children}</p>
           },
           a: ({ href = '', children }) => {
-            const resolved = resolveMarkdownHref(href, page, pages)
+            const resolved = resolveMarkdownHref(href, page, linkTargets)
             const external = resolved ? isExternalMarkdownHref(resolved) : false
 
             if (!resolved) {
