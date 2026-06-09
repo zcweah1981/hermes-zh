@@ -16,10 +16,26 @@ describe('Vercel FOT cache amplification guards', () => {
     assert.match(vercel, /"source":\s*"\/api\/\(\.\*\)"/)
     assert.match(vercel, /private, no-cache, no-store, max-age=0, must-revalidate/)
     assert.match(vercel, /"source":\s*"\/_next\/static\/\(\.\*\)"/)
-    for (const source of ['/_next/static/(.*)', '/fonts/(.*)', '/assets/(.*)', '/og/(.*)', '/hermes-logo.webp']) {
+    for (const source of ['/_next/static/(.*)', '/content-assets/(.*)', '/fonts/(.*)', '/assets/(.*)', '/og/(.*)', '/hermes-logo.webp']) {
       assert.ok(vercel.includes(`"source": "${source}"`), `missing immutable static header for ${source}`)
     }
     assert.match(vercel, /public, max-age=31536000, immutable/)
+  })
+
+  it('sets explicit Vercel CDN immutable cache headers for T1-confirmed high-FOT static path families', () => {
+    const config = JSON.parse(read('vercel.json')) as {
+      headers: { source: string; headers: { key: string; value: string }[] }[]
+    }
+    const highFotStaticSources = ['/content-assets/(.*)', '/fonts/(.*)', '/hermes-logo.webp']
+
+    for (const source of highFotStaticSources) {
+      const rule = config.headers.find((entry) => entry.source === source)
+      assert.ok(rule, `missing header rule for ${source}`)
+      const browserHeader = rule.headers.find((header) => header.key === 'Cache-Control')?.value
+      const cdnHeader = rule.headers.find((header) => header.key === 'Vercel-CDN-Cache-Control')?.value
+      assert.equal(browserHeader, 'public, max-age=31536000, immutable', `${source} browser cache should stay immutable`)
+      assert.equal(cdnHeader, 'public, s-maxage=31536000, immutable', `${source} should explicitly stay immutable at Vercel CDN edge`)
+    }
   })
 
   it('keeps search API responses CDN-cacheable through Vercel-CDN-Cache-Control and bounds repeated origin reads', () => {

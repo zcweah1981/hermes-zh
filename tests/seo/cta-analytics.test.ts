@@ -21,6 +21,7 @@ describe('core CTA analytics markers', () => {
     assert.match(layoutSource, /addEventListener\(['"]click['"]/, 'click listener should be delegated')
     assert.match(layoutSource, /closest\(['"]\[data-analytics-event\]['"]\)/, 'listener should use stable data-analytics markers')
     assert.match(layoutSource, /CustomEvent\(['"]hermes:analytics['"]/, 'listener should emit a local custom event for downstream hooks')
+    assert.match(layoutSource, /window\.gtag\('event', detail\.event/, 'listener should forward stable CTA events to GA4 when available')
     assert.doesNotMatch(layoutSource, /navigator\.sendBeacon|fetch\(/, 'lightweight entrypoint should not send PII or call a new tracking endpoint')
     assert.doesNotMatch(layoutSource, /AnalyticsEvents|<AnalyticsEvents\s*\/>/)
   })

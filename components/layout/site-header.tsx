@@ -26,13 +26,12 @@ export function SiteHeader() {
     <header className="site-frame sticky top-0 z-40">
       <div className="mx-auto flex max-w-site-docs flex-col gap-4 px-6 py-3 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex min-h-[var(--site-header-height)] items-center justify-between gap-4">
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" prefetch={false} className="flex items-center gap-3">
             <Image
               src="/hermes-logo.webp"
               alt="Hermes Agent 中文站 Logo"
               width={44}
               height={44}
-              priority
               className="h-11 w-11 object-contain"
             />
             <div>
@@ -64,6 +63,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch={false}
                 className="site-nav-link"
                 data-analytics-event={item.analyticsEvent}
                 data-analytics-label={item.label}
@@ -91,6 +91,7 @@ export function SiteHeader() {
             </a>
             <Link
               href="/docs/start"
+              prefetch={false}
               className="site-cta-primary hidden px-4 xl:px-5 py-2.5 lg:inline-flex"
               data-analytics-event="nav_start_click"
               data-analytics-label="快速上手"

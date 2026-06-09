@@ -60,7 +60,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="zh-CN">
       <body>
         <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd(), buildSoftwareApplicationJsonLd()]} />
-        <Script id="ga4-gtag-js" src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
+        <Script id="ga4-gtag-js" src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="lazyOnload" />
         <Script
           id="ga4-gtag-config"
           strategy="afterInteractive"
@@ -100,6 +100,13 @@ gtag('config', '${GA_MEASUREMENT_ID}');`,
     if (!detail) return;
 
     window.dispatchEvent(new CustomEvent('hermes:analytics', { detail: detail }));
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', detail.event, {
+        event_label: detail.label,
+        link_url: detail.destination,
+        page_section: detail.section
+      });
+    }
   }, { capture: true });
 })();`,
           }}

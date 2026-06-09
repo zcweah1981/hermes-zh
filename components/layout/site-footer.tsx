@@ -22,7 +22,7 @@ export function SiteFooter() {
     <footer className="border-t border-border bg-[#07101d]">
       <div className="mx-auto grid max-w-site-marketing gap-8 px-6 py-10 md:grid-cols-[1.35fr_1fr_1fr_1fr]">
         <div>
-          <Link href="/" className="inline-flex items-center gap-3">
+          <Link href="/" prefetch={false} className="inline-flex items-center gap-3">
             <Image
               src="/hermes-logo.webp"
               alt="Hermes Agent 中文站 Logo"
@@ -62,7 +62,7 @@ function FooterColumn({ title, links, external = false }: { title: string; links
               {link.label}
             </a>
           ) : (
-            <Link key={link.href} href={link.href} className="transition hover:text-text-primary">
+            <Link key={link.href} href={link.href} prefetch={false} className="transition hover:text-text-primary">
               {link.label}
             </Link>
           ),

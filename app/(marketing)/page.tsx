@@ -270,6 +270,7 @@ export default function HomePage() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  prefetch={false}
                   className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
                   data-analytics-event="home_primary_path_click"
                   data-analytics-label={item.title}
@@ -299,7 +300,7 @@ export default function HomePage() {
             >
               <div className="grid gap-4 md:grid-cols-3">
                 {solutionCards.map((item) => (
-                  <Link key={item.href} href={item.href} className="site-section-card site-section-card-interactive p-5">
+                  <Link key={item.href} href={item.href} prefetch={false} className="site-section-card site-section-card-interactive p-5">
                     <h3 className="text-lg font-semibold text-text-primary">{item.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-text-secondary">{item.description}</p>
                     <p className="mt-5 text-sm font-semibold text-brand-primary">进入方案 →</p>
@@ -322,6 +323,7 @@ export default function HomePage() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  prefetch={false}
                   className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-lg"
                   data-analytics-event="home_china_landing_click"
                   data-analytics-label={item.title}
@@ -340,10 +342,10 @@ export default function HomePage() {
         <section data-home-section="support-and-trust" className="px-6 py-16 md:py-20">
           <div className="mx-auto grid max-w-site-marketing gap-6 lg:grid-cols-3">
             <SectionCard eyebrow="遇到问题" title="按症状排查，而不是重读全部文档" description="安装、Provider、CLI、Gateway、Tools、Docker、SSH 等问题集中回流到问题模块。" density="docs">
-              <Link href="/docs/issues" className="site-cta-secondary mt-2 px-4 py-2">查看问题入口</Link>
+              <Link href="/docs/issues" prefetch={false} className="site-cta-secondary mt-2 px-4 py-2">查看问题入口</Link>
             </SectionCard>
             <SectionCard eyebrow="迁移参考" title="从 OpenClaw 过来的用户有独立路径" description="关系、共存、迁移与检查清单单独收口，避免混在新手路径里。" density="docs">
-              <Link href="/docs/openclaw" className="site-cta-secondary mt-2 px-4 py-2">查看迁移路径</Link>
+              <Link href="/docs/openclaw" prefetch={false} className="site-cta-secondary mt-2 px-4 py-2">查看迁移路径</Link>
             </SectionCard>
             <SectionCard eyebrow="内容特点" title="按真实使用路径组织内容" description="从快速跑通、场景方案、国内落地到参考手册，内容按用户决策顺序串起来，而不是堆成命令清单。" density="docs">
               <a

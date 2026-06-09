@@ -28,6 +28,7 @@ export function Hero() {
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link
             href="/docs/start"
+            prefetch={false}
             className="site-hero-cta-primary"
             data-analytics-event="hero_start_click"
             data-analytics-label="快速上手"
@@ -39,6 +40,7 @@ export function Hero() {
           </Link>
           <Link
             href="/docs/docs-overview"
+            prefetch={false}
             className="site-hero-cta-secondary"
             data-analytics-event="hero_docs_overview_click"
             data-analytics-label="浏览文档"
