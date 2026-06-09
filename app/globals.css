@@ -8,6 +8,10 @@
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 88%;
+  descent-override: 12%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -16,6 +20,10 @@
   font-style: normal;
   font-weight: 700 900;
   font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 88%;
+  descent-override: 12%;
+  line-gap-override: 0%;
 }
 
 :root {
@@ -100,6 +108,7 @@
 
   .site-hero-fullscreen {
     min-height: calc(100vh - var(--site-header-height));
+    contain-intrinsic-size: calc(100vh - var(--site-header-height));
     overflow: hidden;
     background:
       radial-gradient(circle at 50% 20%, rgba(91, 167, 255, 0.22), transparent 30%),

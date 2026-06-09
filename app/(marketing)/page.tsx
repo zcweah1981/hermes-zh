@@ -134,7 +134,7 @@ function CapabilityInfographic() {
       <div className="site-capability-stars" />
       <div className="site-capability-circuit site-capability-circuit-left" />
       <div className="site-capability-circuit site-capability-circuit-right" />
-      <LazyCapabilityConnectorLayer />
+      <LazyCapabilityConnectorLayer deferUntilIdle />
 
       <div className="site-capability-inner">
         <header className="site-capability-title-block">

@@ -8,7 +8,11 @@ const CapabilityConnectorLayer = dynamic(
   { ssr: false },
 )
 
-export function LazyCapabilityConnectorLayer() {
+type LazyCapabilityConnectorLayerProps = {
+  deferUntilIdle?: boolean
+}
+
+export function LazyCapabilityConnectorLayer({ deferUntilIdle = false }: LazyCapabilityConnectorLayerProps) {
   const sentinelRef = useRef<HTMLSpanElement>(null)
   const [shouldLoad, setShouldLoad] = useState(false)
 
@@ -21,20 +25,42 @@ export function LazyCapabilityConnectorLayer() {
       return undefined
     }
 
+    let idleHandle: number | null = null
+    let timeoutHandle: ReturnType<typeof setTimeout> | null = null
+
+    const loadConnectorLayer = () => setShouldLoad(true)
+    const scheduleConnectorLayer = () => {
+      if (!deferUntilIdle) {
+        loadConnectorLayer()
+        return
+      }
+
+      if ('requestIdleCallback' in window && typeof window.requestIdleCallback === 'function') {
+        idleHandle = window.requestIdleCallback(loadConnectorLayer, { timeout: 1600 })
+        return
+      }
+
+      timeoutHandle = setTimeout(loadConnectorLayer, 1600)
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries.some((entry) => entry.isIntersecting)) {
-          setShouldLoad(true)
+          scheduleConnectorLayer()
           observer.disconnect()
         }
       },
-      { rootMargin: '600px 0px' },
+      { rootMargin: deferUntilIdle ? '0px' : '600px 0px' },
     )
 
     observer.observe(sentinel)
 
-    return () => observer.disconnect()
-  }, [shouldLoad])
+    return () => {
+      observer.disconnect()
+      if (idleHandle !== null && typeof window.cancelIdleCallback === 'function') window.cancelIdleCallback(idleHandle)
+      if (timeoutHandle !== null) clearTimeout(timeoutHandle)
+    }
+  }, [deferUntilIdle, shouldLoad])
 
   return (
     <>
