@@ -13,8 +13,7 @@ const read = (path: string) => readFileSync(join(repoRoot, path), 'utf8')
 
 const LLMS_BROWSER_CACHE = 'public, max-age=3600'
 const LLMS_CDN_CACHE = 'public, s-maxage=86400, stale-while-revalidate=604800'
-const SEARCH_BROWSER_CACHE = 'public, max-age=60'
-const SEARCH_CDN_CACHE = 'public, s-maxage=300, stale-while-revalidate=600'
+const SEARCH_REDIRECT_CACHE = 'public, max-age=300'
 
 type HeaderRule = {
   source: string
@@ -88,8 +87,8 @@ describe('route redirect/cache response contracts', () => {
     assert.equal(llmsCache, LLMS_BROWSER_CACHE)
     assert.equal(cdnCacheHeader(vercel.headers[llmsIndex]), LLMS_CDN_CACHE)
     assert.doesNotMatch(llmsCache, /s-maxage|stale-while-revalidate/)
-    assert.equal(searchCache, SEARCH_BROWSER_CACHE)
-    assert.equal(cdnCacheHeader(vercel.headers[searchIndex]), SEARCH_CDN_CACHE)
+    assert.equal(searchCache, SEARCH_REDIRECT_CACHE)
+    assert.equal(cdnCacheHeader(vercel.headers[searchIndex]), '')
     assert.doesNotMatch(searchCache, /s-maxage|stale-while-revalidate|no-store|no-cache|private/)
   })
 
@@ -118,11 +117,13 @@ describe('route redirect/cache response contracts', () => {
     assert.match(source, /export const revalidate = false/, 'docs catch-all must not schedule ISR revalidation for unchanged content')
     assert.match(source, /export const fetchCache = ['"]force-cache['"]/, 'docs catch-all should not opt into per-request origin reads')
   })
-  it('serves /api/search with browser cache separated from CDN cache', async () => {
+  it('keeps legacy /api/search requests as a tiny cacheable redirect to the noindex search page', async () => {
     const response = await searchGET(new Request('https://hermes-zh.com/api/search?q=hermes'))
 
-    assert.equal(response.headers.get('cache-control'), SEARCH_BROWSER_CACHE)
-    assert.equal(response.headers.get('vercel-cdn-cache-control'), SEARCH_CDN_CACHE)
-    assert.doesNotMatch(response.headers.get('cache-control') ?? '', /s-maxage|stale-while-revalidate/)
+    assert.equal(response.status, 308)
+    assert.equal(response.headers.get('location'), 'https://hermes-zh.com/search?q=hermes')
+    assert.equal(response.headers.get('cache-control'), SEARCH_REDIRECT_CACHE)
+    assert.equal(response.headers.get('vercel-cdn-cache-control'), null)
+    assert.doesNotMatch(response.headers.get('cache-control') ?? '', /s-maxage|stale-while-revalidate|no-store|no-cache|private/)
   })
 })

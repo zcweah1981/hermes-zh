@@ -115,7 +115,7 @@ gtag('config', '${GA_MEASUREMENT_ID}');`,
         <Analytics />
         <Script
           id="cloudflare-web-analytics"
-          src="https://static.cloudflareinsights.com/beacon.min.js"
+          src="/cdn-cgi/rum/beacon.min.js"
           data-cf-beacon={JSON.stringify({ token: CLOUDFLARE_WEB_ANALYTICS_TOKEN })}
           strategy="lazyOnload"
         />
