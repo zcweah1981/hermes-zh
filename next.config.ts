@@ -48,6 +48,9 @@ const LEGACY_REDIRECTS = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  experimental: {
+    inlineCss: true,
+  },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
