@@ -126,7 +126,11 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=1800, s-maxage=14400, stale-while-revalidate=7200"
+          "value": "public, max-age=1800"
+        },
+        {
+          "key": "Vercel-CDN-Cache-Control",
+          "value": "public, s-maxage=14400, stale-while-revalidate=7200"
         }
       ]
     },

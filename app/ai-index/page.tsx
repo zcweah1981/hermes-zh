@@ -12,6 +12,9 @@ const seo = getCorePageSeo('/ai-index')
 const xTwitterPath = '/docs/solutions/x-twitter'
 const generatedDiscoveryExamples = 'X/Twitter 内容与互动助手、多平台内容改写助手、行动计划助手、邮件群消息摘要助手'
 
+export const dynamic = 'force-static'
+export const fetchCache = 'force-cache'
+
 export const metadata: Metadata = buildSeoMetadata({
   title: seo.title,
   description: seo.description,

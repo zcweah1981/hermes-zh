@@ -77,7 +77,10 @@ function buildWhatYouGet(pack: SitePack, relatedDoc?: SitePage) {
   return items
 }
 
+export const dynamic = 'force-static'
 export const dynamicParams = false
+export const revalidate = false
+export const fetchCache = 'force-cache'
 
 export async function generateStaticParams() {
   const packs = await loadPacksManifest()

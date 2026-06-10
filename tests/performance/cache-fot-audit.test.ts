@@ -11,7 +11,8 @@ describe('Vercel FOT cache amplification guards', () => {
     const vercel = read('vercel.json')
 
     assert.match(vercel, /"source":\s*"\/\(\(\?!api\/\|_next\/data\/\|fonts\/\|assets\/\|og\//)
-    assert.match(vercel, /public, max-age=1800, s-maxage=14400, stale-while-revalidate=7200/)
+    assert.match(vercel, /public, max-age=1800/)
+    assert.match(vercel, /public, s-maxage=14400, stale-while-revalidate=7200/)
     assert.match(vercel, /"key":\s*"Vercel-CDN-Cache-Control"/)
     assert.match(vercel, /"source":\s*"\/api\/\(\.\*\)"/)
     assert.match(vercel, /private, no-cache, no-store, max-age=0, must-revalidate/)

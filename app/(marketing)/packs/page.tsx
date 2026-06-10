@@ -8,6 +8,10 @@ import { buildSeoMetadata, getCorePageSeo } from '@/lib/seo/metadata'
 
 const packsSeo = getCorePageSeo('/packs')
 
+export const dynamic = 'force-static'
+export const revalidate = false
+export const fetchCache = 'force-cache'
+
 export const metadata: Metadata = buildSeoMetadata({
   title: packsSeo.title,
   description: packsSeo.description,

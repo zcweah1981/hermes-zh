@@ -43,6 +43,10 @@ function buildEntryHref(entry: Awaited<ReturnType<typeof loadSearchIndex>>[numbe
   return entry.type === 'page' ? toDocPath(entry.slug) : entry.slug
 }
 
+export const dynamic = 'force-static'
+export const revalidate = false
+export const fetchCache = 'force-cache'
+
 export const metadata: Metadata = {
   title: '搜索',
   description: '搜索 Hermes 中文站文档与 Packs 索引。',
