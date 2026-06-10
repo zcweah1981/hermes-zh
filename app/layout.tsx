@@ -60,7 +60,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="zh-CN">
       <body>
         <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd(), buildSoftwareApplicationJsonLd()]} />
-        <Script id="ga4-gtag-js" src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="lazyOnload" />
         <Script
           id="ga4-gtag-config"
           strategy="afterInteractive"
@@ -70,6 +69,28 @@ window.dataLayer = window.dataLayer || [];
 function gtag() { window.dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', '${GA_MEASUREMENT_ID}');`,
+          }}
+        />
+        <Script
+          id="ga4-idle-loader"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+(function () {
+  var loaded = false;
+  function loadGtag() {
+    if (loaded) return;
+    loaded = true;
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
+    document.head.appendChild(script);
+  }
+
+  window.setTimeout(loadGtag, 12000);
+  window.addEventListener('pointerdown', loadGtag, { once: true, passive: true });
+  window.addEventListener('keydown', loadGtag, { once: true });
+})();`,
           }}
         />
         <Script
