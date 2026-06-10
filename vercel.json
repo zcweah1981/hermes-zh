@@ -131,6 +131,10 @@
         {
           "key": "Vercel-CDN-Cache-Control",
           "value": "public, s-maxage=14400, stale-while-revalidate=7200"
+        },
+        {
+          "key": "Cloudflare-CDN-Cache-Control",
+          "value": "public, max-age=1800, must-revalidate"
         }
       ]
     },

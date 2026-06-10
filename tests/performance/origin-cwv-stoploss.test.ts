@@ -54,4 +54,17 @@ describe('origin-level CWV stoploss contracts', () => {
     assert.equal(headerValue(fallback, 'Vercel-CDN-Cache-Control'), 'public, s-maxage=14400, stale-while-revalidate=7200')
     assert.doesNotMatch(headerValue(fallback, 'Cache-Control'), /s-maxage|stale-while-revalidate|private|no-store|no-cache/)
   })
+
+  it('prevents Cloudflare from serving stale pre-inlineCss HTML that still links render-blocking CSS', () => {
+    const vercel = JSON.parse(read('vercel.json')) as { headers: HeaderRule[] }
+    const fallback = vercel.headers.find((entry) => entry.source.startsWith('/((?!api/'))
+
+    assert.ok(fallback, 'missing broad public HTML fallback cache rule')
+    assert.equal(headerValue(fallback, 'Cloudflare-CDN-Cache-Control'), 'public, max-age=1800, must-revalidate')
+    assert.doesNotMatch(
+      headerValue(fallback, 'Cloudflare-CDN-Cache-Control'),
+      /s-maxage|stale-while-revalidate/,
+      'Cloudflare must not keep serving stale HTML variants after deploys because stale pre-inlineCss HTML reintroduces <link rel="stylesheet">',
+    )
+  })
 })
