@@ -24,22 +24,22 @@ function GitHubIcon() {
 export function SiteHeader() {
   return (
     <header className="site-frame sticky top-0 z-40">
-      <div className="mx-auto flex max-w-site-docs flex-col gap-4 px-6 py-3 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex min-h-[var(--site-header-height)] items-center justify-between gap-4">
-          <Link href="/" prefetch={false} className="flex items-center gap-3">
+      <div className="mx-auto flex max-w-site-docs flex-col gap-3 px-4 py-2 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex min-h-[var(--site-header-height)] min-w-0 items-center justify-between gap-3 sm:gap-4">
+          <Link href="/" prefetch={false} className="flex min-w-0 items-center gap-2 sm:gap-3">
             <Image
               src="/hermes-logo.webp"
               alt="Hermes Agent 中文站 Logo"
               width={44}
               height={44}
-              className="h-11 w-11 object-contain"
+              className="h-10 w-10 object-contain"
             />
-            <div>
-              <p className="bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text font-serif text-xl font-black text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] md:text-[22px] md:tracking-[-0.055em]">Hermes Agent 中文站</p>
+            <div className="min-w-0">
+              <p className="truncate bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text font-serif text-lg font-black text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] sm:text-xl md:text-[22px] md:tracking-[-0.055em]">Hermes Agent 中文站</p>
             </div>
           </Link>
 
-          <div className="flex items-center lg:hidden">
+          <div className="flex shrink-0 items-center lg:hidden">
             <SearchDialog />
             <a
               href={githubHref}
@@ -57,8 +57,8 @@ export function SiteHeader() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
-          <nav className="flex flex-wrap items-center gap-2">
+        <div className="flex min-w-0 flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
+          <nav className="flex max-w-full flex-wrap items-center gap-1.5 sm:gap-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}

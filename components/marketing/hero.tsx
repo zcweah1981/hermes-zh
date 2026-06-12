@@ -4,7 +4,7 @@ const githubHref = 'https://github.com/zcweah1981/awesome-hermes-agent-zh'
 
 export function Hero() {
   return (
-    <section data-home-section="hero" className="site-hero-fullscreen relative overflow-hidden px-6 text-center">
+    <section data-home-section="hero" className="site-hero-fullscreen relative overflow-hidden px-5 text-center sm:px-6">
       <div className="site-hero-stars" />
       <div className="site-grid-overlay absolute inset-0 opacity-25" />
       <div className="site-hero-circuit site-hero-circuit-left" />
@@ -15,7 +15,7 @@ export function Hero() {
       <div className="site-hero-planet site-hero-planet-ring" />
       <div className="site-hero-horizon" />
 
-      <div className="site-hero-content relative z-10 mx-auto flex min-h-[calc(100vh-var(--site-header-height))] max-w-4xl flex-col items-center justify-center py-20 text-center md:py-24">
+      <div className="site-hero-content relative z-10 mx-auto flex min-h-[calc(100svh-var(--site-header-height))] w-full max-w-4xl flex-col items-center justify-center py-16 text-center sm:min-h-[calc(100vh-var(--site-header-height))] sm:py-20 md:py-24">
         <h1 className="site-hero-title max-w-4xl bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text pb-5 font-serif text-5xl font-black leading-[1.28] text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] md:text-[82px] md:tracking-[-0.055em]">
           Hermes Agent 中文站
         </h1>
@@ -25,7 +25,7 @@ export function Hero() {
           <p>从先跑通，到会定制，再到能集成与自动化。</p>
         </div>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
+        <div className="mt-10 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4">
           <Link
             href="/docs/start"
             prefetch={false}

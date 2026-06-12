@@ -79,15 +79,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               }
               .site-hero-title {
                 font-family: serif;
-                font-size: 3rem;
+                font-size: clamp(2.25rem, 15.5vw, 3.5rem);
                 font-weight: 900;
-                line-height: 1.28;
+                line-height: 1.18;
                 color: #fff;
                 background: linear-gradient(to bottom, #fff, #5ba7ff);
                 -webkit-background-clip: text;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 padding-bottom: 1.25rem;
+                overflow-wrap: anywhere;
               }
               @media (min-width: 768px) {
                 .site-hero-title { font-size: 82px; }

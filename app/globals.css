@@ -126,8 +126,10 @@
 
   .site-hero-title {
     display: block;
+    max-width: min(100%, 54rem);
     overflow: visible;
     padding-bottom: 1.25rem;
+    overflow-wrap: anywhere;
     line-height: 1.28;
   }
 
@@ -257,8 +259,23 @@
   }
 
   @media (max-width: 640px) {
+    .site-hero-fullscreen {
+      min-height: calc(100svh - var(--site-header-height));
+      contain-intrinsic-size: calc(100svh - var(--site-header-height));
+    }
+
     .site-hero-content {
       transform: translateY(-1rem);
+    }
+
+    .site-hero-title {
+      font-size: clamp(2.25rem, 15.5vw, 3.5rem);
+      line-height: 1.18;
+      letter-spacing: -0.045em;
+    }
+
+    .site-hero-circuit-left {
+      left: clamp(-74px, -12vw, -42px);
     }
 
     .site-hero-circuit,
@@ -292,6 +309,13 @@
 
   .site-hero-cta-secondary {
     @apply inline-flex items-center justify-center whitespace-nowrap rounded-full border border-sky-200/20 bg-white/[0.035] px-6 py-3.5 text-sm font-semibold text-sky-100 transition duration-200;
+  }
+
+  @media (max-width: 640px) {
+    .site-hero-cta-primary,
+    .site-hero-cta-secondary {
+      width: min(100%, 18rem);
+    }
   }
 
   .site-hero-cta-secondary:hover {
@@ -964,6 +988,12 @@
 
   .site-nav-link {
     @apply whitespace-nowrap rounded-full border border-transparent px-4 py-2 text-sm font-medium text-text-tertiary transition duration-200 hover:border-border hover:bg-white/[0.03] hover:text-text-primary;
+  }
+
+  @media (max-width: 640px) {
+    .site-nav-link {
+      @apply px-3 py-1.5 text-[13px];
+    }
   }
 
   .site-nav-link-active {
