@@ -261,22 +261,21 @@
       transform: translateY(-1rem);
     }
 
-    .site-hero-circuit-left {
-      left: clamp(-74px, -12vw, -42px);
-      top: clamp(72px, 11vw, 86px);
+    .site-hero-circuit,
+    .site-hero-orbit-line,
+    .site-hero-planet,
+    .site-grid-overlay {
+      display: none !important;
     }
 
-    .site-hero-circuit-right {
-      right: clamp(-76px, -12vw, -42px);
-      top: clamp(42px, 7vw, 46px);
+    .site-hero-stars {
+      opacity: 0.32;
     }
 
-    .site-hero-planet-small {
-      left: 6%;
-    }
-
-    .site-hero-planet-ring {
-      right: 6%;
+    .site-hero-horizon {
+      bottom: -110px;
+      height: 180px;
+      filter: blur(40px);
     }
   }
 
