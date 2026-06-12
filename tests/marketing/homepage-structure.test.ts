@@ -8,6 +8,7 @@ const homePageSource = readFileSync(join(repoRoot, 'app/(marketing)/page.tsx'), 
 const heroSource = readFileSync(join(repoRoot, 'components/marketing/hero.tsx'), 'utf8')
 const headerSource = readFileSync(join(repoRoot, 'components/layout/site-header.tsx'), 'utf8')
 const footerSource = readFileSync(join(repoRoot, 'components/layout/site-footer.tsx'), 'utf8')
+const connectorSource = readFileSync(join(repoRoot, 'components/marketing/capability-connectors.tsx'), 'utf8')
 const globalsSource = readFileSync(join(repoRoot, 'app/globals.css'), 'utf8')
 const routesManifest = JSON.parse(readFileSync(join(repoRoot, 'content-cache/generated/routes-manifest.json'), 'utf8')) as Array<{
   slug: string
@@ -104,19 +105,28 @@ describe('R19 homepage structure', () => {
 
     assert.doesNotMatch(homePageSource, /<defs>[\s\S]*site-capability-arrowhead/)
     assert.doesNotMatch(homePageSource, /<marker[\s\S]*arrowhead/)
-    assert.doesNotMatch(homePageSource, /<marker|arrowhead/)
+    assert.doesNotMatch(connectorSource, /<marker|arrowhead/)
     assert.doesNotMatch(globalsSource, /marker-end:\s*url\(/)
     assert.match(globalsSource, /\.site-capability-connectors path\s*{[^}]*marker-start:\s*none[^}]*marker-mid:\s*none[^}]*marker-end:\s*none/s)
     assert.match(globalsSource, /@media \(max-width:\s*900px\)\s*{[\s\S]*\.site-capability-connectors\s*{\s*display:\s*none/s)
   })
 
-  it('uses static SVG connector lines and removes internal public copy', () => {
+  it('uses DOM anchors for VFIX9 connector lines and removes internal public copy', () => {
     const expectedNodes = ['core', 'left-top', 'left-middle', 'left-bottom', 'right-top', 'right-middle', 'right-bottom']
     const expectedLines = ['top-left', 'top-right', 'middle-left', 'middle-right', 'bottom-left', 'bottom-right']
     const expectedTargets = ['left-top', 'right-top', 'left-middle', 'right-middle', 'left-bottom', 'right-bottom']
 
-    assert.doesNotMatch(homePageSource, /CapabilityConnectorLayer|lazy-capability-connectors/)
-    assert.match(homePageSource, /data-connector-layer="static-svg"/)
+    assert.match(connectorSource, /'use client'/)
+    assert.match(connectorSource, /ResizeObserver/)
+    assert.match(connectorSource, /getBoundingClientRect/)
+    assert.match(connectorSource, /function mirrorPointX/)
+    assert.match(connectorSource, /function mirrorLeftLineToRight/)
+    assert.match(connectorSource, /const leftStarts/)
+    assert.match(connectorSource, /const rightStarts/)
+    assert.match(connectorSource, /mirrorPointX\(leftStarts\.top, axisX\)/)
+    assert.match(connectorSource, /end:\s*mirrorPointX\(leftLine\.end, axisX\)/)
+    assert.match(connectorSource, /dot:\s*mirrorPointX\(leftLine\.dot, axisX\)/)
+    assert.match(homePageSource, /CapabilityConnectorLayer/)
     assert.match(homePageSource, /data-connector-scope="capability-infographic"/)
 
     assert.match(homePageSource, /data-connector-node/)
@@ -125,12 +135,14 @@ describe('R19 homepage structure', () => {
     }
 
     for (const line of expectedLines) {
-      assert.match(homePageSource, new RegExp(`data-connector-line=["']${line}["']`))
+      assert.match(connectorSource, new RegExp(`['\"]${line}['\"]`))
     }
+    assert.match(connectorSource, /data-connector-line={line\.id}/)
     for (const target of expectedTargets) {
-      assert.match(homePageSource, new RegExp(`data-target=["']${target}["']`))
-      assert.match(homePageSource, new RegExp(`data-connector-dot=["']${target}["']`))
+      assert.match(connectorSource, new RegExp(`target:\\s*['\"]${target}['\"]`))
     }
+    assert.match(connectorSource, /data-target={line\.target}/)
+    assert.match(connectorSource, /data-connector-dot={line\.target}/)
 
     assert.doesNotMatch(homePageSource, /viewBox="0 0 1120 620"/)
     assert.doesNotMatch(homePageSource, /机制汇聚|机器汇聚|能力输出|同步口径|构建驱动的半自动同步/)

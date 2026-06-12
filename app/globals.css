@@ -129,7 +129,6 @@
     overflow: visible;
     padding-bottom: 1.25rem;
     line-height: 1.28;
-    min-height: 2.56em;
   }
 
   @media (min-width: 768px) {
