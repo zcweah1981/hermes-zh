@@ -10,7 +10,7 @@ import { SITE_NAME, SITE_URL } from '@/lib/site-config'
 
 import './globals.css'
 
-const CLOUDFLARE_WEB_ANALYTICS_TOKEN='b653102bed904fb289cf6e3dd1f8baaa'
+const CLOUDFLARE_WEB_ANALYTICS_TOKEN='b65310...baaa'
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-N2Q0TXQDRZ'
 
 export const metadata: Metadata = {
@@ -58,6 +58,24 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/noto-serif-sc.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+          fetchpriority="high"
+        />
+        <link
+          rel="preload"
+          href="/fonts/noto-sans-sc.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+          fetchpriority="high"
+        />
+      </head>
       <body>
         <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd(), buildSoftwareApplicationJsonLd()]} />
         <Script
@@ -72,24 +90,44 @@ gtag('config', '${GA_MEASUREMENT_ID}');`,
           }}
         />
         <Script
-          id="ga4-idle-loader"
+          id="idle-script-loader"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
 (function () {
   var loaded = false;
-  function loadGtag() {
+  function loadScripts() {
     if (loaded) return;
     loaded = true;
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
-    document.head.appendChild(script);
+
+    // Load GA4
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}';
+    document.head.appendChild(ga);
+
+    // Load Cloudflare Analytics
+    var cf = document.createElement('script');
+    cf.async = true;
+    cf.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    cf.setAttribute('data-cf-beacon', JSON.stringify({ token: '${CLOUDFLARE_WEB_ANALYTICS_TOKEN}' }));
+    document.head.appendChild(cf);
   }
 
-  window.setTimeout(loadGtag, 12000);
-  window.addEventListener('pointerdown', loadGtag, { once: true, passive: true });
-  window.addEventListener('keydown', loadGtag, { once: true });
+  // 1. Trigger on idle
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(function() {
+      setTimeout(loadScripts, 3000); // Wait bit more after idle
+    });
+  } else {
+    window.setTimeout(loadScripts, 15000);
+  }
+
+  // 2. Trigger on user interaction
+  var interactions = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+  interactions.forEach(function(event) {
+    window.addEventListener(event, loadScripts, { once: true, passive: true });
+  });
 })();`,
           }}
         />
@@ -134,12 +172,6 @@ gtag('config', '${GA_MEASUREMENT_ID}');`,
         />
         {children}
         <Analytics />
-        <Script
-          id="cloudflare-web-analytics"
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon={JSON.stringify({ token: CLOUDFLARE_WEB_ANALYTICS_TOKEN })}
-          strategy="lazyOnload"
-        />
       </body>
     </html>
   )
