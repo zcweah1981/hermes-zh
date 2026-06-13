@@ -1039,7 +1039,7 @@
   }
 
   .site-icon-link {
-    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-border text-text-secondary transition duration-200 hover:border-border-strong hover:bg-white/[0.04] hover:text-text-primary;
+    @apply inline-flex h-9 w-9 items-center justify-center rounded-full border border-border text-text-secondary transition duration-200 hover:border-border-strong hover:bg-white/[0.04] hover:text-text-primary sm:h-10 sm:w-10;
   }
 
   .site-cta-primary {

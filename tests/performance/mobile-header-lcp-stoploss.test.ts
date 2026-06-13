@@ -14,6 +14,8 @@ describe('R9 mobile header overflow and FCP/LCP stoploss', () => {
     assert.match(header, /<details[^>]*className="[^"]*site-mobile-nav/, 'mobile header should use native details/summary instead of rendering the full nav row first-screen')
     assert.match(header, /<summary[^>]*aria-label="打开移动端导航"/, 'mobile menu must have an accessible label')
     assert.match(header, /className="[^"]*hidden[^"]*lg:flex/, 'desktop nav must remain available without the mobile disclosure')
+    assert.match(header, /className="[^"]*flex[^"]*min-w-0[^"]*flex-1[^"]*items-center/, 'brand row should be allowed to shrink instead of forcing header overflow')
+    assert.match(header, /className="[^"]*site-icon-link hidden min-\[360px\]:inline-flex/, 'lowest-priority GitHub icon should hide on ultra-narrow mobile while remaining reachable from wider mobile/header desktop')
     assert.match(header, /data-analytics-event="nav_start_click"/, 'primary nav_start_click analytics must not be removed')
 
     for (const label of ['从这开始', '现成方案', '国内落地', '从 OpenClaw 过来', '参考手册', 'Packs']) {
@@ -35,5 +37,8 @@ describe('R9 mobile header overflow and FCP/LCP stoploss', () => {
       assert.match(source, /@media \(max-width:\s*640px\)\s*\{[\s\S]*?\.site-hero-title\s*\{[\s\S]*?font-size:\s*clamp\(2rem, 13\.5vw, 3\.25rem\)/, 'mobile LCP title should use the tighter R9 clamp in both critical and full CSS')
       assert.match(source, /@media \(max-width:\s*640px\)\s*\{[\s\S]*?\.site-hero-title\s*\{[\s\S]*?line-height:\s*1\.12/, 'mobile LCP title line-height should be synchronized')
     }
+
+    assert.match(layout, /\.site-hero-title\s*\{[\s\S]*?font-family:\s*'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;/, 'inline critical LCP title should use the already-needed UI font family')
+    assert.match(read('components/marketing/hero.tsx'), /className="site-hero-title[^\"]*font-sans/, 'homepage LCP title should not trigger the decorative serif face on the mobile critical path')
   })
 })

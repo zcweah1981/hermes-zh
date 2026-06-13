@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 text-align: center;
               }
               .site-hero-title {
-                font-family: serif;
+                font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
                 font-size: clamp(2.25rem, 15.5vw, 3.5rem);
                 font-weight: 900;
                 line-height: 1.18;

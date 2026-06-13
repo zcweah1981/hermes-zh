@@ -24,9 +24,9 @@ function GitHubIcon() {
 export function SiteHeader() {
   return (
     <header className="site-frame sticky top-0 z-40">
-      <div className="mx-auto flex max-w-site-docs flex-col gap-2 px-3 py-2 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
-        <div className="flex min-h-[var(--site-header-height)] min-w-0 items-center justify-between gap-2 sm:gap-4">
-          <Link href="/" prefetch={false} className="flex min-w-0 items-center gap-2 sm:gap-3">
+      <div className="mx-auto flex max-w-site-docs flex-col gap-2 px-2.5 py-2 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
+        <div className="flex min-h-[var(--site-header-height)] min-w-0 items-center justify-between gap-1.5 sm:gap-4">
+          <Link href="/" prefetch={false} className="flex min-w-0 flex-1 items-center gap-1.5 sm:gap-3">
             <Image
               src="/hermes-logo.webp"
               alt="Hermes Agent 中文站 Logo"
@@ -34,18 +34,18 @@ export function SiteHeader() {
               height={44}
               className="h-10 w-10 object-contain"
             />
-            <div className="min-w-0">
-              <p className="truncate bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text font-serif text-base font-black text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] min-[360px]:text-lg sm:text-xl md:text-[22px] md:tracking-[-0.055em]">Hermes Agent 中文站</p>
+            <div className="min-w-0 flex-1">
+              <p className="truncate bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text font-sans text-[15px] font-black text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] min-[360px]:text-lg sm:text-xl md:text-[22px] md:tracking-[-0.055em]">Hermes Agent 中文站</p>
             </div>
           </Link>
 
-          <div className="relative flex shrink-0 items-center gap-1 lg:hidden">
+          <div className="relative flex min-w-0 shrink-0 items-center gap-0.5 min-[360px]:gap-1 lg:hidden">
             <SearchDialog />
             <a
               href={githubHref}
               target="_blank"
               rel="noreferrer"
-              className="site-icon-link"
+              className="site-icon-link hidden min-[360px]:inline-flex"
               aria-label="打开 GitHub 真相源"
               data-analytics-event="nav_github_click"
               data-analytics-label="GitHub"
