@@ -202,10 +202,28 @@ export function DocSidebar({ items, currentSlug, className = '' }: { items: DocS
       return
     }
 
-    const activeTop = active.offsetTop
-    const targetTop = Math.max(activeTop - scroll.clientHeight * 0.36, 0)
-    scroll.scrollTo({ top: targetTop, behavior: 'auto' })
-  }, [currentSlug, expandedByParent, defaultExpandedNodeIds])
+    let frameId = 0
+    const scrollToActive = () => {
+      const activeTop = active.offsetTop
+      const targetTop = Math.max(activeTop - scroll.clientHeight * 0.36, 0)
+      scroll.scrollTo({ top: targetTop, behavior: 'auto' })
+    }
+
+    const scheduleScroll = () => {
+      window.cancelAnimationFrame(frameId)
+      frameId = window.requestAnimationFrame(scrollToActive)
+    }
+
+    const observer = new ResizeObserver(scheduleScroll)
+    observer.observe(scroll)
+    observer.observe(active)
+    scheduleScroll()
+
+    return () => {
+      window.cancelAnimationFrame(frameId)
+      observer.disconnect()
+    }
+  }, [currentSlug, expandedByParent])
 
   function toggleExpandedNode(node: DocSidebarTreeNode, parentKey: string) {
     setExpandedByParent((previous) => {

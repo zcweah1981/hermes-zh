@@ -195,7 +195,16 @@ test('getOrderedSidebarItems mixes pages and child folders by source path with o
   assert.equal(getOrderedSidebarItems(contextSystem!)[0]?.label, '01-总览')
 })
 
-test('DocSidebar VFIX8 uses same-parent single-open accordion state and ordered mixed rendering', () => {
+test('DocSidebar defers active-link scroll measurement to ResizeObserver and requestAnimationFrame', () => {
+  assert.match(sidebarSource, /const observer = new ResizeObserver\(scheduleScroll\)/)
+  assert.match(sidebarSource, /window\.requestAnimationFrame\(scrollToActive\)/)
+  assert.match(sidebarSource, /window\.cancelAnimationFrame\(frameId\)/)
+  assert.match(sidebarSource, /observer\.observe\(scroll\)/)
+  assert.match(sidebarSource, /observer\.observe\(active\)/)
+  assert.match(sidebarSource, /return \(\) => \{\s*window\.cancelAnimationFrame\(frameId\)\s*observer\.disconnect\(\)\s*\}/)
+})
+
+test('DocSidebar supports VFIX8 same-parent single-open accordion state and ordered mixed rendering', () => {
   assert.match(sidebarSource, /type ExpandedByParent\s*=\s*Record<string, string>/)
   assert.match(sidebarSource, /data-doc-sidebar-parent-id=\{parentId \|\| '__root__'\}/)
   assert.match(sidebarSource, /data-doc-sidebar-node-id=\{node\.id\}/)
