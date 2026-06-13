@@ -181,7 +181,7 @@ function DocSidebarNode({
   )
 }
 
-export function DocSidebar({ items, currentSlug }: { items: DocSidebarItem[]; currentSlug: string }) {
+export function DocSidebar({ items, currentSlug, className = '' }: { items: DocSidebarItem[]; currentSlug: string; className?: string }) {
   const sidebarTree = useMemo(() => buildDocSidebarTree(items), [items])
   const currentRoot = useMemo(() => findRootNodeForSlug(sidebarTree, currentSlug), [sidebarTree, currentSlug])
   const defaultExpandedNodeIds = useMemo(() => findExpandedAncestorIds(sidebarTree, currentSlug), [sidebarTree, currentSlug])
@@ -229,7 +229,7 @@ export function DocSidebar({ items, currentSlug }: { items: DocSidebarItem[]; cu
   }
 
   return (
-    <aside className="site-panel-docs site-doc-sidebar-shell p-4 lg:p-5">
+    <aside className={`site-panel-docs site-doc-sidebar-shell p-4 lg:p-5 ${className}`.trim()}>
       <div className="site-doc-sidebar-heading border-b border-border pb-4">
         <p className="site-doc-rail-title">Docs navigation</p>
         <p className="mt-2 text-sm leading-6 text-text-tertiary">按章节浏览文档，当前路径会在目录中高亮。</p>

@@ -58,12 +58,12 @@ describe('R19 homepage structure', () => {
     assert.match(heroSource, /site-hero-content[^\"]*min-h-\[calc\(100svh-var\(--site-header-height\)\)\][^\"]*w-full/)
     assert.match(heroSource, /mt-10 flex w-full flex-col items-center justify-center gap-3/)
     assert.match(globalsSource, /@media \(max-width:\s*640px\)\s*{[\s\S]*\.site-hero-fullscreen\s*{[^}]*min-height:\s*calc\(100svh - var\(--site-header-height\)\)/s)
-    assert.match(globalsSource, /@media \(max-width:\s*640px\)\s*{[\s\S]*\.site-hero-title\s*{[^}]*font-size:\s*clamp\(2\.25rem,\s*15\.5vw,\s*3\.5rem\)[^}]*letter-spacing:\s*-0\.045em/s)
+    assert.match(globalsSource, /@media \(max-width:\s*640px\)\s*{[\s\S]*\.site-hero-title\s*{[^}]*font-family:\s*system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;[^}]*font-size:\s*clamp\(2rem,\s*13\.5vw,\s*3\.25rem\)[^}]*letter-spacing:\s*-0\.04em/s)
     assert.match(globalsSource, /@media \(max-width:\s*640px\)\s*{[\s\S]*\.site-hero-cta-primary,[\s\S]*\.site-hero-cta-secondary\s*{[^}]*width:\s*min\(100%,\s*18rem\)/s)
-    assert.match(headerSource, /className=\"mx-auto flex max-w-site-docs flex-col gap-3 px-4 py-2/)
-    assert.match(headerSource, /className=\"flex min-h-\[var\(--site-header-height\)\] min-w-0 items-center/)
+    assert.match(headerSource, /className=\"mx-auto flex max-w-site-docs flex-col gap-2 px-2\.5 py-2 sm:px-6 sm:py-3/)
+    assert.match(headerSource, /className=\"data-r10-header-row flex min-h-\[var\(--site-header-height\)\] min-w-0 items-center/)
     assert.match(headerSource, /className=\"truncate bg-gradient-to-b/)
-    assert.match(globalsSource, /@media \(max-width:\s*640px\)\s*{[\s\S]*\.site-nav-link\s*{[^}]*@apply px-3 py-1\.5 text-\[13px\]/s)
+    assert.match(globalsSource, /@media \(max-width:\s*640px\)\s*{[\s\S]*\.site-nav-link\s*{[^}]*@apply min-w-0 overflow-hidden text-ellipsis px-2\.5 py-1\.5 text-center text-\[13px\]/s)
   })
 
   it('surfaces the GitHub truth-source entry in header hero and footer without exposing the private site repo', () => {

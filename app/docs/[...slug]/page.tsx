@@ -99,9 +99,9 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
   return (
     <div className="site-doc-page-grid mx-auto grid max-w-site-docs gap-6 px-6 py-8 xl:grid-cols-[280px_minmax(0,1fr)_250px]">
       <SiteJsonLd data={jsonLdData} />
-      <DocSidebar items={sidebarItems} currentSlug={page.slug} />
+      <DocSidebar items={sidebarItems} currentSlug={page.slug} className="order-2 xl:order-none" />
 
-      <article className="site-panel-docs site-doc-article overflow-hidden p-6 lg:p-8">
+      <article className="site-panel-docs site-doc-article order-1 overflow-hidden p-6 xl:order-none lg:p-8">
         <Breadcrumb items={breadcrumbItems} />
         <div className="site-doc-header border-b border-border pb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">{page.module}</p>

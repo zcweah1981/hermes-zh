@@ -104,6 +104,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   contain-intrinsic-size: calc(100svh - var(--site-header-height));
                 }
                 .site-hero-title {
+                  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
                   font-size: clamp(2rem, 13.5vw, 3.25rem);
                   line-height: 1.12;
                   min-height: auto;
