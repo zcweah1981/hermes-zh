@@ -1,0 +1,67 @@
+{
+  "url": "http://127.0.0.1:3102/",
+  "viewport": {
+    "width": 1350,
+    "height": 940
+  },
+  "hero": {
+    "selector": "section[data-home-section=\"hero\"].site-hero-fullscreen",
+    "tag": "section",
+    "className": "site-hero-fullscreen relative overflow-hidden px-5 text-center sm:px-6",
+    "rect": {
+      "top": 81,
+      "left": 0,
+      "width": 1350,
+      "height": 884
+    },
+    "computed": {
+      "minHeight": "884px",
+      "height": "884px",
+      "transform": "none",
+      "fontWeight": "400",
+      "paddingTop": "0px",
+      "paddingBottom": "0px",
+      "containIntrinsicSize": "884px"
+    }
+  },
+  "content": {
+    "selector": ".site-hero-content",
+    "tag": "div",
+    "className": "site-hero-content relative z-10 mx-auto flex min-h-[calc(100svh-var(--site-header-height))] w-full max-w-4xl flex-col items-center justify-center py-16 text-center sm:min-h-[calc(100vh-var(--site-header-height))] sm:py-20 md:py-24",
+    "rect": {
+      "top": 49,
+      "left": 227,
+      "width": 896,
+      "height": 884
+    },
+    "computed": {
+      "minHeight": "884px",
+      "height": "884px",
+      "transform": "matrix(1, 0, 0, 1, 0, -32)",
+      "fontWeight": "400",
+      "paddingTop": "96px",
+      "paddingBottom": "96px",
+      "containIntrinsicSize": "884px"
+    }
+  },
+  "title": {
+    "selector": ".site-hero-title",
+    "tag": "h1",
+    "className": "site-hero-title max-w-4xl bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text pb-5 font-sans text-5xl font-black leading-[1.28] text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] md:text-[82px] md:tracking-[-0.055em]",
+    "rect": {
+      "top": 331.515625,
+      "left": 310.75,
+      "width": 728.5,
+      "height": 124.953125
+    },
+    "computed": {
+      "minHeight": "124.96px",
+      "height": "124.953px",
+      "transform": "none",
+      "fontWeight": "800",
+      "paddingTop": "0px",
+      "paddingBottom": "20px",
+      "containIntrinsicSize": "124.96px"
+    }
+  }
+}

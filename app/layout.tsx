@@ -86,7 +86,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               .site-hero-title {
                 font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
                 font-size: clamp(2.25rem, 15.5vw, 3.5rem);
-                font-weight: 900;
+                font-weight: 800;
                 line-height: 1.28;
                 min-height: calc(82px * 1.28 + 1.25rem);
                 contain-intrinsic-size: calc(82px * 1.28 + 1.25rem);
@@ -111,6 +111,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 }
               }
               @media (min-width: 768px) {
+                .site-hero-content {
+                  transform: translateY(-2rem);
+                  padding: 6rem 0;
+                }
                 .site-hero-title {
                   font-size: 82px;
                   line-height: 1.28;

@@ -25,12 +25,23 @@ describe('R10 desktop CLS critical CSS stoploss', () => {
       ['full CSS', fullHeroTitle],
     ] as const) {
       assert.match(block, /font-family:\s*'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;/, `${name} should reserve the same UI font stack`)
+      assert.match(block, /font-weight:\s*800;/, `${name} should use the loaded Noto Sans SC max weight instead of synthetic 900 that shifts on font swap`)
       assert.match(block, /line-height:\s*1\.28;/, `${name} should keep the desktop line-height stable before and after full CSS loads`)
       assert.match(block, /min-height:\s*calc\(82px \* 1\.28 \+ 1\.25rem\);/, `${name} should reserve the one-line desktop h1 box plus existing descender padding`)
       assert.match(block, /contain-intrinsic-size:\s*calc\(82px \* 1\.28 \+ 1\.25rem\);/, `${name} should expose an intrinsic size guard for lab CLS`)
     }
 
     assert.match(layout, /@media \(min-width:\s*768px\)\s*\{[\s\S]*?\.site-hero-title\s*\{[\s\S]*?font-size:\s*82px;[\s\S]*?line-height:\s*1\.28;[\s\S]*?min-height:\s*calc\(82px \* 1\.28 \+ 1\.25rem\);[\s\S]*?\}/, 'desktop critical override should not only set font-size; it must also reserve line-box height')
+  })
+
+  it('keeps desktop critical hero content geometry aligned with the hydrated Tailwind/full CSS state', () => {
+    const layout = read('app/layout.tsx')
+
+    assert.match(
+      layout,
+      /@media \(min-width:\s*768px\)\s*\{[\s\S]*?\.site-hero-content\s*\{[\s\S]*?transform:\s*translateY\(-2rem\);[\s\S]*?padding:\s*6rem 0;[\s\S]*?\}/,
+      'desktop critical CSS must reserve the same hero-content transform and md vertical padding before full CSS loads',
+    )
   })
 
   it('pins the desktop hero section and content boxes so font swap cannot resize the fullscreen CLS source node', () => {

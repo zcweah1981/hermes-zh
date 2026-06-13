@@ -136,6 +136,7 @@
     padding-bottom: 1.25rem;
     overflow-wrap: anywhere;
     font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-weight: 800;
     line-height: 1.28;
     min-height: calc(82px * 1.28 + 1.25rem);
     contain-intrinsic-size: calc(82px * 1.28 + 1.25rem);
