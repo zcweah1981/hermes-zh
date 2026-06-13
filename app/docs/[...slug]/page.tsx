@@ -96,8 +96,14 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
   const sidebarItems = toDocSidebarItems(pages)
   const linkTargets = toDocLinkTargets(pages)
 
+  const docsStartDesktopClsStabilizer = page.slug === '/start' ? 'start' : undefined
+
   return (
-    <div className="site-doc-page-grid mx-auto grid max-w-site-docs gap-6 px-6 py-8 xl:grid-cols-[280px_minmax(0,1fr)_250px]">
+    <div
+      className="site-doc-page-grid mx-auto grid max-w-site-docs gap-6 px-6 py-8 xl:grid-cols-[280px_minmax(0,1fr)_250px]"
+      data-doc-desktop-cls-stabilizer={docsStartDesktopClsStabilizer}
+      suppressHydrationWarning
+    >
       <SiteJsonLd data={jsonLdData} />
       <DocSidebar items={sidebarItems} currentSlug={page.slug} className="order-2 xl:order-none" />
 

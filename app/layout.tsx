@@ -123,10 +123,46 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     contain-intrinsic-size: calc(82px * 1.28 + 1.25rem);
                   }
                 }
+                @media (min-width: 1280px) {
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] {
+                    display: grid;
+                    grid-template-columns: 280px minmax(0, 1fr) 250px;
+                    grid-auto-rows: minmax(0, auto);
+                    min-height: 1620px;
+                    contain: layout paint;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"],
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] * {
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+                  }
+                  body:has(.site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"]) .site-frame,
+                  body:has(.site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"]) .site-frame * {
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+                  }
+                  body:has(.site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"]) .site-frame > div {
+                    min-height: 80px;
+                  }
+                  body:has(.site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"]) main.flex-1 {
+                    min-height: 1620px;
+                    contain: layout paint;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] > aside,
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] > article {
+                    contain: layout paint;
+                    min-height: 720px;
+                  }
+                }
                 .site-doc-header h1 {
                   content-visibility: auto;
                   contain-intrinsic-size: 40px 100%;
                 }
+              `,
+            }}
+          />
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
                 [data-analytics-event="nav_start_click"] {
                   content-visibility: auto;
                   contain-intrinsic-size: 1px 1px;
