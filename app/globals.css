@@ -108,6 +108,7 @@
 
   .site-hero-fullscreen {
     min-height: calc(100vh - var(--site-header-height));
+    height: calc(100vh - var(--site-header-height));
     contain-intrinsic-size: calc(100vh - var(--site-header-height));
     overflow: hidden;
     background:
@@ -121,6 +122,10 @@
   }
 
   .site-hero-content {
+    box-sizing: border-box;
+    min-height: calc(100vh - var(--site-header-height));
+    height: calc(100vh - var(--site-header-height));
+    contain-intrinsic-size: calc(100vh - var(--site-header-height));
     transform: translateY(-1.5rem);
   }
 

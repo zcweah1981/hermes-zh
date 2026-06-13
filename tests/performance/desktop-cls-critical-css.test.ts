@@ -33,6 +33,35 @@ describe('R10 desktop CLS critical CSS stoploss', () => {
     assert.match(layout, /@media \(min-width:\s*768px\)\s*\{[\s\S]*?\.site-hero-title\s*\{[\s\S]*?font-size:\s*82px;[\s\S]*?line-height:\s*1\.28;[\s\S]*?min-height:\s*calc\(82px \* 1\.28 \+ 1\.25rem\);[\s\S]*?\}/, 'desktop critical override should not only set font-size; it must also reserve line-box height')
   })
 
+  it('pins the desktop hero section and content boxes so font swap cannot resize the fullscreen CLS source node', () => {
+    const layout = read('app/layout.tsx')
+    const globals = read('app/globals.css')
+
+    const criticalHero = firstRuleBlock(layout, '.site-hero-fullscreen')
+    const fullHero = firstRuleBlock(globals, '.site-hero-fullscreen')
+    const criticalContent = firstRuleBlock(layout, '.site-hero-content')
+    const fullContent = firstRuleBlock(globals, '.site-hero-content')
+
+    for (const [name, block] of [
+      ['inline critical hero section', criticalHero],
+      ['full hero section', fullHero],
+    ] as const) {
+      assert.match(block, /min-height:\s*calc\(100vh - var\(--site-header-height\)\);/, `${name} must keep the viewport reservation`)
+      assert.match(block, /height:\s*calc\(100vh - var\(--site-header-height\)\);/, `${name} must pin the Lighthouse culprit section height before and after font swap`)
+      assert.match(block, /contain-intrinsic-size:\s*calc\(100vh - var\(--site-header-height\)\);/, `${name} must expose matching intrinsic height for CLS attribution`)
+    }
+
+    for (const [name, block] of [
+      ['inline critical hero content', criticalContent],
+      ['full hero content', fullContent],
+    ] as const) {
+      assert.match(block, /box-sizing:\s*border-box;/, `${name} must include vertical padding inside the reserved fullscreen box`)
+      assert.match(block, /min-height:\s*calc\(100vh - var\(--site-header-height\)\);/, `${name} must reserve the same hero content height as the section`)
+      assert.match(block, /height:\s*calc\(100vh - var\(--site-header-height\)\);/, `${name} must not grow from web-font metric changes`)
+      assert.match(block, /contain-intrinsic-size:\s*calc\(100vh - var\(--site-header-height\)\);/, `${name} must match the section intrinsic reservation`)
+    }
+  })
+
   it('keeps desktop header in a single stable row without re-expanding the mobile nav into layout flow', () => {
     const header = read('components/layout/site-header.tsx')
     const globals = read('app/globals.css')

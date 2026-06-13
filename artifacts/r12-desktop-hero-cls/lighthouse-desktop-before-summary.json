@@ -1,0 +1,85 @@
+{
+  "source": "/root/.hermes/projects/hermes-zh/docs/audits/2026-06-13-r11-clean-deploy-verify/lh-home-desktop.report.json",
+  "url": "https://hermes-zh.com/",
+  "cumulativeLayoutShift": {
+    "score": 0.24,
+    "numericValue": 0.4083333333333333,
+    "displayValue": "0.408"
+  },
+  "clsCulpritsInsight": {
+    "score": 0,
+    "items": [
+      {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "extra"
+            },
+            "label": "Element"
+          },
+          {
+            "key": "score",
+            "valueType": "numeric",
+            "subItemsHeading": {
+              "key": "cause",
+              "valueType": "text"
+            },
+            "granularity": 0.001,
+            "label": "Layout shift score"
+          }
+        ],
+        "items": [
+          {
+            "node": {
+              "type": "text",
+              "value": "Total"
+            },
+            "score": 0.4083333333333333
+          },
+          {
+            "node": {
+              "type": "node",
+              "lhId": "page-1-SECTION",
+              "path": "2,HTML,1,BODY,2,DIV,2,DIV,1,MAIN,1,SECTION",
+              "selector": "div.relative > div.relative > main.flex-1 > section.site-hero-fullscreen",
+              "boundingRect": {
+                "top": 81,
+                "bottom": 965,
+                "left": 0,
+                "right": 1335,
+                "width": 1335,
+                "height": 884
+              },
+              "snippet": "<section data-home-section=\"hero\" class=\"site-hero-fullscreen relative overflow-hidden px-5 text-center sm:px-6\">",
+              "nodeLabel": "Hermes Agent 中文站\n\n一套面向中文用户的 AI Agent 全流程实践指南。\n\n从先跑通，到会定制，再到能集成与自动化。\n\n🚀\n快速上手\n浏览文…"
+            },
+            "score": 0.4083333333333333,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "extra": {
+                    "type": "url",
+                    "value": "https://hermes-zh.com/fonts/noto-sans-sc.woff2"
+                  },
+                  "cause": "Web font"
+                },
+                {
+                  "extra": {
+                    "type": "url",
+                    "value": "https://hermes-zh.com/fonts/noto-serif-sc.woff2"
+                  },
+                  "cause": "Web font"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "containsSiteHeroFullscreenCulprit": true
+}

@@ -1,0 +1,15 @@
+{
+  "url": "http://127.0.0.1:3212/",
+  "performanceScore": 0.59,
+  "cumulativeLayoutShift": {
+    "score": 1,
+    "numericValue": 0,
+    "displayValue": "0"
+  },
+  "clsCulpritsInsight": {
+    "score": 1,
+    "items": []
+  },
+  "layoutShifts": [],
+  "containsSiteHeroFullscreenCulprit": false
+}

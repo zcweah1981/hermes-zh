@@ -63,7 +63,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{
             __html: `
               .site-hero-fullscreen {
-                min-height: calc(100vh - 56px);
+                min-height: calc(100vh - var(--site-header-height));
+                height: calc(100vh - var(--site-header-height));
+                contain-intrinsic-size: calc(100vh - var(--site-header-height));
                 background: #071021;
                 display: flex;
                 align-items: center;
@@ -72,8 +74,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               .site-hero-content {
                 position: relative;
                 z-index: 10;
+                box-sizing: border-box;
                 margin: 0 auto;
                 max-width: 56rem;
+                min-height: calc(100vh - var(--site-header-height));
+                height: calc(100vh - var(--site-header-height));
+                contain-intrinsic-size: calc(100vh - var(--site-header-height));
                 padding: 5rem 0;
                 text-align: center;
               }
