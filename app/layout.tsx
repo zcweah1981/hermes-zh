@@ -90,6 +90,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 padding-bottom: 1.25rem;
                 overflow-wrap: anywhere;
               }
+              @media (max-width: 640px) {
+                .site-hero-fullscreen {
+                  min-height: calc(100svh - var(--site-header-height));
+                  contain-intrinsic-size: calc(100svh - var(--site-header-height));
+                }
+                .site-hero-title {
+                  font-size: clamp(2rem, 13.5vw, 3.25rem);
+                  line-height: 1.12;
+                }
+              }
               @media (min-width: 768px) {
                 .site-hero-title { font-size: 82px; }
               }

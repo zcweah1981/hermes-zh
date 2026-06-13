@@ -24,8 +24,8 @@ function GitHubIcon() {
 export function SiteHeader() {
   return (
     <header className="site-frame sticky top-0 z-40">
-      <div className="mx-auto flex max-w-site-docs flex-col gap-3 px-4 py-2 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex min-h-[var(--site-header-height)] min-w-0 items-center justify-between gap-3 sm:gap-4">
+      <div className="mx-auto flex max-w-site-docs flex-col gap-2 px-3 py-2 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
+        <div className="flex min-h-[var(--site-header-height)] min-w-0 items-center justify-between gap-2 sm:gap-4">
           <Link href="/" prefetch={false} className="flex min-w-0 items-center gap-2 sm:gap-3">
             <Image
               src="/hermes-logo.webp"
@@ -35,11 +35,11 @@ export function SiteHeader() {
               className="h-10 w-10 object-contain"
             />
             <div className="min-w-0">
-              <p className="truncate bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text font-serif text-lg font-black text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] sm:text-xl md:text-[22px] md:tracking-[-0.055em]">Hermes Agent 中文站</p>
+              <p className="truncate bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text font-serif text-base font-black text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] min-[360px]:text-lg sm:text-xl md:text-[22px] md:tracking-[-0.055em]">Hermes Agent 中文站</p>
             </div>
           </Link>
 
-          <div className="flex shrink-0 items-center lg:hidden">
+          <div className="relative flex shrink-0 items-center gap-1 lg:hidden">
             <SearchDialog />
             <a
               href={githubHref}
@@ -54,11 +54,33 @@ export function SiteHeader() {
             >
               <GitHubIcon />
             </a>
+            <details className="site-mobile-nav lg:hidden">
+              <summary aria-label="打开移动端导航" className="site-mobile-nav-summary">
+                <span>导航</span>
+                <span aria-hidden="true">⌄</span>
+              </summary>
+              <nav className="site-mobile-nav-panel" aria-label="移动端主导航">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    prefetch={false}
+                    className="site-nav-link"
+                    data-analytics-event={item.analyticsEvent}
+                    data-analytics-label={item.label}
+                    data-analytics-destination={item.href}
+                    data-analytics-section="site-header-mobile-menu"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </nav>
+            </details>
           </div>
         </div>
 
-        <div className="flex min-w-0 flex-col gap-3 lg:flex-row lg:items-center lg:gap-4">
-          <nav className="flex max-w-full flex-wrap items-center gap-1.5 sm:gap-2">
+        <div className="hidden min-w-0 flex-col gap-3 lg:flex lg:flex-row lg:items-center lg:gap-4">
+          <nav className="flex max-w-full flex-wrap items-center gap-1.5 sm:gap-2" aria-label="主导航">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -75,7 +97,7 @@ export function SiteHeader() {
             ))}
           </nav>
           
-          <div className="hidden lg:flex items-center gap-3 ml-auto">
+          <div className="ml-auto flex items-center gap-3">
             <a
               href={githubHref}
               target="_blank"
@@ -92,7 +114,7 @@ export function SiteHeader() {
             <Link
               href="/docs/start"
               prefetch={false}
-              className="site-cta-primary hidden px-4 xl:px-5 py-2.5 lg:inline-flex"
+              className="site-cta-primary hidden px-4 py-2.5 xl:inline-flex xl:px-5"
               data-analytics-event="nav_start_click"
               data-analytics-label="快速上手"
               data-analytics-destination="/docs/start"
