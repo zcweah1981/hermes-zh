@@ -81,7 +81,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
                 font-size: clamp(2.25rem, 15.5vw, 3.5rem);
                 font-weight: 900;
-                line-height: 1.18;
+                line-height: 1.28;
+                min-height: calc(82px * 1.28 + 1.25rem);
+                contain-intrinsic-size: calc(82px * 1.28 + 1.25rem);
                 color: #fff;
                 background: linear-gradient(to bottom, #fff, #5ba7ff);
                 -webkit-background-clip: text;
@@ -98,10 +100,17 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 .site-hero-title {
                   font-size: clamp(2rem, 13.5vw, 3.25rem);
                   line-height: 1.12;
+                  min-height: auto;
+                  contain-intrinsic-size: auto;
                 }
               }
               @media (min-width: 768px) {
-                .site-hero-title { font-size: 82px; }
+                .site-hero-title {
+                  font-size: 82px;
+                  line-height: 1.28;
+                  min-height: calc(82px * 1.28 + 1.25rem);
+                  contain-intrinsic-size: calc(82px * 1.28 + 1.25rem);
+                }
               }
             `,
           }}

@@ -130,7 +130,10 @@
     overflow: visible;
     padding-bottom: 1.25rem;
     overflow-wrap: anywhere;
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
     line-height: 1.28;
+    min-height: calc(82px * 1.28 + 1.25rem);
+    contain-intrinsic-size: calc(82px * 1.28 + 1.25rem);
   }
 
   @media (min-width: 768px) {
@@ -272,6 +275,8 @@
       font-size: clamp(2rem, 13.5vw, 3.25rem);
       line-height: 1.12;
       letter-spacing: -0.04em;
+      min-height: auto;
+      contain-intrinsic-size: auto;
     }
 
     .site-hero-circuit-left {

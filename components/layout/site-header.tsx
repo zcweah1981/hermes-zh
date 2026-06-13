@@ -25,7 +25,10 @@ export function SiteHeader() {
   return (
     <header className="site-frame sticky top-0 z-40">
       <div className="mx-auto flex max-w-site-docs flex-col gap-2 px-2.5 py-2 sm:px-6 sm:py-3 lg:flex-row lg:items-center lg:justify-between lg:gap-4">
-        <div className="flex min-h-[var(--site-header-height)] min-w-0 items-center justify-between gap-1.5 sm:gap-4">
+        <div
+          className="data-r10-header-row flex min-h-[var(--site-header-height)] min-w-0 items-center justify-between gap-1.5 sm:gap-4"
+          data-r10-header-row="compact-mobile-stable-desktop"
+        >
           <Link href="/" prefetch={false} className="flex min-w-0 flex-1 items-center gap-1.5 sm:gap-3">
             <Image
               src="/hermes-logo.webp"
