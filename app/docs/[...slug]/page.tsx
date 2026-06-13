@@ -105,7 +105,10 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
         <Breadcrumb items={breadcrumbItems} />
         <div className="site-doc-header border-b border-border pb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">{page.module}</p>
-          <h1 className="mt-4 text-3xl font-black text-white lg:text-4xl">{page.title}</h1>
+          <h1 className="mt-4 text-3xl font-black text-white lg:text-4xl">
+            {page.title}
+            <span className="sr-only" data-lcp-marker="doc-title">LCP</span>
+          </h1>
           <p data-ai-summary="true" className="mt-4 max-w-3xl text-base leading-8 text-text-secondary">{effectiveDescription}</p>
 
           <div className="mt-6 flex flex-wrap gap-3 text-xs text-text-tertiary">

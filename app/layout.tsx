@@ -59,73 +59,81 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="zh-CN">
       <head>
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `
-              .site-hero-fullscreen {
-                min-height: calc(100vh - var(--site-header-height));
-                height: calc(100vh - var(--site-header-height));
-                contain-intrinsic-size: calc(100vh - var(--site-header-height));
-                background: #071021;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-              }
-              .site-hero-content {
-                position: relative;
-                z-index: 10;
-                box-sizing: border-box;
-                margin: 0 auto;
-                max-width: 56rem;
-                min-height: calc(100vh - var(--site-header-height));
-                height: calc(100vh - var(--site-header-height));
-                contain-intrinsic-size: calc(100vh - var(--site-header-height));
-                padding: 5rem 0;
-                text-align: center;
-              }
-              .site-hero-title {
-                font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-                font-size: clamp(2.25rem, 15.5vw, 3.5rem);
-                font-weight: 800;
-                line-height: 1.28;
-                min-height: calc(82px * 1.28 + 1.25rem);
-                contain-intrinsic-size: calc(82px * 1.28 + 1.25rem);
-                color: #fff;
-                background: linear-gradient(to bottom, #fff, #5ba7ff);
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                padding-bottom: 1.25rem;
-                overflow-wrap: anywhere;
-              }
-              @media (max-width: 640px) {
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
                 .site-hero-fullscreen {
-                  min-height: calc(100svh - var(--site-header-height));
-                  contain-intrinsic-size: calc(100svh - var(--site-header-height));
+                  min-height: calc(100vh - var(--site-header-height));
+                  height: calc(100vh - var(--site-header-height));
+                  contain-intrinsic-size: calc(100vh - var(--site-header-height));
+                  background: #071021;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
                 }
-                .site-hero-title {
-                  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-                  font-size: clamp(2rem, 13.5vw, 3.25rem);
-                  line-height: 1.12;
-                  min-height: auto;
-                  contain-intrinsic-size: auto;
-                }
-              }
-              @media (min-width: 768px) {
                 .site-hero-content {
-                  transform: translateY(-2rem);
-                  padding: 6rem 0;
+                  position: relative;
+                  z-index: 10;
+                  box-sizing: border-box;
+                  margin: 0 auto;
+                  max-width: 56rem;
+                  min-height: calc(100vh - var(--site-header-height));
+                  height: calc(100vh - var(--site-header-height));
+                  contain-intrinsic-size: calc(100vh - var(--site-header-height));
+                  padding: 5rem 0;
+                  text-align: center;
                 }
                 .site-hero-title {
-                  font-size: 82px;
+                  font-family: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+                  font-size: clamp(2.25rem, 15.5vw, 3.5rem);
+                  font-weight: 800;
                   line-height: 1.28;
                   min-height: calc(82px * 1.28 + 1.25rem);
                   contain-intrinsic-size: calc(82px * 1.28 + 1.25rem);
+                  color: #fff;
+                  background: linear-gradient(to bottom, #fff, #5ba7ff);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  padding-bottom: 1.25rem;
+                  overflow-wrap: anywhere;
                 }
-              }
-            `,
-          }}
-        />
+                @media (max-width: 640px) {
+                  .site-hero-fullscreen {
+                    min-height: calc(100svh - var(--site-header-height));
+                    contain-intrinsic-size: calc(100svh - var(--site-header-height));
+                  }
+                  .site-hero-title {
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                    font-size: clamp(2rem, 13.5vw, 3.25rem);
+                    line-height: 1.12;
+                    min-height: auto;
+                    contain-intrinsic-size: auto;
+                  }
+                }
+                @media (min-width: 768px) {
+                  .site-hero-content {
+                    transform: translateY(-2rem);
+                    padding: 6rem 0;
+                  }
+                  .site-hero-title {
+                    font-size: 82px;
+                    line-height: 1.28;
+                    min-height: calc(82px * 1.28 + 1.25rem);
+                    contain-intrinsic-size: calc(82px * 1.28 + 1.25rem);
+                  }
+                }
+                .site-doc-header h1 {
+                  content-visibility: auto;
+                  contain-intrinsic-size: 40px 100%;
+                }
+                [data-analytics-event="nav_start_click"] {
+                  content-visibility: auto;
+                  contain-intrinsic-size: 1px 1px;
+                }
+              `,
+            }}
+          />
       </head>
       <body>
         <SiteJsonLd data={[buildWebSiteJsonLd(), buildOrganizationJsonLd(), buildSoftwareApplicationJsonLd()]} />

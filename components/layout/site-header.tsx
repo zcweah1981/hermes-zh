@@ -30,13 +30,15 @@ export function SiteHeader() {
           data-r10-header-row="compact-mobile-stable-desktop"
         >
           <Link href="/" prefetch={false} className="flex min-w-0 flex-1 items-center gap-1.5 sm:gap-3">
-            <Image
-              src="/hermes-logo.webp"
-              alt="Hermes Agent 中文站 Logo"
-              width={44}
-              height={44}
-              className="h-10 w-10 object-contain"
-            />
+              <Image
+                src="/hermes-logo.webp"
+                alt="Hermes Agent 中文站 Logo"
+                width={44}
+                height={44}
+                priority
+                fetchPriority="high"
+                className="h-10 w-10 object-contain"
+              />
             <div className="min-w-0 flex-1">
               <p className="truncate bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text font-sans text-[15px] font-black text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] min-[360px]:text-lg sm:text-xl md:text-[22px] md:tracking-[-0.055em]">Hermes Agent 中文站</p>
             </div>

@@ -18,6 +18,7 @@ export function Hero() {
       <div className="site-hero-content relative z-10 mx-auto flex min-h-[calc(100svh-var(--site-header-height))] w-full max-w-4xl flex-col items-center justify-center py-16 text-center sm:min-h-[calc(100vh-var(--site-header-height))] sm:py-20 md:py-24">
         <h1 className="site-hero-title max-w-4xl bg-gradient-to-b from-white via-sky-100 to-brand-primary bg-clip-text pb-5 font-sans text-5xl font-black leading-[1.28] text-transparent drop-shadow-[0_0_24px_rgba(91,167,255,0.22)] md:text-[82px] md:tracking-[-0.055em]">
           Hermes Agent 中文站
+          <span className="sr-only" data-lcp-marker="hero-title">LCP</span>
         </h1>
 
         <div className="mt-7 max-w-3xl space-y-3 text-base leading-8 text-sky-100/92 md:text-[19px] md:leading-8">
