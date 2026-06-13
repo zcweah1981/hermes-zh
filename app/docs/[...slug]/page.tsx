@@ -119,7 +119,7 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
           </div>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10" style={{ minHeight: '600px', contain: 'layout' }}>
           <MarkdownBody page={page} linkTargets={linkTargets} />
         </div>
 

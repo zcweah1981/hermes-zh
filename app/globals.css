@@ -8,7 +8,7 @@
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
-  size-adjust: 100%;
+  size-adjust: 104.5%;
   ascent-override: 88%;
   descent-override: 12%;
   line-gap-override: 0%;
@@ -20,7 +20,7 @@
   font-style: normal;
   font-weight: 700 900;
   font-display: swap;
-  size-adjust: 100%;
+  size-adjust: 104.5%;
   ascent-override: 88%;
   descent-override: 12%;
   line-gap-override: 0%;
@@ -1072,6 +1072,7 @@
 
   .site-doc-page-grid {
     position: relative;
+    contain: layout;
   }
 
   @screen xl {

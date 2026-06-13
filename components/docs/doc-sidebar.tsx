@@ -229,7 +229,7 @@ export function DocSidebar({ items, currentSlug, className = '' }: { items: DocS
   }
 
   return (
-    <aside className={`site-panel-docs site-doc-sidebar-shell p-4 lg:p-5 ${className}`.trim()}>
+    <aside className={`site-panel-docs site-doc-sidebar-shell p-4 lg:p-5 ${className}`.trim()} style={{ minHeight: '520px' }}>
       <div className="site-doc-sidebar-heading border-b border-border pb-4">
         <p className="site-doc-rail-title">Docs navigation</p>
         <p className="mt-2 text-sm leading-6 text-text-tertiary">按章节浏览文档，当前路径会在目录中高亮。</p>
