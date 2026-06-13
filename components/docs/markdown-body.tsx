@@ -178,10 +178,22 @@ export function MarkdownBody({ page, linkTargets }: { page: SitePage; linkTarget
               return null
             }
 
+            const isDocsStartHeroImage = page.slug === '/start' && resolved.endsWith('rm2-learning-path-gemini-final-v2.webp')
+            const imageSrc = isDocsStartHeroImage ? '/content-assets/rm2-learning-path-gemini-final-v2-lcp.webp' : resolved
+
             return (
               <figure className="my-8 overflow-hidden rounded-2xl border border-white/10 bg-black/20">
                 {/* eslint-disable-next-line @next/next/no-img-element -- markdown images resolve to external/raw content URLs at runtime */}
-                <img src={resolved} alt={alt} className="h-auto w-full" loading="lazy" />
+                <img
+                  src={imageSrc}
+                  alt={alt}
+                  className={isDocsStartHeroImage ? 'docs-start-lcp-image h-auto w-full' : 'h-auto w-full'}
+                  loading={isDocsStartHeroImage ? 'eager' : 'lazy'}
+                  fetchPriority={isDocsStartHeroImage ? 'high' : 'auto'}
+                  decoding={isDocsStartHeroImage ? 'sync' : 'async'}
+                  width={isDocsStartHeroImage ? 720 : undefined}
+                  height={isDocsStartHeroImage ? 402 : undefined}
+                />
                 {alt ? <figcaption className="border-t border-white/10 px-4 py-3 text-xs leading-6 text-text-tertiary">{alt}</figcaption> : null}
               </figure>
             )

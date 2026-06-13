@@ -30,10 +30,16 @@ describe('R13 mobile LCP stoploss for home and /docs/start only', () => {
     const docsPage = read('app/docs/[...slug]/page.tsx')
     const sidebar = read('components/docs/doc-sidebar.tsx')
 
+    const articleIndex = docsPage.indexOf('<article')
+    const sidebarIndex = docsPage.indexOf('<DocSidebar')
+
+    assert.ok(articleIndex > -1, 'docs page should render an article')
+    assert.ok(sidebarIndex > -1, 'docs page should render the sidebar')
+    assert.ok(articleIndex < sidebarIndex, 'mobile docs route should render article HTML before the sidebar rail')
     assert.match(
       docsPage,
-      /<DocSidebar[\s\S]*?className="[^"]*order-2[^"]*xl:order-none[^"]*"/,
-      'mobile docs route should render article before the sidebar rail; desktop xl grid order must remain unchanged',
+      /<DocSidebar[\s\S]*?className="[^"]*order-2[^"]*xl:order-1[^"]*"/,
+      'mobile docs route should render article before the sidebar rail; desktop xl grid order must remain first column',
     )
     assert.match(
       sidebar,

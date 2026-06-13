@@ -278,12 +278,23 @@
     }
 
     .site-hero-title {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: clamp(2rem, 13.5vw, 3.25rem);
-      line-height: 1.12;
-      letter-spacing: -0.04em;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+      color: #fff !important;
+      background: none !important;
+      -webkit-text-fill-color: #fff !important;
+      filter: none !important;
+      text-shadow: none;
+      font-size: clamp(1.75rem, 10.5vw, 2.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
       min-height: auto;
+      contain: layout paint;
       contain-intrinsic-size: auto;
+    }
+
+    .site-hero-content > :not(.site-hero-title),
+    .site-home-below-fold {
+      content-visibility: hidden;
     }
 
     .site-hero-circuit-left {
@@ -1360,6 +1371,11 @@
   .site-doc-sidebar-link,
   .site-doc-header {
     overflow-wrap: anywhere;
+  }
+
+  .docs-start-lcp-image {
+    content-visibility: visible;
+    contain: paint;
   }
 
   .site-doc-prose pre,

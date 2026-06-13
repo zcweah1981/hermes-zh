@@ -105,9 +105,8 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
       suppressHydrationWarning
     >
       <SiteJsonLd data={jsonLdData} />
-      <DocSidebar items={sidebarItems} currentSlug={page.slug} className="order-2 xl:order-none" />
 
-      <article className="site-panel-docs site-doc-article order-1 overflow-hidden p-6 xl:order-none lg:p-8">
+      <article className="site-panel-docs site-doc-article order-1 overflow-hidden p-6 xl:order-2 lg:p-8">
         <Breadcrumb items={breadcrumbItems} />
         <div className="site-doc-header border-b border-border pb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand-primary">{page.module}</p>
@@ -116,6 +115,9 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
             <span className="sr-only" data-lcp-marker="doc-title">LCP</span>
           </h1>
           <p data-ai-summary="true" className="mt-4 max-w-3xl text-base leading-8 text-text-secondary">{effectiveDescription}</p>
+          {page.slug === '/start' ? (
+            <link rel="preload" as="image" href="/content-assets/rm2-learning-path-gemini-final-v2-lcp.webp" fetchPriority="high" />
+          ) : null}
 
           <div className="mt-6 flex flex-wrap gap-3 text-xs text-text-tertiary">
             <span className="site-meta-pill">最后更新：{page.updated || '未标注'}</span>
@@ -142,7 +144,9 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
         <DocPrevNext page={page} pages={pages} />
       </article>
 
-      <DocOutline page={page} />
+      <DocSidebar items={sidebarItems} currentSlug={page.slug} className="order-2 xl:order-1" />
+
+      <DocOutline page={page} className="order-3" />
     </div>
   )
 }

@@ -4,11 +4,11 @@ import type { SitePage } from '@/lib/content/types'
 import { getDocNavSummary } from '@/lib/docs/nav-summary'
 import { toDocPath } from '@/lib/routing/docs-path'
 
-export function DocOutline({ page }: { page: SitePage }) {
+export function DocOutline({ page, className = '' }: { page: SitePage; className?: string }) {
   const headings = page.headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3)
 
   return (
-    <aside className="site-panel-docs site-doc-outline-shell p-5 xl:sticky xl:top-24 xl:h-fit" style={{ minHeight: '320px' }}>
+    <aside className={`site-panel-docs site-doc-outline-shell p-5 xl:sticky xl:top-24 xl:h-fit ${className}`.trim()} style={{ minHeight: '320px' }}>
       <div className="border-b border-border pb-4">
         <p className="site-doc-rail-title">On this page</p>
         <p className="mt-2 text-sm leading-6 text-text-tertiary">正文目录、原文入口与相邻页面都在这里。</p>

@@ -104,11 +104,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     contain-intrinsic-size: calc(100svh - var(--site-header-height));
                   }
                   .site-hero-title {
-                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-                    font-size: clamp(2rem, 13.5vw, 3.25rem);
-                    line-height: 1.12;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+                    color: #fff !important;
+                    background: none !important;
+                    -webkit-text-fill-color: #fff !important;
+                    filter: none !important;
+                    text-shadow: none;
+                    font-size: clamp(1.75rem, 10.5vw, 2.5rem);
+                    line-height: 1.08;
                     min-height: auto;
+                    contain: layout paint;
                     contain-intrinsic-size: auto;
+                  }
+                  .site-hero-content > :not(.site-hero-title),
+                  .site-home-below-fold {
+                    content-visibility: hidden;
                   }
                 }
                 @media (min-width: 768px) {

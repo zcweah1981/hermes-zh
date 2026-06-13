@@ -256,7 +256,7 @@ export default function HomePage() {
       />
       <Hero />
 
-      <main className="flex flex-col">
+      <main className="site-home-below-fold flex flex-col">
         <section data-home-section="primary-paths" className="bg-slate-50 px-6 pb-24 pt-16 text-slate-950 md:pb-28 md:pt-20">
           <div className="mx-auto max-w-site-marketing">
             <div className="max-w-3xl">
