@@ -47,6 +47,7 @@ const LEGACY_REDIRECTS = [
 ]
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   reactStrictMode: true,
   experimental: {
     inlineCss: true,
