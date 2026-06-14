@@ -252,6 +252,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   content-visibility: auto;
                   contain-intrinsic-size: 40px 100%;
                 }
+                .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header h1 {
+                  content-visibility: visible;
+                  contain-intrinsic-size: auto;
+                  min-height: 40px;
+                }
               `,
             }}
           />

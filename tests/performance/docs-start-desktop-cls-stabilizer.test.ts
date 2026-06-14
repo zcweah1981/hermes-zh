@@ -23,12 +23,27 @@ describe('/docs/start desktop CLS stabilizer', () => {
       assert.match(source, /site-doc-page-grid\[data-doc-desktop-cls-stabilizer="start"\] > article[\s\S]*min-height:\s*720px;/)
       assert.match(
         source,
-        /site-doc-page-grid\[data-doc-desktop-cls-stabilizer="start"\] \.site-doc-header h1\s*\{[\s\S]*?line-height:\s*2\.5rem;[\s\S]*?content-visibility:\s*visible;[\s\S]*?contain-intrinsic-size:\s*auto;[\s\S]*?min-height:\s*2\.5rem;/,
+        /site-doc-page-grid\[data-doc-desktop-cls-stabilizer="start"\] \.site-doc-header h1\s*\{[\s\S]*?line-height:\s*2\.5rem;[\s\S]*?content-visibility:\s*visible;[\s\S]*?contain-intrinsic-size:\s*auto;[\s\S]*?min-height:\s*(?:2\.5rem|40px);/,
       )
     }
     assert.match(layoutSource, /body:has\(\.site-doc-page-grid\[data-doc-desktop-cls-stabilizer="start"\]\) main\.flex-1/)
     assert.match(cssSource, /font-display:\s*optional;/)
     assert.match(cssSource, /body:has\(\.site-doc-page-grid\[data-doc-desktop-cls-stabilizer="start"\]\) main\.flex-1/)
     assert.match(pageSource, /suppressHydrationWarning/)
+  })
+
+  it('keeps the route-scoped H1 materialization rule after the global skipped-H1 critical rule', () => {
+    const globalSkippedH1Match = /\n\s+\.site-doc-header h1 \{/.exec(layoutSource)
+    const scopedH1Rule = '.site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header h1 {'
+    const globalSkippedH1Index = globalSkippedH1Match?.index ?? -1
+    const scopedH1Index = layoutSource.lastIndexOf(scopedH1Rule)
+
+    assert.notEqual(globalSkippedH1Index, -1)
+    assert.notEqual(scopedH1Index, -1)
+    assert.ok(scopedH1Index > globalSkippedH1Index)
+    assert.match(
+      layoutSource.slice(scopedH1Index),
+      /content-visibility:\s*visible;[\s\S]*?contain-intrinsic-size:\s*auto;[\s\S]*?min-height:\s*40px;/,
+    )
   })
 })
