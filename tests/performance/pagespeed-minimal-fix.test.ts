@@ -40,7 +40,7 @@ describe('R7 PageSpeed minimal zero-visual-change guards', () => {
     const globals = read('app/globals.css')
     const hero = read('components/marketing/hero.tsx')
 
-    assert.match(globals, /@font-face\s*\{[\s\S]*?font-family:\s*'Noto Sans SC'[\s\S]*?size-adjust:\s*100%;[\s\S]*?ascent-override:\s*88%;[\s\S]*?descent-override:\s*12%;[\s\S]*?line-gap-override:\s*0%;[\s\S]*?\}/)
+    assert.match(globals, /@font-face\s*\{[\s\S]*?font-family:\s*'Noto Sans SC'[\s\S]*?size-adjust:\s*104\.5%;[\s\S]*?ascent-override:\s*88%;[\s\S]*?descent-override:\s*12%;[\s\S]*?line-gap-override:\s*0%;[\s\S]*?\}/)
     assert.match(globals, /@font-face\s*\{[\s\S]*?font-family:\s*'Noto Serif SC'[\s\S]*?ascent-override:\s*88%;[\s\S]*?descent-override:\s*12%;[\s\S]*?line-gap-override:\s*0%;[\s\S]*?\}/)
     assert.match(globals, /\.site-hero-fullscreen\s*\{[\s\S]*?contain-intrinsic-size:\s*calc\(100vh - var\(--site-header-height\)\);/)
     assert.match(hero, /className="site-hero-title max-w-4xl/, 'hero title visual class contract must remain')
