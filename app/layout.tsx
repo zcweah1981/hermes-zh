@@ -160,6 +160,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   }
                 }
                 @media (min-width: 1280px) {
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] {
+                    display: grid;
+                    grid-template-columns: 280px minmax(0, 1fr) 250px;
+                    grid-auto-rows: minmax(0, auto);
+                    min-height: 1320px;
+                    contain: layout paint;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] > aside,
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] > article {
+                    contain: layout paint;
+                    min-height: 640px;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] .site-doc-header h1 {
+                    content-visibility: visible;
+                    contain-intrinsic-size: auto;
+                    min-height: 2.5rem;
+                    line-height: 2.5rem;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] .site-doc-header [data-ai-summary="true"] {
+                    line-height: 2rem;
+                  }
                   .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] {
                     display: grid;
                     grid-template-columns: 280px minmax(0, 1fr) 250px;

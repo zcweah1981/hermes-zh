@@ -1123,6 +1123,30 @@
       min-height: calc(100vh - var(--site-header-height) - 2rem);
     }
 
+    .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] {
+      grid-template-columns: 280px minmax(0, 1fr) 250px;
+      grid-auto-rows: minmax(0, auto);
+      min-height: 1320px;
+      contain: layout paint;
+    }
+
+    .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] > aside,
+    .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] > article {
+      contain: layout paint;
+      min-height: 640px;
+    }
+
+    .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] .site-doc-header h1 {
+      content-visibility: visible;
+      contain-intrinsic-size: auto;
+      min-height: 2.5rem;
+      line-height: 2.5rem;
+    }
+
+    .site-doc-page-grid[data-doc-desktop-cls-stabilizer="generic-field"] .site-doc-header [data-ai-summary="true"] {
+      line-height: 2rem;
+    }
+
     .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] {
       grid-template-columns: 280px minmax(0, 1fr) 250px;
       grid-auto-rows: minmax(0, auto);
@@ -1224,6 +1248,14 @@
       font-size: 1rem;
       line-height: 2rem;
     }
+  }
+
+  /* R23 production-materialized /docs/start H1 materialization override.
+     Keep this in globals.css so the route-scoped H1 reservation survives production CSS serialization. */
+  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header h1 {
+    content-visibility: visible;
+    contain-intrinsic-size: auto;
+    min-height: 40px;
   }
 
   .site-doc-sidebar-link {
@@ -1475,6 +1507,11 @@
   }
 
   .docs-start-lcp-image {
+    content-visibility: visible;
+    contain: paint;
+  }
+
+  .docs-lcp-image {
     content-visibility: visible;
     contain: paint;
   }

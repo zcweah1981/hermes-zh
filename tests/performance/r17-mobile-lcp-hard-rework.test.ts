@@ -45,11 +45,13 @@ describe('R17 mobile LCP hard rework for home and /docs/start', () => {
 
     assert.match(markdownBody, /const isDocsStartHeroImage = page\.slug === '\/start' && resolved\.endsWith\('rm2-learning-path-gemini-final-v2\.webp'\)/)
     assert.match(markdownBody, /const imageSrc = isDocsStartHeroImage \? '\/content-assets\/rm2-learning-path-gemini-final-v2-lcp\.webp' : resolved/)
-    assert.match(markdownBody, /className=\{isDocsStartHeroImage \? 'docs-start-lcp-image h-auto w-full' : 'h-auto w-full'\}/)
-    assert.match(markdownBody, /loading=\{isDocsStartHeroImage \? 'eager' : 'lazy'\}/)
-    assert.match(markdownBody, /fetchPriority=\{isDocsStartHeroImage \? 'high' : 'auto'\}/)
-    assert.match(markdownBody, /width=\{isDocsStartHeroImage \? 720 : undefined\}/)
-    assert.match(markdownBody, /height=\{isDocsStartHeroImage \? 402 : undefined\}/)
+    assert.match(markdownBody, /className=\{isDocsStartHeroImage \? 'docs-start-lcp-image h-auto w-full' : fieldLcpImage \? 'docs-lcp-image h-auto w-full' : 'h-auto w-full'\}/)
+    assert.match(markdownBody, /loading=\{isPriorityMarkdownImage \? 'eager' : 'lazy'\}/)
+    assert.match(markdownBody, /fetchPriority=\{isPriorityMarkdownImage \? 'high' : 'auto'\}/)
+    assert.match(markdownBody, /const imageWidth = isDocsStartHeroImage \? 720 : fieldLcpImage\?\.width/)
+    assert.match(markdownBody, /width=\{imageWidth\}/)
+    assert.match(markdownBody, /const imageHeight = isDocsStartHeroImage \? 402 : fieldLcpImage\?\.height/)
+    assert.match(markdownBody, /height=\{imageHeight\}/)
 
     const docsPage = read('app/docs/[...slug]/page.tsx')
     assert.match(

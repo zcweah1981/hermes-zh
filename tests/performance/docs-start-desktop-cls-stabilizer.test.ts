@@ -7,9 +7,10 @@ const cssSource = readFileSync('app/globals.css', 'utf8')
 const layoutSource = readFileSync('app/layout.tsx', 'utf8')
 
 describe('/docs/start desktop CLS stabilizer', () => {
-  it('scopes the stabilizer to the canonical /docs/start page only', () => {
-    assert.match(pageSource, /page\.slug === '\/start'/)
-    assert.match(pageSource, /data-doc-desktop-cls-stabilizer=\{docsStartDesktopClsStabilizer\}/)
+  it('keeps the canonical /docs/start stabilizer value intact while allowing separate field-page stabilization', () => {
+    assert.match(pageSource, /page\.slug === '\/start' \? 'start'/)
+    assert.match(pageSource, /data-doc-desktop-cls-stabilizer=\{docDesktopClsStabilizer\}/)
+    assert.match(pageSource, /genericDocsDesktopClsStabilizerSlugs/)
   })
 
   it('reserves the desktop docs grid, columns, and first-screen h1 before web font swap', () => {
@@ -44,6 +45,20 @@ describe('/docs/start desktop CLS stabilizer', () => {
     assert.match(
       layoutSource.slice(scopedH1Index),
       /content-visibility:\s*visible;[\s\S]*?contain-intrinsic-size:\s*auto;[\s\S]*?min-height:\s*40px;/,
+    )
+  })
+
+  it('duplicates the H1 materialization override into a stable production CSS path', () => {
+    const marker = 'R23 production-materialized /docs/start H1 materialization override'
+    const stableOverrideIndex = cssSource.indexOf(marker)
+    const scopedH1Rule = '.site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header h1 {'
+
+    assert.notEqual(stableOverrideIndex, -1)
+    assert.match(
+      cssSource.slice(stableOverrideIndex),
+      new RegExp(
+        `${scopedH1Rule.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\s\\S]*?content-visibility:\\s*visible;[\\s\\S]*?contain-intrinsic-size:\\s*auto;[\\s\\S]*?min-height:\\s*40px;`,
+      ),
     )
   })
 })

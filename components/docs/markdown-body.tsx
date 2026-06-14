@@ -179,7 +179,20 @@ export function MarkdownBody({ page, linkTargets }: { page: SitePage; linkTarget
             }
 
             const isDocsStartHeroImage = page.slug === '/start' && resolved.endsWith('rm2-learning-path-gemini-final-v2.webp')
+            const fieldLcpImageDimensions: Record<string, { width: number; height: number }> = {
+              '/start/practical/home-assistant::solution-practical-10-home-assistant-control-loop-v1.webp': { width: 1360, height: 765 },
+              '/start/build/memory-providers/holographic::rm2-5-memory-providers-02-holographic-first-route.webp': { width: 2752, height: 1536 },
+              '/china/deploy/tencent-lite-server::tencent-buy-hermes-agent.webp': { width: 1239, height: 1280 },
+            }
+            const fieldLcpImage = Object.entries(fieldLcpImageDimensions).find(([key]) => {
+              const [slug, asset] = key.split('::')
+
+              return page.slug === slug && resolved.endsWith(asset)
+            })?.[1]
+            const isPriorityMarkdownImage = isDocsStartHeroImage || Boolean(fieldLcpImage)
             const imageSrc = isDocsStartHeroImage ? '/content-assets/rm2-learning-path-gemini-final-v2-lcp.webp' : resolved
+            const imageWidth = isDocsStartHeroImage ? 720 : fieldLcpImage?.width
+            const imageHeight = isDocsStartHeroImage ? 402 : fieldLcpImage?.height
 
             return (
               <figure className="my-8 overflow-hidden rounded-2xl border border-white/10 bg-black/20">
@@ -187,12 +200,12 @@ export function MarkdownBody({ page, linkTargets }: { page: SitePage; linkTarget
                 <img
                   src={imageSrc}
                   alt={alt}
-                  className={isDocsStartHeroImage ? 'docs-start-lcp-image h-auto w-full' : 'h-auto w-full'}
-                  loading={isDocsStartHeroImage ? 'eager' : 'lazy'}
-                  fetchPriority={isDocsStartHeroImage ? 'high' : 'auto'}
-                  decoding={isDocsStartHeroImage ? 'sync' : 'async'}
-                  width={isDocsStartHeroImage ? 720 : undefined}
-                  height={isDocsStartHeroImage ? 402 : undefined}
+                  className={isDocsStartHeroImage ? 'docs-start-lcp-image h-auto w-full' : fieldLcpImage ? 'docs-lcp-image h-auto w-full' : 'h-auto w-full'}
+                  loading={isPriorityMarkdownImage ? 'eager' : 'lazy'}
+                  fetchPriority={isPriorityMarkdownImage ? 'high' : 'auto'}
+                  decoding={isPriorityMarkdownImage ? 'sync' : 'async'}
+                  width={imageWidth}
+                  height={imageHeight}
                 />
                 {alt ? <figcaption className="border-t border-white/10 px-4 py-3 text-xs leading-6 text-text-tertiary">{alt}</figcaption> : null}
               </figure>
