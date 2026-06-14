@@ -215,6 +215,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     margin-top: 1rem;
                     font-size: 2.25rem;
                     line-height: 2.5rem;
+                    content-visibility: visible;
+                    contain-intrinsic-size: auto;
+                    min-height: 2.5rem;
                   }
                   .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header [data-ai-summary="true"] {
                     margin-top: 1rem;

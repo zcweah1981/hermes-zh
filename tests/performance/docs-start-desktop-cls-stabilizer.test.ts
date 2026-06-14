@@ -12,7 +12,7 @@ describe('/docs/start desktop CLS stabilizer', () => {
     assert.match(pageSource, /data-doc-desktop-cls-stabilizer=\{docsStartDesktopClsStabilizer\}/)
   })
 
-  it('reserves the desktop docs grid and column layout before web font swap', () => {
+  it('reserves the desktop docs grid, columns, and first-screen h1 before web font swap', () => {
     for (const source of [cssSource, layoutSource]) {
       assert.match(source, /site-doc-page-grid\[data-doc-desktop-cls-stabilizer="start"\]/)
       assert.match(source, /grid-template-columns:\s*280px minmax\(0, 1fr\) 250px;/)
@@ -21,6 +21,10 @@ describe('/docs/start desktop CLS stabilizer', () => {
       assert.match(source, /font-family:\s*system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;/)
       assert.match(source, /font-family:\s*system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;/)
       assert.match(source, /site-doc-page-grid\[data-doc-desktop-cls-stabilizer="start"\] > article[\s\S]*min-height:\s*720px;/)
+      assert.match(
+        source,
+        /site-doc-page-grid\[data-doc-desktop-cls-stabilizer="start"\] \.site-doc-header h1\s*\{[\s\S]*?line-height:\s*2\.5rem;[\s\S]*?content-visibility:\s*visible;[\s\S]*?contain-intrinsic-size:\s*auto;[\s\S]*?min-height:\s*2\.5rem;/,
+      )
     }
     assert.match(layoutSource, /body:has\(\.site-doc-page-grid\[data-doc-desktop-cls-stabilizer="start"\]\) main\.flex-1/)
     assert.match(cssSource, /font-display:\s*optional;/)
