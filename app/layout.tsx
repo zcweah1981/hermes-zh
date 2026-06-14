@@ -98,6 +98,32 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   padding-bottom: 1.25rem;
                   overflow-wrap: anywhere;
                 }
+                @media (min-width: 1024px) {
+                  :root {
+                    --site-header-height: 109px;
+                  }
+                  .site-frame > div {
+                    min-height: 108px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 1rem;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                  }
+                  .site-frame > div > div.hidden {
+                    display: flex;
+                    min-width: 0;
+                    min-height: 84px;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1rem;
+                  }
+                  main.flex-1 {
+                    min-height: calc(100vh - var(--site-header-height));
+                  }
+                }
                 @media (max-width: 640px) {
                   .site-hero-fullscreen {
                     min-height: calc(100svh - var(--site-header-height));
@@ -138,6 +164,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     display: grid;
                     grid-template-columns: 280px minmax(0, 1fr) 250px;
                     grid-auto-rows: minmax(0, auto);
+                    gap: 1.5rem;
+                    padding: 2rem 1.5rem;
                     min-height: 1620px;
                     contain: layout paint;
                     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -151,7 +179,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
                   }
                   body:has(.site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"]) .site-frame > div {
-                    min-height: 80px;
+                    min-height: 108px;
                   }
                   body:has(.site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"]) main.flex-1 {
                     min-height: 1620px;
@@ -161,6 +189,60 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] > article {
                     contain: layout paint;
                     min-height: 720px;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] > article {
+                    overflow: hidden;
+                    padding: 2rem;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] nav[aria-label="Breadcrumb"] {
+                    margin-bottom: 1.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.25rem;
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header {
+                    padding: 2rem;
+                    padding-bottom: 2rem;
+                    border-bottom: 1px solid rgba(125, 165, 220, 0.18);
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header p,
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header h1 {
+                    margin: 0;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header h1 {
+                    margin-top: 1rem;
+                    font-size: 2.25rem;
+                    line-height: 2.5rem;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-header [data-ai-summary="true"] {
+                    margin-top: 1rem;
+                    line-height: 2rem;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .docs-start-lcp-figure {
+                    min-height: 359px;
+                    contain: layout paint;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .docs-start-markdown-shell {
+                    contain: layout paint;
+                    min-height: 5434px;
+                    contain-intrinsic-size: 5434px;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-prose h2 {
+                    margin-top: 3rem;
+                    border-top: 1px solid rgba(255, 255, 255, 0.08);
+                    padding-top: 2rem;
+                    font-size: 1.5rem;
+                    line-height: 2rem;
+                    font-weight: 900;
+                  }
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-prose p,
+                  .site-doc-page-grid[data-doc-desktop-cls-stabilizer="start"] .site-doc-prose li {
+                    margin-top: 1rem;
+                    margin-bottom: 1rem;
+                    font-size: 1rem;
+                    line-height: 2rem;
                   }
                 }
                 .site-doc-header h1 {

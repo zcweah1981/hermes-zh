@@ -97,6 +97,10 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
   const linkTargets = toDocLinkTargets(pages)
 
   const docsStartDesktopClsStabilizer = page.slug === '/start' ? 'start' : undefined
+  const docsStartMarkdownShellStyle =
+    page.slug === '/start'
+      ? { marginTop: '0', minHeight: '5434px', contain: 'layout paint' as const }
+      : { minHeight: '600px', contain: 'layout' as const }
 
   return (
     <div
@@ -127,7 +131,7 @@ export default async function DocsPage({ params }: { params: Promise<{ slug?: st
           </div>
         </div>
 
-        <div className="mt-10" style={{ minHeight: '600px', contain: 'layout' }}>
+        <div className={page.slug === '/start' ? 'docs-start-markdown-shell' : 'mt-10'} style={docsStartMarkdownShellStyle}>
           <MarkdownBody page={page} linkTargets={linkTargets} />
         </div>
 
