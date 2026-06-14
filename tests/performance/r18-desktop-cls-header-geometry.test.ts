@@ -57,7 +57,8 @@ describe('R18 desktop-only header/main geometry CLS stoploss', () => {
     }
 
     assert.match(docsPage, /page\.slug === '\/start'/)
-    assert.match(docsPage, /data-doc-desktop-cls-stabilizer=\{docsStartDesktopClsStabilizer\}/)
+    assert.match(docsPage, /const docDesktopClsStabilizer = page\.slug === '\/start' \? 'start' : genericDocsDesktopClsStabilizerSlugs\.has\(page\.slug\) \? 'generic-field' : undefined/)
+    assert.match(docsPage, /data-doc-desktop-cls-stabilizer=\{docDesktopClsStabilizer\}/)
     assert.match(docsPage, /page\.slug === '\/start'[\s\S]*?\{ marginTop: '0', minHeight: '5434px', contain: 'layout paint' as const \}/)
     assert.match(docsPage, /className=\{page\.slug === '\/start' \? 'docs-start-markdown-shell' : 'mt-10'\}/)
     assert.match(header, /data-analytics-event="nav_start_click"/)

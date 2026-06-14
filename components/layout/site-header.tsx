@@ -35,8 +35,6 @@ export function SiteHeader() {
                 alt="Hermes Agent 中文站 Logo"
                 width={44}
                 height={44}
-                priority
-                fetchPriority="high"
                 className="h-10 w-10 object-contain"
               />
             <div className="min-w-0 flex-1">

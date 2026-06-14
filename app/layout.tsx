@@ -136,8 +136,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     -webkit-text-fill-color: #fff !important;
                     filter: none !important;
                     text-shadow: none;
-                    font-size: clamp(1.75rem, 10.5vw, 2.5rem);
-                    line-height: 1.08;
+                    font-size: clamp(2rem, 13.5vw, 3.25rem);
+                    line-height: 1.12;
                     min-height: auto;
                     contain: layout paint;
                     contain-intrinsic-size: auto;
