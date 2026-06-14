@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import { Hero } from '@/components/marketing/hero'
-import { LazyCapabilityConnectorLayer } from '@/components/marketing/lazy-capability-connectors'
 import { SectionCard } from '@/components/ui/section-card'
 import { SiteJsonLd, buildBreadcrumbJsonLd } from '@/lib/seo/json-ld'
 import { SITE_NAME, SITE_URL } from '@/lib/site-config'
@@ -134,7 +133,26 @@ function CapabilityInfographic() {
       <div className="site-capability-stars" />
       <div className="site-capability-circuit site-capability-circuit-left" />
       <div className="site-capability-circuit site-capability-circuit-right" />
-      <LazyCapabilityConnectorLayer deferUntilIdle />
+      <svg
+        className="site-capability-connectors"
+        data-connector-layer="static-svg"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path data-connector-line="top-left" data-target="left-top" d="M 47.4 36.5 C 38 36.5 34 30 27 23" />
+        <path data-connector-line="top-right" data-target="right-top" d="M 52.6 36.5 C 62 36.5 66 30 73 23" />
+        <path data-connector-line="middle-left" data-target="left-middle" d="M 45.5 50 C 36 50 32 50 27 50" />
+        <path data-connector-line="middle-right" data-target="right-middle" d="M 54.5 50 C 64 50 68 50 73 50" />
+        <path data-connector-line="bottom-left" data-target="left-bottom" d="M 47.4 63.5 C 38 63.5 34 70 27 77" />
+        <path data-connector-line="bottom-right" data-target="right-bottom" d="M 52.6 63.5 C 62 63.5 66 70 73 77" />
+        <circle data-connector-dot="left-top" cx="27" cy="23" r="0.42" />
+        <circle data-connector-dot="right-top" cx="73" cy="23" r="0.42" />
+        <circle data-connector-dot="left-middle" cx="27" cy="50" r="0.42" />
+        <circle data-connector-dot="right-middle" cx="73" cy="50" r="0.42" />
+        <circle data-connector-dot="left-bottom" cx="27" cy="77" r="0.42" />
+        <circle data-connector-dot="right-bottom" cx="73" cy="77" r="0.42" />
+      </svg>
 
       <div className="site-capability-inner">
         <header className="site-capability-title-block">
